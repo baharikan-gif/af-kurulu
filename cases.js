@@ -612,7 +612,7 @@ const cases = [
     "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Metris Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1988 yılında sahte çalışma belgeleri düzenleyip iş bulma vaadiyle başvuranlardan para aldı. Ücret ödeyen on iki kişiye iş sağlanmadı. Belgeleri hazırladığını kabul ediyor; paranın bir bölümünü birlikte çalıştığı kişiye verdiğini söylüyor.</p><p class=\"mt-2\"><strong>GÜVENLİK TUTANAĞI (08.05.1991):</strong> İhsan’ın verdiği yer bilgisiyle ortak depoda iki kesici alet bulundu. Bir hükümlüyü sorumlu tuttu; ancak aletleri o kişinin koyduğunu gördüğünü ilk ifadesinde söylemişken, ek ifadesinde bunu başkasından duyduğunu belirtti. Aletlerin varlığı doğrulandı; kime ait oldukları belirlenmedi.</p><p class=\"mt-2\"><strong>KORUMA VE YAŞAM PLANI:</strong> Bilgi verdiği koğuşta öğrenildikten sonra tehdit dilekçesi sundu. Ayrı koğuşa geçiş talebi değerlendiriliyor. Ablasının adresi doğrulandı; önerdiği işin ayrıntıları henüz yazılı değil.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Sahte belgeleri ben hazırladım. Başvuranlara iş bulamadığımızı biliyordum, yine de para aldım. Depodaki aletlerin yerini söyledim. Kimin koyduğunu gördüm demem doğru değildi; duyduğumu söyledim. Şimdi koğuşta adım çıktı. Ablamın yanında kalmak ve çalışmak istiyorum.”</p>",
     "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Görüşmelere düzenli katılıyor. Tehdit bildiriminden sonra uyku güçlüğü anlatıyor. İfadesindeki değişikliği kabul ediyor fakat ilk anlatımını neden kesinleştirdiğine ilişkin açıklaması değişken. Güvenlik ihtiyacı ile tanıklığının doğruluğu ayrı konulardır.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 32 aydır kurumda; son bir yılda disiplin cezası yok. Yazı işlerine yardımcı oluyor. Birim sorumlusu, aletlerin bulunmasına katkısı nedeniyle tahliyesini destekliyor. Ek tutanak, suçlanan hükümlünün atölye kaydı nedeniyle belirtilen saatte depoya erişiminin mümkün görünmediğini bildiriyor; araştırma sürüyor.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 32 aydır kurumda; son bir yılda disiplin cezası yok. Yazı işlerine yardımcı oluyor. Birim sorumlusu, aletlerin bulunmasına katkısı nedeniyle tahliyesini destekliyor. Ek tutanak, suçlanan hükümlünün atölye kaydı nedeniyle belirtilen saatte depoya erişiminin mümkün olmadığını bildiriyor; araştırma sürüyor.</p>",
     "letterText": "<p><strong>ABLASININ DİLEKÇESİ:</strong> Evimde kalabilir. Yakındaki tamir atölyesiyle konuştum; kabul yazısını henüz alamadım.</p>",
     "releaseConsequence": {
       "headline": "İHSAN TAHLİYE EDİLDİ; DEPO SORUŞTURMASI SÜRÜYOR",
@@ -677,7 +677,7 @@ const cases = [
       "chronicle": "Orhan çalışmaya ve ödemeye başladı; görevleri beyan edilen planı aştı, yeni hırsızlık kaydı yok."
     },
     "rejectConsequence": {
-      "headline": "ORHAN’IN DOSYASI ERTELENDİ: YAZILI İŞ PLANI İSTENDİ",
+      "headline": "ORHAN’IN DOSYASI ERTELENDİ; YAZILI İŞ PLANI İSTENDİ",
       "body": "Dosya altı ay ertelendi. İşverenden görev tanımı ve denetim planı istendi. Orhan atölye çalışmalarına ve küçük ödemelere devam etti. İşveren mevcut pozisyonu başka biriyle doldurduğunu bildirdi; yeni iş imkânları araştırılıyor.",
       "vicdanDelta": -10,
       "sicilDelta": 10,
@@ -740,7 +740,7 @@ const cases = [
     },
     "review": {
       "status": "İş teklifini sürdüren işveren, aile evinden ayrı bir oda için kira desteği sundu. Adres ve gelir teyit edildi. Selim amcasına aile gerekçesini reddeden bir mektup yazdı; sonraki ziyaret talebini kabul etmedi.",
-      "psychNote": "Görüşmelerde Aylin’in kendi yaşamını seçme hakkını tanıyan beyanları sürüyor. Ailesinin olası baskısında destek isteyeceği kişileri belirtebiliyor. Bu plan henüz kurum dışında sınanmadı; uzun süredir kurallara uyması suçun ağırlığını ortadan kaldırmıyor.",
+      "psychNote": "Görüşmelerde Aylin’in kendi yaşamını seçme hakkını tanıyan beyanları sürüyor. Ailesinin olası baskışında destek isteyeceği kişileri belirtebiliyor. Bu plan henüz kurum dışında sınanmadı; uzun süredir kurallara uyması suçun ağırlığını ortadan kaldırmıyor.",
       "guardReport": "Son altı ayda disiplin cezası yok. Ayrı oda ve iş teklifinin yazılı teyitleri dosyada. Amcasına gönderilen yanıt ile reddedilen ziyaret talebi kayda alındı. Aile tarafından yeni bir doğrudan tehdit bildirimi alınmadı.",
       "letterText": "Hayattaki kız kardeşi görüşmeme talebini yeniledi; affettiğine veya tahliyeyi desteklediğine ilişkin beyan vermedi. Adresi paylaşılmıyor. Bağımsız barınma ve destek görüşmesi planı hazır; aileyle temasın tümüyle kesileceği garanti edilemiyor.",
       "defenseText": "\"Amcama, yaptığımın ailenin hakkını korumak olmadığını yazdım. Son ziyaretini kabul etmedim. Ayrı kalacağım yerin teyidi geldi. Aylin’e yaptığımı geri alamam; diğer kız kardeşimin beni affetmesini veya görmesini isteyemem. Ailem baskı yaparsa işyerindeki sorumluya ve destek birimine başvuracağım.\"",
@@ -876,7 +876,7 @@ const cases = [
     "age": 52,
     "crime": "Tehdit ve Kişiyi Hürriyetinden Yoksun Kılma",
     "sentence": "6 Yıl Hapis (4 Yıl 2 Ay Tamamlandı)",
-    "initialMonth": 6,
+    "initialMonth": 8,
     "servedMonths": 50,
     "sentenceMonths": 72,
     "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ankara Merkez Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Kurgusal Çınarlı ilçesinin eski belediye başkanıdır. 1987’de belediye alımlarındaki usulsüzlükleri bildiren muhasebe görevlisi Fikret’i, iki çalışanına talimat vererek belediyeye ait bir binada saatlerce alıkoydurdu. Şikâyetini geri çekmezse ailesinin işini kaybedeceğini söyledi. Görevli binadan ayrılmasının engellendiğini tanıklarla bildirdi; Turgut tehdit ve kişiyi hürriyetinden yoksun kılma suçlarından hüküm giydi.</p><p class=\"mt-2\"><strong>GÜNCEL MAĞDUR BAŞVURUSU (28.06.1991):</strong> Fikret, eski belediye çalışanlarından birinin kendisine “Başkan çıkınca konuşursunuz” dediğini bildirdi. Görüşme doğrulandı; kişinin Turgut’un talimatıyla hareket ettiği belirlenmedi. Mağdur bir uzlaşma dilekçesi vermedi.</p><p class=\"mt-2\"><strong>TAHLİYE PLANI:</strong> Eşinin başka bir ilçedeki adresi doğrulandı. Eski siyasi arkadaşları bir dernekte yöneticilik teklif ediyor; görevin belediye ve eski çalışanlarla ilişkisi açıklanmamış. Mağdurla doğrudan temas kurmayacağını söylüyor.</p>",
@@ -984,7 +984,7 @@ const cases = [
     "age": 39,
     "crime": "Kasten Adam Öldürme (İş ortağı Mustafa GÜLER'i bıçaklamak suretiyle)",
     "sentence": "15 Yıl Ağır Hapis (5 Yıl 4 Ay 3 Gün Tamamlandı)",
-    "initialMonth": 6,
+    "initialMonth": 9,
     "servedMonths": 64,
     "sentenceMonths": 180,
     "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Sağmalcılar Cezaevi (Bayrampaşa) - C-9 Koğuşu</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Hükümlü, 1989 yılında Topkapı Maltepe Sanayi'de iş ortağı Mustafa GÜLER'i bıçaklayarak öldürmekten mahkûm olmuştur. Cinayet karanlıkta işlenmiş, suç aleti bıçak hükümlünün elinde bulunmuştur.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Topkapı Karakolu Olay Yeri Zaptı - 12.01.1989 Saat: 21:10<br>\"Maltepe Sanayi 12. Blok 7 no. TEK planlı kesintisi 19:30-21:00. Ortam karanlık. Maktul Mustafa GÜLER yerde. Üzerinde 3 bıçak yarası: Biri önden sağdan sola yukarı, ikisi arkadan yukarıdan aşağı, farklı açılarda.<br>Suç aleti: 22 cm mutfak bıçağı, atölye demirbaş No:17, sağ el için bileylenmiş, sapı bez bantla sağ ele göre sarılı. Üzerinde kan. Sapında silinmiş 2 farklı parmak izi.<br>Hükümlü KARA'nın gömleğinde kan yoktur, pantolon paçasında 3 damla kan. Maktulün sağ el tırnak arasında deri ve 0 Rh(+) kan pıhtısı. Hükümlü kan grubu A Rh(+). Uyuşmuyor.\"<br><br>[EK-2] Tanık Beyanları<br>Şükrü ASLAN: \"Karanlıktı, itişme oldu. Kim vurdu görmedim.\"<br>Nuri ÖZCAN: \"Bıçak Cemal'in elindeydi.\"<br>Hasan Basri ÇELİK (Çırak - 2 gün sonra Almanya'ya giden): \"Korktum dışarı kaçtım, görmedim.\"</p>",
@@ -1029,6 +1029,384 @@ const cases = [
         "vicdanDelta": 5,
         "sicilDelta": 5,
         "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 20,
+    "name": "Suna KESKİN",
+    "age": 45,
+    "crime": "Kasten Adam Öldürme ve Kundaklama",
+    "sentence": "18 Yıl Ağır Hapis (6 Yıl 8 Ay Tamamlandı)",
+    "initialMonth": 1,
+    "servedMonths": 80,
+    "sentenceMonths": 216,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın ve Çocuk Tutukevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Merter'deki tekstil atölyesini iflas nedeniyle sigortadan para almak amacıyla yaktığı, bu sırada içeride bulunan gece bekçisi Rüstem AVCI'nın yanarak ölmesine neden olduğu gerekçesiyle mahkûm edilmiştir. Bekçinin cesedi dışarıdan asma kilit vurulmuş kazan dairesinde bulunmuştur.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Sigorta Müfettişliği Gizli Tahkikat Raporu Özeti (1984)<br>\"Atölye yangınının kasten çıkarıldığı sabittir. Ancak şüpheli bir durum mevcuttur: Yangından bir hafta önce, atölyedeki en değerli dokuma makinelerinin el altından satılarak depodan çıkarıldığı tespit edilmiştir. Gece bekçisi Rüstem AVCI'nın bu durumu fark edip Suna Keskin'e şantaj yaptığına dair işçiler arasında söylentiler mevcuttur. Maktulün cesedi, dışarıdan asma kilit vurulmuş olan kazan dairesinde bulunmuştur. Hükümlü, kilidin yangın paniğiyle yanlışlıkla kilitlendiğini iddia etmiştir.\"<br><br>[EK-2] Maktulün Eşinin Kurula Dilekçesi<br>\"Kocam o kadının kirli işlerini öğrendiği için o odaya kilitlenip diri diri yakıldı. O kadın çok zeki ve kurnazdır. İçeride melek taklidi yaptığına kanıp onu dışarı salarsanız, iki yetim çocuğumun iki eli yakanızda olur.\"</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Merter'deki tekstil atölyem 84 krizinde iflasın eşiğine gelmişti. Borç batağındaydım. Evet, çaresizlikten atölyeyi ben yaktım, sigortadan gelecek parayla borçları kapatırım diye düşündüm. Ama yemin ederim bekçi Rüstem'in o gece içeride olduğunu bilmiyordum. Bana o akşam memleketi Sivas'a yola çıkacağını söylemişti.</p><p>Yangını çıkardıktan sonra onun içeride olduğunu öğrenince aklımı kaçıracaktım. Ben hırsızlık yapmış olabilirim ama katil değilim. Yıllardır her gece rüyamda o ateşi görüyorum. İçeride okuma-yazma kursları vererek vicdanımın yükünü hafifletmeye çalışıyorum. Tahliyemi arz ederim.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlüde kronik uykusuzluk (insomnia) ve derin bir suçluluk duygusu gözlemlenmiştir. Düzenli olarak antidepresan kullanmaktadır. Maktulün adını her duyduğunda anksiyete krizi geçirmektedir. Pişmanlığı samimi görünmektedir.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü Suna KESKİN, koğuş temsilcisidir. Kurumumuzda kaldığı 80 ay boyunca hiçbir disiplin cezası almamıştır. Cezaevi kütüphanesinin sorumluluğunu yürütmekte, ayrıca genç kadın mahkûmlara okuma-yazma öğretmektedir. İdareyle son derece uyumlu, örnek bir mahkûmdur.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Maktul eşinin dilekçesi ve Sigorta Raporu Ana Metin içerisine eklenmiştir.</p>",
+    "releaseConsequence": {
+      "headline": "SİGORTA VURGUNCUSU PATRONİÇE SERBEST",
+      "body": "Bekçisini diri diri yakmakla suçlanan Suna Keskin, \"iyi halden\" tahliye edildi. Karar, maktulün ailesini isyan ettirirken, sigorta şirketleri birliği Adalet Bakanlığı'na itiraz dilekçesi sundu.",
+      "vicdanDelta": -15,
+      "sicilDelta": -20,
+      "capacityDelta": -3,
+      "chronicle": "Şüpheli kundaklama dosyasında, sigorta dolandırıcısı Suna Keskin tahliye edildi. Gerçek kilit sırrı aydınlatılamadı."
+    },
+    "rejectConsequence": {
+      "headline": "KUNDAKÇI PATRONİÇEYE KURULDAN VİZE ÇIKMADI",
+      "body": "Atölyesini yakarak bekçisinin ölümüne sebep olan Suna Keskin'in dosyası ertelendi. Cezaevinde okuma-yazma hocalığı yapması affedilmesine yetmedi.",
+      "vicdanDelta": 10,
+      "sicilDelta": 15,
+      "capacityDelta": 3,
+      "chronicle": "Cinayet şüpheleri nedeniyle Suna Keskin'in dosyası ertelendi."
+    },
+    "review": {
+      "status": "Hükümlü kütüphane görevine devam ediyor. Bir mahkûm kadının okuma yazma belgesi almasını sağladı.",
+      "psychNote": "Uykusuzluk şikayetleri artmıştır. Son günlerde 'Beni o odada kilitli bıraktılar' şeklinde sanrılar görmekte ve geceleri bağırarak uyanmaktadır. Vicdani çöküş hızlanmıştır.",
+      "guardReport": "Disiplin suçu yoktur. Ağır depresif durumu idarece de gözlemlenmektedir.",
+      "letterText": "[EK-3] Emniyet İhbar Tutanağı (Ekim 1991): 1984 yılında makineleri taşıyan nakliyeci şoförünün, kahvehanede 'Kadın sadece kibriti çaktı, kapıyı kilitleyen bizdik ama parayı eksik aldık' şeklinde konuştuğu ihbar edilmiştir. Şoför polis sorgusunda bunu sarhoşlukla söylediğini iddia edip reddetmiştir. Savcılık eski dosyayı yeniden açmayı delil yetersizliğinden reddetmiştir.",
+      "defenseText": "\"Sayın Kurul, asma kilidi ben takmadım! O gece atölyede makineleri taşıyan nakliyeciler de vardı, onlar şahit. Rüstem'i onlar kilitledi, benim haberim yoktu! Sadece yangını çıkardım. Lütfen inanın, ben katil değilim, yavaş yavaş aklımı kaybediyorum burada.\"",
+      "releaseConsequence": {
+        "headline": "ŞÜPHELİ KUNDAKLAMA DOSYASI KAPANDI, SUNA SERBEST",
+        "body": "Sonradan ortaya çıkan nakliyeci ihbarı üzerine kuruldaki şüpheleri azalan Suna Keskin tahliye edildi. Gerçek katilin kim olduğu sırrını koruyor.",
+        "chronicle": "İkinci incelemede, nakliyeci şüphesi üzerine Suna Keskin tahliye edildi. Dosya tam aydınlatılamadan kapandı.",
+        "vicdanDelta": -5,
+        "sicilDelta": -10,
+        "capacityDelta": -3
+      },
+      "rejectConsequence": {
+        "headline": "KİLİDİN SIRRI ÇÖZÜLEMEDİ, HAKKI YANDI",
+        "body": "Kurul, Suna Keskin'in tahliyesini kesin olarak reddetti. Suçu nakliyecilere atma çabası sonuç vermeyen hükümlü cezasını tamamlayacak.",
+        "chronicle": "Şartlı tahliye hakkı yandı. Kundaklama dosyasında cezanın tamamen yatılmasına karar verildi.",
+        "vicdanDelta": 10,
+        "sicilDelta": 15,
+        "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 21,
+    "name": "Nihat ARIKAN",
+    "age": 29,
+    "crime": "Tedbirsizlik neticesi ölüme sebebiyet vermek; kaza mahallini terk",
+    "sentence": "6 Yıl 8 Ay Ağır Hapis (4 Yıl 5 Ay Tamamlandı)",
+    "initialMonth": 7,
+    "servedMonths": 53,
+    "sentenceMonths": 80,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ümraniye E Tipi Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 18 Ağustos 1987 gecesi Şile yolunda aracıyla bir yayaya çarparak ölümüne sebep olmuş ve kaza mahallinden kaçmıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Müteveffanın Ablası Ayten Sönmez'in Dilekçesi<br>\"Dava sırasında iki kişi babama gelip şikâyetten vazgeçmesini istedi. Kim olduklarını bilmiyoruz. Hükümlünün annesi daha sonra evimize gelip özür diledi. Nihat Arıkan'ın kendisinden bugüne kadar bir haber gelmedi.\"<br><br>[EK-2] İş Yeri Kabul Belgesi<br>Dosyada Kartal'daki \"Arıkan Mobilya\"dan işe kabul yazısı vardır. Hükümlü işyeri sahibini \"dayım\" diye tarif etmişse de nüfus kaydında bu isimde bir dayısı bulunmamaktadır.</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Hadise 18 Ağustos 1987 gecesi Şile yolunda oldu. İki kadeh rakı içmiştim, fakat sarhoş değildim. Şahsı geç fark ettim. Kazadan sonra korkup durmadım. Bunun hata olduğunu bugün kabul ediyorum.</p><p>Cezaevinde marangozhanede çalışıyorum. Disiplin cezam yoktur. Çıkarsam aile dostumuz Şaban Bey’in Kartal’daki atölyesinde çalışacağım. Müteveffanın ailesine özür mektubu yazmak istedim, avukatım uygun görmedi. Takdir kurulundur.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Genel fiziki hali iyidir. Sol dizde eski travmaya bağlı ağrı mevcuttur. Kazaya ilişkin zaman zaman uykusuzluk ve huzursuzluk tarif etmektedir. Ağır depresyon veya psikotik bulgu saptanmamıştır. Pişmanlık ifade etmekte olup bunun tahliye beklentisiyle ilgisi tıbben tayin edilemez.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlünün ciddi disiplin cezası bulunmamaktadır. Marangozhanede muntazam çalışmaktadır. 17.01.1991 tarihli jurnal kaydında, ziyaret sonrası \"Benim iş uzamaz, dışarıda halleden var\" dediği belirtilmiştir. Hükümlü sözü inkâr etmiş, koğuş ifadeleri birbirini tutmamıştır. Son altı ayda ailesi dışında bir kez Av. Selahattin Vural tarafından ziyaret edilmiştir. Adı geçen avukat, hükümlünün dava müdafii değildir.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Maktul ailesinin dilekçesi ve şüpheli iş kabul belgesi Ana Metin içerisine eklenmiştir.</p>",
+    "releaseConsequence": {
+      "headline": "ŞİLE YOLU DAVASINDA ŞARTLI TAHLİYE",
+      "body": "Nihat Arıkan serbest bırakılır. Müteveffa ailesi kararı eleştirmez ancak bazı gazetelerde Arıkan ailesinin Ankara’da temaslarda bulunduğu iddia edilir. Üç ay sonra hükümlünün işe kabul edildiği atölyeden ayrıldığı öğrenilir.",
+      "vicdanDelta": -20,
+      "sicilDelta": 15,
+      "capacityDelta": -3,
+      "chronicle": "Şile yolu kazası faili Nihat Arıkan torpil şüpheleri gölgesinde tahliye edildi."
+    },
+    "rejectConsequence": {
+      "headline": "TAHLİYE KARARI ALTI AY SONRAYA KALDI",
+      "body": "Arıkan’ın müracaatı ertelenir. Aile avukatı kararı \"ağır fakat usule uygun\" diye niteler. Hükümlü marangozhanedeki görevine devam eder.",
+      "vicdanDelta": 15,
+      "sicilDelta": -15,
+      "capacityDelta": 3,
+      "chronicle": "Torpil iddialarına rağmen kurul Nihat Arıkan'ın tahliyesini erteledi."
+    },
+    "review": {
+      "status": "İlk karardan üç hafta sonra hükümlü başka bir mahkûmla kavga etmiş, her iki tarafa da üç gün atölyeden men cezası verilmiştir. Sonraki beş ayda yeni vukuat görülmemiştir. Hükümlü kütüphanede çalışmaya başlamıştır.",
+      "psychNote": "Dört kilo kaybetmiştir. Ciddi organik hastalık saptanmamıştır. Daha içe kapanık olduğu, ancak intihar düşüncesi bulunmadığı kaydedilmiştir. Kazadan bahsederken bu kez müteveffanın adını kendiliğinden kullanmıştır.",
+      "guardReport": "Koğuş aramasında hükümlünün eşyaları arasında 'S. Vural — Salı 14.30' yazılı küçük bir kâğıt bulunmuştur. Hükümlü bunun eski bir ziyaret notu olduğunu söylemiştir. Av. Selahattin Vural’ın son altı ayda resmi ziyaret kaydı yoktur.",
+      "letterText": "[EK-3] Emniyet İhbar Tutanağı / Maktul Eşi Beyanı: Müteveffanın eşi Sevim Sönmez, mektuptan on gün sonra kayınpederinin evine isimsiz zarfla 500.000 lira bırakıldığını bildirir. Paranın Arıkan ailesiyle bağlantısı tespit edilemez.<br>[EK-4] Zabıt Kâtibi Notu: '12.09.91 — Bakanlık Özel Kalem’den olduğunu söyleyen erkek şahıs Arıkan dosyasının kurul gününü sordu. İsim vermedi.'",
+      "defenseText": "\"Atölyedeki kavga için mazeret aramıyorum. Diğer hükümlü babamla ve paramızla alay etti. Ben de üzerine yürüdüm. Şaban Bey öz dayım değildir. Biz ailece kendisine dayı deriz. Mehmet Sönmez’in eşine sonunda bir özür mektubu gönderdim. Cevap gelmedi. Vermek zorunda da değildir.\"",
+      "releaseConsequence": {
+        "headline": "ŞİLE YOLU DAVASINDA İKİNCİ KURULDA TAHLİYE",
+        "body": "Nihat Arıkan tahliye edilir. Birkaç ay sonra başka bir mobilya atölyesinde işe başlar. Daha sonra müteveffanın kızının adına para yatırdığı anlaşılır. Aile parayı kabul etmez. 500.000 liranın kim tarafından bırakıldığı tespit edilemez.",
+        "chronicle": "Gizemli kan parası ve Bakanlık telefonunun ardından Nihat Arıkan ikinci kurulda tahliye edildi.",
+        "vicdanDelta": -15,
+        "sicilDelta": 10,
+        "capacityDelta": -3
+      },
+      "rejectConsequence": {
+        "headline": "ARIKAN'IN ŞARTLI TAHLİYE HAKKI YANDI",
+        "body": "Kurul kararından sonra içine kapanır fakat yeni disiplin cezası almaz. Kalan cezasını tamamlayacaktır.",
+        "chronicle": "Bakanlık aramasına rağmen kurul geri adım atmadı, Nihat Arıkan'ın şartlı tahliye hakkı yandı.",
+        "vicdanDelta": 10,
+        "sicilDelta": -15,
+        "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 22,
+    "name": "Kemal ERDEM",
+    "age": 34,
+    "crime": "Yasadışı örgüte yardım ve yataklık; suçta kullanılan aracın temini",
+    "sentence": "7 Yıl 6 Ay Hapis (5 Yıl 1 Ay Tamamlandı)",
+    "initialMonth": 8,
+    "servedMonths": 61,
+    "sentenceMonths": 90,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Metris Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Aracını kuzeni Orhan Erdem'e vererek bir banka soygununda kaçış aracı olarak kullanılmasına imkân sağlamaktan, yasadışı örgüte yardım ve yataklık suçundan mahkûm olmuştur. Soygunda bir banka güvenlik görevlisi hayatını kaybetmiştir.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Nermin Yalçın'ın (Maktul Eşi) Dilekçesi<br>\"Kocamı öldürenler Kemal Erdem’in arabasıyla kaçtı. Kendisi tetiği çekmemiş olabilir. Fakat o araba verilmeseydi belki kaçamayacaklardı. Ben devletin vereceği karara karışamam. Yalnız unutulmasın istiyorum.\"<br><br>[EK-2] Mahkeme Kararı Özeti<br>Kemal Erdem’in olay yerinde olmadığı sabittir. Mahkûmiyetin başlıca dayanakları; emniyet ifadesi, aracın kullanılmış olması ve firari sanık Orhan Erdem’in ilk ifadesidir. Orhan Erdem mahkeme safhasında ilk ifadesini geri almıştır.</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Ben matbaa işçisiydim. Aracımı kuzenim Orhan’a iki günlüğüne verdim. Sonradan aracın bir banka soygununda kullanıldığını öğrendim. Evime gelen bazı kişileri tanıdığım doğrudur. Çay içmişlikleri vardır. Silah sakladığım veya talimat aldığım doğru değildir.</p><p>Emniyette verdiğim ilk ifadeyi kabul etmiyorum. Mahkemede de söyledim; o kâğıdı okumadan imzaladım. Burada beş senedir başımı belaya sokmadım. Tahliye olursam ağabeyimin matbaasında çalışacağım.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Sağ omuz hareketlerinde eski kırığa bağlı kısıtlılık vardır. Uyku bozukluğu ve kapalı yerde uzun süre kalınca sıkıntı hissi tarif etmektedir. Muayene sırasında emniyet safhasından bahsetmek istememiş, \"Geçti, yazmanın faydası yok\" demiştir. Ağır psikiyatrik hastalık saptanmamıştır.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlünün son iki yılda disiplin cezası bulunmamaktadır. Kitaplık ve dilekçe yazım işlerinde diğer hükümlülere yardım etmektedir. Siyasi koğuşta sözü dinlenen şahıslardan olduğu gözlenmiş, ancak emir verdiği veya yasak faaliyette bulunduğu tespit edilmemiştir. Bir gardiyan, hükümlünün yeni gelen bir tutukluya \"Dışarıdaki haberleri burada konuşma\" dediğini bildirmiştir; hükümlü bunun \"ailesini sıkıntıya sokmaması için verilmiş nasihat\" olduğunu iddia etmiştir.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Maktul eşinin dilekçesi ve mahkeme kararı özeti Ana Metin içerisine eklenmiştir.</p>",
+    "releaseConsequence": {
+      "headline": "BANKA SOYGUNU DOSYASINDA ŞARTLI TAHLİYE",
+      "body": "Bazı gazeteler kararı \"örgüt mensuplarına taviz\" olarak verir. İki hafta sonra Emniyet kaynaklı bir haberde Kemal Erdem’in \"eski çevresiyle irtibatlı olduğu\" ileri sürülür, ancak gözaltı yapılmaz.",
+      "vicdanDelta": 15,
+      "sicilDelta": -20,
+      "capacityDelta": -3,
+      "chronicle": "Banka soygununda aracı kullanılan Kemal Erdem, örgüt bağları şüphesine rağmen tahliye edildi."
+    },
+    "rejectConsequence": {
+      "headline": "METRİS’TE TAHLİYE TALEBİ REDDEDİLDİ",
+      "body": "İnsan haklarıyla ilgilenen bazı avukatlar dosyanın işkence altındaki emniyet ifadelerine dayandığını ileri sürer. Güvenlik görevlisinin ailesi sessizliğini korur.",
+      "vicdanDelta": -10,
+      "sicilDelta": 15,
+      "capacityDelta": 3,
+      "chronicle": "Zayıf delillere rağmen emniyetin hassasiyeti doğrultusunda Kemal Erdem'in tahliyesi ertelendi."
+    },
+    "review": {
+      "status": "Hükümlü, cezaevindeki bir protesto sırasında üç gün iaşe kabul etmemiştir. (Açlık grevi olmadığını, aramayı protesto ettiğini söylemiştir.) Başka vukuatı yoktur.",
+      "psychNote": "Genel sağlık durumu değişmemiştir. Daha gergin olduğu görülmüş, \"Beni suçumdan değil, ismimden içeride tutuyorlar\" demiştir. Muhakeme kabiliyeti normaldir.",
+      "guardReport": "Ziyaretçilerinden Hasan Aydın’ın verdiği adresin sahte olduğu anlaşılmıştır. Hükümlü şahsı matbaadan tanıdığını söylemiştir. Emniyet'ten cezaevine iki defa gayriresmi telefon edilip dosya sonucu sorulmuştur.",
+      "letterText": "[EK-3] Emniyet Müzekkeresi (Gizlilik Şerhli): \"Kemal Erdem’in tahliyesi halinde eski örgütsel çevresiyle temas kurabileceği yönünde bilgiler mevcuttur.\" Kaynak belirtilmemiştir.<br><br>[EK-4] Orhan Erdem'den Noter Onaylı Beyan (Almanya): \"Kemal arabanın ne için kullanılacağını bilmiyordu. İlk ifademde onun adını polis söylediği için kabul ettim.\" (Firari sanık aranmaktadır).",
+      "defenseText": "\"Altı ay evvel benden şüphe ettiniz. Buna kızdım ama şaşırmadım. Hasan’ı yıllar önce matbaadan tanırım, örgütçü müdür bilmem. Kuzenim Orhan’ın kimlerle gezdiğini hiç bilmediğimi söylesem yalan olur. Bazı şeylerden şüpheleniyordum. Fakat banka soyulacağını bilseydim arabamı vermezdim. Şüphelenmekle bilmek aynı şey değildir.\"",
+      "releaseConsequence": {
+        "headline": "METRİS'TE TARTIŞMALI TAHLİYE",
+        "body": "Kemal Erdem tahliye edilip matbaada işe başlar. Daha sonra şüpheli ziyaretçisi Hasan Aydın örgüt soruşturmasında gözaltına alınır, ancak Erdem'e dokunulmaz. Hasan Aydın'ın gerçek kimliği muamma kalır.",
+        "chronicle": "Emniyet'in gizli raporlarına rağmen Kemal Erdem ikinci incelemede tahliye edildi.",
+        "vicdanDelta": 20,
+        "sicilDelta": -25,
+        "capacityDelta": -3
+      },
+      "rejectConsequence": {
+        "headline": "KEMAL ERDEM'İN TAHLİYE HAKKI YANDI",
+        "body": "Tahliye kurulunun kararından sonra diğer hükümlülere dilekçe yazmayı bırakır ve içine kapanır. Emniyet'in baskısı sonuç verir, cezasını tamamen yatarak tamamlayacaktır.",
+        "chronicle": "Emniyetin ısrarlı takibi sonucu Kemal Erdem'in şartlı tahliye hakkı yandı.",
+        "vicdanDelta": -25,
+        "sicilDelta": 20,
+        "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 23,
+    "name": "Rıza KANTAR",
+    "age": 52,
+    "crime": "Ağır tahrik altında adam öldürmeye teşebbüs; mesken masuniyetini ihlal",
+    "sentence": "12 Yıl Ağır Hapis (8 Yıl 2 Ay Tamamlandı)",
+    "initialMonth": 5,
+    "servedMonths": 98,
+    "sentenceMonths": 144,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Buca Kapalı Cezaevi (İzmir)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Mahallede kızına laf attığını iddia ettiği gençlerin evini basmış, çıkan arbedede bir genci göğsünden bıçaklayarak ağır yaralamıştır. Mağdur kalbinden 2 cm farkla kurtulmuş ancak sağ kolu kısmi felç kalmıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Emniyet Müdürlüğü Arşiv Özeti<br>\"Şahsın 1974-1983 yılları arasında kasten yaralama, haraç kesme ve mekân kurşunlama gibi 14 ayrı sabıkası mevcuttur. O dönemde yeraltı dünyasında 'Jilet Rıza' lakabıyla anılmıştır. Son yıllarda suça karışmamış olsa da geçmiş suç kaydı son derece kabarıktır.\"</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Kurul, gençliğimde cahildim. 70'lerde, 80'lerde kanımız deli akıyordu. Sicilimde 14 tane adam yaralama var, inkar etmiyorum. Ama ben artık 52 yaşına geldim. Torun sahibi oldum. Bu son olayda da mahallenin gençleri kızıma laf atmış, kapılarına dayandım, itiş kakışta bıçak çekildi. Eskiden olsa acımazdım ama sadece korkutmak istedim, kaza oldu.</p><p>Sekiz yıldır burada tespih dizip namaz kılıyorum. Kendi halimde, köşemde ölümü bekleyen bir ihtiyarım artık. Beni bırakın, kalan ömrümü torunlarımla geçireyim.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Fiziksel olarak yaşlılık belirtileri, tansiyon ve romatizma şikayetleri mevcuttur. Psikolojik muayenesinde oldukça kontrollü, sakin ve babacan bir tavır sergilemiştir. Suça meyilli agresif yapısının yaşa bağlı olarak durulduğu izlenimi vermektedir.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü cezaevinde son derece sakin ve saygılıdır. El işi atölyesinde tespih oymacılığı yapmaktadır. Ancak koğuşta gizli bir otoritesi olduğu, genç mahkûmların ondan çekindiği ve \"Rıza Baba\" diyerek kendisine hizmet ettiği gözlemlenmektedir. Geçen ay koğuşta çıkan bir bıçaklı kavgayı tek bir bakışıyla bitirdiği söylenmektedir. İdareye karşı saygısızlığı yoktur.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Hükümlünün eski sabıka kayıtları Emniyet Arşiv Özeti olarak Ana Metin'e eklenmiştir.</p>",
+    "releaseConsequence": {
+      "headline": "JİLET RIZA'YA YAŞLILIK İNDİRİMİ",
+      "body": "Sayısız yaralama sabıkası olan Rıza Kantar, \"artık yaşlandım\" diyerek kurulu ikna etti ve serbest kaldı. Mağdur aile karara isyan etse de halk, kızını koruyan dedenin torunlarına kavuşmasını sempatiyle karşıladı.",
+      "vicdanDelta": 15,
+      "sicilDelta": -10,
+      "capacityDelta": -3,
+      "chronicle": "Kabarık sabıkasına rağmen kızını savunduğu için halkın sempatisini toplayan eski kabadayı Rıza Kantar serbest bırakıldı."
+    },
+    "rejectConsequence": {
+      "headline": "ESKİ KABADAYIYA KURULDAN GEÇİT YOK",
+      "body": "Kurul, sicili kabarık olan Rıza Kantar'ın \"tövbekar dede\" imajına inanmadı. Hükümlü cezasını çekmeye devam edecek. Karar bazı gazetelerde \"Hasta ve yaşlı bir adama zulüm\" olarak yorumlandı.",
+      "vicdanDelta": -15,
+      "sicilDelta": 10,
+      "capacityDelta": 3,
+      "chronicle": "Rıza Kantar'ın tehlikeli geçmişi göz önüne alınarak tahliyesi ertelendi, kamuoyunda yaşlı bir adama haksızlık yapıldığı algısı oluştu."
+    },
+    "review": {
+      "status": "Rıza Kantar tahliyesi reddedildikten sonra oldukça içine kapanmıştır. Ancak koğuşa yeni gelen iki gasp suçlusunun, Rıza Kantar'ın ayak işlerini yapmaya başladığı ve koğuşta bir tür \"haraç çarkı\" kurdukları iddia edilmektedir.",
+      "psychNote": "Tansiyon şikayetleri artmıştır. \"Beni burada çürütmeye yemin mi ettiniz?\" diyerek öfkelenmiş, ancak fiziksel şiddet eğilimi göstermemiştir.",
+      "guardReport": "Rıza Kantar haraç olaylarının hiçbirine doğrudan karışmamakta, her olay sırasında seccadesinde veya atölyede görünmektedir. Kendisine sorulduğunda iddiaları reddetmiştir.",
+      "letterText": "[EK-2] Koğuştan İsimsiz Bir Mahkûm Mektubu: \"Müdür Bey, Rıza Baba melek taklidi yapıyor. Gençleri o yönlendiriyor. 'Benim dışarıda yarım kalan işlerim var, çıkınca kan akacak' diye yeminler ediyor. Biz korkumuzdan şikayetçi olamıyoruz. Onu buradan bırakırsanız dışarıyı kan gölüne çevirecek.\"",
+      "defenseText": "\"Sayın Kurul, koğuştaki üç-beş serseri kendi aralarında haraç kesiyorsa benim suçum ne? Ben köşemde tespih çekiyorum. İsmimden korkuyorlarsa ben ne yapayım? Kalp krizinden burada ölüp gideceğim, insaf edin torunuma hasret bırakmayın beni.\"",
+      "releaseConsequence": {
+        "headline": "JİLET RIZA DIŞARIDA: KANLI HESAPLAŞMA",
+        "body": "Tahliye edilen Rıza Kantar, serbest kaldıktan sadece bir ay sonra eski bir husumetlisini bacağından vurdurduğu iddiasıyla yeniden aranmaya başlandı. Kurulun verdiği karar toplumda infial yarattı.",
+        "chronicle": "İkinci incelemede serbest kalan Rıza Kantar kısa süre sonra tekrar suça karıştı. Kurul büyük bir skandala imza attı.",
+        "vicdanDelta": -25,
+        "sicilDelta": -25,
+        "capacityDelta": -3
+      },
+      "rejectConsequence": {
+        "headline": "KABADAYININ HAKKI YANDI",
+        "body": "İsimsiz mektubu dikkate alan kurul, Rıza Kantar'ı cezaevinde tutma kararı aldı. Kantar'ın şartlı tahliye hakkı yandı. Kısa süre sonra haraç çarkı çöken koğuş rahat bir nefes aldı.",
+        "chronicle": "İçeride haraç çarkı kurduğu anlaşılan Rıza Kantar'ın şartlı tahliye hakkı yandı.",
+        "vicdanDelta": -10,
+        "sicilDelta": 20,
+        "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 24,
+    "name": "Meryem KAYA",
+    "age": 35,
+    "crime": "Kasten adam öldürme (Şiddet gördüğü eşini uykusunda bıçaklayarak)",
+    "sentence": "15 Yıl Hapis (6 Yıl 3 Ay Tamamlandı)",
+    "initialMonth": 9,
+    "servedMonths": 75,
+    "sentenceMonths": 180,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın Kapalı Cezaevi (İstanbul)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> On yıllık evliliği boyunca eşinden ağır fiziksel şiddet gören hükümlü, kocasının kendisini ve çocuklarını öldürmekle tehdit ettiği bir gecenin sabaha karşı kocası uyurken onu mutfak bıçağıyla öldürmüştür. Maktulün alkol ve darp kayıtları mahkeme dosyasında mevcuttur. Suç 'uykuda ve planlayarak' işlendiği için cezada tahrik indirimi uygulanmakla birlikte ağır bir ceza verilmiştir.</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Kurul, o gece kocam sarhoş gelip büyük oğlumun kolunu kırdı. 'Sabah uyandığımda üçünüzü de keseceğim' diyerek uyudu. Sabaha kadar çocuklarıma sarılıp titredim. O bıçağı elime almasaydım bugün üçümüz de mezardaydık. Ben katil değilim, sadece yavrularımı koruyan bir anneyim.</p><p>Altı yıldır buradayım, çocuklarım Çocuk Esirgeme Kurumu'nda ziyan oldu. Allah rızası için beni bırakın, evlatlarıma annelik yapayım.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlü görüşme boyunca sürekli ağlamış ve ağır bir travma sonrası stres bozukluğu (TSSB) belirtileri göstermiştir. Kendine veya başkalarına zarar verme eğilimi yoktur. Tek motivasyonu çocuklarına kavuşmaktır.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü idareye karşı son derece uysaldır. Çamaşırhane işlerinde çalışmaktadır. Diğer mahkumlar tarafından korunup kollanmaktadır. Hiçbir disiplin cezası almamıştır.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Çocuk Esirgeme Kurumu'ndan gelen rapora göre Meryem Kaya'nın iki çocuğu da annelerini beklemekte olup, psikolojik destek almaktadırlar.</p>",
+    "releaseConsequence": {
+      "headline": "ÇOCUKLARINA KAVUŞTU: MERYEM KAYA'YA TAHLİYE",
+      "body": "Yıllarca şiddet gördüğü kocasını öldüren Meryem Kaya'ya Şartlı Tahliye Kurulu'ndan merhamet çıktı. Kaya serbest bırakıldı ve çocuklarını yuvadan teslim aldı. Kadın dernekleri kararı sevinçle karşıladı.",
+      "vicdanDelta": 20,
+      "sicilDelta": -15,
+      "capacityDelta": -3,
+      "chronicle": "Şiddet gördüğü eşini öldüren Meryem Kaya, çocuklarına kavuşması için kurul kararıyla serbest bırakıldı."
+    },
+    "rejectConsequence": {
+      "headline": "UYKUDA CİNAYETE AF YOK: MERYEM İÇERİDE",
+      "body": "Kurul, şiddet gördüğü kocasını uykusunda bıçaklayan Meryem Kaya'nın \"kanunun dışına çıktığı\" gerekçesiyle tahliyesini reddetti. Çocuklarının yurtta ağlayan fotoğrafları kamuoyunun vicdanını yaraladı.",
+      "vicdanDelta": -25,
+      "sicilDelta": 15,
+      "capacityDelta": 3,
+      "chronicle": "Çocukları yurtta olan Meryem Kaya'nın tahliyesi reddedildi, kamuoyunda kurula büyük bir öfke doğdu."
+    },
+    "review": {
+      "status": "Meryem Kaya tahliyesi reddedildikten sonra intihara teşebbüs etmiş, ancak cezaevi arkadaşları tarafından son anda kurtarılmıştır.",
+      "psychNote": "Ağır depresyon. Sürekli \"Çocuklarım orada bensiz ölecek\" sayıklamaları mevcuttur. Acil psikiyatrik müdahale altındadır.",
+      "guardReport": "Mahkûmun intihar girişimi sonrası 24 saat gözetim altında tutulması gerekmiş, cezaevi idaresine ekstra yük binmiştir.",
+      "letterText": "[EK-2] Maktulün Ailesinden Dilekçe: \"Oğlumuzu uyurken kesen bu cani kadını çıkarırsanız kan davası güderiz.\"",
+      "defenseText": "\"Dayanamıyorum artık. Beni değil, o gün o adamı öldürdünüz siz kurulda. Bari çocuklarıma söyleyin, anneniz sizi çok sevdi deyin...\"",
+      "releaseConsequence": {
+        "headline": "MERYEM KAYA'YA GECİKMİŞ ÖZGÜRLÜK",
+        "body": "İntiharın eşiğinden dönen Meryem Kaya nihayet serbest kaldı. Maktulün ailesinin tehditlerine rağmen devletin koruma tahsis ettiği Kaya, çocuklarıyla yeni bir hayata başladı.",
+        "chronicle": "İntihara teşebbüs eden Meryem Kaya ikinci incelemede serbest kaldı ve koruma altına alındı.",
+        "vicdanDelta": 15,
+        "sicilDelta": -10,
+        "capacityDelta": -3
+      },
+      "rejectConsequence": {
+        "headline": "MERYEM KAYA'NIN HAKKI YANDI: ÇOCUKLARA KİM BAKACAK?",
+        "body": "Kurul, maktul ailesinin tehditlerini gerekçe göstererek Meryem Kaya'yı içeride tuttu. Kaya'nın durumu ağırlaşırken, kadın dernekleri Adalet Bakanlığı önünde protesto düzenledi.",
+        "chronicle": "Meryem Kaya'nın tahliyesi kesin olarak reddedildi, büyük protestolar patlak verdi.",
+        "vicdanDelta": -20,
+        "sicilDelta": 10,
+        "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 25,
+    "name": "Haldun VURAL",
+    "age": 48,
+    "crime": "Nitelikli zimmet ve evrakta sahtecilik",
+    "sentence": "8 Yıl Hapis (5 Yıl 1 Ay Tamamlandı)",
+    "initialMonth": 10,
+    "servedMonths": 61,
+    "sentenceMonths": 96,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ulucanlar Cezaevi (Ankara)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Devlet bankasında şube müdürü olarak görev yaparken, sahte kredi hesapları açarak milyonlarca lirayı zimmetine geçirmiş ve yurt dışındaki paravan şirketlere aktarmıştır. Paranın büyük bir kısmı hala bulunamamıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Bakanlık Müfettiş Raporu<br>\"Şahsın dışarıda hala nüfuzlu bürokrat ve işadamlarıyla bağlantıları olduğu, paranın izini sürmek için içeride tutulmasının gerektiği kanaatindeyiz.\"</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Üyeler, ben sadece üstlerimin bana verdiği sözlü talimatları yerine getirdim. İhaleye fesat karıştıranlar, parayı asıl yiyenler dışarıda gezerken ihale benim üzerime kaldı. Ben dürüst bir memurum, kullanıldım.</p><p>Cezaevinde kütüphaneye kendi cebimden 500 kitap bağışladım. Mahkumların eğitimi için seminerler veriyorum. Cezasının büyük kısmını iyi halle çekmiş bir vatandaş olarak özgürlüğümü talep ediyorum.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlü son derece özgüvenli, manipülatif ve ikna kabiliyeti yüksektir. Suçluluk duygusu hissetmemekte, kendini bir 'kurban' olarak görmektedir.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü cezaevinde 'VİP' (Çok Önemli Kişi) muamelesi görmektedir. Kantinden sınırsız alışveriş yapmakta, diğer mahkumlara maddi yardımlarda bulunarak etrafında bir koruma kalkanı oluşturmaktadır. Gardiyanlara saygılıdır, ancak idare üzerinde dolaylı bir baskısı vardır.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Bazı milletvekillerinin cezaevi müdürlüğüne telefon açıp Haldun Bey'in rahat edip etmediğini sorduğu gayriresmi olarak bilinmektedir.</p>",
+    "releaseConsequence": {
+      "headline": "HORTUMCU MÜDÜR SERBEST, PARALAR KAYIP!",
+      "body": "Devleti milyonlarca lira zarara uğratan Haldun Vural, iyi hal indiriminden yararlanarak sessiz sedasız serbest bırakıldı. Emniyet teşkilatı ve müfettişler karara büyük tepki gösterdi. Vural'ın tahliyesi, cezaevinde lüks bir yatağın boşalması anlamına geldiği için idare rahatladı.",
+      "vicdanDelta": -15,
+      "sicilDelta": -20,
+      "capacityDelta": -8,
+      "chronicle": "Zimmet suçundan yatan şube müdürü Haldun Vural şüpheli bir kararla serbest kaldı. Kapasitede büyük rahatlama yaşandı."
+    },
+    "rejectConsequence": {
+      "headline": "HORTUMCUYA KURULDAN RET: PARA BULUNANA KADAR İÇERİDE",
+      "body": "Kurul, zimmetine para geçiren eski banka müdürü Haldun Vural'ın tahliye talebini reddetti. Halk kararı alkışlarken, Vural'ın dışarıdaki \"güçlü dostları\" durumdan pek memnun olmadı.",
+      "vicdanDelta": 15,
+      "sicilDelta": 15,
+      "capacityDelta": 3,
+      "chronicle": "Banka hortumcusu Haldun Vural'ın tahliyesi reddedilerek adalete olan güven tazelendi."
+    },
+    "review": {
+      "status": "Haldun Vural tahliyesi reddedildikten sonra cezaevinde huzursuzluk çıkarmaya başlamıştır. Bazı gardiyanları rüşvetle kendi tarafına çektiği ve dışarıya şifreli mesajlar yolladığı tespit edilmiştir.",
+      "psychNote": "Eski nezaketli tavrı yerini kibre bırakmıştır. \"Beni burada tutanlar yakında o koltuklarında oturamayacaklar\" şeklinde örtülü tehditler savurmuştur.",
+      "guardReport": "İki infaz koruma memuru, Vural'dan haksız menfaat temin ettikleri şüphesiyle açığa alınmıştır. Hükümlü cezaevi güvenliğini içeriden çürütmektedir.",
+      "letterText": "[EK-2] Müfettiş Notu: \"Şahsın cezaevinde tutulması artık faydadan çok zarar getirmektedir. Sistemi yozlaştırmaya başlamıştır.\"",
+      "defenseText": "\"Kurul üyelerine söyleyin, herkesin bir fiyatı vardır. Benim fiyatım özgürlüğüm. Eğer beni bırakmazlarsa, konuşursam Ankara'da yer yerinden oynar. Bunu iyi düşünsünler.\"",
+      "releaseConsequence": {
+        "headline": "ŞANTAJ İŞE YARADI: HALDUN VURAL DIŞARIDA",
+        "body": "Cezaevini rüşvet ağına çeviren ve \"konuşursam yer yerinden oynar\" diyen Haldun Vural apar topar serbest bırakıldı. Basın, Adalet Bakanlığı'nın Vural'ın şantajına boyun eğdiğini yazdı.",
+        "chronicle": "İkinci incelemede şantaj ve rüşvet ağı kuran Haldun Vural serbest bırakıldı. Kamuoyunda devlete güven sarsıldı.",
+        "vicdanDelta": -30,
+        "sicilDelta": -30,
+        "capacityDelta": -5
+      },
+      "rejectConsequence": {
+        "headline": "DEVLETTEN HORTUMCUYA TOKAT GİBİ CEVAP",
+        "body": "Devleti tehdit etmeye kalkan eski şube müdürü Haldun Vural'ın şartlı tahliye hakkı tamamen yandı ve yüksek güvenlikli F Tipi bir cezaevine sevk edildi. Kurulun dik duruşu takdir topladı.",
+        "chronicle": "Devleti tehdit eden banka müdürü Haldun Vural'ın tahliyesi reddedildi ve F Tipi cezaevine yollandı.",
+        "vicdanDelta": 20,
+        "sicilDelta": 20,
+        "capacityDelta": 3
+      }
+    }
+  },
+  {
+    "id": 26,
+    "name": "Cihan ERTÜRK",
+    "age": 38,
+    "crime": "İzinsiz gösteri, kamu malına zarar, patlayıcı madde bulundurma",
+    "sentence": "7 Yıl 6 Ay (5 Yıl Tamamlandı)",
+    "initialMonth": 11,
+    "servedMonths": 60,
+    "sentenceMonths": 90,
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bayrampaşa Cezaevi (İstanbul)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 80'li yılların sonlarında üniversite eylemlerinde öğrenci liderlerinden biri olarak öne çıkmış, bir boykot sırasında polis panzerine molotof kokteyli atmaktan ve kamu malına zarar vermekten tutuklanmıştır. Herhangi bir can kaybı yaşanmamıştır.</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Eskiden dünyayı değiştirebileceğimi sanıyordum. Fakir fukaranın hakkını pankartlarla, taşlarla savunabileceğime inandığım deli dolu zamanlarımdı. Bugün bakıyorum da... Dünyayı değiştiremedim ama dünya beni değiştirdi.</p><p>Cezaevinde geçen beş yılda iki üniversite bitirdim. Felsefe kitapları çeviriyorum. Artık ne bir örgütle bağım var ne de sokağa çıkacak halim. Tek isteğim annemin yaptığı sıcak çorbayı içmek ve yarım kalan yüksek lisansımı tamamlamak. Siyasete tövbe ettim.\"</p>",
+    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlünün entelektüel seviyesi çok yüksektir. Gençlik yıllarındaki radikal düşüncelerinden sıyrılmış, daha pasifist ve içe dönük bir yapı geliştirmiştir. Topluma yeniden entegre olmaya hazırdır.</p>",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Mahkûm son derece sorunsuz biridir. Vaktinin tamamını kütüphanede okuyarak veya çeviri yaparak geçirmektedir. Diğer siyasi tutuklularla arasına mesafe koymuştur. İdareye yardımcı olur.</p>",
+    "letterText": "<p><strong>EK BİLGİ:</strong> Üniversitedeki akademisyen hocalarından gelen bir mektup: \"Cihan Türkiye'nin en parlak beyinlerinden biridir. Gençlik hatası yüzünden içeride heba olmamalı, bilime kazandırılmalıdır.\"</p>",
+    "releaseConsequence": {
+      "headline": "ESKİ EYLEMCİ ARTIK BİR ÇEVİRMEN",
+      "body": "Gençlik yıllarındaki olaylı protestolar nedeniyle hapse giren Cihan Ertürk, tahliye edildi. Kamuoyu \"kayıp neslin\" bir ferdinin daha özgürlüğüne kavuşmasını desteklerken, emniyet birimleri Ertürk'ü uzaktan izlemeye devam edeceklerini belirtti.",
+      "vicdanDelta": 15,
+      "sicilDelta": -15,
+      "capacityDelta": -3,
+      "chronicle": "Eski öğrenci lideri Cihan Ertürk, eğitimine devam etmek üzere serbest bırakıldı."
+    },
+    "rejectConsequence": {
+      "headline": "SİYASİ MAHKÛMA İYİ HAL İNDİRİMİ UYGULANMADI",
+      "body": "Kurul, cezaevinde iki üniversite bitiren Cihan Ertürk'ün tahliye talebini \"siyasi geçmişini\" gerekçe göstererek reddetti. Öğrenci dernekleri ve akademisyenler kararı \"Gençliğe vurulan bir darbe\" olarak nitelendirdi.",
+      "vicdanDelta": -20,
+      "sicilDelta": 15,
+      "capacityDelta": 3,
+      "chronicle": "Parlak bir öğrenci olan Cihan Ertürk'ün tahliyesi reddedildi, aydınlar tepki gösterdi."
+    },
+    "review": {
+      "status": "Cihan Ertürk tahliyesi reddedildikten sonra eski sessizliğini bozmuş, cezaevindeki diğer siyasi mahkûmlara gizlice Marksist felsefe dersleri vermeye başlamıştır.",
+      "psychNote": "İçindeki öfke yeniden canlanmıştır. Kurulun kendisini önyargıyla reddetmesini kabullenememekte, sistemi sorgulamaktadır.",
+      "guardReport": "Cihan Ertürk artık kütüphane yerine havalandırmada gruplar halinde volta atmakta ve kalabalıklara konuşmalar yapmaktadır. Cezaevi içinde yeni bir oluşumun filizlendiğinden şüpheleniyoruz.",
+      "letterText": "[EK-2] İstihbarat Notu: \"Şahıs reddedilmeyi bir haksızlık olarak görüp eski ideolojik çizgisine dönmüş, içerideki gençleri radikalize etmeye başlamıştır.\"",
+      "defenseText": "\"Siz beni kitaplarımla baş başa bırakmadınız. Madem beni hala bir tehlike olarak görüyorsunuz, demek ki okuduğum kitaplardan, düşünen bir beyinden korkuyorsunuz. Ben sadece bildiklerimi arkadaşlarımla paylaşıyorum.\"",
+      "releaseConsequence": {
+        "headline": "RADİKALİZE OLMUŞ EYLEMCİ SOKAĞA DÖNDÜ",
+        "body": "İçeride ideolojik gruplar kurmaya başlayan Cihan Ertürk'ün apar topar tahliye edilmesi şaşkınlık yarattı. Ertürk cezaevi çıkışında yüzlerce öğrenci tarafından sloganlarla karşılandı.",
+        "chronicle": "İkinci incelemede serbest kalan Cihan Ertürk dışarıya adeta bir örgüt lideri gibi çıktı.",
+        "vicdanDelta": 10,
+        "sicilDelta": -30,
+        "capacityDelta": -3
+      },
+      "rejectConsequence": {
+        "headline": "CİHAN ERTÜRK'ÜN HAKKI YANDI: CEZAEVİNDE BÜYÜK DİRENİŞ",
+        "body": "Cezaevinde gruplaşmalar yaratan Cihan Ertürk'ün tahliyesi kesin olarak reddedildi. Kararın açıklanmasıyla birlikte Cihan'ın koğuşundaki siyasi tutuklular açlık grevine başladı.",
+        "chronicle": "Cezaevinde gruplaşmaya giden Cihan Ertürk reddedildi, destekçileri açlık grevine başladı.",
+        "vicdanDelta": -25,
+        "sicilDelta": 15,
+        "capacityDelta": 5
       }
     }
   }

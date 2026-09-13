@@ -1,7 +1,7 @@
 // Takvim ayları sıfır tabanlıdır: 0 = Ocak 1991, 12 = Ocak 1992.
 const SAVE_KEY = 'af_kurulu_calendar_v2';
 const SETTINGS_KEY = 'af_kurulu_settings_v1';
-const RIOT_CAPACITY = 115;
+const RIOT_CAPACITY = 110;
 const months = ['OCAK', 'ŞUBAT', 'MART', 'NİSAN', 'MAYIS', 'HAZİRAN', 'TEMMUZ', 'AĞUSTOS', 'EYLÜL', 'EKİM', 'KASIM', 'ARALIK'];
 const initialMonths = typeof cases !== 'undefined' ? cases.map(c => c.initialMonth) : [0, 0, 1, 2, 2, 2, 3, 3, 3, 3, 4, 4, 5, 5, 5, 5, 6, 6];
 const servedMonths = typeof cases !== 'undefined' ? cases.map(c => c.servedMonths) : [25, 50, 54, 38, 25, 18, 48, 30, 28, 171, 44, 32, 36, 110, 60, 152, 50, 49];
@@ -201,6 +201,9 @@ if (typeof document !== 'undefined' && typeof document.addEventListener === 'fun
 
 // 1991 Kırmızı Masa Telefonu Çağrıları (Baskı, rüşvet ve sokak istihbaratı diyalogları)
 const phoneCalls = {
+  '27_0': { caller: 'Ankara Büyükşehir Eski Başkanı', callerDept: 'ANKARA - ÖZEL HAT', dialogue: 'Sayın Başkanım, Kadir Yılmaz benim çok eski ve değerli bir dostumdur. İçeride yeterince yattı. Yarım kalan inşaat projelerimiz var, memleket ekonomisi için Kadir\'in dışarı çıkması şart. Bu dosyada pürüz istemiyorum, onayınızı bekliyorum. Aksi halde Ankara\'daki itibarınızı gözden geçirmeniz gerekir.' },
+  '28_0': { caller: 'İstihbarat Daire Başkan Yardımcısı', callerDept: 'ANKARA - İSTİHBARAT ŞUBE', dialogue: 'Komisyon Başkanı, Sarı Selim dosyası elinizde. Bu adamın dışarı çıkması demek sokakların yeniden kan gölüne dönmesi demek. Eski siyasi ortaklarını tehdit etmeye başlamış, içeride kalmalı! Dosyasına ret basın. Eğer onaylarsanız doğacak güvenlik zafiyetinden tamamen siz sorumlu tutulacaksınız.' },
+
   '17_0': { caller: 'Bakanlık Müsteşar Yardımcısı Rıfat Bey', callerDept: 'ANKARA · MAKAM SANTRALİ', dialogue: 'Başkanım, Turgut Bey’in dosyası bugün önünüzde. Mağdurla mesele kapandı, karşılıklı anlaştılar diye bilgi geldi. Bunca hizmeti olan bir insanı artık ailesine kavuşturalım. Bu dosyada olumlu karar bekliyoruz; aksi durumda kurulun uygulamalarını ayrıca incelememiz gerekecek.' },
   '17_1': { caller: 'Bakanlık Müsteşar Yardımcısı Rıfat Bey', callerDept: 'ANKARA · MAKAM SANTRALİ', dialogue: 'Turgut Bey için altı ay bekledik. Dernek teklifini reddetmiş, ayrı adrese gidecekmiş; artık dosyanın kapanmasını bekliyoruz. Mağdurla anlaşma belgesi yoksa bu konuyu uzatmayın. Vereceğiniz kararın gerekçesini şahsen görmek istiyorum.' },
 
@@ -247,10 +250,13 @@ let activePhoneCall = null;
 let phoneInterval = null;
 let phoneAnswered = false;
 let phoneIgnored = false;
+let phoneVoiceAudio = null;
 
 function freshGame() {
+  const q = cases.map((c, i) => ({ id: c.id, month: c.initialMonth ?? initialMonths[i], firstMonth: c.initialMonth ?? initialMonths[i], review: 0, previous: null }));
+  q.sort((a,b) => a.month - b.month || a.id - b.id);
   return { version: 2, vicdan: 50, sicil: 50, capacity: 104, history: [], activeTab: 'main', phase: 'review',
-    queue: cases.map((c, i) => ({ id: c.id, month: c.initialMonth ?? initialMonths[i], firstMonth: c.initialMonth ?? initialMonths[i], review: 0, previous: null })),
+    queue: q,
     meetingPosition: 1, pending: null };
 }
 
@@ -643,6 +649,15 @@ function answerPhone() {
   stopPhoneRinging();
   document.getElementById('ringingPhoneOverlay')?.classList.add('hidden');
   if (typeof playPhonePickupSound === 'function') playPhonePickupSound();
+  
+  if (typeof gameSettings !== 'undefined' && gameSettings.sound) {
+    if (!phoneVoiceAudio) {
+      phoneVoiceAudio = new Audio('phone1.ogg');
+      phoneVoiceAudio.loop = true;
+    }
+    phoneVoiceAudio.play().catch(e => console.warn('Audio play failed:', e));
+  }
+
   phoneAnswered = true;
 
   const dateInfo = dateFor(gameState.queue[0]?.month || 0);
@@ -664,6 +679,12 @@ function closePhoneModal() {
   if (typeof playPhoneHangupSound === 'function') playPhoneHangupSound();
   document.getElementById('phoneModal')?.classList.add('hidden');
   document.getElementById('ringingPhoneOverlay')?.classList.add('hidden');
+  
+  if (phoneVoiceAudio) {
+    phoneVoiceAudio.pause();
+    phoneVoiceAudio.currentTime = 0;
+  }
+  
   checkAndTriggerPhoneCall();
 }
 

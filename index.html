@@ -739,11 +739,14 @@
         <span id="phoneRingPing" class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full animate-ping"></span>
         <span id="phoneRingBadge" class="absolute -top-2 -right-2 w-6 h-6 bg-red-600 border-2 border-white rounded-full flex items-center justify-center text-xs text-white font-bold shadow">!</span>
       </div>
-      <div class="text-center">
+      <div class="text-center mb-6">
         <div class="text-xs font-mono font-bold tracking-widest text-red-400 uppercase animate-pulse">DAHİLİ KRİPTO HATTI ÇALIYOR</div>
         <div class="text-base font-bold font-typewriter text-stone-100 mt-1">AHİZEYİ KALDIR</div>
-        <div class="text-[11px] font-mono text-amber-300 mt-1">Görüşmeyi dinlemek için dokunun ➔</div>
+        <div class="text-[11px] font-mono text-amber-300 mt-1">Görüşmeyi dinlemek için dokunun 📞</div>
       </div>
+    </button>
+    <button type="button" onclick="ignorePhone()" class="absolute bottom-16 sm:bottom-24 bg-stone-900/90 hover:bg-stone-800 border border-stone-600 text-stone-300 py-3 px-8 rounded-xl text-sm font-typewriter font-bold uppercase transition flex items-center justify-center gap-2 cursor-pointer shadow-lg active:scale-95">
+      <span>❌</span> MEŞGULE AT
     </button>
   </div>
   </div>
@@ -831,13 +834,10 @@
         <p id="phoneDialogueText" class="italic text-stone-200 leading-relaxed">"..."</p>
       </div>
 
-      <!-- Ahizeyi Kapat / Meşgule At Butonları -->
-      <div class="grid grid-cols-2 gap-2">
-        <button type="button" onclick="ignorePhone(); closePhoneModal();" class="bg-stone-850 hover:bg-stone-800 border border-stone-700 text-stone-300 py-2.5 rounded-lg text-xs font-typewriter font-bold uppercase transition flex items-center justify-center gap-1.5 cursor-pointer">
-          <span>🚫</span> MEŞGULE AT
-        </button>
-        <button type="button" onclick="closePhoneModal()" class="bg-red-900 hover:bg-red-800 border border-red-700 text-red-100 py-2.5 rounded-lg text-xs font-typewriter font-bold uppercase transition flex items-center justify-center gap-1.5 cursor-pointer shadow-md">
-          <span>📞</span> AHİZEYİ KAPAT
+      <!-- Ahizeyi Kapat Butonu -->
+      <div class="grid grid-cols-1 gap-2">
+        <button type="button" onclick="closePhoneModal()" class="bg-red-900 hover:bg-red-800 border border-red-700 text-red-100 py-3 rounded-lg text-sm font-typewriter font-bold uppercase transition flex items-center justify-center gap-1.5 cursor-pointer shadow-md">
+          <span>☎️</span> AHİZEYİ KAPAT
         </button>
       </div>
 
@@ -1143,7 +1143,7 @@
 
         <div class="p-2.5 bg-white/80 rounded border border-stone-300">
           <div class="font-bold text-stone-900 font-mono text-[11px]">🏢 CEZAEVİ KAPASİTESİ (1991 Doluluk Krizi)</div>
-          <p class="text-[11px] text-stone-700 mt-0.5 leading-snug">Tahliye edilen her mahkûm koğuşları rahatlatır (-%3). Tahliye edilmeyenler doluluğu artırır (+%3). Doluluk %115'e ulaşırsa <strong>Kanlı Cezaevi İsyanı</strong> patlak verir.</p>
+          <p class="text-[11px] text-stone-700 mt-0.5 leading-snug">Tahliye edilen her mahkûm koğuşları rahatlatır (-%3). Tahliye edilmeyenler doluluğu artırır (+%3). Doluluk %110'a ulaşırsa <strong>Kanlı Cezaevi İsyanı</strong> patlak verir.</p>
         </div>
 
         <div class="p-2.5 bg-white/80 rounded border border-stone-300">
@@ -1506,7 +1506,7 @@
       // 3. Kapasite Barı
       const capacityEl = document.getElementById('capacityBar');
       const capacityValEl = document.getElementById('capacityValue');
-      const riotCap = typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 115;
+      const riotCap = typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 110;
       const capPercent = Math.min(100, Math.max(0, Math.round(((gameState.capacity - 80) / (riotCap - 80)) * 100)));
       capacityEl.style.width = `${capPercent}%`;
       capacityValEl.textContent = `${gameState.capacity}%`;
@@ -1558,10 +1558,7 @@
       const canShake = typeof gameSettings === 'undefined' || gameSettings.shake;
       if (canShake) {
         if (gameState.vicdan <= 20 || gameState.sicil <= 20) {
-          deskArea.classList.add('danger-level-2');
           paperDossier.classList.add('danger-vignette');
-        } else if (gameState.vicdan <= 35 || gameState.sicil <= 35) {
-          deskArea.classList.add('danger-level-1');
         }
       }
 
@@ -1607,7 +1604,7 @@
       } else if (forcedType === 'MONSTER' || gameState.vicdan <= 0) {
         titleEl.textContent = "FİNAL: TAŞLAŞMIŞ BÜROKRAT (RUHEN ÖLÜ)";
         descEl.textContent = "Kariyerini ve koltuğunu korumak uğruna masumları harcadın. Sicilin lekesiz, Ankara sana bayılıyor; fakat içindeki insan tamamen öldü. Artık Adliye koridorlarında sadece emirleri damgalayan yaşayan bir ölüsün.";
-      } else if (forcedType === 'RIOT' || gameState.capacity >= (typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 115)) {
+      } else if (forcedType === 'RIOT' || gameState.capacity >= (typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 110)) {
         titleEl.textContent = "FİNAL: CEZAEVİNDE BÜYÜK İSYAN";
         descEl.textContent = "Cezaevlerindeki doluluk patladı. Yer yatakları bile dolunca koğuşlarda kanlı isyan patlak verdi. Bakanlık komisyonunuzu lağvetti, hakkınızda adli tahkikat açıldı.";
       } else if (gameState.vicdan >= 50 && gameState.sicil >= 50) {
