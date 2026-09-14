@@ -1,3 +1,18 @@
+// Eski kayıtların arşiv metinleri de güncel dünya adlarını kullanır.
+const worldNameReplacements = [["Ceza ve Tevkifevleri Genel Müdürlüğü","İnfaz Kurumları Genel Dairesi"],["CEZA VE TEVKİFEVLERİ GENEL MÜDÜRLÜĞÜ","İNFAZ KURUMLARI GENEL DAİRESİ"],["Çocuk Esirgeme Kurumu","Çocuk Bakım Dairesi"],["ÇOCUK ESİRGEME KURUMU","ÇOCUK BAKIM DAİRESİ"],["Adalet Bakanlığı","Hukuk ve İnfaz Bakanlığı"],["ADALET BAKANLIĞI","HUKUK VE İNFAZ BAKANLIĞI"],["Ziraat Bankası","Tarven Bankası"],["ZİRAAT BANKASI","TARVEN BANKASI"],["Sağmalcılar","Vardak"],["SAĞMALCILAR","VARDAK"],["Bayrampaşa","Vardak"],["BAYRAMPAŞA","VARDAK"],["Paşakapısı","Nerhisar"],["PAŞAKAPISI","NERHİSAR"],["Cerrahpaşa","Erdemhan"],["CERRAHPAŞA","ERDEMHAN"],["Mercedesli","uzun siyah otomobilli"],["MERCEDESLİ","UZUN SİYAH OTOMOBİLLİ"],["Ulucanlar","Kargan"],["ULUCANLAR","KARGAN"],["Yeşilyurt","Yelvadi"],["YEŞİLYURT","YELVADİ"],["İstanbul","Kardun"],["İSTANBUL","KARDUN"],["Bakırköy","Serenköy"],["BAKIRKÖY","SERENKÖY"],["Ümraniye","Orven"],["ÜMRANİYE","ORVEN"],["Soğanlık","Söğenlik"],["SOĞANLIK","SÖĞENLİK"],["Kapıkule","Batıgeçit"],["KAPIKULE","BATIGEÇİT"],["Türkiye","Velya"],["TÜRKİYE","VELYA"],["Almanya","Velmanya"],["ALMANYA","VELMANYA"],["Üsküdar","Yelhisar"],["ÜSKÜDAR","YELHİSAR"],["Kadıköy","Derenköy"],["KADIKÖY","DERENKÖY"],["Topkapı","Taşgeçit"],["TOPKAPI","TAŞGEÇİT"],["Maltepe","Yeltepe"],["MALTEPE","YELTEPE"],["Çınarlı","Çınarova"],["ÇINARLI","ÇINAROVA"],["Ankara","Ardora"],["ANKARA","ARDORA"],["Metris","Dervan"],["METRİS","DERVAN"],["Kartal","Tarsal"],["KARTAL","TARSAL"],["Merter","Velter"],["MERTER","VELTER"],["Bağdat","Arel"],["BAĞDAT","AREL"],["Bursa","Belra"],["BURSA","BELRA"],["İzmir","İldem"],["İZMİR","İLDEM"],["Sivas","Torvas"],["SİVAS","TORVAS"],["T.C.","VELYA CUMHURİYETİ"],["T.C.","VELYA CUMHURİYETİ"],["Rize","Nerze"],["RİZE","NERZE"],["Buca","Meldar"],["BUCA","MELDAR"],["Moda","Lora"],["MODA","LORA"],["Şile","Sire"],["ŞİLE","SİRE"],["PTT","PHİ"],["PTT","PHİ"],["TEK","VEK"],["TEK","VEK"],[" TL"," VL"],[" TL"," VL"]];
+function migrateWorldNames(value) {
+  if (typeof value === "string") {
+    for (const [oldName, newName] of worldNameReplacements) {
+      const escaped = oldName.replace(/[.*+?^${}()|[\]\\]/g, "\\value = value.split(oldName).join(newName);");
+      value = value.replace(new RegExp("(?<![\\p{L}])" + escaped + ((oldName === "TEK" || oldName === "MODA" || oldName === "Moda") ? "(?![\\p{L}])" : ""), "gu"), () => newName);
+    }
+    return value.replace(/Kurgusal\s+|kurgusal\s+/g, "").replace(/Velya'nin/g, "Velya'nın");
+  }
+  if (Array.isArray(value)) return value.map(migrateWorldNames);
+  if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([key, item]) => [key, migrateWorldNames(item)]));
+  return value;
+}
+
 // Takvim ayları sıfır tabanlıdır: 0 = Ocak 1991, 12 = Ocak 1992.
 const SAVE_KEY = 'af_kurulu_calendar_v2';
 const SETTINGS_KEY = 'af_kurulu_settings_v1';
@@ -201,17 +216,17 @@ if (typeof document !== 'undefined' && typeof document.addEventListener === 'fun
 
 // 1991 Kırmızı Masa Telefonu Çağrıları (Baskı, rüşvet ve sokak istihbaratı diyalogları)
 const phoneCalls = {
-  '27_0': { caller: 'Ankara Büyükşehir Eski Başkanı', callerDept: 'ANKARA - ÖZEL HAT', dialogue: 'Sayın Başkanım, Kadir Yılmaz benim çok eski ve değerli bir dostumdur. İçeride yeterince yattı. Yarım kalan inşaat projelerimiz var, memleket ekonomisi için Kadir\'in dışarı çıkması şart. Bu dosyada pürüz istemiyorum, onayınızı bekliyorum. Aksi halde Ankara\'daki itibarınızı gözden geçirmeniz gerekir.' },
-  '28_0': { caller: 'İstihbarat Daire Başkan Yardımcısı', callerDept: 'ANKARA - İSTİHBARAT ŞUBE', dialogue: 'Komisyon Başkanı, Sarı Selim dosyası elinizde. Bu adamın dışarı çıkması demek sokakların yeniden kan gölüne dönmesi demek. Eski siyasi ortaklarını tehdit etmeye başlamış, içeride kalmalı! Dosyasına ret basın. Eğer onaylarsanız doğacak güvenlik zafiyetinden tamamen siz sorumlu tutulacaksınız.' },
+  '27_0': { caller: 'Ardora Büyükşehir Eski Başkanı', callerDept: 'ARDORA - ÖZEL HAT', dialogue: 'Sayın Başkanım, Kadir Yılmaz benim çok eski ve değerli bir dostumdur. İçeride yeterince yattı. Yarım kalan inşaat projelerimiz var, memleket ekonomisi için Kadir\'in dışarı çıkması şart. Bu dosyada pürüz istemiyorum, onayınızı bekliyorum. Aksi halde Ardora\'daki itibarınızı gözden geçirmeniz gerekir.' },
+  '28_0': { caller: 'İstihbarat Daire Başkan Yardımcısı', callerDept: 'ARDORA - İSTİHBARAT ŞUBE', dialogue: 'Komisyon Başkanı, Sarı Selim dosyası elinizde. Bu adamın dışarı çıkması demek sokakların yeniden kan gölüne dönmesi demek. Eski siyasi ortaklarını tehdit etmeye başlamış, içeride kalmalı! Dosyasına ret basın. Eğer onaylarsanız doğacak güvenlik zafiyetinden tamamen siz sorumlu tutulacaksınız.' },
 
-  '17_0': { caller: 'Bakanlık Müsteşar Yardımcısı Rıfat Bey', callerDept: 'ANKARA · MAKAM SANTRALİ', dialogue: 'Başkanım, Turgut Bey’in dosyası bugün önünüzde. Mağdurla mesele kapandı, karşılıklı anlaştılar diye bilgi geldi. Bunca hizmeti olan bir insanı artık ailesine kavuşturalım. Bu dosyada olumlu karar bekliyoruz; aksi durumda kurulun uygulamalarını ayrıca incelememiz gerekecek.' },
-  '17_1': { caller: 'Bakanlık Müsteşar Yardımcısı Rıfat Bey', callerDept: 'ANKARA · MAKAM SANTRALİ', dialogue: 'Turgut Bey için altı ay bekledik. Dernek teklifini reddetmiş, ayrı adrese gidecekmiş; artık dosyanın kapanmasını bekliyoruz. Mağdurla anlaşma belgesi yoksa bu konuyu uzatmayın. Vereceğiniz kararın gerekçesini şahsen görmek istiyorum.' },
+  '17_0': { caller: 'Bakanlık Müsteşar Yardımcısı Rıfat Bey', callerDept: 'ARDORA · MAKAM SANTRALİ', dialogue: 'Başkanım, Turgut Bey’in dosyası bugün önünüzde. Mağdurla mesele kapandı, karşılıklı anlaştılar diye bilgi geldi. Bunca hizmeti olan bir insanı artık ailesine kavuşturalım. Bu dosyada olumlu karar bekliyoruz; aksi durumda kurulun uygulamalarını ayrıca incelememiz gerekecek.' },
+  '17_1': { caller: 'Bakanlık Müsteşar Yardımcısı Rıfat Bey', callerDept: 'ARDORA · MAKAM SANTRALİ', dialogue: 'Turgut Bey için altı ay bekledik. Dernek teklifini reddetmiş, ayrı adrese gidecekmiş; artık dosyanın kapanmasını bekliyoruz. Mağdurla anlaşma belgesi yoksa bu konuyu uzatmayın. Vereceğiniz kararın gerekçesini şahsen görmek istiyorum.' },
 
   // 5. Vaka: Cemil Bozkurt (İhale Yolsuzluğu & Rüşvet) - İlk İnceleme
   '5_0': {
     caller: 'Bakanlık Özel Kalem Müdürü Muzaffer Bey',
-    callerDept: 'T.C. ADALET BAKANLIĞI SANTRAL · ANKARA',
-    dialogue: 'Sayın Komisyon Başkanım, Cemil Bozkurt Bey\'in dosyası önünüze gelmiş olmalı. Kendisi ağır şeker hastası, revirde yataktan kalkamıyor. Ailesi perişan vaziyette. Sayın Bakanımız bu dosyayı bizzat takip ediyor ve tahliyesini bekliyor. Bu akşam evrakı imzalayın, Ankara\'da önünüz açılsın. Aksi takdirde teftiş heyeti yarın masanızı inceler!'
+    callerDept: 'VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI SANTRAL · ARDORA',
+    dialogue: 'Sayın Komisyon Başkanım, Cemil Bozkurt Bey\'in dosyası önünüze gelmiş olmalı. Kendisi ağır şeker hastası, revirde yataktan kalkamıyor. Ailesi perişan vaziyette. Sayın Bakanımız bu dosyayı bizzat takip ediyor ve tahliyesini bekliyor. Bu akşam evrakı imzalayın, Ardora\'da önünüz açılsın. Aksi takdirde teftiş heyeti yarın masanızı inceler!'
   },
   // 6. Vaka: Barış Aksoy (Tıp Fakültesi Öğrencisi & Bildiri) - İlk İnceleme
   '6_0': {
@@ -222,25 +237,25 @@ const phoneCalls = {
   // 2. Vaka: Erkan Korkmaz (Tetikçi / Çete) - İlk İnceleme
   '2_0': {
     caller: 'Gizli İhbar (Kıraathane Esnafı)',
-    callerDept: 'KADIKÖY İLÇE EMNİYET SANTRALİ AKTARMALI',
+    callerDept: 'DERENKÖY İLÇE EMNİYET SANTRALİ AKTARMALI',
     dialogue: "Ben kahvehanenin yakınında esnafım. Dün iki kişi dükkâna gelip işletmeciye Erkan’ın yakında çıkacağını söyledi. İşletmeci konuşmak istemeyince kepenge vurdular. İsimlerini bilmiyorum; Erkan mı gönderdi onu da bilmiyorum. Olayı karakola bildirdik."
   },
   // 9. Vaka: Murat Çetin (Alkollü Kaza) - İlk İnceleme
   '9_0': {
     caller: 'Milletvekili Başdanışmanı Selahattin Bey',
     callerDept: 'TBMM İKTİDAR GRUBU ODASI',
-    dialogue: 'Başkanım, bu dosyayı Sayın Vekilimiz yakından takip ediyor. Mağdur ailesinin dilekçesi var; ayrıca biz de bu toplantıda tahliye kararı çıkmasını istemiyoruz. Kurum raporlarınız olumlu olabilir, ancak kararınızın gerekçesi Ankara’da ayrıca değerlendirilecek. Erteleme yönünde hareket etmenizi bekliyoruz.'
+    dialogue: 'Başkanım, bu dosyayı Sayın Vekilimiz yakından takip ediyor. Mağdur ailesinin dilekçesi var; ayrıca biz de bu toplantıda tahliye kararı çıkmasını istemiyoruz. Kurum raporlarınız olumlu olabilir, ancak kararınızın gerekçesi Ardora’da ayrıca değerlendirilecek. Erteleme yönünde hareket etmenizi bekliyoruz.'
   },
   // 1. Vaka: Emre Yılmaz (6 Ay Erteleme Sonrası Dönüş - 2. İnceleme)
   '1_1': {
-    caller: 'Kartal Oto Sanayi - Tornacı Nuri Usta',
-    callerDept: 'KARTAL PTT SANTRALİ · ŞAHSİ ÇAĞRI',
-    dialogue: 'Başkan Bey, ben Kartal’dan Nuri. Emre için kalfa yardımcılığı teklifimi yazılı gönderdim. Hastane kontrollerine göre saatlerini ayarlayabilirim. İçerideki olayın ayrıntılarını bilmiyorum; ailesi yaralandığını söyledi. Atölyede çalıştığı dönemde verilen işleri tamamlıyordu. Dışarıdaki borçlarını nasıl çözeceğini ise bilmiyorum.'
+    caller: 'Tarsal Oto Sanayi - Tornacı Nuri Usta',
+    callerDept: 'TARSAL PHİ SANTRALİ · ŞAHSİ ÇAĞRI',
+    dialogue: 'Başkan Bey, ben Tarsal’dan Nuri. Emre için kalfa yardımcılığı teklifimi yazılı gönderdim. Hastane kontrollerine göre saatlerini ayarlayabilirim. İçerideki olayın ayrıntılarını bilmiyorum; ailesi yaralandığını söyledi. Atölyede çalıştığı dönemde verilen işleri tamamlıyordu. Dışarıdaki borçlarını nasıl çözeceğini ise bilmiyorum.'
   },
   // 2. Vaka: Erkan Korkmaz (6 Ay Erteleme Sonrası Dönüş - 2. İnceleme)
   '2_1': {
-    caller: 'Kadıköy İlçe Emniyet Amiri Kemal Bey',
-    callerDept: 'İSTANBUL EMNİYET MÜDÜRLÜĞÜ · ASAYİŞ ŞUBE',
+    caller: 'Derenköy İlçe Emniyet Amiri Kemal Bey',
+    callerDept: 'KARDUN EMNİYET MÜDÜRLÜĞÜ · ASAYİŞ ŞUBE',
     dialogue: "Başkanım, Mayıs ayındaki aramanın tutanağını dosyanıza gönderdik. Erkan’ın kişisel eşya torbasında iki metal parçası ve mağdurun yeni adresinin krokisi bulunmuş. Dışarıdaki tehditlerle bağlantısını araştırıyoruz. Mağdurun koruma başvurusu sürüyor; şu an Erkan’ın talimat verdiğini doğrulayan bir ifade yok."
   }
 };
@@ -282,7 +297,7 @@ function validSave(s) {
     Array.isArray(s.queue) && s.queue.every(entry) && s.queue.every((e, i) => !i || s.queue[i - 1].month <= e.month) &&
     new Set(s.queue.map(e => e.id)).size === s.queue.length &&
     Array.isArray(s.history) && s.history.every(h => h && ['month','name','decision','summary'].every(k => typeof h[k] === 'string')) &&
-    ['main','defense','psych','guard','letter'].includes(s.activeTab) && Number.isInteger(s.meetingPosition) && s.meetingPosition >= 1 && s.meetingPosition <= 4 &&
+    ['main','defense','psych','guard','letter'].includes(s.activeTab) && Number.isInteger(s.meetingPosition) && s.meetingPosition >= 1 && s.meetingPosition <= cases.length * 2 &&
     (s.phase === 'ended' || s.queue.length > 0) &&
     (s.phase !== 'consequence' || (s.pending && typeof s.pending.isRelease === 'boolean' && s.pending.outcome && typeof s.pending.outcome.body === 'string' && ['vicdanDelta','sicilDelta','capacityDelta'].every(k => Number.isFinite(s.pending.outcome[k]))));
 }
@@ -294,7 +309,7 @@ function loadSavedGame() {
     if (raw) {
       const parsed = JSON.parse(raw);
       if (!validSave(parsed)) throw new Error('Geçersiz kayıt');
-      gameState = parsed;
+      gameState = migrateWorldNames(parsed);
       // Eski sürümde oluşmuş üçüncü ve sonraki incelemeler artık kapalıdır.
       if (gameState.queue.some(e => e.review > 1)) {
         const oldCurrent = gameState.queue[0];
@@ -496,7 +511,7 @@ function currentCase() {
   c.guardReport = banner + `<p><strong>SON ALTI AYIN JURNALİ:</strong> ${revGuard}</p>`;
   c.defenseText = banner + `<div class="bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900"><div class="flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600"><span>GÜNCEL HÜKÜMLÜ BEYANI</span><span>${e.review + 1}. İNCELEME</span></div><p class="italic text-stone-800 leading-relaxed text-[13px]">${revDefense}</p><div class="mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500">İfade Sahibi: <span class="italic text-stone-700 font-semibold">${base.name} (Ek Savunma)</span></div></div>`;
   c.letterText = banner + `<p><strong>YENİ MEKTUP / EK BELGE:</strong> ${revLetter}</p>`;
-  if (e.id >= 3 && e.id <= 18) c.mainText += `<p class="mt-2"><strong>GÜNCEL EK BELGE:</strong> ${revLetter}</p>`;
+  if (revLetter) c.mainText += `<p class="mt-2"><strong>GÜNCEL EK BELGE:</strong> ${revLetter}</p>`;
   c.releaseConsequence = revRelease;
   c.rejectConsequence = revReject;
   c.mainText = '<p class="bg-red-100 text-red-900 border border-red-700 rounded p-2 mb-2"><strong>SON İNCELEME:</strong> İkinci ret kararında şartlı tahliye hakkı yanar; dosya kapanır.</p>' + c.mainText;
@@ -545,7 +560,7 @@ function checkAndTriggerPhoneCall() {
     if (ringBadge) ringBadge.classList.add('hidden');
     if (icon) icon.classList.remove('phone-icon-pulse');
     if (statusLbl) statusLbl.textContent = 'KIRMIZI HAT: SESSİZ';
-    if (subLbl) subLbl.textContent = 'PTT Dahili Santral Beklemede';
+    if (subLbl) subLbl.textContent = 'PHİ Dahili Santral Beklemede';
     if (actionBtns) actionBtns.classList.add('hidden');
     return;
   }
@@ -606,7 +621,7 @@ function checkAndTriggerPhoneCall() {
       } else if (phoneIgnored) {
         subLbl.textContent = 'Santral hattı kesildi';
       } else {
-        subLbl.textContent = 'PTT Dahili Santral Beklemede';
+        subLbl.textContent = 'PHİ Dahili Santral Beklemede';
       }
     }
     if (actionBtns) actionBtns.classList.add('hidden');
@@ -621,11 +636,11 @@ function handlePhoneClick() {
   if (call && !phoneAnswered && !phoneIgnored) {
     answerPhone();
   } else if (phoneAnswered) {
-    showPhoneNotice(`PTT DAHİLİ KRİPTO HATTI: Bu oturumda ${activePhoneCall ? activePhoneCall.caller : 'makam'} ile görüşüldü. Telefon tutanağı masadaki evraklara işlenmiştir.`);
+    showPhoneNotice(`PHİ DAHİLİ KRİPTO HATTI: Bu oturumda ${activePhoneCall ? activePhoneCall.caller : 'makam'} ile görüşüldü. Telefon tutanağı masadaki evraklara işlenmiştir.`);
   } else if (phoneIgnored) {
-    showPhoneNotice('PTT DAHİLİ SANTRAL: Çağrı meşgule atıldı. Şu anda hattan yeni bir talimat veya arama gelmiyor.');
+    showPhoneNotice('PHİ DAHİLİ SANTRAL: Çağrı meşgule atıldı. Şu anda hattan yeni bir talimat veya arama gelmiyor.');
   } else {
-    showPhoneNotice('PTT DAHİLİ SANTRAL: Şu anda hattan gelen aktif bir arama veya bakanlık talimatı bulunmuyor. Kırmızı hat beklemede.');
+    showPhoneNotice('PHİ DAHİLİ SANTRAL: Şu anda hattan gelen aktif bir arama veya bakanlık talimatı bulunmuyor. Kırmızı hat beklemede.');
   }
 }
 
@@ -924,6 +939,12 @@ function showConsequenceModal() {
   for (const [key, id, label] of [['vicdan','statVicdanDiff','⚖️ Vicdan'],['sicil','statSicilDiff','📂 Sicil'],['capacity','statCapacityDiff','🏢 Doluluk']]) {
     const delta = o[key + 'Delta'];
     document.getElementById(id).textContent = `${label}: ${delta > 0 ? '+' : ''}${delta} puan`;
+  }
+  for (const key of ['vicdan', 'sicil']) {
+    const el = document.getElementById(key === 'vicdan' ? 'statVicdanReason' : 'statSicilReason');
+    const reason = o[key + 'Reason'];
+    el.textContent = typeof reason === 'string' ? reason : '';
+    el.hidden = !el.textContent;
   }
   document.getElementById('consequenceModal').classList.remove('hidden');
 }

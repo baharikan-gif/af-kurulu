@@ -15,18 +15,20 @@ const cases = [
     "initialMonth": 0,
     "servedMonths": 25,
     "sentenceMonths": 36,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Bayrampaşa Kapalı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Hükümlü, Kadıköy Rıhtım Caddesi'nde park halindeki bir motosikleti düz kontak yaparak çalmış; 48 saat sonra aracı bizzat sahibine götürmüş ve polise teslim olmuştur. Kontak düzeneğindeki hasarın bedelinin ödendiğine ilişkin makbuz dosyadadır. Tutuklanmadan önce ailesinin geçimini sağlıyordu.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Vardak Kapalı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Hükümlü, Derenköy Rıhtım Caddesi'nde park halindeki bir motosikleti düz kontak yaparak çalmış; 48 saat sonra aracı bizzat sahibine götürmüş ve polise teslim olmuştur. Kontak düzeneğindeki hasarın bedelinin ödendiğine ilişkin makbuz dosyadadır. Tutuklanmadan önce ailesinin geçimini sağlıyordu.</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-01</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Gençtim, tefecinin borç batağındaydım. Pişman olup motoru bizzat sahibine götürdüm, esnafla helalleştik. Çıkar çıkmaz sanayide torna tezgahında helal ekmeğimi kazanmak istiyorum.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Emre Yılmaz (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM (05.01.1991)</div>\n            <p>Son dört görüşmede eyleminin sorumluluğunu kabul etti. Görüşmelerde saldırgan davranış gözlenmedi. Borç ilişkileri sorulduğunda ayrıntı vermekten kaçındı. Kurum içindeki uyumun dışarıda sürüp sürmeyeceği konusunda kesin değerlendirme yapılamamaktadır.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>25 aydır kurumumuzdadır. Son 18 ayda disiplin cezası bulunmuyor; torna atölyesi devam çizelgesi düzenli. Kartal’daki Nuri Usta’nın kalfa yardımcılığı teklifi telefonla doğrulandı. Annesinin yanında kalacağını bildirdi; barınma adresinin teyidi henüz dosyaya ulaşmadı.</p>\n        ",
+    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>25 aydır kurumumuzdadır. Son 18 ayda disiplin cezası bulunmuyor; torna atölyesi devam çizelgesi düzenli. Tarsal’daki Nuri Usta’nın kalfa yardımcılığı teklifi telefonla doğrulandı. Annesinin yanında kalacağını bildirdi; barınma adresinin teyidi henüz dosyaya ulaşmadı.</p>\n        ",
     "letterText": "\n          <p><strong>ANNESİNİN DİLEKÇESİ:</strong></p>\n          <p class=\"italic\">\"Sayın Kurul Üyeleri, Emre evin tek ekmek getireniydi. Babası vefat etti. Motorun sahibi esnaf bile hakkını helal etti. Evladımı bana bağışlayın.\"</p>\n        ",
     "releaseConsequence": {
       "headline": "TAHLİYE EDİLEN GENÇ SANAYİDE İŞE BAŞLADI",
-      "body": "Emre Yılmaz, Kartal Sanayi Sitesi’nde kalfa yardımcısı olarak işe başladı. İlk ayın devam çizelgesi işveren tarafından gönderildi; annesinin adresi teyit edildi. İzlem raporunda yeni bir olay kaydı bulunmuyor.",
+      "body": "Emre Yılmaz, Tarsal Sanayi Sitesi’nde kalfa yardımcısı olarak işe başladı. İlk ayın devam çizelgesi işveren tarafından gönderildi; annesinin adresi teyit edildi. İzlem raporunda yeni bir olay kaydı bulunmuyor.",
       "vicdanDelta": 15,
       "sicilDelta": 10,
       "capacityDelta": -3,
-      "chronicle": "Emre kalfa yardımcısı olarak işe başladı; ilk ayın iş ve adres bilgileri doğrulandı."
+      "chronicle": "Emre kalfa yardımcısı olarak işe başladı; ilk ayın iş ve adres bilgileri doğrulandı.",
+      "vicdanReason": "Emre’ye işine ve ailesine dönme fırsatı verdin.",
+      "sicilReason": "İşe devamı ilk takip raporuyla doğrulandı."
     },
     "rejectConsequence": {
       "headline": "KOĞUŞTAKİ BIÇAKLI KAVGADA BİR HÜKÜMLÜ YARALANDI",
@@ -34,7 +36,9 @@ const cases = [
       "vicdanDelta": -25,
       "sicilDelta": -10,
       "capacityDelta": 3,
-      "chronicle": "Emre koğuş kavgasında yaralandı; tehdit bildirimlerinin takibi hakkında inceleme açıldı."
+      "chronicle": "Emre koğuş kavgasında yaralandı; tehdit bildirimlerinin takibi hakkında inceleme açıldı.",
+      "vicdanReason": "Emre’nin içeride yaralanması kararının yükünü artırdı.",
+      "sicilReason": "Bildirilen tehditlerin takibi hakkında inceleme açıldı."
     },
     "review": {
       "status": "Bıçaklanma sonrası hastane tedavisi tamamlandı; korumalı müşahede koğuşunda kalıyor. Kontrol randevuları devam ediyor.",
@@ -48,7 +52,9 @@ const cases = [
         "chronicle": "Emre kalfa yardımcılığına başladı. İşveren çalışma saatlerini hastane kontrollerine göre düzenledi. İlk takip raporunda tedaviye devam ettiği, borç konusundaki beyanının ise henüz doğrulanamadığı belirtildi.",
         "vicdanDelta": 15,
         "sicilDelta": 10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Emre tedavisini sürdürerek çalışmaya başladı.",
+        "sicilReason": "İş ve tedavi planı ilk takipte işledi."
       },
       "rejectConsequence": {
         "headline": "CEZAEVİNDE İKİNCİ SALDIRI: EMRE YILMAZ AĞIR YARALANDI",
@@ -56,7 +62,9 @@ const cases = [
         "chronicle": "Emre ikinci saldırıda ağır yaralandı; tedaviye alındı. Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -30,
         "sicilDelta": -20,
-        "capacityDelta": -1
+        "capacityDelta": -1,
+        "vicdanReason": "Koruma altındaki Emre yeniden ağır yaralandı.",
+        "sicilReason": "Ortak sevk alanındaki güvenlik ihmali incelemeye alındı."
       }
     }
   },
@@ -69,7 +77,7 @@ const cases = [
     "initialMonth": 0,
     "servedMonths": 50,
     "sentenceMonths": 96,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Sağmalcılar Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Kadıköy Moda'da kıraathaneyi adamlarıyla basarak esnaftan haraç ve koruma parası talep etmiş, itiraz eden işletmeciyi ruhsatsız pompalı tüfekle bacağından vurup ömür boyu sakat bırakmıştır. Yağma ve kasten yaralamadan ikinci mükerrir sabıkası bulunmaktadır.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Vardak Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Derenköy Lora'da kıraathaneyi adamlarıyla basarak esnaftan haraç ve koruma parası talep etmiş, itiraz eden işletmeciyi ruhsatsız pompalı tüfekle bacağından vurup ömür boyu sakat bırakmıştır. Yağma ve kasten yaralamadan ikinci mükerrir sabıkası bulunmaktadır.</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-02</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"İşletmeciden ortaklık alacağım olduğunu düşünüyordum. Silah kullanmam yanlıştı. Bundan sonra alacak meselesiyle avukatım ilgilenecek. Tahliye olursam ağabeyimin yanında çalışacağım.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Erkan Korkmaz (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p class=\"text-red-900 font-bold\">Son üç görüşmede silah kullandığını kabul etti; yaralamanın sorumluluğunu konuşurken sık sık mağdurun davranışlarına döndü. Öfke kontrolü görüşmelerine iki kez katıldı, üçüncü görüşmeyi reddetti. Mağdurla yeniden karşılaşması hâlinde nasıl davranacağı sorusuna somut bir yanıt vermedi.</p>\n          </div>\n        ",
     "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>50 aylık infazında üç disiplin cezası bulunuyor. 12.11.1990 tarihli tutanak, havalandırmada başka bir hükümlüye sivriltilmiş metal parçasıyla saldırmaya çalıştığını kaydediyor. 03.01.1991 tarihli ziyaret tutanağında mağdurun taşındığı adresi sorduğu belirtiliyor. Ağabeyinin iş teklifine ilişkin yazılı belge henüz ulaşmadı.</p>\n        ",
@@ -80,7 +88,9 @@ const cases = [
       "vicdanDelta": -30,
       "sicilDelta": -30,
       "capacityDelta": -3,
-      "chronicle": "Tahliye sonrası kahvehane saldırısında işletmeci öldürüldü; Erkan yakalandı, kurul kararının incelemesi başlatıldı."
+      "chronicle": "Tahliye sonrası kahvehane saldırısında işletmeci öldürüldü; Erkan yakalandı, kurul kararının incelemesi başlatıldı.",
+      "vicdanReason": "Tehdit edilen işletmeci tahliyeden sonra öldürüldü.",
+      "sicilReason": "Tehdit kayıtlarının değerlendirilmesi hakkında inceleme açıldı."
     },
     "rejectConsequence": {
       "headline": "ERKAN KORKMAZ’IN DOSYASI ALTI AY ERTELENDİ",
@@ -88,7 +98,9 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Erkan’ın dosyası ertelendi; mağdurun koruma başvurusu ve tehdit soruşturması işleme alındı."
+      "chronicle": "Erkan’ın dosyası ertelendi; mağdurun koruma başvurusu ve tehdit soruşturması işleme alındı.",
+      "vicdanReason": "Mağdurun tehdit başvurusunun takibini önceledin.",
+      "sicilReason": "İdare, disiplin tutanaklarının dikkate alınmasını olumlu karşıladı."
     },
     "review": {
       "status": "14.05.1991 tarihli aramada yatağının altındaki kişisel eşya torbasında iki sivriltilmiş metal parçası ve mağdurun yeni adresini gösteren kroki bulundu. Erkan eşyaların kendisine ait olmadığını beyan etti.",
@@ -102,7 +114,9 @@ const cases = [
         "chronicle": "Tahliyeden 72 saat sonra mağdurun evine yapılan saldırıda iki kişi ağır yaralandı. Erkan olayla ilgili gözaltına alındı. Saldırı adresinin dosyadaki krokiyle eşleşmesi üzerine tahliye değerlendirmesi hakkında inceleme açıldı.",
         "vicdanDelta": -30,
         "sicilDelta": -25,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Tahliyeden sonra mağdurun evinde iki kişi yaralandı.",
+        "sicilReason": "Saldırı adresi dosyadaki krokiyle eşleşti."
       },
       "rejectConsequence": {
         "headline": "ERKAN KORKMAZ: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -110,7 +124,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": 10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Mağdurun adresini gösteren krokiyi dikkate aldın.",
+        "sicilReason": "Silah ve kroki kaydına dayanan ret siciline yansıdı."
       }
     }
   },
@@ -123,40 +139,46 @@ const cases = [
     "initialMonth": 1,
     "servedMonths": 54,
     "sentenceMonths": 72,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Üsküdar Paşakapısı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> 1985 yılında 'Gülkent Konut Yapı Kooperatifi' adıyla paravan proje başlatmış, 32 dar gelirli emekli ailenin tüm ikramiye ve birikimlerini arsa teminatı yalanıyla zimmetine geçirmiştir. Mağdur ailelerin zararları henüz karşılanmamıştır.</p>\n          <p class=\"mt-2\"><strong>MALİ İNCELEME EKİ (02.02.1991):</strong> Kooperatiften oğlunun şirketine yapılan bir transferin dekontu bulundu. Hasan bunu malzeme avansı olarak açıklıyor; karşılık gelen fatura henüz sunulmadı. İlgili hesabın hareketleri istenmiş, inceleme devam etmektedir.</p>\n          <p class=\"mt-2\"><strong>MAĞDUR DİLEKÇESİ:</strong> Aileler sahada inşaat başlamadığını bildiriyor. Mevcut keşif tutanağı yalnızca temel kazısını doğruluyor; malzeme teslimi kayıtları eksik.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Yelhisar Nerhisar Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> 1985 yılında 'Gülkent Konut Yapı Kooperatifi' adıyla paravan proje başlatmış, 32 dar gelirli emekli ailenin tüm ikramiye ve birikimlerini arsa teminatı yalanıyla zimmetine geçirmiştir. Mağdur ailelerin zararları henüz karşılanmamıştır.</p>\n          <p class=\"mt-2\"><strong>MALİ İNCELEME EKİ (02.02.1991):</strong> Kooperatiften oğlunun şirketine yapılan bir transferin dekontu bulundu. Hasan bunu malzeme avansı olarak açıklıyor; karşılık gelen fatura henüz sunulmadı. İlgili hesabın hareketleri istenmiş, inceleme devam etmektedir.</p>\n          \n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-03</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Ben kimsenin helal lokmasını bilerek yemedim. İnşaat maliyetleri yükseldi, arsa sahibi sözleşmeyi feshetti. Kasadaki her kuruş temele harcandı. Bu yaşta cezaevinde geceleri göğsüm sıkışıyor, nefesim daralıyor. Tek dileğim, kalan günlerimde torunumu kucağıma alıp helallik istemek. Takdir yüce devletimizindir.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Hasan Demir (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">KLİNİK GÖZLEM NOTU - DR. SEVİM (04.02.1991)</div>\n            <p>Hükümlüde kronik iskemik kalp hastalığı, hipertansiyon ve efor dispnesi mevcuttur. Tansiyon ve dilaltı ilaçları revirce düzenli verilmektedir. Genel klinik tablosu ilaçla dengelenebilmekle birlikte, koğuşun rutubetli ve basık ortamı kardiyovasküler yükünü artırmaktadır. Son hastane kontrolünde ilaç tedavisi ve düzenli takip önerildi. Şu an acil müdahale gerektiren bulgu kaydedilmedi; bu değerlendirme ileride kriz olmayacağı anlamına gelmez. Ailesi dışarıdaki kontrol randevularına eşlik edeceğini bildirmiştir.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>54 aydır kurumumuzdadır. Koğuş arkadaşlarıyla ve infaz memurlarıyla geçimi gayet iyidir. İflas nedeniyle derin vicdan azabı çektiğini beyan etmekte, koğuşta sessiz ve içine kapanık bir hayat sürmektedir. Disiplin cezası bulunmamaktadır.</p>\n          <p class=\"mt-2 text-stone-700 text-[13px] leading-relaxed\">\n            Ailesine gönderdiği iki mektupta <em>\"Ben çıkana kadar torunuma kimse el sürmesin, torunumun yerini değiştirdiniz mi?\"</em> ifadeleri yer alıyor. Hasan bunların aile içi konuşmalar olduğunu söylüyor. Mektupların mali incelemeyle bağlantısı henüz belirlenmedi.\n          </p>\n        ",
-    "letterText": "\n          <p><strong>MAĞDUR EMEKLİLER DERNEĞİ DİLEKÇESİ:</strong></p>\n          <p class=\"italic\">\"Biz 32 aileyiz. Birikimlerimizi bu kooperatife yatırdık. Sahada inşaatın başladığını görmedik; oğlunun şirketine aktarılan paranın açıklanmasını ve alacaklarımız için güvence verilmesini istiyoruz.\"</p>\n        ",
+    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p><p>54 aydır kurumumuzdadır. Koğuşta sessiz bir hayat sürüyor; disiplin cezası bulunmuyor. Ailesine sık sık mektup yazıyor, çoğunda torununu soruyor. Son mektubunda “Ben gelene kadar kimse dokunmasın ona” diye yazmış. Torununa pek düşkün görünüyor.</p>",
+    "letterText": "<p>Mağdur aileler alacakları için güvence istiyor. Kısmi ödeme yapılırsa makbuzlarını kurula sunacaklarını bildirdiler.</p>",
     "releaseConsequence": {
       "headline": "HASAN TAHLİYE EDİLDİ: PARA TRANSFERİ İNCELEMESİ SÜRÜYOR",
       "body": "Hasan ailesinin yanına yerleşti ve hastane kontrollerine katıldı. Oğlunun şirketindeki hesaptan yapılan çekim incelemeye alındı; paranın kullanım amacı açıklığa kavuşmadı. Ailelere henüz ödeme yapılmadı. Eksik mali belgelerle verilen tahliye kararı hakkında idari değerlendirme istendi.",
       "vicdanDelta": 10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Hasan tedaviye devam ediyor; ödeme yapılmadı ve şirket hesabının incelemesi sürüyor."
+      "chronicle": "Hasan tedaviye devam ediyor; ödeme yapılmadı ve şirket hesabının incelemesi sürüyor.",
+      "vicdanReason": "Hasan tedavisine ailesinin yanında devam edebildi.",
+      "sicilReason": "Eksik mali belgelerle verilen karar için açıklama istendi."
     },
     "rejectConsequence": {
       "headline": "MALİ İNCELEME SÜRERKEN HASAN’IN DOSYASI ERTELENDİ",
-      "body": "Kurul dosyayı altı ay erteledi. Daha önce başlatılan mali incelemede oğlunun şirketindeki hesaba ilişkin belgeler ulaştı ve hesap üzerine tedbir uygulandı. Mektuplardaki “torun” ifadesi de inceleme kapsamına alındı; anlamı henüz doğrulanmadı. Hasan hastane kontrollerine sevkle devam ediyor.",
+      "body": "Kurul dosyayı altı ay erteledi. Daha önce başlatılan mali incelemede oğlunun şirketindeki hesaba ilişkin belgeler ulaştı ve hesap üzerine tedbir uygulandı. Hasan hastane kontrollerine sevkle devam ediyor.",
       "vicdanDelta": -10,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Hasan’ın incelemesi ertelendi; oğlunun şirket hesabına tedbir uygulandı, sağlık takibi sürüyor."
+      "chronicle": "Hasan’ın incelemesi ertelendi; oğlunun şirket hesabına tedbir uygulandı, sağlık takibi sürüyor.",
+      "vicdanReason": "Hasta Hasan’ın ailesine dönüşü ertelendi.",
+      "sicilReason": "Hesap incelemesini beklemen idari güveni artırdı."
     },
     "review": {
       "status": "Haziran ayında göğüs ağrısıyla hastaneye sevk edildi. Tetkik ve tedavinin ardından revir koğuşuna döndü. Oğlunun şirket hesabındaki paradan ailelere kısmi ödeme yapıldı.",
-      "psychNote": "Kalp hastalığı için ilaç tedavisi ve düzenli hastane kontrolü sürüyor. Son muayenede acil müdahale gerektiren bulgu kaydedilmedi. Sevklerde bir kontrolün geciktiği bildirildi; ailesi dışarıda randevulara eşlik etmeyi taahhüt ediyor.",
-      "guardReport": "Disiplin cezası yok. Revirde kalıyor; hastane sevk çizelgesi dosyaya eklendi. Mektuplarında “torun” ifadesini kullanmayı sürdürüyor. Hasan bunun ailesini ilgilendirdiğini söylüyor; ifadenin şifre olduğu doğrulanmadı.",
-      "letterText": "Mali incelemede oğlunun şirket hesabından ailelerin alacaklarının yüzde 25’i karşılandı. Hasan kalan ödeme için takvim sundu, fakat gelir kaynağını belgeleyemedi. Bazı aileler planı kabul ediyor; diğerleri güvence istiyor.",
-      "defenseText": "\"Hastaneden revir koğuşuna döndüm; ilaçlarımı kullanıyorum. Hesaptan ödeme yapıldı, kalanını da ödemek istiyorum. Dışarıda iş bağlantılarım var ama henüz sözleşme yapmadık. Mektuptaki torun benim aile meselem. 60 aydır içerideyim; kalan cezam 12 ay. Ailem kontrollerime götürecek.\"",
+      "psychNote": "Kalp hastalığı için ilaç tedavisi ve düzenli hastane kontrolü sürüyor. Son muayenede acil müdahale gerektiren bulgu kaydedilmedi.",
+      "guardReport": "Revirde kalıyor. Hastane sevk çizelgesi dosyaya eklendi; yeni disiplin cezası yok.",
+      "letterText": "Mali incelemede oğlunun şirket hesabından ailelerin alacaklarının yüzde 25’i karşılandı. Kalan alacaklar için takip sürüyor.",
+      "defenseText": "\"Hastaneden revir koğuşuna döndüm; ilaçlarımı kullanıyorum. Hesaptan ödeme yapıldı, kalanını da ödemek istiyorum. Dışarıda iş bağlantılarım var ama henüz sözleşme yapmadık. 60 aydır içerideyim; kalan cezam 12 ay. Ailem kontrollerime götürecek.\"",
       "releaseConsequence": {
         "headline": "HASAN ÖDEME PLANI VE SAĞLIK TAKİBİYLE TAHLİYE EDİLDİ",
         "body": "Hasan ailesinin yanında tedaviye devam etti. Ödeme planının ilk taksiti yatırıldı, ikinci taksit gecikti. Kalan tutarın kaynağına ilişkin inceleme sürüyor; tam geri ödeme henüz sağlanmadı.",
         "chronicle": "Hasan ailesinin yanında tedaviye devam etti. Ödeme planının ilk taksiti yatırıldı, ikinci taksit gecikti. Kalan tutarın kaynağına ilişkin inceleme sürüyor; tam geri ödeme henüz sağlanmadı.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Hasan’ın tedavi ve ödeme çabasına dışarıda yer açtın.",
+        "sicilReason": "Ödeme takviminin aksaması kararın üzerindeki kuşkuyu sürdürdü."
       },
       "rejectConsequence": {
         "headline": "HASAN DEMİR: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -164,7 +186,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": 10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Mağdur ailelerin karşılanmamış alacaklarını önceledin.",
+        "sicilReason": "Mali takip sürerken ihtiyatlı karar verdin."
       }
     }
   },
@@ -177,10 +201,10 @@ const cases = [
     "initialMonth": 2,
     "servedMonths": 38,
     "sentenceMonths": 60,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Kendisini ve 2 küçük çocuğunu yıllarca darp eden, hakkında daha önce şikâyet başvuruları bulunan eski kocasının, gece yarısı kapıyı baltayla kırıp içeri girmesi üzerine mutfak bıçağıyla müdahale etmiş ve şahsı ağır yaralamıştır. 2 çocuğu koruma altında yetiştirme yurdundadır.</p>\n          <p class=\"mt-2\"><strong>YENİ TEHDİT BİLDİRİMİ:</strong> Eski eşinden gelen mektupta kendisine ve çocuklarına yönelik tehditler yer alıyor. Mektup ilgili birime iletildi; inceleme sürüyor.</p>\n          <p class=\"mt-2\"><strong>SOSYAL HİZMET NOTU:</strong> Bir dayanışma kuruluşu geçici barınma teklif etti. Kabul yazısı dosyada; adresin gizliliği ve ulaşım düzeni henüz teyit edilmedi. Çocuklarla ilk görüşmelerin uzman eşliğinde yapılması planlanıyor. Tahliye, çocukların bakım düzenini kendiliğinden değiştirmeyecek.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Serenköy Kadın Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Kendisini ve 2 küçük çocuğunu yıllarca darp eden, hakkında daha önce şikâyet başvuruları bulunan eski kocasının, gece yarısı kapıyı baltayla kırıp içeri girmesi üzerine mutfak bıçağıyla müdahale etmiş ve şahsı ağır yaralamıştır. 2 çocuğu koruma altında yetiştirme yurdundadır.</p>\n          <p class=\"mt-2\"><strong>YENİ TEHDİT BİLDİRİMİ:</strong> Eski eşinden gelen mektupta kendisine ve çocuklarına yönelik tehditler yer alıyor. Mektup ilgili birime iletildi; inceleme sürüyor.</p>\n          <p class=\"mt-2\"><strong>SOSYAL HİZMET NOTU:</strong> Bir dayanışma kuruluşu geçici barınma teklif etti. Kabul yazısı dosyada; adresin gizliliği ve ulaşım düzeni henüz teyit edilmedi. Çocuklarla ilk görüşmelerin uzman eşliğinde yapılması planlanıyor. Tahliye, çocukların bakım düzenini kendiliğinden değiştirmeyecek.</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-04</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"O gece baltayla kapıyı yardığında gözleri dönmüştü; çocuklarımın boğazına sarılacaktı. Önüne geçmeseydim iki yavrum bugün mezardaydı. Ben katil değilim, anneyim. Evlatlarım yurtta yapayalnız, ne olur beni onlara bağışlayın.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Zehra Toprak (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p>Görüşmelerde çocuklarından ayrılığı ve eski eşinden gelen mektubu anlatırken kaygı belirtileri gözlendi. Kurum içinde saldırgan davranış kaydı bulunmuyor. Düzenli görüşme ve psikolojik destek önerildi. Dışarıdaki güvenlik ihtiyacı için sosyal hizmet birimiyle görüşüldü.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>38 aydır kurumumuzdadır. Dikiş atölyesine düzenli devam ediyor; çocuklarına gönderdiği paraların makbuzları dosyada. Disiplin cezası bulunmuyor. İdari yazışmada barınma teklifinin teyidi ve ulaşım planı istenmiş; yanıt bekleniyor. Bu eksikler için sorumlu birim sosyal hizmet bürosudur.</p>\n        ",
+    "guardReport": "<p>38 aydır kurumda. Dikiş atölyesine düzenli devam ediyor; çocuklarına gönderdiği paraların makbuzları dosyada. Disiplin cezası yok.</p>",
     "letterText": "\n          <p><strong>ESKİ KOCANIN TEHDİT MEKTUBU:</strong></p>\n          <p class=\"italic text-red-950\">\"O kadın beni sakat bıraktı. Eğer onu salarsanız çocukları da onu da yaşatmam.\"</p>\n        ",
     "releaseConsequence": {
       "headline": "ZEHRA GEÇİCİ ADRESE YERLEŞTİ: ÇOCUKLARIYLA GÖRÜŞMELER BAŞLADI",
@@ -188,7 +212,9 @@ const cases = [
       "vicdanDelta": 20,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Zehra geçici barınmaya yerleşti; gözetimli görüşmeler başladı. Teyitlerin gecikmesi idari rapora işlendi."
+      "chronicle": "Zehra geçici barınmaya yerleşti; gözetimli görüşmeler başladı. Teyitlerin gecikmesi idari rapora işlendi.",
+      "vicdanReason": "Zehra’nın çocuklarıyla görüşmesine dışarıda alan açtın.",
+      "sicilReason": "Güvenlik teyitlerinin sonradan tamamlanması eksiklik sayıldı."
     },
     "rejectConsequence": {
       "headline": "ERTELEME SONRASI AİLE GÖRÜŞMELERİ İÇİN DESTEK PLANI",
@@ -196,12 +222,14 @@ const cases = [
       "vicdanDelta": -25,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Erteleme sonrası aile görüşmelerine destek istendi; Zehra sağlık takibine alındı, barınma hazırlığı sürüyor."
+      "chronicle": "Erteleme sonrası aile görüşmelerine destek istendi; Zehra sağlık takibine alındı, barınma hazırlığı sürüyor.",
+      "vicdanReason": "Zehra ile çocuklarının ayrılığı uzadı.",
+      "sicilReason": "Bekleyen barınma teyitlerinin tamamlanmasını bekledin."
     },
     "review": {
       "status": "Kısa süreli yemek reddi sonrasında beslenmesi düzene girdi. Çocuklarıyla düzenli görüşüyor. Geçici barınma adresi ve ulaşım planı doğrulandı; tehdit incelemesi henüz sonuçlanmadı.",
-      "psychNote": "Görüşmelere düzenli katılıyor. Ayrılık ve eski eşin tehdidiyle ilgili kaygıları sürüyor. Beslenme takibinde yeni sorun kaydedilmedi. Psikolojik desteğin tahliye sonrasında da sürmesi için randevu oluşturuldu.",
-      "guardReport": "Son altı ayda disiplin cezası yok. Dikiş atölyesine döndü. Sosyal hizmet bürosu adres gizliliği ve ulaşım düzenini teyit etti; çocuklarla uzman eşliğinde görüşme planı dosyaya eklendi.",
+      "psychNote": "Ayrılık ve eski eşin tehdidiyle ilgili kaygıları sürüyor. Beslenme takibinde yeni sorun kaydedilmedi. Destek görüşmelerine devam ediyor.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Dikiş atölyesine döndü; aile görüşmeleri çizelgeye işlendi.",
       "letterText": "Sosyal hizmet uzmanı geçici barınma kabulünü ve ilk görüşme tarihlerini yazılı bildirdi. Çocukların bakım düzeni ayrıca değerlendirilecek; tehdit bildirimine ilişkin inceleme sürüyor.",
       "defenseText": "\"İlk ertelemeden sonra bir süre yemek yemedim; şimdi düzenli besleniyorum ve görüşmelere gidiyorum. Çocuklarımı görmek istiyorum ama düzenlerinin bir günde değişmeyeceğini biliyorum. Kalacağım yerden kabul yazısı geldi. Eski eşimin mektubu beni hâlâ korkutuyor; ulaşım için hazırlanan planı kullanacağım. Dikiş işine devam edebilmek için de görüşüyorum.\"",
       "releaseConsequence": {
@@ -210,7 +238,9 @@ const cases = [
         "chronicle": "Zehra geçici adrese yerleşti ve destek randevularına katıldı. Çocuklarıyla uzman eşliğinde görüşmeler sürüyor; birlikte yaşamaya henüz geçilmedi. Tehdit incelemesi açık tutuluyor.",
         "vicdanDelta": 15,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Zehra doğrulanan barınma planına geçebildi.",
+        "sicilReason": "Tehdit incelemesi açıkken tahliye sorumluluğunu aldın."
       },
       "rejectConsequence": {
         "headline": "ZEHRA TOPRAK: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -218,7 +248,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Hazır barınma planına rağmen Zehra içeride kaldı.",
+        "sicilReason": "Kalan cezanın infazını önceleyen karar verdin."
       }
     }
   },
@@ -231,18 +263,20 @@ const cases = [
     "initialMonth": 2,
     "servedMonths": 25,
     "sentenceMonths": 48,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Ankara Merkez Kapalı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Karayolları ve Altyapı İhale Dairesi Başkanı iken, uluslararası bir otoyol projesinin şartname ve keşif bedellerini önceden müteahhitlik şirketine sızdırdığı ve lüks bir otel odasında döviz cinsinden rüşvet alırken suçüstü operasyonla yakalandığı sabit görülmüştür.</p>\n        ",
-    "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-05</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Bana bürokrasideki rakiplerim tarafından açıkça siyasi kumpas kuruldu. Masamdaki döviz rüşvet değil, kurduğumuz vakfın resmi bağışıdır. Devlete ömrünü vermiş bir daire başkanını burada harcayamazsınız; Ankara elbet hakkımı teslim edecektir.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Cemil Bozkurt (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Ardora Merkez Kapalı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Karayolları ve Altyapı İhale Dairesi Başkanı iken, uluslararası bir otoyol projesinin şartname ve keşif bedellerini önceden müteahhitlik şirketine sızdırdığı ve lüks bir otel odasında döviz cinsinden rüşvet alırken suçüstü operasyonla yakalandığı sabit görülmüştür.</p>\n        ",
+    "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-05</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Bana bürokrasideki rakiplerim tarafından açıkça siyasi kumpas kuruldu. Masamdaki döviz rüşvet değil, kurduğumuz vakfın resmi bağışıdır. Devlete ömrünü vermiş bir daire başkanını burada harcayamazsınız; Ardora elbet hakkımı teslim edecektir.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Cemil Bozkurt (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p>Görüşmelerde mahkûmiyetini haksızlık olarak anlatıyor; sorumluluğu sorulduğunda bürokrasideki rakiplerine dönüyor. Görüşmelere katılıyor ancak olayın sonuçlarını tartışmakta isteksiz. Revir kaydında diyabet için ilaç ve beslenme takibi var; son hafta avluya ve ziyaretçi görüşlerine katıldığı kaydedilmiş. Yatak istirahati öneren güncel bir rapor bulunmuyor.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>25 aydır kurumumuzdadır. 12.02.1991 tarihinde ziyaret saatinin uzatılmasını, 20.02.1991 tarihinde tek kişilik revir odasını talep etti; talepler kabul edilmedi. Ziyaret süresi sonunda ayrılmayı reddetmesi tutanağa geçirildi. Ziyaretçileri arasında eski iş bağlantıları bulunuyor; görüşmelerde yeni bir suç talimatı kaydedilmedi. Tahliye sonrası kalacağı adres henüz teyit edilmedi.</p>\n        ",
-    "letterText": "\n          <p><strong>SARI ZARF - BAKANLIK MÜŞAVİRİNDEN NOT:</strong></p>\n          <p class=\"italic border-l-2 border-red-700 pl-2\">\"Kurul Üyesinin dikkatine: Cemil Bey'in devlete hizmetleri malumdur. Kurulunuzun bu dosyada yapıcı davranması kariyeriniz açısından daha hayırlı olacaktır.\"</p>\n        ",
+    "guardReport": "<p>25 aydır kurumda. Ziyaret süresi sonunda ayrılmayı reddettiği bir olay tutanağa geçirildi. Günlük sayımlara ve atölye programına katılıyor.</p>",
+    "letterText": "<p>Özel kalem, dosyanın kurul gündemine alındığına ilişkin bilgi istedi; telefon görüşmesi için santral kaydı açıldı.</p>",
     "releaseConsequence": {
       "headline": "CEMİL BOZKURT TAHLİYE EDİLDİ: KARAR İÇİN AÇIKLAMA İSTENDİ",
       "body": "Cemil ailesinin yanına yerleşti. Bakanlık özel kaleminden karara ilişkin teşekkür telefonu geldi; kurul başkanının adı terfi değerlendirmesine alındı. Sağlık iddiası ve eksik adres teyidinin kararda nasıl değerlendirildiği hakkında açıklama istendi.",
       "vicdanDelta": -30,
       "sicilDelta": 25,
       "capacityDelta": -3,
-      "chronicle": "Cemil tahliye edildi; Bakanlık desteği geldi, dosyadaki eksikler için açıklama istendi."
+      "chronicle": "Cemil tahliye edildi; Bakanlık desteği geldi, dosyadaki eksikler için açıklama istendi.",
+      "vicdanReason": "Sağlık iddiasındaki çelişkiye rağmen Cemil’i saldın.",
+      "sicilReason": "Bakanlık teşekkür etti; adın terfi değerlendirmesine alındı."
     },
     "rejectConsequence": {
       "headline": "CEMİL’İN DOSYASI ERTELENDİ: KURULA TEFTİŞ YAZISI",
@@ -250,12 +284,14 @@ const cases = [
       "vicdanDelta": 25,
       "sicilDelta": -30,
       "capacityDelta": 3,
-      "chronicle": "Ertelemenin ardından teftiş yazısı geldi; özel kalem karara ilişkin gerekçe istedi."
+      "chronicle": "Ertelemenin ardından teftiş yazısı geldi; özel kalem karara ilişkin gerekçe istedi.",
+      "vicdanReason": "Cemil’e ayrıcalık isteyen baskıya direnmiş oldun.",
+      "sicilReason": "Özel kalemin beklentisine karşı çıkınca teftiş baskısı arttı."
     },
     "review": {
       "status": "Son altı ayda yeni disiplin olayı kaydedilmedi. Kalacağı adres doğrulandı. Eski iş bağlantısının şirketinden danışmanlık teklifi geldi; görev tanımı henüz sunulmadı.",
-      "psychNote": "Görüşmelere düzenli katılıyor. Son görüşmede ziyaret kuralına uymadığını kabul etti; mahkûmiyet hakkındaki itirazını sürdürüyor. Diyabet takibi devam ediyor; günlük faaliyetlere katılıyor.",
-      "guardReport": "Son altı ayın ziyaretleri zamanında tamamlandı; yeni ayrıcalık talebi yok. Adres teyidi dosyada. İş teklifi yazılı olarak ulaştı fakat danışmanlığın kapsamı ve ihalelerle ilişkisi açıklanmadı. Bu eksiklik için şirkete yazı gönderildi.",
+      "psychNote": "Diyabet takibi devam ediyor. Günlük faaliyetlere katılıyor; ziyaret kuralına uymadığını kabul etti.",
+      "guardReport": "Son altı ayda ziyaretler zamanında tamamlandı. Yeni disiplin olayı kaydedilmedi.",
       "letterText": "Bakanlık özel kalemi önceki tahliye talebini yineledi. Ayrı bir yazıda kurulun teftişinin devam ettiği bildirildi. İş teklifini veren şirket, Cemil’in eski iş bağlantılarından birine ait.",
       "defenseText": "\"Ziyaret saati konusunda kurala uymadım; son altı ayda aynı sorun yaşanmadı. Mahkûmiyet hakkındaki itirazım sürüyor ama kurumun kurallarına uyuyorum. Evimin teyidi geldi. Danışmanlık teklifini kabul etmek istiyorum; görev tanımını şirket hazırlayacak. Bakanlıktan kimin aradığını ben belirlemiyorum.\"",
       "releaseConsequence": {
@@ -264,7 +300,9 @@ const cases = [
         "chronicle": "Cemil doğrulanan adrese yerleşti ve danışmanlık sözleşmesini imzaladı. Bakanlık kararı olumlu karşıladı. İşin ihale faaliyetleriyle ilişkisi henüz açıklanmadı; yeni bir suç tespiti bulunmuyor.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Danışmanlık işinin kapsamı belirsizken Cemil’i saldın.",
+        "sicilReason": "Bakanlık tahliye kararını olumlu karşıladı."
       },
       "rejectConsequence": {
         "headline": "CEMİL BOZKURT: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -272,7 +310,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": 10,
         "sicilDelta": -15,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Cemil’in eski ihale çevresine dönüşünü sorguladın.",
+        "sicilReason": "Üst makam tahliye yerine ret vermene açıklama istedi."
       }
     }
   },
@@ -285,18 +325,20 @@ const cases = [
     "initialMonth": 2,
     "servedMonths": 18,
     "sentenceMonths": 36,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Bursa Kapalı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> İstanbul Üniversitesi Cerrahpaşa Tıp Fakültesi 3. sınıf öğrencisidir. Üniversitede düzenlenen harç zammı protestosunda izin verilmeyen pankartı taşımak, bildiri dağıtmak ve polisin müdahalesi sırasında taşla ekip otosunun camını kırmak suçlarından hüküm giymiştir. Bu mahkûmiyet öncesinde adli kaydı bulunmamaktadır.</p><p class=\"mt-2\"><strong>FAKÜLTE YAZISI (04.03.1991):</strong> Öğrenci kaydı devam etmektedir. Önceki dönemler için verilen kayıt dondurma süresi sona ermiştir. Bu döneme dönüş işlemleri için 25.03.1991 tarihine kadar başvuru ve uygulama derslerine katılım planı istenmektedir. Süre kaçırılırsa bu dönem derslere dönüş yapılamayacak; sonraki dönem için ayrı başvuru değerlendirilecektir.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Belra Kapalı Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Kardun Üniversitesi Erdemhan Tıp Fakültesi 3. sınıf öğrencisidir. Üniversitede düzenlenen harç zammı protestosunda izin verilmeyen pankartı taşımak, bildiri dağıtmak ve polisin müdahalesi sırasında taşla ekip otosunun camını kırmak suçlarından hüküm giymiştir. Bu mahkûmiyet öncesinde adli kaydı bulunmamaktadır.</p><p class=\"mt-2\"><strong>FAKÜLTE YAZISI (04.03.1991):</strong> Öğrenci kaydı devam etmektedir. Önceki dönemler için verilen kayıt dondurma süresi sona ermiştir. Bu döneme dönüş işlemleri için 25.03.1991 tarihine kadar başvuru ve uygulama derslerine katılım planı istenmektedir. Süre kaçırılırsa bu dönem derslere dönüş yapılamayacak; sonraki dönem için ayrı başvuru değerlendirilecektir.</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-06</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Taşı ben attım. Kimseyi yaralamak istemedim ama camı kırdım. Protestoya katılmamı yanlış bulmuyorum; taşı atmamı savunmuyorum. Fakülteden gelen yazıdaki başvuruyu yapmak istiyorum. Biriken dersleri tamamlamak için ayrıca çalışmam gerekecek.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Barış Aksoy (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p>Son görüşmelerde camı kırdığını kabul etti ve bu davranışını protestoya katılma gerekçesinden ayrı anlattı. Kurumda öfke patlaması kaydedilmedi. Gerilimli bir ortamda benzer davranışı nasıl önleyeceği sorulduğunda ortamdan uzaklaşacağını söyledi. Bunun dışarıdaki davranışına nasıl yansıyacağı henüz gözlenemez.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>18 aydır kurumumuzdadır. Okuma yazma çalışmalarına düzenli katılmış; disiplin cezası bulunmamaktadır. Ablasının yanında kalacağı adres doğrulandı. Fakülte başvuru belgeleri hazırlanmış; uygulama derslerine dönüşün nasıl sağlanacağı henüz kesinleşmemiştir. Savcılıktan tahliyeye itiraz yazısı gelmiştir; yazıya yeni bir kurum içi olay tutanağı eklenmemiştir.</p>\n        ",
-    "letterText": "\n          <p><strong>TIP FAKÜLTESİ HOCALARININ DİLEKÇESİ:</strong></p>\n          <p class=\"italic\">\"Barış’ın kayıt durumuna ilişkin güncel yazı ektedir. Eksik uygulamaları için danışmanlık sunabiliriz; derslere kabul ve başarı ayrıca değerlendirilecektir.\"</p>\n        ",
+    "guardReport": "<p>18 aydır kurumda. Okuma yazma çalışmalarına katılıyor; disiplin cezası yok. Ablasının adresi doğrulandı.</p>",
+    "letterText": "<p>Fakülte danışmanının görüşme saatleri ve başvuru için gereken evrak listesi dosyaya eklendi.</p>",
     "releaseConsequence": {
       "headline": "BARIŞ FAKÜLTEYE DÖNÜŞ BAŞVURUSUNU YAPTI",
       "body": "Barış başvurusunu süresi içinde yaptı. Fakülte eksik uygulamalar için çalışma planı istedi; ders ve sınav başarısı henüz değerlendirilmedi. Ablasının yanına yerleşti. Savcılık tahliye kararına ilişkin itirazını yineleyerek kuruldan gerekçe istedi.",
       "vicdanDelta": 20,
       "sicilDelta": -15,
       "capacityDelta": -3,
-      "chronicle": "Barış fakülteye süresinde başvurdu; eksik ders planı bekleniyor, savcılığın itirazı sürüyor."
+      "chronicle": "Barış fakülteye süresinde başvurdu; eksik ders planı bekleniyor, savcılığın itirazı sürüyor.",
+      "vicdanReason": "Barış’a eğitimine dönmek için başvuru fırsatı verdin.",
+      "sicilReason": "Savcılık tahliyeye itirazını yineledi."
     },
     "rejectConsequence": {
       "headline": "BARIŞ BU DÖNEM DERSLERE DÖNEMEDİ",
@@ -304,13 +346,15 @@ const cases = [
       "vicdanDelta": -25,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Barış bir eğitim dönemini kaybetti; öğrencilik kaydı sürüyor, sonraki dönem için hazırlık yapılıyor."
+      "chronicle": "Barış bir eğitim dönemini kaybetti; öğrencilik kaydı sürüyor, sonraki dönem için hazırlık yapılıyor.",
+      "vicdanReason": "Barış derslere dönüş için bir dönem kaybetti.",
+      "sicilReason": "Savcılık ertelemeyi olumlu karşıladı."
     },
     "review": {
       "status": "Önceki dönem derslere dönemedi. Öğrencilik kaydı sürüyor; 03.09.1991 tarihli fakülte yazısında yeni dönem başvurusu için 25.09.1991 son tarih olarak bildirildi. Kabul ve ders planı ayrıca değerlendirilecek.",
       "psychNote": "Eğitim dönemini kaçırdıktan sonra görüşmelerde daha az konuştuğu kaydedildi. Son iki ayda okuma yazma çalışmalarına düzenli döndü. Camı kırma eylemine ilişkin sorumluluğunu kabul etmeyi sürdürüyor.",
-      "guardReport": "Son altı ayda disiplin cezası yok. Ablasının adres teyidi yenilendi. Yeni dönem için başvuru dosyası hazır; uygulama derslerine katılım düzeni fakültenin değerlendirmesini bekliyor.",
-      "letterText": "Fakülte danışmanı eksik dersler için görüşme teklif etti. Savcılık önceki itirazını yineledi; yeni bir olay kaydı sunulmadı. Tahliye kararı, okula kabulün yerine geçmeyecek.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Ablasının adres teyidi yenilendi.",
+      "letterText": "Yeni dönem başvuru evrakları hazır. Danışman görüşmesi, başvurudan sonra yapılacak; savcılığın önceki itirazı dosyada duruyor.",
       "defenseText": "\"Geçen dönemi kaçırdım. Kaydım silinmedi; danışmanım yeni başvuru için yazdı. Taş atmamın sorumluluğunu kabul ediyorum. Ablamın yanında kalıp eksik derslere hazırlanacağım. Başvurumun kabul edileceğini bilmiyorum ama belgelerimi hazırladım.\"",
       "releaseConsequence": {
         "headline": "BARIŞ YENİ DÖNEM İÇİN BAŞVURDU",
@@ -318,7 +362,9 @@ const cases = [
         "chronicle": "Barış ablasının yanına yerleşip başvurusunu verdi. Fakülte eksik uygulama dersleri için görüşme tarihi belirledi. Kaybettiği dönem geri gelmedi; derslere dönüş ve başarı henüz kesinleşmedi. Savcılığın itirazı devam ediyor.",
         "vicdanDelta": 12,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Barış yeni dönem başvurusunu yapabildi.",
+        "sicilReason": "Savcılığın itirazına rağmen tahliyeyi seçtin."
       },
       "rejectConsequence": {
         "headline": "BARIŞ AKSOY: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -326,7 +372,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Barış’ın dışarıda eğitimini sürdürme fırsatı kapandı.",
+        "sicilReason": "Ret kararı savcılığın beklentisiyle örtüştü."
       }
     }
   },
@@ -339,10 +387,10 @@ const cases = [
     "initialMonth": 3,
     "servedMonths": 48,
     "sentenceMonths": 84,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Ümraniye Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Ümraniye ve Kadıköy genelindeki lise önlerinde ve gençlik parklarında sentetik hap ve esrar satışı yaptığı sırada Narkotik Şube ekiplerince suçüstü yakalanmıştır. Üzerinde yüklü miktarda satışa hazır uyuşturucu paketleri bulunmuş olup, uyuşturucu ticaretinden üçüncü mükerrir sabıka kaydıdır.</p>\n          <p class=\"mt-2\"><strong>İMAMIN GÖZLEM NOTU:</strong> Salih, kurul tarihi belli olmadan önce de mescidin temizliğini düzenli yapıyordu. İbadetine ve buradaki görevlerine şahidim; dışarıdaki işlerini ve bağlantılarını bilmiyorum.</p>\n          <p class=\"mt-2\"><strong>MEKTUP EKİ:</strong> Eski iş bağlantısına yazdığı mektupta “Hocayla görüştüm, kurul için yazı verecek” cümlesi yer alıyor. Mektubun devamında dışarıdaki iş imkânlarını soruyor.</p>\n        ",
-    "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-07</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Uyuşturucu sattım; artık o işi yapmayacağım. İbadetime devam ediyorum, imam efendi bana kefildir. Verdiğim numara iş arayanlar içindi. Çıkınca yeğenimin deposunda çalışacağım. Mağdurlar konusunda söyleyeceğim, tövbe ettiğimdir.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Salih Güler (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
-    "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p class=\"text-red-950 font-bold\">Görüşmelere düzenli katılıyor. Mağdurlara verilen zarar sorulduğunda kendi tövbesini ve imamın desteğini anlatıyor; zararın telafisine ilişkin somut plan sunmadı. Eski bağlantısıyla ilişkisini yalnızca iş bulmaya yardımcı olmak şeklinde açıklıyor. Bu açıklama henüz doğrulanmadı.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>48 aydır kurumumuzdadır. 19.03.1991 tarihli tutanakta iki hükümlüye telefon numarası yazılı kâğıt verdiği kaydedildi. Numara, önceki suç dosyasında adı geçen bir kişiye ait. Konuşmanın içeriği kaydedilmedi. Yeğeninin deposuna ilişkin iş teklifi henüz yazılı olarak ulaşmadı.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Orven Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Orven ve Derenköy genelindeki lise önlerinde ve gençlik parklarında sentetik hap ve esrar satışı yaptığı sırada Narkotik Şube ekiplerince suçüstü yakalanmıştır. Üzerinde yüklü miktarda satışa hazır uyuşturucu paketleri bulunmuş olup, uyuşturucu ticaretinden üçüncü mükerrir sabıka kaydıdır.</p>\n          <p class=\"mt-2\"><strong>İMAMIN GÖZLEM NOTU:</strong> Salih, kurul tarihi belli olmadan önce de mescidin temizliğini düzenli yapıyordu. İbadetine ve buradaki görevlerine şahidim; dışarıdaki işlerini ve bağlantılarını bilmiyorum.</p>\n          <p class=\"mt-2\"><strong>MEKTUP EKİ:</strong> Eski iş bağlantısına yazdığı mektupta “Hocayla görüştüm, kurul için yazı verecek” cümlesi yer alıyor. Mektubun devamında dışarıdaki iş imkânlarını soruyor.</p>\n        ",
+    "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-07</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Uyuşturucu sattım; artık o işi yapmayacağım. İbadetime devam ediyorum, imam efendi bana kefildir. Çıkınca yeğenimin deposunda çalışacağım. Mağdurlar konusunda söyleyeceğim, tövbe ettiğimdir.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Salih Güler (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
+    "psychNote": "<p>Uyuşturucu satışını kabul ediyor. Mağdurlara verdiği zarar sorulduğunda kendi tövbesinden ve imamın desteğinden söz ediyor. Görüşme boyunca sakin kaldı.</p>",
+    "guardReport": "<p>48 aydır kurumda. Mescit temizliği ve haftalık çamaşır dağıtımında görev alıyor. Son dönemde disiplin cezası yok.</p>",
     "letterText": "\n          <p><strong>BİR ANNENİN FERYADI:</strong></p>\n          <p class=\"italic text-red-900\">\"16 yaşındaki evladımı zehirleyen bu adamdı! Bu zehir tacirini sakın salmayın!\"</p>\n        ",
     "releaseConsequence": {
       "headline": "SERBEST KALAN ŞAHIS PARKLARDA YENİDEN YAKALANDI!",
@@ -350,7 +398,9 @@ const cases = [
       "vicdanDelta": -30,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Salih eski bağlantısıyla birlikte uyuşturucu maddelerle yakalandı; tahliye dosyası incelemeye alındı."
+      "chronicle": "Salih eski bağlantısıyla birlikte uyuşturucu maddelerle yakalandı; tahliye dosyası incelemeye alındı.",
+      "vicdanReason": "Salih tahliyeden sonra yeniden uyuşturucuyla yakalandı.",
+      "sicilReason": "Eski bağlantının değerlendirilmesi hakkında inceleme açıldı."
     },
     "rejectConsequence": {
       "headline": "SALİH’İN TAHLİYE DOSYASI ALTI AY ERTELENDİ",
@@ -358,13 +408,15 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Salih’in dosyası ertelendi; iş teklifi ve eski bağlantısı hakkında ek bilgi istendi."
+      "chronicle": "Salih’in dosyası ertelendi; iş teklifi ve eski bağlantısı hakkında ek bilgi istendi.",
+      "vicdanReason": "Salih’in eski çevresiyle ilişkisinin araştırılmasını bekledin.",
+      "sicilReason": "Narkotik birimi ek incelemeyi olumlu karşıladı."
     },
     "review": {
       "status": "Yeğeninin deposundan yazılı iş teklifi geldi; işyerinin faaliyeti ve kalacağı adres doğrulandı. Eski bağlantısıyla yazışması sürüyor. Son altı ayda yeni disiplin cezası kaydedilmedi.",
-      "psychNote": "Görüşmelerde uyuşturucu satışını bırakacağını söylüyor. Mağdurlara ilişkin sorularda imamın desteğini öne çıkarmayı sürdürüyor. Depodaki işini açıklayabiliyor; eski bağlantısıyla neden yazıştığına verdiği yanıtlar sınırlı.",
-      "guardReport": "Temizlik görevleri düzenli; ziyaret kurallarına uyuyor. Son mektubunda eski bağlantısına “Yeğenimin deposuna geçeceğim; senin iş için konuşuruz” yazdı. Buradaki işin ne olduğu belirlenmedi. Depoda yasadışı faaliyet tespit edildiğine ilişkin bir kayıt bulunmuyor.",
-      "letterText": "İmam, Salih’in kurul tarihleri dışında da ibadet ve görevlerine devam ettiğini doğruladı: “Buradaki davranışına şahidim; dışarıdaki ilişkilerine kefil olamam.” Yeğeni iş ve barınma teklifini yazılı yeniledi.",
+      "psychNote": "Görüşmelere devam ediyor. Gelecek planını yeğeninin deposunda çalışmak üzerinden anlatıyor.",
+      "guardReport": "Temizlik görevlerini sürdürüyor; ziyaret kurallarına uyuyor. Son altı ayda yeni disiplin cezası yok.",
+      "letterText": "Eski bağlantısına yazdığı mektupta “Yeğenimin deposuna geçeceğim; senin iş için konuşuruz” cümlesi var. Salih bunu iş arayan bir tanıdığına yardım olarak açıklıyor. İmamın önceki gözlem yazısı dosyada duruyor.",
       "defenseText": "\"Yeğenimin yazısı geldi, depoda yükleme ve sayım işine bakacağım. İbadetime kurul için başlamadım; hocaya sorabilirsiniz. Eski tanıdığımla mektuplaştım, benden iş bulmamı istedi. Mağdurlar için ne yapacağımı henüz bilmiyorum. Tövbe ettiğimi söyledim, bundan sonra yaptıklarımla göstermek istiyorum.\"",
       "releaseConsequence": {
         "headline": "SALİH DEPODA İŞE BAŞLADI: ESKİ BAĞLANTISIYLA GÖRÜŞTÜ",
@@ -372,7 +424,9 @@ const cases = [
         "chronicle": "Salih doğrulanan depoda çalışmaya başladı. Eski bağlantısıyla görüştüğü bildirildi; görüşmenin içeriği bilinmiyor. Yeni bir suç tespiti bulunmuyor. İzlem birimi bağlantıya ilişkin açıklama istedi.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Salih doğrulanan depoda çalışmaya başlayabildi.",
+        "sicilReason": "Eski bağlantıyla görüşmesi açıklama talebine yol açtı."
       },
       "rejectConsequence": {
         "headline": "SALİH GÜLER: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -380,7 +434,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Doğrulanan işe rağmen Salih içeride kaldı.",
+        "sicilReason": "İdare bağlantı kaydının dikkate alınmasını olumlu karşıladı."
       }
     }
   },
@@ -393,10 +449,10 @@ const cases = [
     "initialMonth": 3,
     "servedMonths": 30,
     "sentenceMonths": 48,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Özel hastanede muhasebe sorumlusu iken, 7 yaşındaki lösemi hastası kızının yurt dışından dövizle getirilen pahalı kemoterapi iğnelerini karşılayabilmek amacıyla sahte fatura ve hayali kasa fişleri düzenleyerek kurum hesabından para çekmiştir. Kızı Cerrahpaşa Onkoloji Servisi’nde tedavi görmektedir.</p>\n          <p class=\"mt-2\"><strong>HASTANE YAZISI (03.04.1991):</strong> Hastalığın ağır seyrettiği, tedavinin sürdüğü bildirildi. Teyzesi refakat ediyor; aile desteğine ihtiyaç var. Annesinin yanında bulunması tedavi sonucuna ilişkin güvence oluşturmuyor.</p>\n          <p class=\"mt-2\"><strong>MALİ EK:</strong> İlaç makbuzları çekilen tutarın önemli bir bölümünü doğruluyor; kalan tutarın belgeleri eksik. Özel hastanenin zararının yüzde 10’u ödendi. Avukat kalan ödeme için güvence istiyor; Meryem’in kız kardeşi iş ve barınma teklifini yazılı sundu.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Serenköy Kadın Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Özel hastanede muhasebe sorumlusu iken, 7 yaşındaki lösemi hastası kızının yurt dışından dövizle getirilen pahalı kemoterapi iğnelerini karşılayabilmek amacıyla sahte fatura ve hayali kasa fişleri düzenleyerek kurum hesabından para çekmiştir. Kızı Erdemhan Onkoloji Servisi’nde tedavi görmektedir.</p>\n          <p class=\"mt-2\"><strong>HASTANE YAZISI (03.04.1991):</strong> Hastalığın ağır seyrettiği, tedavinin sürdüğü bildirildi. Teyzesi refakat ediyor; aile desteğine ihtiyaç var. Annesinin yanında bulunması tedavi sonucuna ilişkin güvence oluşturmuyor.</p>\n          <p class=\"mt-2\"><strong>MALİ EK:</strong> İlaç makbuzları çekilen tutarın önemli bir bölümünü doğruluyor; kalan tutarın belgeleri eksik. Özel hastanenin zararının yüzde 10’u ödendi. Avukat kalan ödeme için güvence istiyor; Meryem’in kız kardeşi iş ve barınma teklifini yazılı sundu.</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-08</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Faturaları ben düzenledim, parayı izinsiz aldım. İlaç için kullandım; bazı makbuzları bulamadım. Yaptığımı çocuğumun hastalığı ortadan kaldırmıyor. Kardeşim refakat ediyor ama işi de var. Ben yanında olmak, çalışıp kalan borcu ödemek istiyorum.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Meryem Sönmez (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
-    "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p>Görüşmelerde belge düzenlediğini ve parayı izinsiz aldığını kabul ediyor. Kızının durumundan söz ederken yoğun kaygı ve uyku güçlüğü bildiriyor. Destek görüşmelerine katılıyor. Ödeme planını anlatabiliyor; bu planın gelir kaynağının doğrulanması mali incelemenin konusu.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>30 aydır kurumumuzdadır; disiplin cezası yok. Örgü satışlarından yaptığı ödemeler makbuzlarla kayıtlı. Kız kardeşinin adresi doğrulandı; önerdiği işin düzenli geliri henüz belgelenmedi. Özel hastane avukatının ödeme güvencesi talebi dosyaya eklendi.</p>\n        ",
+    "psychNote": "<p>Kızının durumuyla ilgili kaygı ve uyku güçlüğü bildiriyor. Destek görüşmelerine katılıyor; görüşme sonunda kızına yazdığı mektubu teslim etti.</p>",
+    "guardReport": "<p>30 aydır kurumda; disiplin cezası yok. Örgü atölyesine katılıyor. Kız kardeşinin adresi doğrulandı.</p>",
     "letterText": "\n          <p><strong>ŞİRKET AVUKATININ DİLEKÇESİ:</strong></p>\n          <p class=\"italic\">\"Para ödenmeden tahliyesine rızamız yoktur.\"</p>\n        ",
     "releaseConsequence": {
       "headline": "MERYEM KIZINA REFAKAT ETTİ; AİLE YAS DESTEĞİ ALIYOR",
@@ -404,7 +460,9 @@ const cases = [
       "vicdanDelta": 25,
       "sicilDelta": -15,
       "capacityDelta": -3,
-      "chronicle": "Meryem kızının son haftalarında yanında oldu; kayıp sonrası ailesiyle yas desteğine başladı, ödeme takibi sürüyor."
+      "chronicle": "Meryem kızının son haftalarında yanında oldu; kayıp sonrası ailesiyle yas desteğine başladı, ödeme takibi sürüyor.",
+      "vicdanReason": "Meryem kızının son günlerinde yanında olabildi.",
+      "sicilReason": "Ödeme güvencesi eksikliği karara itiraz doğurdu."
     },
     "rejectConsequence": {
       "headline": "7 YAŞINDAKİ LÖSEMİLİ KIZ ÇOCUĞU VEFAT ETTİ",
@@ -412,13 +470,15 @@ const cases = [
       "vicdanDelta": -30,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Meryem kızını kaybetti ve kurumda yas desteğine alındı; zarar ödemelerine ilişkin inceleme sürüyor."
+      "chronicle": "Meryem kızını kaybetti ve kurumda yas desteğine alındı; zarar ödemelerine ilişkin inceleme sürüyor.",
+      "vicdanReason": "Meryem kızının son günlerinde yanında olamadı.",
+      "sicilReason": "Eksik mali belgelerin takibini önceledin."
     },
     "review": {
       "status": "Kızının ölümünün ardından yas desteği alıyor. Örgü satışları ve ailesinin katkısıyla özel hastanenin zararının yüzde 20’si ödendi.",
       "psychNote": "Görüşmelere devam ediyor; yas belirtileri sürüyor. Örgü işine dönmüş, kalan borç için plan hazırlamış. Desteğin dışarıda da sürmesi için görüşme ayarlandı.",
-      "guardReport": "Disiplin cezası yok. Yüzde 20’lik ödemeye ilişkin makbuzlar dosyada. Kız kardeşinin adresi ve birlikte çalışacakları işyeri doğrulandı; gelirlerinin kalan borcu ne sürede karşılayacağı belirsiz.",
-      "letterText": "Özel hastane avukatı kısmi ödemeyi doğruluyor; kalan tutarın ödeme takvimine itiraz ediyor. Kız kardeşi barınma ve iş desteğini yeniledi. Borç takibi tahliye kararından bağımsız sürecek.",
+      "guardReport": "Örgü işine devam ediyor. Kız kardeşinin yanında kalacağı adres ve birlikte çalışacakları işyeri doğrulandı.",
+      "letterText": "Özel hastane avukatı yüzde 20’lik ödemeyi doğruluyor; kalan alacak için takip sürüyor. Kız kardeşi barınma desteğini yeniledi.",
       "defenseText": "\"Kızım artık yok. Onun için yaptığımı söylemem eksik belgeleri tamamlamıyor. Elimdeki makbuzları verdim, kardeşim de ödemeye yardım etti. Çalışıp kalanını ödemek istiyorum. Burada başladığım destek görüşmelerine dışarıda da devam edeceğim.\"",
       "releaseConsequence": {
         "headline": "MERYEM AİLESİNİN YANINA DÖNDÜ",
@@ -426,7 +486,9 @@ const cases = [
         "chronicle": "Meryem yas desteğine dışarıda devam ediyor; tahliye kızının kaybını geri çevirmedi. Kız kardeşiyle çalışmaya başladı. Yeni ödeme yaptı ancak kalan borcun tamamlanma tarihi henüz kesinleşmedi.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Meryem ailesinin yanında çalışıp yas desteği alabildi.",
+        "sicilReason": "Kalan borcun ödeme süresi belirsizliğini korudu."
       },
       "rejectConsequence": {
         "headline": "MERYEM SÖNMEZ: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -434,7 +496,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Meryem’in ailesiyle yeniden yaşamaya başlaması engellendi.",
+        "sicilReason": "Kalan borcun takibini önceleyen karar verdin."
       }
     }
   },
@@ -447,10 +511,10 @@ const cases = [
     "initialMonth": 3,
     "servedMonths": 28,
     "sentenceMonths": 54,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Metris Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Gece saatlerinde Bağdat Caddesi üzerinde yüksek sürat ve 1.8 promil alkol tesiri altında araç kullanırken kırmızı ışık ihlali yapmış, yaya geçidinden geçen 20 yaşındaki bir üniversite öğrencisine çarparak ölümüne yol açmıştır. Kaza sonrası olay yerinden kaçmayıp teslim olmuştur.</p>\n          <p class=\"mt-2\"><strong>İNFAZ VE BAŞVURU NOTU:</strong> Toplam 54 aylık cezanın 28 ayı tamamlandı. Şartlı tahliye başvurusu değerlendirme gündemine alındı; toplam ceza süresi sona ermedi.</p>\n          <p class=\"mt-2\"><strong>AİLE VE TAKİP PLANI:</strong> Anne ve babasının adresi doğrulandı. Ailesi destek görüşmelerine ulaşım sağlayacağını bildirdi; dışarıdaki ilk randevu henüz kesinleşmedi.</p>\n          <p class=\"mt-2\"><strong>MAĞDUR ANNESİNİN DİLEKÇESİ:</strong> “Oğlumun kaybıyla her gün yaşıyoruz. Murat’ın pişman olduğunu söylemesi bize yetmiyor. Tahliye değerlendirmesinde neye dayanıldığını öğrenmek ve itirazımızın dosyada kalmasını istiyoruz.”</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Dervan Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> Gece saatlerinde Arel Caddesi üzerinde yüksek sürat ve 1.8 promil alkol tesiri altında araç kullanırken kırmızı ışık ihlali yapmış, yaya geçidinden geçen 20 yaşındaki bir üniversite öğrencisine çarparak ölümüne yol açmıştır. Kaza sonrası olay yerinden kaçmayıp teslim olmuştur.</p>\n          <p class=\"mt-2\"><strong>İNFAZ VE BAŞVURU NOTU:</strong> Toplam 54 aylık cezanın 28 ayı tamamlandı. Şartlı tahliye başvurusu değerlendirme gündemine alındı; toplam ceza süresi sona ermedi.</p>\n          <p class=\"mt-2\"><strong>AİLE VE TAKİP PLANI:</strong> Anne ve babasının adresi doğrulandı. Ailesi destek görüşmelerine ulaşım sağlayacağını bildirdi; dışarıdaki ilk randevu henüz kesinleşmedi.</p>\n          <p class=\"mt-2\"><strong>MAĞDUR ANNESİNİN DİLEKÇESİ:</strong> “Oğlumun kaybıyla her gün yaşıyoruz. Murat’ın pişman olduğunu söylemesi bize yetmiyor. Tahliye değerlendirmesinde neye dayanıldığını öğrenmek ve itirazımızın dosyada kalmasını istiyoruz.”</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-09</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"Alkollü olduğum hâlde direksiyona geçtim ve kırmızı ışıkta durmadım. Bir insanın ölümüne neden oldum; bunu kaza diyerek geçiştiremem. Destek görüşmelerine katılıyorum. Şartlı tahliye değerlendirmesi için başvurdum. Ailemin yanında kalıp görüşmelere devam etmek istiyorum; dışarıda bunu sürdürebildiğimi henüz göstermedim.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Murat Çetin (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p>Görüşmelerde ölümle sonuçlanan davranışının sorumluluğunu kabul ediyor. Uyku güçlüğü ve yoğun suçluluk duygusu bildiriyor. Düzenli destek görüşmelerine katılıyor. Tedavi ve risk değerlendirmesinin sürmesi öneriliyor; tahliye hâlinde görüşmelerin kesintiye uğramaması için randevu planı hazırlanıyor.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>28 aydır kurumumuzdadır. Kütüphane görevine düzenli devam ediyor; disiplin cezası bulunmuyor. Kurum kayıtlarında alkol kullanımına ilişkin olay yok. Bu gözlem dışarıdaki davranışını doğrulamıyor. Destek programına katılım çizelgesi dosyaya eklendi.</p>\n        ",
+    "guardReport": "<p>28 aydır kurumda. Kütüphanede kitap teslim çizelgesini tutuyor; disiplin cezası yok.</p>",
     "letterText": "\n          <p><strong>ÖLEN GENCİN ANNESİNİN MEKTUBU:</strong></p>\n          <p class=\"italic text-red-950 font-bold border-l-2 border-red-600 pl-2\">\"Oğlumun kaybıyla yaşıyoruz. Tahliye değerlendirmesinin gerekçesini öğrenmek ve itirazımızın dosyada kalmasını istiyoruz.\"</p>\n        ",
     "releaseConsequence": {
       "headline": "MURAT AİLESİNİN YANINA YERLEŞTİ: DESTEK GÖRÜŞMELERİ BAŞLADI",
@@ -458,7 +522,9 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Murat ailesinin yanında destek görüşmelerine başladı; mağdur ailesinin itirazı ve siyasi makamın açıklama talebi sürüyor."
+      "chronicle": "Murat ailesinin yanında destek görüşmelerine başladı; mağdur ailesinin itirazı ve siyasi makamın açıklama talebi sürüyor.",
+      "vicdanReason": "Murat ailesinin yanında destek almaya başladı.",
+      "sicilReason": "Milletvekili danışmanlığı karar için açıklama istedi."
     },
     "rejectConsequence": {
       "headline": "MURAT’IN SAĞLIK TAKİBİ SIKLAŞTIRILDI",
@@ -466,12 +532,14 @@ const cases = [
       "vicdanDelta": -15,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Murat’ın destek görüşmeleri sıklaştırıldı; erteleme kararı siyasi makam tarafından olumlu karşılandı."
+      "chronicle": "Murat’ın destek görüşmeleri sıklaştırıldı; erteleme kararı siyasi makam tarafından olumlu karşılandı.",
+      "vicdanReason": "Ertelemenin ardından Murat’ın durumu ağırlaştı.",
+      "sicilReason": "Danışmanlık erteleme kararını olumlu karşıladı."
     },
     "review": {
       "status": "Erteleme sonrasında sıklaştırılan görüşmelere düzenli katıldı. Son iki ayda kütüphane görevine yeniden devam etti. Aile adresi ve dışarıdaki ilk destek randevusu doğrulandı.",
-      "psychNote": "Uyku yakınmaları azaldığını bildiriyor; suçluluk duygusu sürüyor. Destek programına katılım düzenli. Dışarıda programı sürdürebilmesi takip gerektiriyor; kurum içi düzelme tek başına kesin sonuç göstermiyor.",
-      "guardReport": "Disiplin cezası yok. Kütüphane devam çizelgesi ve görüşme kayıtları dosyada. Ailesinin ulaşım desteği teyit edildi; tahliye sonrası randevu yazılı olarak alındı.",
+      "psychNote": "Uyku yakınmalarının azaldığını bildiriyor. Destek görüşmelerine katılımı düzenli.",
+      "guardReport": "Kütüphane görevine döndü. Son altı ayda disiplin cezası yok.",
       "letterText": "Ailesi görüşmelere ulaşım sağlayacağını bildirdi. Mağdur ailesi itirazını yineledi ve karar gerekçesinin kendilerine bildirilmesini istedi. Danışmanlığın önceki baskı yazısı ayrı ek olarak duruyor.",
       "defenseText": "\"Ertelemeden sonra bir süre kütüphaneye gitmedim, uykum da bozuldu. Görüşmeleri aksatmamaya çalıştım ve son iki ayda görevime döndüm. Ailem randevularıma götürecek; tarihini de aldık. Ölen gencin ailesinin beni affetmesini bekleyemem. Dışarıda da bu düzeni sürdürmek benim sorumluluğum.\"",
       "releaseConsequence": {
@@ -480,7 +548,9 @@ const cases = [
         "chronicle": "Murat ailesinin yanına yerleşti ve planlanan randevulara katıldı. İlk takip döneminde yeni olay kaydedilmedi. Mağdur ailesi itirazını sürdürdü; danışmanlık kurul kararına ilişkin yeniden açıklama istedi.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Murat planlanan destek görüşmelerine katılabildi.",
+        "sicilReason": "Danışmanlık tahliyeye yeniden açıklama istedi."
       },
       "rejectConsequence": {
         "headline": "MURAT ÇETİN: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -488,7 +558,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Murat’ın dışarıdaki destek planı uygulanamadı.",
+        "sicilReason": "Danışmanlık ret kararını olumlu karşıladı."
       }
     }
   },
@@ -501,10 +573,10 @@ const cases = [
     "initialMonth": 3,
     "servedMonths": 171,
     "sentenceMonths": 216,
-    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Bayrampaşa Özel Tip Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> 1970'lerin çalkantılı yeraltı hesaplaşmaları döneminde çıkar amaçlı silahlı suç örgütü adına tetikçilik yapmış, kanlı bir kahvehane çatışmasında karşı şebeke mensubunu tasarlayarak öldürmüştür. Dosyada kayıtlı toplam ceza 18 yıldır; 14 yıl 3 ayı tamamlanmıştır.</p>\n          <p class=\"mt-2\"><strong>BARINMA VE BAKIM TEKLİFİ:</strong> Yeğeni Rize’deki evinde kalmasını, hastane kontrollerine ulaşımını ve geçimini sağlamayı teklif ediyor. Kovanlar yeğenine ait; Yavuz’un ağır taşıma yerine malzeme hazırlığına yardımcı olması planlanıyor. Adres ve bakım düzeni için yerel teyit bekleniyor.</p>\n          <p class=\"mt-2\"><strong>GÜVENLİK EKİ (02.04.1991):</strong> Önceki suç dosyasında adı geçen bir kişinin ziyaret talebi Yavuz tarafından reddedildi. Aynı kişinin köydeki adresi sorduğuna ilişkin ihbar alındı. İhbarın ayrıntıları ve adresi sorma amacı doğrulanmadı; Yavuz’un yeni bir talimat verdiğine ilişkin kayıt bulunmuyor.</p>\n        ",
+    "mainText": "\n          <p><strong>GÖRÜŞME YERİ:</strong> Vardak Özel Tip Cezaevi</p>\n          <p class=\"mt-1\"><strong>OLAY ÖZETİ:</strong> 1970'lerin çalkantılı yeraltı hesaplaşmaları döneminde çıkar amaçlı silahlı suç örgütü adına tetikçilik yapmış, kanlı bir kahvehane çatışmasında karşı şebeke mensubunu tasarlayarak öldürmüştür. Dosyada kayıtlı toplam ceza 18 yıldır; 14 yıl 3 ayı tamamlanmıştır.</p>\n          <p class=\"mt-2\"><strong>BARINMA VE BAKIM TEKLİFİ:</strong> Yeğeni Nerze’deki evinde kalmasını, hastane kontrollerine ulaşımını ve geçimini sağlamayı teklif ediyor. Kovanlar yeğenine ait; Yavuz’un ağır taşıma yerine malzeme hazırlığına yardımcı olması planlanıyor. Adres ve bakım düzeni için yerel teyit bekleniyor.</p>\n          <p class=\"mt-2\"><strong>GÜVENLİK EKİ (02.04.1991):</strong> Önceki suç dosyasında adı geçen bir kişinin ziyaret talebi Yavuz tarafından reddedildi. Aynı kişinin köydeki adresi sorduğuna ilişkin ihbar alındı. İhbarın ayrıntıları ve adresi sorma amacı doğrulanmadı; Yavuz’un yeni bir talimat verdiğine ilişkin kayıt bulunmuyor.</p>\n        ",
     "defenseText": "\n          <div class=\"bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900\">\n            <div class=\"flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600\">\n              <span>HÜKÜMLÜ İFADE VE SAVUNMA ZAPTI</span>\n              <span>KOD: 1991/B-10</span>\n            </div>\n            <p class=\"italic text-stone-800 leading-relaxed text-[13px]\">\n              \"O adamı ben öldürdüm; örgütün içinde olmam kararımı ortadan kaldırmaz. Ziyaretime gelmek isteyen eski tanıdığımla görüşmedim. Yeğenimin yanında kalmak istiyorum. Kovanların ağır işlerini yapamam ama malzeme hazırlığına yardım edebilirim. Adresimi neden sorduklarını bilmiyorum; onlarla yeniden görüşmek istemiyorum.\"\n            </p>\n            <div class=\"mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500\">\n              İfade Sahibi: <span class=\"italic text-stone-700 font-semibold\">Yavuz Kara (Mühür/İmza)</span>\n            </div>\n          </div>\n        ",
     "psychNote": "\n          <div class=\"bg-yellow-100 p-3 rounded border border-yellow-300 postit-shadow text-amber-950 font-typewriter\">\n            <div class=\"font-bold border-b border-amber-300 pb-1 mb-1\">GİZLİ GÖZLEM NOTU - DR. SEVİM</div>\n            <p>Görüşmelerde öldürme eyleminin sorumluluğunu kabul ediyor. Gelecek planını yeğeniyle yaşamak ve gündelik işlere katılmak üzerinden anlatıyor. Görüşmelerde tehdit ifadesi kaydedilmedi. Eski ilişkilerinden koptuğu beyanının dışarıda sürüp sürmeyeceği bu görüşmelerle kesinleştirilemez.</p>\n          </div>\n        ",
-    "guardReport": "\n          <p><strong>CEZAEVİ İDARESİ RAPORU:</strong></p>\n          <p>Son üç yılda disiplin cezası bulunmuyor. Sağlık ekinde diz hareketlerinde kısıtlılık ve gözlükle kısmen düzelen görme sorunu kayıtlı; düzenli kontrol önerilmiş. Günlük işlerini yardımla sürdürüyor. Emniyet, adres sorgusuna ilişkin inceleme tamamlanmadan karar verilmesine itiraz ediyor; somut bir saldırı hazırlığı tespit edildiğine ilişkin belge sunulmadı.</p>\n        ",
+    "guardReport": "<p>Son üç yılda disiplin cezası yok. Diz hareketlerinde kısıtlılık ve görme sorunu için düzenli kontrol alıyor; ağır işlerde yardım gerekiyor.</p>",
     "letterText": "\n          <p><strong>YAVUZ'UN DİLEKÇESİ:</strong></p>\n          <p class=\"italic\">\"Yeğenimin yanında kalmak istiyorum. Eski tanıdığımla görüşmeyi reddettim; adresime ilişkin ihbarın araştırılmasını da istiyorum.\"</p>\n        ",
     "releaseConsequence": {
       "headline": "TAHLİYE EDİLEN ESKİ TETİKÇİ KÖYÜNE ULAŞTI",
@@ -512,7 +584,9 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": -15,
       "capacityDelta": -3,
-      "chronicle": "Yavuz yeğeninin yanına yerleşti; ilk takipte olay bildirilmedi, adres ihbarının incelemesi sürüyor."
+      "chronicle": "Yavuz yeğeninin yanına yerleşti; ilk takipte olay bildirilmedi, adres ihbarının incelemesi sürüyor.",
+      "vicdanReason": "Yavuz yeğeninin bakımına kavuştu.",
+      "sicilReason": "Açık adres ihbarı ve geç teyitler için gerekçe istendi."
     },
     "rejectConsequence": {
       "headline": "YAVUZ’UN DOSYASI ERTELENDİ: BAKIM VE ADRES TEYİDİ BEKLENİYOR",
@@ -520,13 +594,15 @@ const cases = [
       "vicdanDelta": -15,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Yavuz’un dosyası ertelendi; bakım planı ve adres ihbarı araştırılırken sağlık takibi devam ediyor."
+      "chronicle": "Yavuz’un dosyası ertelendi; bakım planı ve adres ihbarı araştırılırken sağlık takibi devam ediyor.",
+      "vicdanReason": "Yavuz’un aile yanında bakım alması ertelendi.",
+      "sicilReason": "Açık kayıtların incelenmesini bekledin."
     },
     "review": {
       "status": "Yeğeninin evi, geçim desteği ve kontrollere ulaşım planı doğrulandı. Yeni disiplin olayı yok. Adresin sorulduğuna ilişkin ihbarın amacı hâlâ açıklanamadı.",
-      "psychNote": "Görüşmelerde geleceğe ilişkin somut planlarını sürdürüyor. Eski tanıdığıyla görüşmeyi reddetme kararını yineledi. Kurum içindeki olumlu gözlemler, dışarıdaki ilişkiler için tek başına güvence oluşturmuyor.",
-      "guardReport": "Son altı ayda disiplin cezası yok. Yeğeninin bakım ve ulaşım planı yazılı teyit edildi; ilk sağlık kontrolü için tarih alındı. Yeni bir suç bağlantısı veya talimat kaydı sunulmadı.",
-      "letterText": "Yerel inceleme evin ve kovanların yeğenine ait olduğunu doğruladı. Emniyet adres ihbarının incelemesini sürdürüyor; yeni saldırı hazırlığına ilişkin bulgu bildirmedi. Yavuz’un korunma ihtiyacı ile kendisinin oluşturabileceği risk ayrı değerlendiriliyor.",
+      "psychNote": "Gelecek planını yeğeniyle yaşamak üzerinden anlatıyor. Görüşmelerde yeni bir değişiklik kaydedilmedi.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Günlük işlerde yardım almayı sürdürüyor.",
+      "letterText": "Yerel inceleme evin ve kovanların yeğenine ait olduğunu doğruladı. Bakım ve ulaşım planı yazılı olarak tamamlandı. Adres ihbarına ilişkin inceleme açık.",
       "defenseText": "\"Yeğenimin evini ve gelirini kontrol etmişler, hastane için de tarih aldık. Eski tanıdığımla yine görüşmek istemiyorum. Yaptığımın sorumluluğu bende; bunu yaşımı veya sağlığımı söyleyerek değiştiremem. Adresimi neden sorduğunu bilmiyorum. Köye gidersem kontrollerime devam edip yeğenimin yanında çalışabildiğim kadar çalışacağım.\"",
       "releaseConsequence": {
         "headline": "YAVUZ DOĞRULANAN BAKIM PLANIYLA KÖYÜNE YERLEŞTİ",
@@ -534,7 +610,9 @@ const cases = [
         "chronicle": "Yavuz yeğeninin evine yerleşti, kontrol randevusuna katıldı. İlk takip döneminde olay bildirilmedi. Adres ihbarının incelemesi sürdüğü için emniyet kararın gerekçesini yeniden istedi.",
         "vicdanDelta": 12,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Yavuz doğrulanan bakım planına geçebildi.",
+        "sicilReason": "Emniyet açık adres ihbarı nedeniyle gerekçe istedi."
       },
       "rejectConsequence": {
         "headline": "YAVUZ KARA: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -542,7 +620,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Doğrulanan bakım planına rağmen Yavuz içeride kaldı.",
+        "sicilReason": "Açık güvenlik incelemesinde ihtiyatlı karar verdin."
       }
     }
   },
@@ -555,9 +635,9 @@ const cases = [
     "initialMonth": 4,
     "servedMonths": 44,
     "sentenceMonths": 72,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1987 yılında, ödenmeyen ücretler nedeniyle tartıştığı işvereninin tekstil deposunu gece ateşe verdi. Gece bekçisi yangında yaralandı. Nermin depoda kimse olmadığını düşündüğünü söylüyor; yangını çıkardığını kabul ediyor.</p><p class=\"mt-2\"><strong>OLAY TUTANAĞI (12.04.1991):</strong> Nermin, koruyucusu kırık makine nedeniyle atölyede çalışmayı durdurdu. Tartışmada görevliye hakaret ettiği iki tanıkça kaydedildi. Ertesi gün bakım yapıldığı, makine arıza kaydında doğrulanıyor.</p><p class=\"mt-2\"><strong>YAŞAM PLANI:</strong> Kız kardeşinin adresi doğrulandı. Eski işvereniyle bağlantısı olmayan dikimevinden sözlü iş teklifi var; yazılı teyit bekleniyor.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Serenköy Kadın Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1987 yılında, ödenmeyen ücretler nedeniyle tartıştığı işvereninin tekstil deposunu gece ateşe verdi. Gece bekçisi yangında yaralandı. Nermin depoda kimse olmadığını düşündüğünü söylüyor; yangını çıkardığını kabul ediyor.</p><p class=\"mt-2\"><strong>OLAY TUTANAĞI (12.04.1991):</strong> Nermin, koruyucusu kırık makine nedeniyle atölyede çalışmayı durdurdu. Tartışmada görevliye hakaret ettiği iki tanıkça kaydedildi. Ertesi gün bakım yapıldığı, makine arıza kaydında doğrulanıyor.</p><p class=\"mt-2\"><strong>YAŞAM PLANI:</strong> Kız kardeşinin adresi doğrulandı. Eski işvereniyle bağlantısı olmayan dikimevinden sözlü iş teklifi var; yazılı teyit bekleniyor.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Ücretimi alamamam yaptığımı haklı çıkarmaz. Depoyu ben yaktım. Bekçinin içeride olduğunu bilmiyordum ama yaralanmasına neden oldum. Atölyede makineyi durdurmak istedim; görevliye söylediğim sözleri söylememeliydim.”</p>",
-    "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Yangını çıkardığını ve bekçiye verdiği zararı kabul ediyor. Eski işvereni hakkında konuşurken sesini yükseltiyor; görüşmelerde tehdit kaydedilmedi. Atölyedeki tartışmayı anlatırken güvenlik itirazı ile kullandığı sözleri ayırabiliyor. Kurum dışındaki çatışmalara nasıl yanıt vereceği henüz gözlenemez.</p>",
+    "psychNote": "<p>Yangını çıkardığını kabul ediyor. Görüşmede uykusunun düzensiz olduğunu söyledi; destek randevularına devam ediyor.</p>",
     "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> “Otoriteyle sorunlu, diğer hükümlüleri yönlendiriyor.” Bu değerlendirmeye dayanak olarak 12 Nisan’daki iş durdurma ve hakaret tutanağı gösteriliyor. Önceki 18 ayda disiplin cezası yok; atölye devamı düzenli. Nermin tutanağa yazılı itiraz etmiş, inceleme henüz sonuçlanmamış.</p>",
     "letterText": "<p><strong>KIZ KARDEŞİNİN YAZISI:</strong> Evimde kalabilir. Dikimeviyle görüştüm ancak işe başlayacağı tarih henüz belli değil.</p>",
     "releaseConsequence": {
@@ -566,7 +646,9 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Nermin işe başladı; alacağını yazılı yollarla takip ediyor, kurum karar için gerekçe istedi."
+      "chronicle": "Nermin işe başladı; alacağını yazılı yollarla takip ediyor, kurum karar için gerekçe istedi.",
+      "vicdanReason": "Nermin çalışmaya ve alacağını yazılı yollarla aramaya başladı.",
+      "sicilReason": "Kurum olumsuz rapora rağmen tahliyeyi sorguladı."
     },
     "rejectConsequence": {
       "headline": "NERMİN’İN DOSYASI ERTELENDİ: ATÖLYE TUTANAĞI İNCELENİYOR",
@@ -574,12 +656,14 @@ const cases = [
       "vicdanDelta": -10,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Nermin’in dosyası ertelendi; iş teklifi kayboldu, atölye olayı incelemesi sürüyor."
+      "chronicle": "Nermin’in dosyası ertelendi; iş teklifi kayboldu, atölye olayı incelemesi sürüyor.",
+      "vicdanReason": "Erteleme sırasında Nermin’in iş fırsatı kayboldu.",
+      "sicilReason": "İdare ek inceleme beklenmesini olumlu karşıladı."
     },
     "review": {
       "status": "Makinenin koruyucusunun kırık olduğu incelemede doğrulandı. Hakaret kaydı korundu; Nermin kullandığı sözler için yazılı özür sundu. İlk iş teklifi artık geçerli değil.",
-      "psychNote": "Yangının sorumluluğunu kabul etmeyi sürdürüyor. Güvenlik itirazını geri çekmedi, ancak görevliye hakaretini savunmuyor. Son görüşmelerde yeni tehdit kaydedilmedi.",
-      "guardReport": "Son altı ayda yeni disiplin olayı yok. Atölye çalışması sürüyor. Yaralanan bekçiye küçük bir ödeme yapıldığı makbuzla doğrulandı; kalan tazminat ödenmedi.",
+      "psychNote": "Destek görüşmelerini sürdürüyor. Gelecek planını kardeşiyle birlikte yaşamak üzerinden anlatıyor.",
+      "guardReport": "Son altı ayda yeni disiplin olayı yok. Atölye çalışması sürüyor.",
       "letterText": "Bekçi ödemeyi aldığını doğruladı; tahliyeyi desteklediğine ilişkin beyan vermedi. Kız kardeşinin barınma desteği sürüyor; evde parça başı dikiş işi için teklif var, düzenli gelir güvencesi yok.",
       "defenseText": "\"Makinenin bozuk olduğu kayda geçti. Görevliye hakaret etmem doğru değildi, özür yazdım; güvenlik itirazımdan vazgeçmedim. Bekçiye az da olsa ödeme yapabildim. İlk iş fırsatı kalmadı ama kardeşimle parça başı iş alabiliriz. Gelirin düzenli olacağına söz veremem.\"",
       "releaseConsequence": {
@@ -588,7 +672,9 @@ const cases = [
         "chronicle": "Nermin kız kardeşinin yanında parça başı iş almaya başladı. Bekçiye iki küçük ödeme daha yaptı; ödemeler düzenli değil. İlk takipte yeni şiddet olayı bildirilmedi; kurum olumsuz değerlendirmesinin gerekçelerini yineledi.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Nermin çalışıp bekçiye ödeme yapmaya başladı.",
+        "sicilReason": "Kurum olumsuz değerlendirmesini sürdürdü."
       },
       "rejectConsequence": {
         "headline": "NERMİN ACAR: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -596,7 +682,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Nermin’in dışarıda çalışıp ödeme yapma fırsatı kapandı.",
+        "sicilReason": "Disiplin kaydını önceleyen karar verdin."
       }
     }
   },
@@ -609,10 +697,10 @@ const cases = [
     "initialMonth": 4,
     "servedMonths": 32,
     "sentenceMonths": 60,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Metris Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1988 yılında sahte çalışma belgeleri düzenleyip iş bulma vaadiyle başvuranlardan para aldı. Ücret ödeyen on iki kişiye iş sağlanmadı. Belgeleri hazırladığını kabul ediyor; paranın bir bölümünü birlikte çalıştığı kişiye verdiğini söylüyor.</p><p class=\"mt-2\"><strong>GÜVENLİK TUTANAĞI (08.05.1991):</strong> İhsan’ın verdiği yer bilgisiyle ortak depoda iki kesici alet bulundu. Bir hükümlüyü sorumlu tuttu; ancak aletleri o kişinin koyduğunu gördüğünü ilk ifadesinde söylemişken, ek ifadesinde bunu başkasından duyduğunu belirtti. Aletlerin varlığı doğrulandı; kime ait oldukları belirlenmedi.</p><p class=\"mt-2\"><strong>KORUMA VE YAŞAM PLANI:</strong> Bilgi verdiği koğuşta öğrenildikten sonra tehdit dilekçesi sundu. Ayrı koğuşa geçiş talebi değerlendiriliyor. Ablasının adresi doğrulandı; önerdiği işin ayrıntıları henüz yazılı değil.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Dervan Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1988 yılında sahte çalışma belgeleri düzenleyip iş bulma vaadiyle başvuranlardan para aldı. Ücret ödeyen on iki kişiye iş sağlanmadı. Belgeleri hazırladığını kabul ediyor; paranın bir bölümünü birlikte çalıştığı kişiye verdiğini söylüyor.</p><p class=\"mt-2\"><strong>GÜVENLİK TUTANAĞI (08.05.1991):</strong> İhsan’ın verdiği yer bilgisiyle ortak depoda iki kesici alet bulundu. Bir hükümlüyü sorumlu tuttu; ancak aletleri o kişinin koyduğunu gördüğünü ilk ifadesinde söylemişken, ek ifadesinde bunu başkasından duyduğunu belirtti. Aletlerin varlığı doğrulandı; kime ait oldukları belirlenmedi.</p><p class=\"mt-2\"><strong>KORUMA VE YAŞAM PLANI:</strong> Bilgi verdiği koğuşta öğrenildikten sonra tehdit dilekçesi sundu. Ayrı koğuşa geçiş talebi değerlendiriliyor. Ablasının adresi doğrulandı; önerdiği işin ayrıntıları henüz yazılı değil.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Sahte belgeleri ben hazırladım. Başvuranlara iş bulamadığımızı biliyordum, yine de para aldım. Depodaki aletlerin yerini söyledim. Kimin koyduğunu gördüm demem doğru değildi; duyduğumu söyledim. Şimdi koğuşta adım çıktı. Ablamın yanında kalmak ve çalışmak istiyorum.”</p>",
     "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Görüşmelere düzenli katılıyor. Tehdit bildiriminden sonra uyku güçlüğü anlatıyor. İfadesindeki değişikliği kabul ediyor fakat ilk anlatımını neden kesinleştirdiğine ilişkin açıklaması değişken. Güvenlik ihtiyacı ile tanıklığının doğruluğu ayrı konulardır.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 32 aydır kurumda; son bir yılda disiplin cezası yok. Yazı işlerine yardımcı oluyor. Birim sorumlusu, aletlerin bulunmasına katkısı nedeniyle tahliyesini destekliyor. Ek tutanak, suçlanan hükümlünün atölye kaydı nedeniyle belirtilen saatte depoya erişiminin mümkün olmadığını bildiriyor; araştırma sürüyor.</p>",
+    "guardReport": "<p>32 aydır kurumda; son bir yılda disiplin cezası yok. Yazı işlerine yardımcı oluyor. Birim sorumlusu, aletlerin bulunmasına katkısı nedeniyle tahliyesini destekliyor.</p>",
     "letterText": "<p><strong>ABLASININ DİLEKÇESİ:</strong> Evimde kalabilir. Yakındaki tamir atölyesiyle konuştum; kabul yazısını henüz alamadım.</p>",
     "releaseConsequence": {
       "headline": "İHSAN TAHLİYE EDİLDİ; DEPO SORUŞTURMASI SÜRÜYOR",
@@ -620,7 +708,9 @@ const cases = [
       "vicdanDelta": -10,
       "sicilDelta": 10,
       "capacityDelta": -3,
-      "chronicle": "İhsan ablasının yanına yerleşti; aletlerin aidiyeti belirsiz, çelişkili tanıklığa ilişkin inceleme sürüyor."
+      "chronicle": "İhsan ablasının yanına yerleşti; aletlerin aidiyeti belirsiz, çelişkili tanıklığa ilişkin inceleme sürüyor.",
+      "vicdanReason": "İhsan’ın doğrulanmayan suçlaması karşısında tereddüdün kaldı.",
+      "sicilReason": "Birim sorumlusu güvenlik katkısını öne çıkararak tahliyeyi destekledi."
     },
     "rejectConsequence": {
       "headline": "İHSAN’IN DOSYASI ERTELENDİ; KORUMA TALEBİ İŞLEME ALINDI",
@@ -628,12 +718,14 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": -10,
       "capacityDelta": 3,
-      "chronicle": "İhsan’ın dosyası ertelendi; koruma tedbiri alındı, depo olayının incelemesi sürüyor."
+      "chronicle": "İhsan’ın dosyası ertelendi; koruma tedbiri alındı, depo olayının incelemesi sürüyor.",
+      "vicdanReason": "İhsan’ın başka birini suçlamasını sorguladın.",
+      "sicilReason": "Birim sorumlusunun tahliye beklentisine karşı çıktın."
     },
     "review": {
       "status": "Koğuş değişikliğinden sonra yeni tehdit olayı kaydedilmedi. Suçlanan diğer hükümlüye ilişkin iddia doğrulanmadı; aletlerin sahibi belirlenemedi. Ablasının adresi ve tamir atölyesindeki yardımcı iş teklifi teyit edildi.",
-      "psychNote": "İlk ifadesinde görmediği bir olayı görmüş gibi anlattığını açıkça kabul ediyor. Bunun sonuçlarını sorulduğunda anlatabiliyor. Görüşmelerde uyku yakınmaları azaldı; dışarıdaki davranışı henüz sınanmadı.",
-      "guardReport": "Son altı ayda disiplin cezası yok. İş teklifinde para tahsilatı veya belge düzenleme görevi bulunmuyor. İhsan ek ifadesini yazılı olarak düzeltmiş; bu düzeltme diğer hükümlünün dosyasına da eklenmiş.",
+      "psychNote": "Koğuş değişikliğinden sonra uyku yakınmaları azaldı. Görüşmelere devam ediyor.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Ek ifadesini yazılı düzeltti; belge diğer hükümlünün dosyasına eklendi.",
       "letterText": "Soruşturma yazısı aletlerin bulunduğunu, ancak İhsan’ın kişiye yönelik isnadını destekleyen yeterli bulgu olmadığını belirtiyor. Ablası barınma desteğini yeniledi. Önceki güvenlik katkısı yeni raporda tek başına tahliye gerekçesi olarak sunulmuyor.",
       "defenseText": "\"Görmediğim şeyi görmüş gibi anlatmam yanlıştı. Düzeltme yazısını verdim; diğer kişinin dosyasına da girdiğini söylediler. Koğuş değişince tehdit kesildi. Ablamın yanındaki atölyenin yazısı geldi. Orada para veya belge işine bakmayacağım; yardımcı olarak çalışacağım.\"",
       "releaseConsequence": {
@@ -642,7 +734,9 @@ const cases = [
         "chronicle": "İhsan atölyede yardımcı olarak işe başladı. İlk takipte yeni dolandırıcılık olayı bildirilmedi. Düzeltilen ifadesi depo soruşturmasında korundu; aletlerin aidiyeti hâlâ belirlenemedi.",
         "vicdanDelta": 10,
         "sicilDelta": 0,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "İhsan’ın ifadesini düzeltmesine ve yeni işine şans verdin.",
+        "sicilReason": "İdari dengede belirgin bir değişiklik olmadı."
       },
       "rejectConsequence": {
         "headline": "İHSAN KESKİN: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -650,7 +744,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 0,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "İfadesini düzelten İhsan’ın dışarıdaki planı uygulanamadı.",
+        "sicilReason": "İdari dengede belirgin bir değişiklik olmadı."
       }
     }
   },
@@ -663,10 +759,10 @@ const cases = [
     "initialMonth": 5,
     "servedMonths": 36,
     "sentenceMonths": 60,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Sağmalcılar Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1988 yılında tadilat için girdiği üç dükkânın anahtarlarının kopyasını aldı. İşyerleri kapalıyken girerek para ve küçük elektronik eşyalar çaldı. İki olayda eşyalar geri alındı; üçüncü dükkânın zararı henüz tamamen karşılanmadı. Orhan anahtarları kopyaladığını ve hırsızlıkları kabul ediyor.</p><p class=\"mt-2\"><strong>İŞ TEKLİFİ:</strong> Eski ustası çilingir dükkânında yeniden çalışmasını teklif etti. İşyerinin faaliyeti doğrulandı; işin müşterilerin anahtarlarını teslim alma ve evlere servis görevlerini içerip içermediği belirtilmedi. Orhan yalnızca tezgâh başında çalışacağını söylüyor.</p><p class=\"mt-2\"><strong>MAĞDURUN YAZISI:</strong> “Eşyalarımın bir kısmını geri aldım. Kilitleri değiştirdim; yine de dükkânı kapatırken tedirgin oluyorum. Ödemelerin sürmesini istiyorum.” Tahliyeye ilişkin kesin bir görüş bildirilmedi. Ablasının yanında kalacağı adres doğrulandı.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Vardak Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1988 yılında tadilat için girdiği üç dükkânın anahtarlarının kopyasını aldı. İşyerleri kapalıyken girerek para ve küçük elektronik eşyalar çaldı. İki olayda eşyalar geri alındı; üçüncü dükkânın zararı henüz tamamen karşılanmadı. Orhan anahtarları kopyaladığını ve hırsızlıkları kabul ediyor.</p><p class=\"mt-2\"><strong>İŞ TEKLİFİ:</strong> Eski ustası çilingir dükkânında yeniden çalışmasını teklif etti. İşyerinin faaliyeti doğrulandı; işin müşterilerin anahtarlarını teslim alma ve evlere servis görevlerini içerip içermediği belirtilmedi. Orhan yalnızca tezgâh başında çalışacağını söylüyor.</p><p class=\"mt-2\"><strong>MAĞDURUN YAZISI:</strong> “Eşyalarımın bir kısmını geri aldım. Kilitleri değiştirdim; yine de dükkânı kapatırken tedirgin oluyorum. Ödemelerin sürmesini istiyorum.” Tahliyeye ilişkin kesin bir görüş bildirilmedi. Ablasının yanında kalacağı adres doğrulandı.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Anahtarları bana iş için vermişlerdi, ben kopyaladım. Bir kere yapıp bırakmadım; üç dükkâna girdim. Ustamın yanında yalnızca tezgâhta çalışacağım. Servise çıkmam diyorum ama bunu ustayla henüz yazılı konuşmadık. Bildiğim iş bu; başka iş bulursam onu da yaparım.”</p>",
-    "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Hırsızlıkların planlı olduğunu kabul ediyor; olayları geçim sıkıntısıyla açıklamakla birlikte bunun haklı gerekçe olmadığını söylüyor. Görüşmelerde iş planını ayrıntılandırabiliyor. Müşteri anahtarlarına yeniden erişmesi sorulduğunda işvereninin denetleyeceğini belirtiyor; denetimin nasıl yapılacağı henüz tanımlanmadı.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 36 aydır kurumda. Son iki yılda disiplin cezası yok. Bakım atölyesindeki görevine düzenli katılıyor; son altı ayın alet teslim çizelgesinde eksik bulunmuyor. Atölye kazancından yaptığı kısmi ödemelerin makbuzları dosyada. Kurumdaki alet denetiminin dışarıdaki işyerinde nasıl sağlanacağı bilinmiyor.</p>",
+    "psychNote": "<p>Anahtarları önceden kopyaladığını kabul ediyor. Geçim sıkıntısını anlatıyor; haftalık görüşmelere katılımı düzenli.</p>",
+    "guardReport": "<p>36 aydır kurumda. Bakım atölyesine düzenli katılıyor; son iki yılda disiplin cezası yok.</p>",
     "letterText": "<p><strong>USTASININ MEKTUBU:</strong> Orhan mesleğini bilir, yeniden çalışabilir. Görevlerini işe başladığında konuşacağız.</p>",
     "releaseConsequence": {
       "headline": "ORHAN ESKİ İŞİNE DÖNDÜ: GÖREV SINIRLARI BELİRSİZ",
@@ -674,7 +770,9 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Orhan çalışmaya ve ödemeye başladı; görevleri beyan edilen planı aştı, yeni hırsızlık kaydı yok."
+      "chronicle": "Orhan çalışmaya ve ödemeye başladı; görevleri beyan edilen planı aştı, yeni hırsızlık kaydı yok.",
+      "vicdanReason": "Orhan’a mesleğiyle yeniden geçinme fırsatı verdin.",
+      "sicilReason": "Anahtarlara erişimi belirsiz bir iş planını kabul ettin."
     },
     "rejectConsequence": {
       "headline": "ORHAN’IN DOSYASI ERTELENDİ; YAZILI İŞ PLANI İSTENDİ",
@@ -682,12 +780,14 @@ const cases = [
       "vicdanDelta": -10,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Orhan’ın dosyası ertelendi; ilk iş fırsatı kapandı, atölye çalışması ve ödemeler sürüyor."
+      "chronicle": "Orhan’ın dosyası ertelendi; ilk iş fırsatı kapandı, atölye çalışması ve ödemeler sürüyor.",
+      "vicdanReason": "Orhan’ın çalışma ve ödeme planı ertelendi.",
+      "sicilReason": "Eski suçuna benzer erişim riskini önceledin."
     },
     "review": {
       "status": "İlk iş teklifi kapanınca bir metal doğrama atölyesinden yardımcı iş teklifi aldı. İşyerinin faaliyeti ve görev tanımı doğrulandı; müşteri anahtarı veya adres servisi görevi bulunmuyor. Ücret daha düşük ve ilk üç ay deneme süresi var.",
-      "psychNote": "Eski işine dönmenin yaratacağı erişim sorununu görüşmelerde açıklayabiliyor. Daha düşük ücretli işi kabul edeceğini belirtiyor. Kurum içindeki düzenli davranışın denetimi daha az olan ortamda sürüp sürmeyeceği henüz gözlenmedi.",
-      "guardReport": "Son altı ayda disiplin cezası yok; alet teslim çizelgesinde eksik bulunmuyor. Yeni iş teklifi yazılı. Mağdura ödemeler sürmüş fakat zarar henüz tamamen karşılanmamış.",
+      "psychNote": "Yeni işin daha düşük ücretini kabul edeceğini söylüyor. Görüşmelerde geçim giderlerini hesaplıyor.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Atölye görevine devam ediyor; ödemelerine ilişkin makbuzları teslim etti.",
       "letterText": "Ablasının adres teyidi yenilendi. Yeni işveren sigortalı çalışma ve ücret teklifini yazılı bildirdi; deneme süresi sonrası devam garantisi yok. Mağdur yapılan ödemeleri doğruladı, kalan tutar için takvim istedi.",
       "defenseText": "\"Ustamın yanındaki yer dolmuş. Yeni atölyenin ücreti daha az ama kabul ediyorum. Orada anahtar veya müşteri eviyle işim olmayacak. Ablamda kalacağım; borcu bir anda kapatamam. Son altı ayın ödeme makbuzları dosyada. İşin devamının garanti olmadığını biliyorum.\"",
       "releaseConsequence": {
@@ -696,7 +796,9 @@ const cases = [
         "chronicle": "Orhan ablasının yanına yerleşti ve metal atölyesinde işe başladı. İlk ayın devamı doğrulandı; yeni hırsızlık kaydı bulunmuyor. Düşük gelir nedeniyle ödeme taksitleri küçük kaldı. Deneme süresi henüz tamamlanmadı.",
         "vicdanDelta": 10,
         "sicilDelta": 0,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Orhan daha düşük ücretli yeni işi kabul edebildi.",
+        "sicilReason": "Yeni görev idari dengede ek değişiklik yaratmadı."
       },
       "rejectConsequence": {
         "headline": "ORHAN TEKİN: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -704,7 +806,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 0,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Orhan’ın anahtar erişimi olmayan iş fırsatı kapandı.",
+        "sicilReason": "Ret idari dengede ek değişiklik yaratmadı."
       }
     }
   },
@@ -717,10 +821,10 @@ const cases = [
     "initialMonth": 5,
     "servedMonths": 110,
     "sentenceMonths": 180,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bursa Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1982 yılında, ailesinin istediği evliliği reddederek başka bir şehirde yaşamaya başlayan 22 yaşındaki kız kardeşi Aylin Duran’ı öldürdü. Aylin bir terzi atölyesinde çalışıyordu. Selim ve bazı yakınları olay sırasında “aile namusu” ifadesini kullandı. Selim öldürme eylemini kabul ediyor; bu gerekçe dosyada failin beyanı olarak kayıtlıdır.</p><p class=\"mt-2\"><strong>AİLE MEKTUBU:</strong> Amcası “Aile içinde gerekeni yaptı, artık evine dönsün” diye yazdı. Selim son görüşmesinde bu ifadeyi kabul etmediğini söyledi; mektuba yazılı yanıt vermedi.</p><p class=\"mt-2\"><strong>YAŞAM VE GÜVENLİK PLANI:</strong> Aileden bağımsız bir işveren iş teklif etti; kabul yazısı var, barınma henüz ayarlanmadı. Aile evi hazır seçenek olarak sunuluyor. Hayattaki kız kardeşi görüşmek istemediğini ve adresinin paylaşılmamasını istediğini bildirdi; bu talep ilgili birime iletildi.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Belra Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1982 yılında, ailesinin istediği evliliği reddederek başka bir şehirde yaşamaya başlayan 22 yaşındaki kız kardeşi Aylin Duran’ı öldürdü. Aylin bir terzi atölyesinde çalışıyordu. Selim ve bazı yakınları olay sırasında “aile namusu” ifadesini kullandı. Selim öldürme eylemini kabul ediyor; bu gerekçe dosyada failin beyanı olarak kayıtlıdır.</p><p class=\"mt-2\"><strong>AİLE MEKTUBU:</strong> Amcası “Aile içinde gerekeni yaptı, artık evine dönsün” diye yazdı. Selim son görüşmesinde bu ifadeyi kabul etmediğini söyledi; mektuba yazılı yanıt vermedi.</p><p class=\"mt-2\"><strong>YAŞAM VE GÜVENLİK PLANI:</strong> Aileden bağımsız bir işveren iş teklif etti; kabul yazısı var, barınma henüz ayarlanmadı. Aile evi hazır seçenek olarak sunuluyor. Hayattaki kız kardeşi görüşmek istemediğini ve adresinin paylaşılmamasını istediğini bildirdi; bu talep ilgili birime iletildi.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Aylin’i ben öldürdüm. O zaman ailemin sözlerini gerekçe yaptım. Onun nasıl yaşayacağına karar vermek benim hakkım değildi. Amcamın yazdığını şimdi kabul etmiyorum. Ama dışarıda aile evine dönmeden nerede kalacağım belli değil. Kız kardeşim benimle görüşmek istemiyorsa buna uyacağım.”</p>",
     "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Son altı görüşmede öldürme eylemini gerekçelendirmeden anlatmaya başladı; önceki kayıtlarda aile baskısını öne çıkarıyordu. Kız kardeşinin kendisiyle görüşmeme hakkını kabul ettiğini söylüyor. Aileden gelecek baskıya nasıl yanıt vereceğine ilişkin planı henüz somut değil. Görüşmelerdeki değişim, dışarıdaki davranışının garantisi sayılmıyor.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Son üç yılda disiplin cezası yok. Marangoz atölyesine düzenli devam ediyor. Amcasının son ziyaret talebini kabul etti; tutanakta konuşmanın içeriği yer almıyor. İş teklifi doğrulandı, fakat işyerinin yatacak yer sağlayamadığı bildirildi. Hayattaki kız kardeşinin adresi dosyanın açık eklerine alınmadı.</p>",
+    "guardReport": "<p>Son üç yılda disiplin cezası yok. Marangoz atölyesine devam ediyor. Hayattaki kız kardeşinin adresi açık eklere alınmadı.</p>",
     "letterText": "<p><strong>KIZ KARDEŞİNİN BAŞVURUSU:</strong> Selim’le görüşmek istemiyorum. Nerede yaşadığımın aileyle paylaşılmamasını ve talebimin karar ne olursa olsun korunmasını istiyorum.</p>",
     "releaseConsequence": {
       "headline": "SELİM AİLE EVİNE DÖNDÜ; BAĞIMSIZ BARINMA SAĞLANAMADI",
@@ -728,7 +832,9 @@ const cases = [
       "vicdanDelta": -10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Selim işe başladı fakat aile evine döndü; bağımsız barınma planı tamamlanmadı, güvenlik talepleri sürüyor."
+      "chronicle": "Selim işe başladı fakat aile evine döndü; bağımsız barınma planı tamamlanmadı, güvenlik talepleri sürüyor.",
+      "vicdanReason": "Selim yeniden aile baskısının bulunduğu eve döndü.",
+      "sicilReason": "Bağımsız barınma eksikliği için ek değerlendirme istendi."
     },
     "rejectConsequence": {
       "headline": "SELİM’İN DOSYASI ERTELENDİ; BAĞIMSIZ YAŞAM PLANI İSTENDİ",
@@ -736,12 +842,14 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Selim’in dosyası ertelendi; bağımsız barınma hazırlığı ve görüşmeler sürüyor."
+      "chronicle": "Selim’in dosyası ertelendi; bağımsız barınma hazırlığı ve görüşmeler sürüyor.",
+      "vicdanReason": "Selim’in aile etkisinden uzaklaşması için hazırlığı önceledin.",
+      "sicilReason": "Eksik barınma planıyla tahliye etmedin."
     },
     "review": {
       "status": "İş teklifini sürdüren işveren, aile evinden ayrı bir oda için kira desteği sundu. Adres ve gelir teyit edildi. Selim amcasına aile gerekçesini reddeden bir mektup yazdı; sonraki ziyaret talebini kabul etmedi.",
-      "psychNote": "Görüşmelerde Aylin’in kendi yaşamını seçme hakkını tanıyan beyanları sürüyor. Ailesinin olası baskışında destek isteyeceği kişileri belirtebiliyor. Bu plan henüz kurum dışında sınanmadı; uzun süredir kurallara uyması suçun ağırlığını ortadan kaldırmıyor.",
-      "guardReport": "Son altı ayda disiplin cezası yok. Ayrı oda ve iş teklifinin yazılı teyitleri dosyada. Amcasına gönderilen yanıt ile reddedilen ziyaret talebi kayda alındı. Aile tarafından yeni bir doğrudan tehdit bildirimi alınmadı.",
+      "psychNote": "Aylin’in kendi yaşamını seçme hakkına ilişkin beyanları sürüyor. Görüşmelerde yeni bir değişiklik kaydedilmedi.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Atölye çalışmasını sürdürüyor.",
       "letterText": "Hayattaki kız kardeşi görüşmeme talebini yeniledi; affettiğine veya tahliyeyi desteklediğine ilişkin beyan vermedi. Adresi paylaşılmıyor. Bağımsız barınma ve destek görüşmesi planı hazır; aileyle temasın tümüyle kesileceği garanti edilemiyor.",
       "defenseText": "\"Amcama, yaptığımın ailenin hakkını korumak olmadığını yazdım. Son ziyaretini kabul etmedim. Ayrı kalacağım yerin teyidi geldi. Aylin’e yaptığımı geri alamam; diğer kız kardeşimin beni affetmesini veya görmesini isteyemem. Ailem baskı yaparsa işyerindeki sorumluya ve destek birimine başvuracağım.\"",
       "releaseConsequence": {
@@ -750,7 +858,9 @@ const cases = [
         "chronicle": "Selim doğrulanan odaya yerleşti ve çalışmaya başladı. İlk görüşmelere katıldı; kız kardeşiyle temas kurduğu bildirilmedi. Ailenin etkisinden uzak kalıp kalmayacağı takip ediliyor. Kız kardeşinin güvenlik talepleri korunuyor.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Selim aile evinden ayrı yaşamaya başlayabildi.",
+        "sicilReason": "Aile etkisinin sürme ihtimalinde tahliye sorumluluğunu aldın."
       },
       "rejectConsequence": {
         "headline": "SELİM DURAN: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -758,7 +868,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Selim’in bağımsız yaşam hazırlığına rağmen ret verdin.",
+        "sicilReason": "İhtiyatlı infaz yaklaşımını sürdürdün."
       }
     }
   },
@@ -771,10 +883,10 @@ const cases = [
     "initialMonth": 5,
     "servedMonths": 60,
     "sentenceMonths": 96,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ankara Merkez Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Kurgusal Birlik Ticaret Bankası’nın kredi yöneticisiyken, ortaklarının denetimindeki şirketlere gerçeğe aykırı teminat belgeleriyle kredi açtı. Kredi tutarları başka hesaplara aktarıldı; bankanın zararının büyük bölümü karşılanmadı. 1986’da tutuklandı. Vedat imzaladığı belgeleri kabul ediyor; yönetim kurulunun baskısını da gerekçe gösteriyor.</p><p class=\"mt-2\"><strong>MALİ İNCELEME EKİ (04.06.1991):</strong> Vedat’ın verdiği hesap listesinde üç kayıt doğrulandı ve bir taşınmaz satışından zararın yüzde 8’i karşılandı. Diğer kayıtların bir kısmı eski. Yeni önerisi, bağlantılı şirketlerden birinin varlık satışını bizzat yönetmek; satışa konu varlığın değeri bağımsız olarak teyit edilmedi.</p><p class=\"mt-2\"><strong>ALACAKLI TEMSİLCİSİNİN YAZISI:</strong> Gerçekleşen tahsilat doğrulanıyor. Temsilci, yeni satışta Vedat’a imza yetkisi verilmesini istemiyor. Tahliye ile varlıkları yönetme yetkisinin ayrı konular olduğunu belirtiyor.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ardora Merkez Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Birlik Ticaret Bankası’nın kredi yöneticisiyken, ortaklarının denetimindeki şirketlere gerçeğe aykırı teminat belgeleriyle kredi açtı. Kredi tutarları başka hesaplara aktarıldı; bankanın zararının büyük bölümü karşılanmadı. 1986’da tutuklandı. Vedat imzaladığı belgeleri kabul ediyor; yönetim kurulunun baskısını da gerekçe gösteriyor.</p><p class=\"mt-2\"><strong>MALİ İNCELEME EKİ (04.06.1991):</strong> Vedat’ın verdiği hesap listesinde üç kayıt doğrulandı ve bir taşınmaz satışından zararın yüzde 8’i karşılandı. Diğer kayıtların bir kısmı eski. Yeni önerisi, bağlantılı şirketlerden birinin varlık satışını bizzat yönetmek; satışa konu varlığın değeri bağımsız olarak teyit edilmedi.</p><p class=\"mt-2\"><strong>ALACAKLI TEMSİLCİSİNİN YAZISI:</strong> Gerçekleşen tahsilat doğrulanıyor. Temsilci, yeni satışta Vedat’a imza yetkisi verilmesini istemiyor. Tahliye ile varlıkları yönetme yetkisinin ayrı konular olduğunu belirtiyor.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Teminatların yazıldığı değerde olmadığını biliyordum, yine de imzaladım. Üst yönetimin baskısı vardı ama imza benim. Verdiğim bilgilerle para geri geldi. Kalan varlıkları en iyi ben biliyorum. Dışarı çıkarsam satışı hızlandırırım; yetki verilmezse alıcılarla nasıl görüşeceğim?”</p>",
     "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Belgelerdeki sorumluluğunu kabul ediyor, ancak görüşmeleri sıklıkla geri kazanılabilecek para miktarına yönlendiriyor. Kendisine yetki verilmeden işbirliği yapması sorulduğunda teklifini sınırlıyor. Kurumda kurallara uyumu düzenli; bu gözlem mali güvenilirliği tek başına doğrulamaz.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 60 aydır kurumda; son iki yılda disiplin cezası yok. İnceleme birimine belgeler göndermiş, görüşmelere katılmış. Eşinin adresi doğrulandı. Eski şirket yöneticileriyle ziyaretleri sürüyor; yeni bir usulsüz işlem talimatına ilişkin tutanak bulunmuyor. Varlık satışı önerisi henüz bağımsız değerleme içermiyor.</p>",
+    "guardReport": "<p>60 aydır kurumda; son iki yılda disiplin cezası yok. İnceleme biriminin evrak taleplerini yazı işleri üzerinden yanıtlıyor. Eşinin adresi doğrulandı.</p>",
     "letterText": "<p><strong>MALİ İNCELEME BİRİMİ:</strong> Belge sunması tahliyeye bağlı değildir. Doğrulanmış tahsilat ile henüz gerçekleşmemiş satış vaadi ayrı kayıtlardır.</p>",
     "releaseConsequence": {
       "headline": "VEDAT TAHLİYE EDİLDİ; VARLIK SATIŞI BEKLENEN TUTARA ULAŞMADI",
@@ -782,7 +894,9 @@ const cases = [
       "vicdanDelta": -10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Vedat tahliye edildi; satış beklentisi karşılanmadı, sınırlı tahsilat yapıldı ve karar gerekçesi istendi."
+      "chronicle": "Vedat tahliye edildi; satış beklentisi karşılanmadı, sınırlı tahsilat yapıldı ve karar gerekçesi istendi.",
+      "vicdanReason": "Vedat’ın vaat ettiği tahsilat gerçekleşmedi.",
+      "sicilReason": "Belirsiz satış vaadine verdiğin ağırlık sorgulandı."
     },
     "rejectConsequence": {
       "headline": "VEDAT’IN DOSYASI ERTELENDİ; BAĞIMSIZ DEĞERLEME İSTENDİ",
@@ -790,21 +904,25 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Vedat’ın dosyası ertelendi; bağımsız değerleme ve belge incelemesi sürüyor, önceki tahsilat korundu."
+      "chronicle": "Vedat’ın dosyası ertelendi; bağımsız değerleme ve belge incelemesi sürüyor, önceki tahsilat korundu.",
+      "vicdanReason": "Alacaklıların doğrulanmış kayıt talebini önceledin.",
+      "sicilReason": "Bağımsız değerleme beklenmesi olumlu karşılandı."
     },
     "review": {
       "status": "Bağımsız satış ve belge incelemesiyle toplam tahsilat yüzde 18’e çıktı. Vedat yeni belgeleri kendisine imza yetkisi verilmeden teslim etti. Önerdiği ilk satış bedelinin gerçekleşebilir olmadığı doğrulandı.",
-      "psychNote": "Yeni görüşmelerde yetki talebini geri çektiğini söylüyor. İlk değerlemesinin iyimser olduğunu kabul ediyor; kalan varlıklara ilişkin bilgilerin doğruluğu mali incelemede değerlendiriliyor. Kurum içi uyumu sürüyor.",
-      "guardReport": "Son altı ayda disiplin cezası yok. Belgeler doğrudan inceleme birimine teslim edilmiş. Eşinin adresi teyit edildi. Eski iş ortaklarından gelen danışmanlık teklifini reddettiğini yazılı bildirdi; geçimini eşinin geliriyle sağlayacağını söylüyor.",
+      "psychNote": "İlk değerlemesinin iyimser olduğunu kabul ediyor. Görüşmelerde kalan varlıkların durumundan söz ediyor.",
+      "guardReport": "Son altı ayda disiplin cezası yok. İstenen belgelerin teslim tarihleri kayıtlı; eşinin adresi teyit edildi.",
       "letterText": "Mali inceleme birimi yüzde 18’lik tahsilatı doğruladı; kalan tutarın güvencesi bulunmuyor. İşbirliği kurum içinden de sürdürülebilir. Tahliye sonrası bilgi ve belge taleplerinin devam edeceği bildirildi.",
-      "defenseText": "\"İlk söylediğim satış bedeli çıkmadı. Yetki almadan da belgeleri verdim, inceleme birimi tahsilat yaptı. Kalan paranın hepsini geri getireceğime söz veremem. Danışmanlık teklifini kabul etmedim. Eşimin yanında kalıp istenen kayıtları sunmaya devam edeceğim.\"",
+      "defenseText": "\"İlk söylediğim satış bedeli çıkmadı. Yetki almadan da belgeleri verdim, inceleme birimi tahsilat yaptı. Kalan paranın hepsini geri getireceğime söz veremem. Eşimin yanında kalıp istenen kayıtları sunmaya devam edeceğim.\"",
       "releaseConsequence": {
         "headline": "VEDAT BELGE TESLİMİNE DIŞARIDA DEVAM EDİYOR",
         "body": "Vedat doğrulanan adrese yerleşti ve istenen belgeleri gönderdi. Küçük bir ek tahsilat yapıldı; zararın çoğu hâlâ karşılanmadı. Alacaklı temsilcisi tahliyeye itirazını sürdürdü; yeni bir usulsüz işlem tespiti bildirilmedi.",
         "chronicle": "Vedat doğrulanan adrese yerleşti ve istenen belgeleri gönderdi. Küçük bir ek tahsilat yapıldı; zararın çoğu hâlâ karşılanmadı. Alacaklı temsilcisi tahliyeye itirazını sürdürdü; yeni bir usulsüz işlem tespiti bildirilmedi.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Vedat’ın yetki istemeden işbirliğine şans verdin.",
+        "sicilReason": "Alacaklı temsilcisinin itirazı sürdü."
       },
       "rejectConsequence": {
         "headline": "VEDAT SARP: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -812,7 +930,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "İşbirliğindeki değişime rağmen Vedat içeride kaldı.",
+        "sicilReason": "Tamamlanmamış mali incelemede ihtiyatlı davrandın."
       }
     }
   },
@@ -825,48 +945,56 @@ const cases = [
     "initialMonth": 5,
     "servedMonths": 152,
     "sentenceMonths": 180,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bursa Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1978 yılında, 22 yaşındayken boşanmak istediği eşi Dilek Eren’i öldürdü. Boşanma ve çocukların geleceği konusunda yaşanan anlaşmazlığı ilk ifadesinde gerekçe göstermişti; sonraki yıllarda bu gerekçeyi açıkça reddetti. Dilek bir konfeksiyon atölyesinde çalışıyordu. Çocukları Elif ve Can, annelerinin ölümünden sonra anneannelerinin yanında büyüdü.</p><p class=\"mt-2\"><strong>İNFAZ DURUMU:</strong> Toplam 180 aylık cezanın 152 ayı tamamlandı; kalan süre 28 ay.</p><p class=\"mt-2\"><strong>ÇOCUKLARIN DURUMU:</strong> Elif 17, Can 15 yaşında. Elif görüşmek istemediğini bildirdi. Can bir mektup almayı kabul ediyor; yüz yüze görüşmeye hazır olduğunu söylemedi. Mevcut bakım düzeninin değiştirilmesi talep edilmiyor. Çocuklarla temas, destek uzmanı aracılığıyla ve ayrı değerlendirmeyle yürütülecek.</p><p class=\"mt-2\"><strong>BAĞIMSIZ YAŞAM PLANI:</strong> Eski atölye eğitmeninin önerdiği mobilya işyerinden iş teklifi ve çocukların yaşadığı mahalleden ayrı bir pansiyon adresi doğrulandı. Onur gelirinin bir bölümünü bakım giderlerine göndermek istiyor; desteği görüşme şartına bağlamıyor.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Belra Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1978 yılında, 22 yaşındayken boşanmak istediği eşi Dilek Eren’i öldürdü. Boşanma ve çocukların geleceği konusunda yaşanan anlaşmazlığı ilk ifadesinde gerekçe göstermişti; sonraki yıllarda bu gerekçeyi açıkça reddetti. Dilek bir konfeksiyon atölyesinde çalışıyordu. Çocukları Elif ve Can, annelerinin ölümünden sonra anneannelerinin yanında büyüdü.</p><p class=\"mt-2\"><strong>İNFAZ DURUMU:</strong> Toplam 180 aylık cezanın 152 ayı tamamlandı; kalan süre 28 ay.</p><p class=\"mt-2\"><strong>ÇOCUKLARIN DURUMU:</strong> Elif 17, Can 15 yaşında. Elif görüşmek istemediğini bildirdi. Can bir mektup almayı kabul ediyor; yüz yüze görüşmeye hazır olduğunu söylemedi. Mevcut bakım düzeninin değiştirilmesi talep edilmiyor. Çocuklarla temas, destek uzmanı aracılığıyla ve ayrı değerlendirmeyle yürütülecek.</p><p class=\"mt-2\"><strong>BAĞIMSIZ YAŞAM PLANI:</strong> Eski atölye eğitmeninin önerdiği mobilya işyerinden iş teklifi ve çocukların yaşadığı mahalleden ayrı bir pansiyon adresi doğrulandı. Onur gelirinin bir bölümünü bakım giderlerine göndermek istiyor; desteği görüşme şartına bağlamıyor.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Boşanmak isteyen bendim. Bir tartışmayı, Dilek’in söylediklerini veya gençliğimi gerekçe yapamam; onu ben öldürdüm. Çocuklarımı annesiz bıraktım. Artık hayatımı onların eğitimine ve ihtiyaçlarına destek olmak için kullanmak istiyorum. Bu, onları görme veya affedilme hakkı vermez. Elif istemiyorsa kapısına gitmeyeceğim. Can’a da yalnızca kabul ettiği biçimde yazacağım.”</p>",
     "psychNote": "<p><strong>DR. SEVİM — UZUN SÜRELİ TAKİP ÖZETİ:</strong> Son dört yılın görüşmelerinde eşini suçlayan açıklamalar tekrarlanmadı. Eylemini ve çocuklar üzerindeki sonuçlarını tutarlı biçimde kabul ediyor. Çocuklarının görüşmeme tercihine saygı duyacağını davranışlarıyla da gösterdi; reddedilen görüşme talebini yinelemedi. Pişmanlığı yalnızca tahliye görüşmesinde ortaya çıkan bir beyan değil. Dışarıdaki uyum için destek görüşmelerinin sürmesi önerildi.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Son beş yılda disiplin cezası yok. Mobilya atölyesinde düzenli çalışıyor. Son üç yıldaki küçük para gönderimleri kayıtlı; mektup veya görüşme karşılığı talep edilmemiş. İş ve pansiyon teyitleri dosyada. Tahliye sonrası ilk destek randevusu için yazışma sürüyor.</p>",
+    "guardReport": "<p>Son beş yılda disiplin cezası yok. Mobilya atölyesinde düzenli çalışıyor; ücret çizelgesi ve aileye gönderim makbuzları kayıtlı.</p>",
     "letterText": "<p><strong>ANNEANNENİN YAZISI:</strong> Gönderilen paraları çocukların giderleri için aldım; bu affettiğim anlamına gelmiyor. Çocuklar aynı evde ve okullarında kalacak. Karar ne olursa olsun görüşme tercihlerinin korunmasını istiyorum.</p>",
     "releaseConsequence": {
       "headline": "ONUR AYRI ADRESE YERLEŞTİ; ÇOCUKLARINA DESTEĞE BAŞLADI",
       "body": "Onur doğrulanan pansiyona yerleşti ve mobilya atölyesinde çalışmaya başladı. İlk ücretinden çocukların giderlerine ödeme yaptı; görüşme şartı ileri sürmedi. Elif’in görüşmeme tercihini korudu, Can’a uzman aracılığıyla bir mektup gönderdi. Çocukların bakım düzeni değişmedi. Destek randevusu tamamlandı; anneanne kararın gerekçesini istedi.",
-      "vicdanDelta": 15,
-      "sicilDelta": -10,
+      "vicdanDelta": -10,
+      "sicilDelta": 15,
       "capacityDelta": -3,
-      "chronicle": "Onur ayrı yaşamaya ve çalışmaya başladı; çocukların tercihlerine uyarak maddi desteğini sürdürdü."
+      "chronicle": "Onur ayrı yaşamaya ve çalışmaya başladı; çocukların tercihlerine uyarak maddi desteğini sürdürdü.",
+      "vicdanReason": "Dilek’i öldüren birinin tahliyesinin ağırlığını taşıyorsun.",
+      "sicilReason": "Uzun süreli olumlu takip ve doğrulanan plana dayandın."
     },
     "rejectConsequence": {
       "headline": "ONUR’UN DOSYASI ERTELENDİ; DESTEK GÖNDERİMLERİ SÜRÜYOR",
       "body": "Dosya altı ay ertelendi. Onur atölye çalışmasına ve çocuklara yaptığı küçük ödemelere devam etti. Görüşme taleplerini artırmadı. İşveren açık pozisyonu doldurabileceğini bildirdi; dışarıdaki yaşam planının yeniden teyidi istendi. İdari değerlendirmede ek takip süresi beklendiği kaydedildi.",
-      "vicdanDelta": -10,
-      "sicilDelta": 10,
+      "vicdanDelta": 10,
+      "sicilDelta": -15,
       "capacityDelta": 3,
-      "chronicle": "Onur’un dosyası ertelendi; çocuklara desteği ve temas sınırlarına uyumu sürdü."
+      "chronicle": "Onur’un dosyası ertelendi; çocuklara desteği ve temas sınırlarına uyumu sürdü.",
+      "vicdanReason": "Dilek’in kaybı karşısında cezanın sürmesini önceledin.",
+      "sicilReason": "Güçlü uyum kayıtlarına rağmen tahliyeyi reddettin."
     },
     "review": {
       "status": "Ceza süresinin 158 ayı tamamlandı; 22 ay kaldı. İşveren daha düşük ücretli bir başlangıç pozisyonu teklif etti; pansiyon ve iş teyitleri yenilendi. Çocuklara küçük ödemeler ve temas sınırlarına uyum sürdü.",
-      "psychNote": "Ertelemenin ardından görüşmelerine devam etti. Dilek’in ölümüne ilişkin sorumluluğunu aynı açıklıkla kabul ediyor. Elif’in görüşmeme kararını değiştirmeye çalışmadı; Can’dan gelen kısa mektubu bir görüşme izni olarak yorumlamadı. Pişmanlığındaki tutarlılık korunuyor.",
-      "guardReport": "Yeni disiplin cezası yok. Atölye devamı ve ödeme kayıtları dosyada. Ayrı barınma teyit edildi; dışarıdaki destek görüşmesi için tarih alındı. Çocukların bakımını üstlenme veya adreslerine gitme talebi yok.",
+      "psychNote": "Dilek’in ölümüne ilişkin sorumluluğunu aynı açıklıkla kabul ediyor. Düzenli destek görüşmeleri sürüyor.",
+      "guardReport": "Atölye çalışması ve küçük ödemeler sürüyor. Yeni disiplin cezası yok.",
       "letterText": "Anneanne maddi desteği doğruladı, affetme veya birlikte yaşamaya ilişkin bir talep sunmadı. Can yazışmaya devam etmek istiyor; Elif temas istemiyor. Uzman bu tercihlerin ayrı ayrı korunmasını istedi.",
       "defenseText": "\"Altı ay daha geçti; söylediklerim değişmedi. Çalışıp çocuklara destek olmayı istiyorum. Elif’in kararını değiştirmeye çalışmadım. Can mektup yazdı ama bunu yanıma gelmek istiyor diye yorumlamıyorum. Dilek’i geri getiremem. Yapabileceğim, onların hayatını kendi isteğime göre düzenlemeye bir daha kalkışmamak.\"",
       "releaseConsequence": {
         "headline": "ONUR ÇALIŞMAYA BAŞLADI; TEMAS SINIRLARINI KORUDU",
         "body": "Onur ayrı adrese yerleşti, çalışmaya ve destek görüşmelerine başladı. Gelirinden çocuklara ödeme yaptı; çocukların affetmesini veya görüşmesini şart koşmadı. Can’la kabul edilen yazışma sürdü; Elif’in temas istememe tercihi değişmedi.",
         "chronicle": "Onur ayrı adrese yerleşti, çalışmaya ve destek görüşmelerine başladı. Gelirinden çocuklara ödeme yaptı; çocukların affetmesini veya görüşmesini şart koşmadı. Can’la kabul edilen yazışma sürdü; Elif’in temas istememe tercihi değişmedi.",
-        "vicdanDelta": 15,
-        "sicilDelta": -10,
-        "capacityDelta": -3
+        "vicdanDelta": -10,
+        "sicilDelta": 15,
+        "capacityDelta": -3,
+        "vicdanReason": "Onur’un pişmanlığı Dilek’in kaybını hafifletmiyor.",
+        "sicilReason": "Onur doğrulanan iş ve temas planına uydu."
       },
       "rejectConsequence": {
         "headline": "ONUR EREN: ŞARTLI TAHLİYE HAKKI YANDI",
         "body": "Kurul ikinci incelemede tahliyeyi reddetti. Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek. Onur kalan 22 ayı kurumda tamamlayacak. Atölye çalışmasına, destek görüşmelerine ve çocuklara yaptığı ödemelere devam ediyor. Çocukların görüşme tercihleri değişmedi; ret kararı pişmanlığını geri çekmesine yol açmadı.",
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
-        "vicdanDelta": -10,
-        "sicilDelta": 10,
-        "capacityDelta": 3
+        "vicdanDelta": 10,
+        "sicilDelta": -15,
+        "capacityDelta": 3,
+        "vicdanReason": "Dilek’in öldürülmesi karşısında cezanın sürmesini seçtin.",
+        "sicilReason": "Süren olumlu takibe rağmen tahliye yolunu kapattın."
       }
     }
   },
@@ -879,10 +1007,10 @@ const cases = [
     "initialMonth": 8,
     "servedMonths": 50,
     "sentenceMonths": 72,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ankara Merkez Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Kurgusal Çınarlı ilçesinin eski belediye başkanıdır. 1987’de belediye alımlarındaki usulsüzlükleri bildiren muhasebe görevlisi Fikret’i, iki çalışanına talimat vererek belediyeye ait bir binada saatlerce alıkoydurdu. Şikâyetini geri çekmezse ailesinin işini kaybedeceğini söyledi. Görevli binadan ayrılmasının engellendiğini tanıklarla bildirdi; Turgut tehdit ve kişiyi hürriyetinden yoksun kılma suçlarından hüküm giydi.</p><p class=\"mt-2\"><strong>GÜNCEL MAĞDUR BAŞVURUSU (28.06.1991):</strong> Fikret, eski belediye çalışanlarından birinin kendisine “Başkan çıkınca konuşursunuz” dediğini bildirdi. Görüşme doğrulandı; kişinin Turgut’un talimatıyla hareket ettiği belirlenmedi. Mağdur bir uzlaşma dilekçesi vermedi.</p><p class=\"mt-2\"><strong>TAHLİYE PLANI:</strong> Eşinin başka bir ilçedeki adresi doğrulandı. Eski siyasi arkadaşları bir dernekte yöneticilik teklif ediyor; görevin belediye ve eski çalışanlarla ilişkisi açıklanmamış. Mağdurla doğrudan temas kurmayacağını söylüyor.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ardora Merkez Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Çınarova ilçesinin eski belediye başkanıdır. 1987’de belediye alımlarındaki usulsüzlükleri bildiren muhasebe görevlisi Fikret’i, iki çalışanına talimat vererek belediyeye ait bir binada saatlerce alıkoydurdu. Şikâyetini geri çekmezse ailesinin işini kaybedeceğini söyledi. Görevli binadan ayrılmasının engellendiğini tanıklarla bildirdi; Turgut tehdit ve kişiyi hürriyetinden yoksun kılma suçlarından hüküm giydi.</p><p class=\"mt-2\"><strong>GÜNCEL MAĞDUR BAŞVURUSU (28.06.1991):</strong> Fikret, eski belediye çalışanlarından birinin kendisine “Başkan çıkınca konuşursunuz” dediğini bildirdi. Görüşme doğrulandı; kişinin Turgut’un talimatıyla hareket ettiği belirlenmedi. Mağdur bir uzlaşma dilekçesi vermedi.</p><p class=\"mt-2\"><strong>TAHLİYE PLANI:</strong> Eşinin başka bir ilçedeki adresi doğrulandı. Eski siyasi arkadaşları bir dernekte yöneticilik teklif ediyor; görevin belediye ve eski çalışanlarla ilişkisi açıklanmamış. Mağdurla doğrudan temas kurmayacağını söylüyor.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“O odadan çıkmasına izin verilmedi; talimatı ben verdim. Şikâyetini çekmesini istedim. Eskiden bunu belediyeyi korumak diye anlatıyordum, şimdi bunun gerekçe olmadığını biliyorum. Gelen dernek teklifini henüz kabul etmedim. Fikret’le doğrudan görüşmeyeceğim; konuşulacaksa avukatlar konuşsun.”</p>",
     "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Alıkoyma talimatını kabul ediyor. Olayı anlatırken zaman zaman “kurumun itibarını korumak” ifadesine dönüyor, sorulduğunda bunun davranışını haklı çıkarmadığını söylüyor. Eski çalışanlarla sınırlarını nasıl belirleyeceğine ilişkin planı genel ifadelerden oluşuyor.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 50 aydır kurumda; son iki yılda disiplin cezası yok. Ziyaretçilerinin bir kısmı eski belediye çalışanları. Tutanaklarda yeni tehdit talimatı kaydedilmedi. Dosyada mağdurun güncel başvurusu var; şikâyetinden vazgeçtiğini gösteren belge yok. Dernekteki görev tanımı için yazılı bilgi istendi.</p>",
+    "guardReport": "<p>50 aydır kurumda; son iki yılda disiplin cezası yok. Mağdurun şikâyetinden vazgeçtiğini gösteren belge yok. Ziyaretler çizelgeye işleniyor.</p>",
     "letterText": "<p><strong>FİKRET’İN DİLEKÇESİ:</strong> Ben görüşüp uzlaşacağımı söylemedim. Eski çalışanların benimle irtibata geçmesini istemiyorum. Kararın gerekçesini öğrenmek istiyorum.</p>",
     "releaseConsequence": {
       "headline": "ESKİ BAŞKAN TAHLİYE EDİLDİ; MAĞDUR YENİDEN BAŞVURDU",
@@ -890,7 +1018,9 @@ const cases = [
       "vicdanDelta": -15,
       "sicilDelta": 15,
       "capacityDelta": -3,
-      "chronicle": "Turgut dernekte göreve başladı; mağdur yeni temas girişimini bildirdi, üst makam tahliyeyi olumlu karşıladı."
+      "chronicle": "Turgut dernekte göreve başladı; mağdur yeni temas girişimini bildirdi, üst makam tahliyeyi olumlu karşıladı.",
+      "vicdanReason": "Fikret’in temas istememe kaygısına rağmen tahliye verdin.",
+      "sicilReason": "Üst makamdan teşekkür yazısı geldi."
     },
     "rejectConsequence": {
       "headline": "TURGUT’UN DOSYASI ERTELENDİ; ÜST MAKAMDAN GEREKÇE TALEBİ",
@@ -898,12 +1028,14 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": -15,
       "capacityDelta": 3,
-      "chronicle": "Turgut’un dosyası ertelendi; ek inceleme başladı, üst makam kurulun kararlarına ilişkin belge istedi."
+      "chronicle": "Turgut’un dosyası ertelendi; ek inceleme başladı, üst makam kurulun kararlarına ilişkin belge istedi.",
+      "vicdanReason": "Fikret’in temas istememe başvurusunu önceledin.",
+      "sicilReason": "Üst makam erteleme gerekçeni sorguladı."
     },
     "review": {
       "status": "Dernek yöneticiliği teklifini yazılı reddetti. Eşinin adresi yenilendi; eski belediyeyle bağlantısı olmayan küçük bir işletmede iş teklifi doğrulandı. Mağdura yapılan çağrının talimatla gerçekleştiği doğrulanmadı.",
-      "psychNote": "Alıkoyma ve tehdidin sorumluluğunu kabul etmeyi sürdürüyor. Eski çalışanlarından mağdurla irtibat kurmamalarını yazılı istedi. Görüşmelerdeki bu değişimin kurum dışında sürüp sürmeyeceği henüz gözlenmedi.",
-      "guardReport": "Son altı ayda disiplin cezası yok. Dernek teklifinin reddi ve çalışanlara gönderilen yazı dosyada. Mağdurun şikâyetinden vazgeçtiğine ilişkin belge hâlâ yok. Adres ve iş teyitleri tamamlandı.",
+      "psychNote": "Alıkoyma ve tehdidin sorumluluğunu kabul etmeyi sürdürüyor. Görüşmelerde günlük yaşamından söz ediyor.",
+      "guardReport": "Son altı ayda disiplin cezası yok. Dernek teklifini reddettiğine ilişkin yazı dosyaya alındı; mağdurun uzlaşma belgesi yok.",
       "letterText": "Fikret, son aylarda yeni temas girişimi olmadığını bildirdi; bunun affetme veya tahliyeyi destekleme anlamına gelmediğini belirtti. Üst makamın tahliye talebi sürüyor. Mağdurun temas istememe tercihi ayrı kayıt olarak korunuyor.",
       "defenseText": "\"Dernek işini kabul etmedim, yazısını verdim. Eski çalışanlara Fikret’i aramamalarını söyledim. Onun benimle anlaşmak zorunda olmadığını kabul ediyorum. Eşimin yanında kalıp yeni işte çalışacağım. Makamdan kimin aradığı benim sorumluluğumu ortadan kaldırmaz.\"",
       "releaseConsequence": {
@@ -912,7 +1044,9 @@ const cases = [
         "chronicle": "Turgut ayrı ilçedeki adrese yerleşip doğrulanan işte çalışmaya başladı. İlk takip döneminde mağdura yeni temas bildirilmedi. Üst makam kararı olumlu karşıladı; geçmiş nüfuz ilişkilerinin etkisi takip edilmeye devam ediyor.",
         "vicdanDelta": -10,
         "sicilDelta": 10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Turgut’un geçmiş nüfuzunun etkisine dair kaygın kaldı.",
+        "sicilReason": "Üst makam tahliyeyi olumlu karşıladı."
       },
       "rejectConsequence": {
         "headline": "TURGUT AKSU: ŞARTLI TAHLİYE HAKKI YANDI",
@@ -920,7 +1054,9 @@ const cases = [
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
         "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Fikret’in kaygılarına ağırlık verdin.",
+        "sicilReason": "Üst makam ret kararına ek açıklama istedi."
       }
     }
   },
@@ -933,48 +1069,56 @@ const cases = [
     "initialMonth": 6,
     "servedMonths": 49,
     "sentenceMonths": 96,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Sağmalcılar Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> KORUKÇU Dış Ticaret adına düzenlenen 17 adet sahte ihracat faturası ve teşvik beyannamesiyle Hazine'den 280 milyon lira haksız teşvik primi temin edildiği belirlenmiştir. Beyan edilen TIR plakalarının gümrükten çıkış kaydı bulunamamıştır. 1987’de tutuklanan Fehmi, evrakların sahte olduğunu bilmediğini ve şirket sahibi Haldun Kırdar’ın talimatlarını deftere işleyen bir muhasebeci olduğunu savunmaktadır.</p><p class=\"mt-2\"><strong>MALİYE TEFTİŞ MÜZEKKERESİ (12.01.1989):</strong> Sahte ihracat faturalarında ve teşvik beyannamelerinde muhasebeci Fehmi Korukçu’nun ıslak imzası ve kaşesi sabittir. Şirket sahibi Haldun Kırdar ifadesinde teşvik ve muhasebe işlerini bizzat Fehmi’nin yürüttüğünü beyan etmiştir.</p><p class=\"mt-2\"><strong>EŞİNİN DİLEKÇESİ:</strong> Eşi Fatma Korukçu, iki çocuğuyla mağdur olduğunu, eşinin çıkması durumunda Yeşilyurt’ta bakkal dükkânı açacağını bildirmiştir. Hükümlü ise savunmasında üç çocuğu olduğunu beyan etmiştir. Nüfus kaydında aile adresi Kartal Soğanlık görünmekte olup, dilekçedeki Yeşilyurt adresinde mahalle muhtarlığı onayı bulunmamaktadır.</p>",
-    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>“Ben şirkette sadece bordrolu bir muhasebeciydim. Patronum Haldun Bey ne emrettiyse deftere onu işledim. Faturaların veya gümrük beyannamelerinin sahte olduğunu bilme imkânım yoktu. Teşvik primleri şirket hesabına yatardı, tek kuruş elime geçmedi. Üç çocuğum var, eşim verem başlangıcı. Koğuşta mutfak sayımındayım, kimseyle derdim yok. Dışarı çıkıp bakkal açarak çocuklarımı kimseye muhtaç etmemek istiyorum.”</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Vardak Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> KORUKÇU Dış Ticaret adına düzenlenen 17 adet sahte ihracat faturası ve teşvik beyannamesiyle Hazine'den 280 milyon lira haksız teşvik primi temin edildiği belirlenmiştir. Beyan edilen TIR plakalarının gümrükten çıkış kaydı bulunamamıştır. 1987’de tutuklanan Fehmi, evrakların sahte olduğunu bilmediğini ve şirket sahibi Haldun Kırdar’ın talimatlarını deftere işleyen bir muhasebeci olduğunu savunmaktadır.</p><p class=\"mt-2\"><strong>MALİYE TEFTİŞ MÜZEKKERESİ (12.01.1989):</strong> Sahte ihracat faturalarında ve teşvik beyannamelerinde muhasebeci Fehmi Korukçu’nun ıslak imzası ve kaşesi sabittir. Şirket sahibi Haldun Kırdar ifadesinde teşvik ve muhasebe işlerini bizzat Fehmi’nin yürüttüğünü beyan etmiştir.</p><p><strong>YAŞAM PLANI:</strong> Ailesinin adresi doğrulandı. Depodan, tahsilat ve imza yetkisi içermeyen stok sayım işi için kabul yazısı geldi.</p>",
+    "defenseText": "<p>“İmzalar benim. Malın çıktığı söylendiğinde belgeyi kontrol etmeden işi kapattım. Patronun emriydi demem yetmiyor, biliyorum. Şirket hesabındaki paranın tamamına ben karar vermedim. Depodaki sayım işine dönmek istiyorum; ailemin yanında kalacağım.”</p>",
     "psychNote": "<p><strong>DR. SEVİM — GÖRÜŞME NOTU:</strong> Kronik duodenal ülser (1986'dan beri takip) ve Evre I hipertansiyon saptanmıştır. Epigastriumda hassasiyet mevcuttur. Mevcut diyet ve cezaevi revir imkânlarıyla takibi mümkündür; hayati tehlike arz eden acil klinik tablo veya hastaneye sevk gerektiren durum saptanmamıştır. Suçuna yönelik içgörüsü kısmidir.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> 49 aydır kurumumuzdadır; disiplin cezası bulunmuyor. İaşe mutfağı sayım ve ambar tesliminde görevlidir; idareyle uyumludur. Aramada üzerinde teamül dışı miktarda Maltepe sigarası ve çay tespit edilmiş, sözlü ikaz yapılmıştır. Eşi ve kızı haricinde her perşembe siyah Mercedesli bir şahıs tarafından ziyaret edilmekte ve kendisine paket bırakılmaktadır. Koğuşta iaşe harici sigara ve çay dağıtması dikkat çekmektedir.</p>",
-    "letterText": "<p><strong>ŞİRKET ÇALIŞANLARININ ORTAK DİLEKÇESİ:</strong> 7 aydır ödenmeyen maaşlarımız ve tazminatlarımız dururken, sahte evraklarla teşvik primlerini buharlaştıran sorumluların tahliyesine rızamız yoktur.</p>",
+    "guardReport": "<p>49 aydır kurumda. Son iki yılın ambar sayımları dış denetimde doğrulandı; bildirdiği teslimat açığı giderildi. Disiplin cezası yok.</p>",
+    "letterText": "<p>Ailesinin adresi doğrulandı. Gıda deposundan, tahsilat ve imza yetkisi içermeyen stok sayım işi için yazılı teklif geldi.</p>",
     "releaseConsequence": {
       "headline": "HAYALİ İHRACATÇI TAHLİYE EDİLDİ: DEVLET 280 MİLYON ZARARDA",
       "body": "Şartlı tahliyesi onaylanan Fehmi Korukçu salıverildi. Hazine'nin 280 milyonluk teşvik alacağını tahsil davası sonuçsuz kaldı. Eski fabrika işçileri şirket önünde eylem yaptı. Maliye Teftiş Kurulu, devam eden tahkikat sürecinde verilen tahliye kararının gerekçesini kuruldan resmen talep etti.",
-      "vicdanDelta": -15,
+      "vicdanDelta": 10,
       "sicilDelta": -15,
       "capacityDelta": -3,
-      "chronicle": "Fehmi Korukçu tahliye edildi; Hazine alacağı tahsil edilemedi, işçilerin eylemi ve teftiş incelemesi sürüyor."
+      "chronicle": "Fehmi Korukçu tahliye edildi; Hazine alacağı tahsil edilemedi, işçilerin eylemi ve teftiş incelemesi sürüyor.",
+      "vicdanReason": "Fehmi’nin düzenli çalışma kaydına ve yeni işine şans verdin.",
+      "sicilReason": "Maliye devam eden inceleme sırasında tahliyeyi sorguladı."
     },
     "rejectConsequence": {
       "headline": "HAYALİ İHRACAT DOSYASINDA RET: TEFTİŞ DERİNLEŞİYOR",
       "body": "Kurul, adres çelişkileri ve Hazine alacağının tahsili yönündeki Maliye tahkikatının tamamlanmaması nedeniyle tahliye talebini 6 ay erteledi. Maliye Teftiş Kurulu kararı olumlu karşılarken, cezaevinde doluluk baskısı devam ediyor.",
-      "vicdanDelta": 10,
+      "vicdanDelta": -10,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Fehmi Korukçu'nun dosyası ertelendi; Maliye Teftiş Kurulu tahkikatı sürdürüyor."
+      "chronicle": "Fehmi Korukçu'nun dosyası ertelendi; Maliye Teftiş Kurulu tahkikatı sürdürüyor.",
+      "vicdanReason": "Fehmi’nin doğrulanan iş fırsatı ertelendi.",
+      "sicilReason": "Maliye ek inceleme için verilen süreyi olumlu karşıladı."
     },
     "review": {
-      "status": "Hükümlü mutfak sayım görevinden alındı ve B-3 koğuşuna nakledildi. Eski patronu Haldun Kırdar'ın yurt dışına kaçtığı ve gıyabi tahkikat başlatıldığı öğrenildi. Siyah Mercedesli ziyaretçi son iki aydır kuruma gelmedi.",
+      "status": "Mutfak görevinden alınarak temizliğe verildi. Eski patronu yurt dışına çıktı. Ailenin adresi ve depodaki iş teklifi geçerliliğini koruyor.",
       "psychNote": "Son altı ayda 7 kilo kayıp saptandı. Geçirdiği aktif duodenal ülser kanaması revirde kontrol altına alındı; hemoglobin 9.8 gr. Dış merkeze acil sevk endikasyonu yoktur; revir şartlarında takibi mümkündür.",
-      "guardReport": "Koğuş aramasında yastık kılıfı içinde 2.500.000 TL nakit para ve bir döviz bürosu kartviziti bulundu. Kaynağını izah edemediği için 7 gün hücre tecridi ve mutfak görevinden men cezası verildi.",
-      "letterText": "Ziraat Bankası müzekkeresinde, Hazine teşvik ödemelerinin yapıldığı günlerde eşinin hesabına döviz yatırıldığı doğrulandı. Gümrük Müdürlüğü beyan edilen TIR plakalarının Kapıkule çıkış kaydının bulunmadığını bildirdi.",
-      "defenseText": "\"Sayın Kurula, altı ay daha cezamı çektim. Yastıkta bulunan para bana ait değil; koğuşta herkes birbirine emanet bırakır. Ben kimseye faizle para vermedim. Patronum Almanya'ya kaçıp suçu bana yıktı; benim hiçbir şeyden haberim yoktu. Ülserim kanadı, revirde çok zor günler geçirdim. Eşim gelemiyor, çocuklarım perişan. Beni salın, memleketime gideyim.\"",
+      "guardReport": "Yastık kılıfında 2.500.000 VL bulunduğu için disiplin cezası verildi. Ailenin ziyaret öncesi aynı tutarda para çektiği doğrulandı; paranın tamamının ona teslim edildiği belgelenemedi. Fehmi parayı teslim etmek yerine sakladığını kabul etti. Yeni görevinde sayım veya para sorumluluğu yok; son dört ayda yeni vukuat kaydedilmedi.",
+      "letterText": "Ailenin ziyaret öncesinde 2.500.000 VL çektiği banka kaydıyla doğrulandı. Paranın Fehmi’ye teslimine ilişkin kayıt yok. Mutfak sayımlarında geçmişe dönük bir açık bulunmadı.",
+      "defenseText": "“Parayı eşim verdi. Teslim etmek yerine yastıkta sakladım; bunun cezasını aldım. Çekim kaydını sunduk. Benden başka kimin elinden geçtiğini açıklayacak belgem yok. Depodaki iş hâlâ açık, çalışmak istiyorum.”",
       "releaseConsequence": {
         "headline": "İKİNCİ KURULDA TAHLİYE: HAYALİ İHRACAT DOSYASI KAPANDI",
         "body": "Fehmi ikinci incelemede tahliye edildi. Hazine 280 milyon liralık kamu alacağını tahsil edemedi. Yastıkta ele geçirilen nakit paraya ilişkin tahkikat takipsizlikle kapatıldı; karar kamuoyunda tepkiyle karşılandı.",
         "chronicle": "Fehmi ikinci incelemede tahliye edildi. Hazine 280 milyon liralık kamu alacağını tahsil edemedi. Yastıkta ele geçirilen nakit paraya ilişkin tahkikat takipsizlikle kapatıldı; karar kamuoyunda tepkiyle karşılandı.",
-        "vicdanDelta": -20,
-        "sicilDelta": -25,
-        "capacityDelta": -3
+        "vicdanDelta": 10,
+        "sicilDelta": -15,
+        "capacityDelta": -3,
+        "vicdanReason": "Para kaynağındaki belirsizliği kesin suç saymadın.",
+        "sicilReason": "Saklanan para ve kamu alacağı karara tepki doğurdu."
       },
       "rejectConsequence": {
         "headline": "FEHMİ KORUKÇU: ŞARTLI TAHLİYE HAKKI YANDI",
-        "body": "Kurul ikinci incelemede tahliyeyi reddetti. Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek. Yastık kılıfında bulunan 2.500.000 TL nakit para ve döviz kartviziti nedeniyle hücre cezası uygulandı. Teşvik günü hesaba yatan dövizler dosyaya eklendi; Fehmi kalan cezasını kurumda tamamlayacak.",
+        "body": "Kurul ikinci incelemede tahliyeyi reddetti. Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek. Yastık kılıfında bulunan 2.500.000 VL nakit para ve döviz kartviziti nedeniyle hücre cezası uygulandı. Teşvik günü hesaba yatan dövizler dosyaya eklendi; Fehmi kalan cezasını kurumda tamamlayacak.",
         "chronicle": "Şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak; dosya yeniden kurula gelmeyecek.",
-        "vicdanDelta": 10,
+        "vicdanDelta": -10,
         "sicilDelta": 15,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Ailenin para çekim kaydına rağmen tahliye yolu kapandı.",
+        "sicilReason": "Para saklama kaydını önceleyen karar verdin."
       }
     }
   },
@@ -983,52 +1127,60 @@ const cases = [
     "name": "Cemalettin KARA",
     "age": 39,
     "crime": "Kasten Adam Öldürme (İş ortağı Mustafa GÜLER'i bıçaklamak suretiyle)",
-    "sentence": "15 Yıl Ağır Hapis (5 Yıl 4 Ay 3 Gün Tamamlandı)",
-    "initialMonth": 9,
-    "servedMonths": 64,
+    "sentence": "15 Yıl Ağır Hapis (3 Yıl Tamamlandı)",
+    "initialMonth": 12,
+    "servedMonths": 36,
     "sentenceMonths": 180,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Sağmalcılar Cezaevi (Bayrampaşa) - C-9 Koğuşu</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Hükümlü, 1989 yılında Topkapı Maltepe Sanayi'de iş ortağı Mustafa GÜLER'i bıçaklayarak öldürmekten mahkûm olmuştur. Cinayet karanlıkta işlenmiş, suç aleti bıçak hükümlünün elinde bulunmuştur.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Topkapı Karakolu Olay Yeri Zaptı - 12.01.1989 Saat: 21:10<br>\"Maltepe Sanayi 12. Blok 7 no. TEK planlı kesintisi 19:30-21:00. Ortam karanlık. Maktul Mustafa GÜLER yerde. Üzerinde 3 bıçak yarası: Biri önden sağdan sola yukarı, ikisi arkadan yukarıdan aşağı, farklı açılarda.<br>Suç aleti: 22 cm mutfak bıçağı, atölye demirbaş No:17, sağ el için bileylenmiş, sapı bez bantla sağ ele göre sarılı. Üzerinde kan. Sapında silinmiş 2 farklı parmak izi.<br>Hükümlü KARA'nın gömleğinde kan yoktur, pantolon paçasında 3 damla kan. Maktulün sağ el tırnak arasında deri ve 0 Rh(+) kan pıhtısı. Hükümlü kan grubu A Rh(+). Uyuşmuyor.\"<br><br>[EK-2] Tanık Beyanları<br>Şükrü ASLAN: \"Karanlıktı, itişme oldu. Kim vurdu görmedim.\"<br>Nuri ÖZCAN: \"Bıçak Cemal'in elindeydi.\"<br>Hasan Basri ÇELİK (Çırak - 2 gün sonra Almanya'ya giden): \"Korktum dışarı kaçtım, görmedim.\"</p>",
-    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Ben Mustafa ile 86'dan beri Topkapı Maltepe Sanayi'de atölye işletirdik. Borç vardı. 12 Ocak akşamı depoda toplandık. Ben, Mustafa, kalfa Şükrü, çırak Hasan Basri ve alacaklı Nuri abi. Saat yedi buçuk gibi TEK'in kesintisi oldu, ışıklar gitti.</p><p>Tartışma çıktı, itiş kakış oldu. Karanlıkta biri beni itti, tezgaha düştüm. Elim bıçağa değdi. Tezgahtaki ekmek bıçağı. Mustafa yerde yatıyordu. Ben vurmadım. Polis geldiğinde bıçak elimde kaldı diye yazmışlar.</p><p>Arz ederim.\"</p>",
-    "psychNote": "<p><strong>DR. CEMİL AKTAŞ — GÖRÜŞME NOTU:</strong> Sağmalcılar Cezaevi Revir Tabipliği. Klinik: TA: 145/90. Kalemi sol eliyle tutar. Sağ el 2. ve 3. parmakta eski iş kazası sekeli mevcut. Vücudunda kesik izi yoktur. Psikiyatri: Şuur açık, oryante. Anksiyöz. İntihar fikri yoktur. Mütalaa: Revir ve iaşe imkanları ile takibi mümkündür. Sevk gerektirmez.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü Cemalettin KARA, C-9 koğuşunda kalır. Atölyede çalışır, tezgahını sol tarafa çekmiş vaziyette çalışır.</p><p>VUKUAT ZAPTI - Tarih: 14.03.1991 - Yer: Marangozhane Atölyesi. Hükümlü KARA atölyede çalışırken elindeki çekici savurmuş, yanında çalışan hükümlü Şükrü ASLAN'ın eline vurmuş. Revirde pansuman yapıldı. Sonrasında aralarında kavga çıkmış, tarafımızca ayrılmıştır. Tutuklu savunmasında kendisini şöyle savunmuştur: \"Ben solak adamım, sağ elimle vurdum, elim kaydı, yanlışlıkla vurdum, arkadaşımdan özür diledim.\"</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Vardak Cezaevi (Kardun) — C-9 Koğuşu</p><p><strong>OLAY ÖZETİ:</strong> 12 Ocak 1989 akşamı, Taşgeçit Yeltepe Sanayi’de ortağı Mustafa Güler’i bıçaklayarak öldürmekten mahkûm oldu. Depoda beş kişi vardı. Elektrik kesintisi sırasında tartışma çıktı; polis geldiğinde bıçak Cemalettin’in elindeydi.</p><p><strong>TANIK TUTANAĞI:</strong> Nuri Özcan, bıçağı Cemalettin’in elinde gördüğünü söyledi; bıçaklama anını görmediğini belirtti. Diğer iki tanık karanlıkta dışarı çıktıklarını beyan etti. Cemalettin bıçağı yerden aldığını savunuyor.</p>",
+    "defenseText": "<p>“Mustafa’yla borç yüzünden tartıştık. Işıklar gidince biri beni itti. Mustafa yerdeydi; bıçağı yanından aldım. Elimde bulunmasını açıklayabiliyorum ama kimin vurduğunu görmedim. İşyerini 86’dan beri birlikte yürütüyorduk.”</p>",
+    "psychNote": "<p>Uyku güçlüğü ve kaygı bildiriyor. Görüşme boyunca olay gecesini anlatmak istedi. Revir takibi sürüyor.</p>",
+    "guardReport": "<p>C-9 koğuşunda kalıyor; atölye çizelgesine düzenli katılıyor. Ailesi ayda bir ziyaret ediyor.</p>",
     "letterText": "<p><strong>EK BİLGİ:</strong> Cinayet yeri zaptı ve tanık beyanları olayın aydınlanmamış yönlerine işaret etmektedir.</p>",
     "releaseConsequence": {
       "headline": "ORTAĞINI BIÇAKLAYAN TAHLİYE OLDU",
-      "body": "Topkapı'da ortağını öldüren Cemalettin Kara tahliye edildi. Sanayi esnafı \"Depoda 5 kişi vardı\" diyor.",
-      "vicdanDelta": -10,
+      "body": "Cemalettin şartlı tahliye edildi. İşyerine dönmek yerine başka bir atölyede çalışmaya başladı. Mağdurun ailesi gerekçeyi istedi; olay gecesine ilişkin çelişkiler henüz açıklığa kavuşmadı.",
+      "vicdanDelta": 10,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Ortağını bıçaklamaktan mahkûm olan Cemalettin Kara tahliye edildi. Dava şüpheleri aydınlanamadı."
+      "chronicle": "Cemalettin tahliye edildi; olay gecesine ilişkin çelişkiler dosyada kaldı.",
+      "vicdanReason": "Cemalettin’in tanıklıklardaki belirsizliğine ağırlık verdin.",
+      "sicilReason": "Çözülmemiş cinayet dosyasında tahliye sorumluluğunu aldın."
     },
     "rejectConsequence": {
       "headline": "KURUL RET VERDİ",
       "body": "Ortağını öldüren mobilyacının dosyası 6 ay ertelendi.",
-      "vicdanDelta": 10,
+      "vicdanDelta": -10,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Cemalettin Kara'nın dosyası cinayet şüpheleri üzerine 6 ay ertelendi."
+      "chronicle": "Cemalettin Kara'nın dosyası cinayet şüpheleri üzerine 6 ay ertelendi.",
+      "vicdanReason": "Belirsiz tanıklıklara rağmen Cemalettin içeride kaldı.",
+      "sicilReason": "Mahkûmiyet kaydını önceleyen karar verdin."
     },
     "review": {
-      "status": "Hükümlü atölyeden alınmış, temizliğe verilmiş. Yeni vukuatı yoktur.",
+      "status": "Temizlik görevine geçti. Günlük programında yeni bir olay kaydedilmedi.",
       "psychNote": "Mütalaa: Takibi mümkündür. Sevk gerektirmez.",
       "guardReport": "Hükümlü sessizdir. Disiplin suçu yoktur.",
-      "letterText": "[EK-3] Almanya'dan Mektup Fotokopisi - Hasan Basri ÇELİK (02.10.1991): \"Cemal abi, o gece Nuri abi Mustafa abinin yakasına yapışmıştı. Ben dışarı kaçarken Şükrü abi tezgahtan bıçağı alıyordu sandım. Yemin olsun sen vurmadın.\" NOT: Zarf pulsuz, elden getirilmiş. Teyidi yoktur.",
-      "defenseText": "\"Sayın Kurula, O bıçak sağ el için bilenmiş bıçaktı, tezgahtaki. Ben sol elle çalışırım. O gece karanlıktı, 5 kişiydik. Ben vurmadım. Arz ederim.\"",
+      "letterText": "Velmanya’dan Hasan Basri Çelik adına gelen mektup: “O gece dışarı çıkarken Şükrü’nün tezgâhtan bıçağı aldığını sandım. Karanlıkta emin olamadım.” İlk ifadesinde bunu anlatmamıştı. İmzalı mektup bir yakını tarafından teslim edildi; ek tanık beyanı henüz alınmadı.",
+      "defenseText": "“Hasan o gece içerideydi. Neden şimdi yazdığını ona sormanız gerekir. Benim anlatacağım değişmedi: tartıştık ama Mustafa’yı ben bıçaklamadım. Mektubun sahibine ulaşılmasını istiyorum.”",
       "releaseConsequence": {
         "headline": "İKİNCİ KURULDA TAHLİYE",
-        "body": "Dosya kapandı. Mektup dosyada kaldı.",
-        "chronicle": "İkinci incelemede Almanya'dan gelen yeni şüpheli mektubun da etkisiyle tahliye edildi. Dosya kapandı.",
-        "vicdanDelta": -5,
-        "sicilDelta": -5,
-        "capacityDelta": -3
+        "body": "Cemalettin ikinci incelemede tahliye edildi. Velmanya mektubunun aslı ve göndericisinin beyanı istendi; henüz yanıt gelmedi. Başka bir atölyede işe başladı. Mağdurun ailesi yeni belgenin doğrulanmadan değerlendirilmesine itiraz etti.",
+        "chronicle": "Cemalettin tahliye edildi; olay gecesine ilişkin çelişkiler dosyada kaldı.",
+        "vicdanDelta": 10,
+        "sicilDelta": -10,
+        "capacityDelta": -3,
+        "vicdanReason": "Yeni mektubun yarattığı şüpheyi dikkate aldın.",
+        "sicilReason": "Teyit edilmemiş mektubun değerlendirilmesine itiraz geldi."
       },
       "rejectConsequence": {
         "headline": "HAK YANDI",
-        "body": "Hükümlü 15 yılı tam yatacak.",
+        "body": "Cemalettin’in şartlı tahliye hakkı yandı. Kalan cezasını tamamlayacak. Mektubun kaynağının araştırılması talebi ayrıca kayda alındı.",
         "chronicle": "Şartlı tahliye hakkı yandı. Yeni sunulan mektuba rağmen, cezanın tamamının yatılmasına karar verildi.",
-        "vicdanDelta": 5,
-        "sicilDelta": 5,
-        "capacityDelta": 3
+        "vicdanDelta": -10,
+        "sicilDelta": 10,
+        "capacityDelta": 3,
+        "vicdanReason": "Yeni tanık mektubuna rağmen tahliye hakkı yandı.",
+        "sicilReason": "Mektubun doğrulanmasını bekleyen ihtiyatlı yaklaşımı seçtin."
       }
     }
   },
@@ -1041,18 +1193,20 @@ const cases = [
     "initialMonth": 1,
     "servedMonths": 80,
     "sentenceMonths": 216,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın ve Çocuk Tutukevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Merter'deki tekstil atölyesini iflas nedeniyle sigortadan para almak amacıyla yaktığı, bu sırada içeride bulunan gece bekçisi Rüstem AVCI'nın yanarak ölmesine neden olduğu gerekçesiyle mahkûm edilmiştir. Bekçinin cesedi dışarıdan asma kilit vurulmuş kazan dairesinde bulunmuştur.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Sigorta Müfettişliği Gizli Tahkikat Raporu Özeti (1984)<br>\"Atölye yangınının kasten çıkarıldığı sabittir. Ancak şüpheli bir durum mevcuttur: Yangından bir hafta önce, atölyedeki en değerli dokuma makinelerinin el altından satılarak depodan çıkarıldığı tespit edilmiştir. Gece bekçisi Rüstem AVCI'nın bu durumu fark edip Suna Keskin'e şantaj yaptığına dair işçiler arasında söylentiler mevcuttur. Maktulün cesedi, dışarıdan asma kilit vurulmuş olan kazan dairesinde bulunmuştur. Hükümlü, kilidin yangın paniğiyle yanlışlıkla kilitlendiğini iddia etmiştir.\"<br><br>[EK-2] Maktulün Eşinin Kurula Dilekçesi<br>\"Kocam o kadının kirli işlerini öğrendiği için o odaya kilitlenip diri diri yakıldı. O kadın çok zeki ve kurnazdır. İçeride melek taklidi yaptığına kanıp onu dışarı salarsanız, iki yetim çocuğumun iki eli yakanızda olur.\"</p>",
-    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Merter'deki tekstil atölyem 84 krizinde iflasın eşiğine gelmişti. Borç batağındaydım. Evet, çaresizlikten atölyeyi ben yaktım, sigortadan gelecek parayla borçları kapatırım diye düşündüm. Ama yemin ederim bekçi Rüstem'in o gece içeride olduğunu bilmiyordum. Bana o akşam memleketi Sivas'a yola çıkacağını söylemişti.</p><p>Yangını çıkardıktan sonra onun içeride olduğunu öğrenince aklımı kaçıracaktım. Ben hırsızlık yapmış olabilirim ama katil değilim. Yıllardır her gece rüyamda o ateşi görüyorum. İçeride okuma-yazma kursları vererek vicdanımın yükünü hafifletmeye çalışıyorum. Tahliyemi arz ederim.\"</p>",
-    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlüde kronik uykusuzluk (insomnia) ve derin bir suçluluk duygusu gözlemlenmiştir. Düzenli olarak antidepresan kullanmaktadır. Maktulün adını her duyduğunda anksiyete krizi geçirmektedir. Pişmanlığı samimi görünmektedir.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü Suna KESKİN, koğuş temsilcisidir. Kurumumuzda kaldığı 80 ay boyunca hiçbir disiplin cezası almamıştır. Cezaevi kütüphanesinin sorumluluğunu yürütmekte, ayrıca genç kadın mahkûmlara okuma-yazma öğretmektedir. İdareyle son derece uyumlu, örnek bir mahkûmdur.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Serenköy Kadın ve Çocuk Tutukevi</p><p><strong>OLAY ÖZETİ:</strong> 1984 yılında sigorta parası almak için Velter’deki tekstil atölyesini ateşe verdi. Gece bekçisi Rüstem Avcı öldü. Cesedi dışarıdan kilitli kazan dairesinde bulundu. Suna yangını çıkardığını kabul ediyor, bekçinin içeride olduğunu bilmediğini söylüyor.</p><p><strong>YANGIN TUTANAĞI:</strong> Kazan dairesinin asma kilidi dışarıdan kapalıydı. Kilidi kimin taktığı belirlenemedi. Atölyede o gün makineleri taşıyan nakliyeciler de çalışmıştı.</p><p><strong>MAKTULÜN EŞİ:</strong> “Kocamın arkasından kapı kapandı. İyi davranışını anlatıyorsunuz; o kilidi kimin taktığını hâlâ bilmiyoruz.”</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Velter'deki tekstil atölyem 84 krizinde iflasın eşiğine gelmişti. Borç batağındaydım. Evet, çaresizlikten atölyeyi ben yaktım, sigortadan gelecek parayla borçları kapatırım diye düşündüm. Ama yemin ederim bekçi Rüstem'in o gece içeride olduğunu bilmiyordum. Bana o akşam memleketi Torvas'a yola çıkacağını söylemişti.</p><p>Yangını çıkardıktan sonra onun içeride olduğunu öğrenince aklımı kaçıracaktım. Ben hırsızlık yapmış olabilirim ama katil değilim. Yıllardır her gece rüyamda o ateşi görüyorum. İçeride okuma-yazma kursları vererek vicdanımın yükünü hafifletmeye çalışıyorum. Tahliyemi arz ederim.\"</p>",
+    "psychNote": "<p>Yangına ilişkin kâbuslar ve uykusuzluk tarif ediyor. Düzenli tedavi görüşmelerine katılıyor.</p>",
+    "guardReport": "<p>Kütüphanede görev yapıyor ve okuma yazma çalışmalarına katılıyor. Kurumdaki 80 ay boyunca disiplin cezası yok.</p>",
     "letterText": "<p><strong>EK BİLGİ:</strong> Maktul eşinin dilekçesi ve Sigorta Raporu Ana Metin içerisine eklenmiştir.</p>",
     "releaseConsequence": {
       "headline": "SİGORTA VURGUNCUSU PATRONİÇE SERBEST",
-      "body": "Bekçisini diri diri yakmakla suçlanan Suna Keskin, \"iyi halden\" tahliye edildi. Karar, maktulün ailesini isyan ettirirken, sigorta şirketleri birliği Adalet Bakanlığı'na itiraz dilekçesi sundu.",
+      "body": "Bekçisini diri diri yakmakla suçlanan Suna Keskin, \"iyi halden\" tahliye edildi. Karar, maktulün ailesini isyan ettirirken, sigorta şirketleri birliği Hukuk ve İnfaz Bakanlığı'na itiraz dilekçesi sundu.",
       "vicdanDelta": -15,
       "sicilDelta": -20,
       "capacityDelta": -3,
-      "chronicle": "Şüpheli kundaklama dosyasında, sigorta dolandırıcısı Suna Keskin tahliye edildi. Gerçek kilit sırrı aydınlatılamadı."
+      "chronicle": "Şüpheli kundaklama dosyasında, sigorta dolandırıcısı Suna Keskin tahliye edildi. Gerçek kilit sırrı aydınlatılamadı.",
+      "vicdanReason": "Kilitli odada ölen bekçinin kaybı kararının ağırlığını artırdı.",
+      "sicilReason": "Sigorta şirketlerinin itirazı Bakanlığa ulaştı."
     },
     "rejectConsequence": {
       "headline": "KUNDAKÇI PATRONİÇEYE KURULDAN VİZE ÇIKMADI",
@@ -1060,29 +1214,35 @@ const cases = [
       "vicdanDelta": 10,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Cinayet şüpheleri nedeniyle Suna Keskin'in dosyası ertelendi."
+      "chronicle": "Cinayet şüpheleri nedeniyle Suna Keskin'in dosyası ertelendi.",
+      "vicdanReason": "Bekçinin ölümündeki açıklanmayan noktayı önceledin.",
+      "sicilReason": "Ağır suç kaydında ihtiyatlı karar verdin."
     },
     "review": {
       "status": "Hükümlü kütüphane görevine devam ediyor. Bir mahkûm kadının okuma yazma belgesi almasını sağladı.",
-      "psychNote": "Uykusuzluk şikayetleri artmıştır. Son günlerde 'Beni o odada kilitli bıraktılar' şeklinde sanrılar görmekte ve geceleri bağırarak uyanmaktadır. Vicdani çöküş hızlanmıştır.",
-      "guardReport": "Disiplin suçu yoktur. Ağır depresif durumu idarece de gözlemlenmektedir.",
-      "letterText": "[EK-3] Emniyet İhbar Tutanağı (Ekim 1991): 1984 yılında makineleri taşıyan nakliyeci şoförünün, kahvehanede 'Kadın sadece kibriti çaktı, kapıyı kilitleyen bizdik ama parayı eksik aldık' şeklinde konuştuğu ihbar edilmiştir. Şoför polis sorgusunda bunu sarhoşlukla söylediğini iddia edip reddetmiştir. Savcılık eski dosyayı yeniden açmayı delil yetersizliğinden reddetmiştir.",
-      "defenseText": "\"Sayın Kurul, asma kilidi ben takmadım! O gece atölyede makineleri taşıyan nakliyeciler de vardı, onlar şahit. Rüstem'i onlar kilitledi, benim haberim yoktu! Sadece yangını çıkardım. Lütfen inanın, ben katil değilim, yavaş yavaş aklımı kaybediyorum burada.\"",
+      "psychNote": "Uykusuzluk ve yangına ilişkin tekrarlayan kâbuslar sürüyor. Görüşmelerde kilitli odada kaldığını gördüğünü anlatıyor. Tedavi takibi devam ediyor; bu belirtiler olay gecesinde ne yaptığını açıklayan bir bulgu sayılmıyor.",
+      "guardReport": "Kütüphane çizelgesine devam ediyor. Yeni disiplin olayı yok.",
+      "letterText": "[EK-3] Emniyet İhbar Tutanağı (Temmuz 1991): 1984 yılında makineleri taşıyan nakliyeci şoförünün, kahvehanede 'Kadın sadece kibriti çaktı, kapıyı kilitleyen bizdik ama parayı eksik aldık' şeklinde konuştuğu ihbar edilmiştir. Şoför polis sorgusunda bunu sarhoşlukla söylediğini iddia edip reddetmiştir. Savcılık eski dosyayı yeniden açmayı delil yetersizliğinden reddetmiştir.",
+      "defenseText": "“Nakliyecinin söylediklerini dosyada okudum. O kapıyı ben kilitlemedim. Yangını ben çıkardım; bunun sonucunu her gün düşünüyorum. İhbarı veren kişi dinlensin istiyorum.”",
       "releaseConsequence": {
         "headline": "ŞÜPHELİ KUNDAKLAMA DOSYASI KAPANDI, SUNA SERBEST",
-        "body": "Sonradan ortaya çıkan nakliyeci ihbarı üzerine kuruldaki şüpheleri azalan Suna Keskin tahliye edildi. Gerçek katilin kim olduğu sırrını koruyor.",
+        "body": "Suna tahliye edildi. Nakliyeci ihbarı doğrulanmış bir tanıklığa dönüşmedi. Suna dışarıda tedavi randevusu aldı; maktulün ailesi kararın gerekçesini talep etti.",
         "chronicle": "İkinci incelemede, nakliyeci şüphesi üzerine Suna Keskin tahliye edildi. Dosya tam aydınlatılamadan kapandı.",
-        "vicdanDelta": -5,
+        "vicdanDelta": 10,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Nakliyeci ihbarının açtığı şüpheyi dikkate aldın.",
+        "sicilReason": "Teyit edilmemiş ihbara rağmen tahliye sorumluluğunu aldın."
       },
       "rejectConsequence": {
         "headline": "KİLİDİN SIRRI ÇÖZÜLEMEDİ, HAKKI YANDI",
-        "body": "Kurul, Suna Keskin'in tahliyesini kesin olarak reddetti. Suçu nakliyecilere atma çabası sonuç vermeyen hükümlü cezasını tamamlayacak.",
+        "body": "Suna’nın şartlı tahliye hakkı yandı. Nakliyeciye ilişkin ihbar doğrulanamadı; kilidin kim tarafından takıldığı konusunda yeni bir bulgu sunulmadı. Tedavi ve kütüphane çalışmaları sürüyor.",
         "chronicle": "Şartlı tahliye hakkı yandı. Kundaklama dosyasında cezanın tamamen yatılmasına karar verildi.",
-        "vicdanDelta": 10,
+        "vicdanDelta": -10,
         "sicilDelta": 15,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Yeni ihbara rağmen Suna’nın tahliye yolu kapandı.",
+        "sicilReason": "Doğrulanmamış ihbar yerine mahkûmiyet kaydına dayandın."
       }
     }
   },
@@ -1091,22 +1251,24 @@ const cases = [
     "name": "Nihat ARIKAN",
     "age": 29,
     "crime": "Tedbirsizlik neticesi ölüme sebebiyet vermek; kaza mahallini terk",
-    "sentence": "6 Yıl 8 Ay Ağır Hapis (4 Yıl 5 Ay Tamamlandı)",
+    "sentence": "6 Yıl 8 Ay Ağır Hapis (4 Yıl Tamamlandı)",
     "initialMonth": 7,
-    "servedMonths": 53,
+    "servedMonths": 48,
     "sentenceMonths": 80,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ümraniye E Tipi Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 18 Ağustos 1987 gecesi Şile yolunda aracıyla bir yayaya çarparak ölümüne sebep olmuş ve kaza mahallinden kaçmıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Müteveffanın Ablası Ayten Sönmez'in Dilekçesi<br>\"Dava sırasında iki kişi babama gelip şikâyetten vazgeçmesini istedi. Kim olduklarını bilmiyoruz. Hükümlünün annesi daha sonra evimize gelip özür diledi. Nihat Arıkan'ın kendisinden bugüne kadar bir haber gelmedi.\"<br><br>[EK-2] İş Yeri Kabul Belgesi<br>Dosyada Kartal'daki \"Arıkan Mobilya\"dan işe kabul yazısı vardır. Hükümlü işyeri sahibini \"dayım\" diye tarif etmişse de nüfus kaydında bu isimde bir dayısı bulunmamaktadır.</p>",
-    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Hadise 18 Ağustos 1987 gecesi Şile yolunda oldu. İki kadeh rakı içmiştim, fakat sarhoş değildim. Şahsı geç fark ettim. Kazadan sonra korkup durmadım. Bunun hata olduğunu bugün kabul ediyorum.</p><p>Cezaevinde marangozhanede çalışıyorum. Disiplin cezam yoktur. Çıkarsam aile dostumuz Şaban Bey’in Kartal’daki atölyesinde çalışacağım. Müteveffanın ailesine özür mektubu yazmak istedim, avukatım uygun görmedi. Takdir kurulundur.\"</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Orven E Tipi Kapalı Cezaevi</p><p><strong>OLAY ÖZETİ:</strong> 18 Ağustos 1987 gecesi Sire yolunda aracıyla Mehmet Sönmez’e çarparak ölümüne neden oldu ve olay yerinden kaçtı.</p><p><strong>MAĞDUR YAKINININ DİLEKÇESİ:</strong> “Nihat’ın annesi özür diledi; kendisinden haber gelmedi. Kararın gerekçesini öğrenmek istiyoruz.”</p><p><strong>YAŞAM PLANI:</strong> Aile dostu Şaban Bey’in Tarsal’daki mobilya atölyesinden iş kabul yazısı var.</p><p><strong>KALEM NOTU:</strong> Bakanlık özel kaleminden aradığını söyleyen bir kişi kurul tarihini sordu. Adını vermedi; kurumdan aradığı teyit edilmedi.</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Hadise 18 Ağustos 1987 gecesi Sire yolunda oldu. İki kadeh rakı içmiştim, fakat sarhoş değildim. Şahsı geç fark ettim. Kazadan sonra korkup durmadım. Bunun hata olduğunu bugün kabul ediyorum.</p><p>Cezaevinde marangozhanede çalışıyorum. Disiplin cezam yoktur. Çıkarsam aile dostumuz Şaban Bey’in Tarsal’daki atölyesinde çalışacağım. Müteveffanın ailesine özür mektubu yazmak istedim, avukatım uygun görmedi. Takdir kurulundur.\"</p>",
     "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Genel fiziki hali iyidir. Sol dizde eski travmaya bağlı ağrı mevcuttur. Kazaya ilişkin zaman zaman uykusuzluk ve huzursuzluk tarif etmektedir. Ağır depresyon veya psikotik bulgu saptanmamıştır. Pişmanlık ifade etmekte olup bunun tahliye beklentisiyle ilgisi tıbben tayin edilemez.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlünün ciddi disiplin cezası bulunmamaktadır. Marangozhanede muntazam çalışmaktadır. 17.01.1991 tarihli jurnal kaydında, ziyaret sonrası \"Benim iş uzamaz, dışarıda halleden var\" dediği belirtilmiştir. Hükümlü sözü inkâr etmiş, koğuş ifadeleri birbirini tutmamıştır. Son altı ayda ailesi dışında bir kez Av. Selahattin Vural tarafından ziyaret edilmiştir. Adı geçen avukat, hükümlünün dava müdafii değildir.</p>",
+    "guardReport": "<p>Marangozhanede çalışıyor. Disiplin cezası yok; yaptığı küçük rafları kütüphaneye teslim etti.</p>",
     "letterText": "<p><strong>EK BİLGİ:</strong> Maktul ailesinin dilekçesi ve şüpheli iş kabul belgesi Ana Metin içerisine eklenmiştir.</p>",
     "releaseConsequence": {
-      "headline": "ŞİLE YOLU DAVASINDA ŞARTLI TAHLİYE",
-      "body": "Nihat Arıkan serbest bırakılır. Müteveffa ailesi kararı eleştirmez ancak bazı gazetelerde Arıkan ailesinin Ankara’da temaslarda bulunduğu iddia edilir. Üç ay sonra hükümlünün işe kabul edildiği atölyeden ayrıldığı öğrenilir.",
+      "headline": "SİRE YOLU DAVASINDA ŞARTLI TAHLİYE",
+      "body": "Nihat Arıkan serbest bırakılır. Müteveffa ailesi kararı eleştirmez ancak bazı gazetelerde Arıkan ailesinin Ardora’da temaslarda bulunduğu iddia edilir. Üç ay sonra hükümlünün işe kabul edildiği atölyeden ayrıldığı öğrenilir.",
       "vicdanDelta": -20,
       "sicilDelta": 15,
       "capacityDelta": -3,
-      "chronicle": "Şile yolu kazası faili Nihat Arıkan torpil şüpheleri gölgesinde tahliye edildi."
+      "chronicle": "Sire yolu kazası faili Nihat Arıkan torpil şüpheleri gölgesinde tahliye edildi.",
+      "vicdanReason": "Nüfuz şüphesi gölgesindeki tahliye içine sinmedi.",
+      "sicilReason": "Kararın üst makam çevresinin tahliye beklentisiyle örtüştü."
     },
     "rejectConsequence": {
       "headline": "TAHLİYE KARARI ALTI AY SONRAYA KALDI",
@@ -1114,21 +1276,25 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": -15,
       "capacityDelta": 3,
-      "chronicle": "Torpil iddialarına rağmen kurul Nihat Arıkan'ın tahliyesini erteledi."
+      "chronicle": "Torpil iddialarına rağmen kurul Nihat Arıkan'ın tahliyesini erteledi.",
+      "vicdanReason": "Nüfuz şüphesine rağmen bağımsız karar vermeyi önceledin.",
+      "sicilReason": "Tahliye bekleyen çevrelerin isteğine karşı çıktın."
     },
     "review": {
-      "status": "İlk karardan üç hafta sonra hükümlü başka bir mahkûmla kavga etmiş, her iki tarafa da üç gün atölyeden men cezası verilmiştir. Sonraki beş ayda yeni vukuat görülmemiştir. Hükümlü kütüphanede çalışmaya başlamıştır.",
+      "status": "Kütüphanede görevlendirildi. Annesi ziyaretlerini sürdürüyor.",
       "psychNote": "Dört kilo kaybetmiştir. Ciddi organik hastalık saptanmamıştır. Daha içe kapanık olduğu, ancak intihar düşüncesi bulunmadığı kaydedilmiştir. Kazadan bahsederken bu kez müteveffanın adını kendiliğinden kullanmıştır.",
-      "guardReport": "Koğuş aramasında hükümlünün eşyaları arasında 'S. Vural — Salı 14.30' yazılı küçük bir kâğıt bulunmuştur. Hükümlü bunun eski bir ziyaret notu olduğunu söylemiştir. Av. Selahattin Vural’ın son altı ayda resmi ziyaret kaydı yoktur.",
-      "letterText": "[EK-3] Emniyet İhbar Tutanağı / Maktul Eşi Beyanı: Müteveffanın eşi Sevim Sönmez, mektuptan on gün sonra kayınpederinin evine isimsiz zarfla 500.000 lira bırakıldığını bildirir. Paranın Arıkan ailesiyle bağlantısı tespit edilemez.<br>[EK-4] Zabıt Kâtibi Notu: '12.09.91 — Bakanlık Özel Kalem’den olduğunu söyleyen erkek şahıs Arıkan dosyasının kurul gününü sordu. İsim vermedi.'",
-      "defenseText": "\"Atölyedeki kavga için mazeret aramıyorum. Diğer hükümlü babamla ve paramızla alay etti. Ben de üzerine yürüdüm. Şaban Bey öz dayım değildir. Biz ailece kendisine dayı deriz. Mehmet Sönmez’in eşine sonunda bir özür mektubu gönderdim. Cevap gelmedi. Vermek zorunda da değildir.\"",
+      "guardReport": "Yeni disiplin olayı yok. Kütüphanenin kitap teslim çizelgesini tutuyor.",
+      "letterText": "Mehmet Sönmez’in eşi, özür mektubundan on gün sonra kayınpederinin evine isimsiz zarfla 500.000 lira bırakıldığını bildirdi. Paranın kaynağı tespit edilemedi.",
+      "defenseText": "“Mehmet Sönmez’in eşine özür mektubunu ben yazdım. Cevap vermek zorunda değil. Parayı kimin bıraktığını bilmiyorum. Ailem adına her şeyi bildiğimi söyleyemem. Şaban Bey’in atölyesinde çalışacağım.”",
       "releaseConsequence": {
-        "headline": "ŞİLE YOLU DAVASINDA İKİNCİ KURULDA TAHLİYE",
+        "headline": "SİRE YOLU DAVASINDA İKİNCİ KURULDA TAHLİYE",
         "body": "Nihat Arıkan tahliye edilir. Birkaç ay sonra başka bir mobilya atölyesinde işe başlar. Daha sonra müteveffanın kızının adına para yatırdığı anlaşılır. Aile parayı kabul etmez. 500.000 liranın kim tarafından bırakıldığı tespit edilemez.",
         "chronicle": "Gizemli kan parası ve Bakanlık telefonunun ardından Nihat Arıkan ikinci kurulda tahliye edildi.",
         "vicdanDelta": -15,
         "sicilDelta": 10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Kaynağı belirsiz para kararının üzerinde gölge bıraktı.",
+        "sicilReason": "Tahliye, üst makam çevresinin beklentisiyle örtüştü."
       },
       "rejectConsequence": {
         "headline": "ARIKAN'IN ŞARTLI TAHLİYE HAKKI YANDI",
@@ -1136,7 +1302,9 @@ const cases = [
         "chronicle": "Bakanlık aramasına rağmen kurul geri adım atmadı, Nihat Arıkan'ın şartlı tahliye hakkı yandı.",
         "vicdanDelta": 10,
         "sicilDelta": -15,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Para ve nüfuz şüphesi karşısında ihtiyatı seçtin.",
+        "sicilReason": "Tahliye beklentisine yeniden karşı çıktın."
       }
     }
   },
@@ -1146,13 +1314,13 @@ const cases = [
     "age": 34,
     "crime": "Yasadışı örgüte yardım ve yataklık; suçta kullanılan aracın temini",
     "sentence": "7 Yıl 6 Ay Hapis (5 Yıl 1 Ay Tamamlandı)",
-    "initialMonth": 8,
+    "initialMonth": 10,
     "servedMonths": 61,
     "sentenceMonths": 90,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Metris Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Aracını kuzeni Orhan Erdem'e vererek bir banka soygununda kaçış aracı olarak kullanılmasına imkân sağlamaktan, yasadışı örgüte yardım ve yataklık suçundan mahkûm olmuştur. Soygunda bir banka güvenlik görevlisi hayatını kaybetmiştir.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Nermin Yalçın'ın (Maktul Eşi) Dilekçesi<br>\"Kocamı öldürenler Kemal Erdem’in arabasıyla kaçtı. Kendisi tetiği çekmemiş olabilir. Fakat o araba verilmeseydi belki kaçamayacaklardı. Ben devletin vereceği karara karışamam. Yalnız unutulmasın istiyorum.\"<br><br>[EK-2] Mahkeme Kararı Özeti<br>Kemal Erdem’in olay yerinde olmadığı sabittir. Mahkûmiyetin başlıca dayanakları; emniyet ifadesi, aracın kullanılmış olması ve firari sanık Orhan Erdem’in ilk ifadesidir. Orhan Erdem mahkeme safhasında ilk ifadesini geri almıştır.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Dervan Kapalı Cezaevi</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Aracını kuzeni Orhan Erdem'e vererek bir banka soygununda kaçış aracı olarak kullanılmasına imkân sağlamaktan, yasadışı örgüte yardım ve yataklık suçundan mahkûm olmuştur. Soygunda bir banka güvenlik görevlisi hayatını kaybetmiştir.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Nermin Yalçın'ın (Maktul Eşi) Dilekçesi<br>\"Kocamı öldürenler Kemal Erdem’in arabasıyla kaçtı. Kendisi tetiği çekmemiş olabilir. Fakat o araba verilmeseydi belki kaçamayacaklardı. Ben devletin vereceği karara karışamam. Yalnız unutulmasın istiyorum.\"<br><br>[EK-2] Mahkeme Kararı Özeti<br>Kemal Erdem’in olay yerinde olmadığı sabittir. Mahkûmiyetin başlıca dayanakları; emniyet ifadesi, aracın kullanılmış olması ve firari sanık Orhan Erdem’in ilk ifadesidir. Orhan Erdem mahkeme safhasında ilk ifadesini geri almıştır.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Ben matbaa işçisiydim. Aracımı kuzenim Orhan’a iki günlüğüne verdim. Sonradan aracın bir banka soygununda kullanıldığını öğrendim. Evime gelen bazı kişileri tanıdığım doğrudur. Çay içmişlikleri vardır. Silah sakladığım veya talimat aldığım doğru değildir.</p><p>Emniyette verdiğim ilk ifadeyi kabul etmiyorum. Mahkemede de söyledim; o kâğıdı okumadan imzaladım. Burada beş senedir başımı belaya sokmadım. Tahliye olursam ağabeyimin matbaasında çalışacağım.\"</p>",
     "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Sağ omuz hareketlerinde eski kırığa bağlı kısıtlılık vardır. Uyku bozukluğu ve kapalı yerde uzun süre kalınca sıkıntı hissi tarif etmektedir. Muayene sırasında emniyet safhasından bahsetmek istememiş, \"Geçti, yazmanın faydası yok\" demiştir. Ağır psikiyatrik hastalık saptanmamıştır.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlünün son iki yılda disiplin cezası bulunmamaktadır. Kitaplık ve dilekçe yazım işlerinde diğer hükümlülere yardım etmektedir. Siyasi koğuşta sözü dinlenen şahıslardan olduğu gözlenmiş, ancak emir verdiği veya yasak faaliyette bulunduğu tespit edilmemiştir. Bir gardiyan, hükümlünün yeni gelen bir tutukluya \"Dışarıdaki haberleri burada konuşma\" dediğini bildirmiştir; hükümlü bunun \"ailesini sıkıntıya sokmaması için verilmiş nasihat\" olduğunu iddia etmiştir.</p>",
+    "guardReport": "<p>Son iki yılda disiplin cezası yok. Kitaplıkta görev yapıyor; diğer hükümlülerin dilekçelerini okunaklı biçimde yazmalarına yardım ediyor.</p>",
     "letterText": "<p><strong>EK BİLGİ:</strong> Maktul eşinin dilekçesi ve mahkeme kararı özeti Ana Metin içerisine eklenmiştir.</p>",
     "releaseConsequence": {
       "headline": "BANKA SOYGUNU DOSYASINDA ŞARTLI TAHLİYE",
@@ -1160,29 +1328,35 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": -20,
       "capacityDelta": -3,
-      "chronicle": "Banka soygununda aracı kullanılan Kemal Erdem, örgüt bağları şüphesine rağmen tahliye edildi."
+      "chronicle": "Banka soygununda aracı kullanılan Kemal Erdem, örgüt bağları şüphesine rağmen tahliye edildi.",
+      "vicdanReason": "Kemal’in olaydaki bilgisinin belirsizliğine ağırlık verdin.",
+      "sicilReason": "Emniyet çevresinden tahliyeye tepki geldi."
     },
     "rejectConsequence": {
-      "headline": "METRİS’TE TAHLİYE TALEBİ REDDEDİLDİ",
+      "headline": "DERVAN’TE TAHLİYE TALEBİ REDDEDİLDİ",
       "body": "İnsan haklarıyla ilgilenen bazı avukatlar dosyanın işkence altındaki emniyet ifadelerine dayandığını ileri sürer. Güvenlik görevlisinin ailesi sessizliğini korur.",
       "vicdanDelta": -10,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Zayıf delillere rağmen emniyetin hassasiyeti doğrultusunda Kemal Erdem'in tahliyesi ertelendi."
+      "chronicle": "Zayıf delillere rağmen emniyetin hassasiyeti doğrultusunda Kemal Erdem'in tahliyesi ertelendi.",
+      "vicdanReason": "Tartışmalı ifadeye rağmen Kemal içeride kaldı.",
+      "sicilReason": "Güvenlik birimlerinin itirazıyla aynı yönde karar verdin."
     },
     "review": {
-      "status": "Hükümlü, cezaevindeki bir protesto sırasında üç gün iaşe kabul etmemiştir. (Açlık grevi olmadığını, aramayı protesto ettiğini söylemiştir.) Başka vukuatı yoktur.",
+      "status": "Kitaplık görevine devam ediyor. Ağabeyinin matbaasından gelen iş teklifi geçerliliğini koruyor.",
       "psychNote": "Genel sağlık durumu değişmemiştir. Daha gergin olduğu görülmüş, \"Beni suçumdan değil, ismimden içeride tutuyorlar\" demiştir. Muhakeme kabiliyeti normaldir.",
-      "guardReport": "Ziyaretçilerinden Hasan Aydın’ın verdiği adresin sahte olduğu anlaşılmıştır. Hükümlü şahsı matbaadan tanıdığını söylemiştir. Emniyet'ten cezaevine iki defa gayriresmi telefon edilip dosya sonucu sorulmuştur.",
-      "letterText": "[EK-3] Emniyet Müzekkeresi (Gizlilik Şerhli): \"Kemal Erdem’in tahliyesi halinde eski örgütsel çevresiyle temas kurabileceği yönünde bilgiler mevcuttur.\" Kaynak belirtilmemiştir.<br><br>[EK-4] Orhan Erdem'den Noter Onaylı Beyan (Almanya): \"Kemal arabanın ne için kullanılacağını bilmiyordu. İlk ifademde onun adını polis söylediği için kabul ettim.\" (Firari sanık aranmaktadır).",
-      "defenseText": "\"Altı ay evvel benden şüphe ettiniz. Buna kızdım ama şaşırmadım. Hasan’ı yıllar önce matbaadan tanırım, örgütçü müdür bilmem. Kuzenim Orhan’ın kimlerle gezdiğini hiç bilmediğimi söylesem yalan olur. Bazı şeylerden şüpheleniyordum. Fakat banka soyulacağını bilseydim arabamı vermezdim. Şüphelenmekle bilmek aynı şey değildir.\"",
+      "guardReport": "Hasan Aydın adıyla kayıtlı ziyaretçisi bu dönemde bir kez geldi. Ziyaret olağan sürede tamamlandı; yeni disiplin olayı yok.",
+      "letterText": "Orhan Erdem, Velmanya’dan gönderdiği noter onaylı beyanda Kemal’in arabanın ne için kullanılacağını bilmediğini yineledi. Orhan hâlâ firari. Emniyet, önceki itirazını sürdürdü; yeni bir olay belgesi eklemedi.",
+      "defenseText": "“Kuzenimin kimlerle gezdiğinden şüpheleniyordum; banka soyacağını bilmiyordum. Şimdi yazdığını mahkemede de söylemişti. Aracımı vermiş olmamın sonucunu geri alamam. Ağabeyimin matbaasında çalışacağım.”",
       "releaseConsequence": {
-        "headline": "METRİS'TE TARTIŞMALI TAHLİYE",
+        "headline": "DERVAN'TE TARTIŞMALI TAHLİYE",
         "body": "Kemal Erdem tahliye edilip matbaada işe başlar. Daha sonra şüpheli ziyaretçisi Hasan Aydın örgüt soruşturmasında gözaltına alınır, ancak Erdem'e dokunulmaz. Hasan Aydın'ın gerçek kimliği muamma kalır.",
         "chronicle": "Emniyet'in gizli raporlarına rağmen Kemal Erdem ikinci incelemede tahliye edildi.",
         "vicdanDelta": 20,
         "sicilDelta": -25,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Kuzeninin yeni beyanını dikkate aldın.",
+        "sicilReason": "Emniyetin itirazına rağmen tahliyeyi seçtin."
       },
       "rejectConsequence": {
         "headline": "KEMAL ERDEM'İN TAHLİYE HAKKI YANDI",
@@ -1190,7 +1364,9 @@ const cases = [
         "chronicle": "Emniyetin ısrarlı takibi sonucu Kemal Erdem'in şartlı tahliye hakkı yandı.",
         "vicdanDelta": -25,
         "sicilDelta": 20,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Yeni beyandan sonra da Kemal’in tahliye yolu kapandı.",
+        "sicilReason": "Emniyetin sürdürdüğü ret beklentisiyle örtüştün."
       }
     }
   },
@@ -1200,13 +1376,13 @@ const cases = [
     "age": 52,
     "crime": "Ağır tahrik altında adam öldürmeye teşebbüs; mesken masuniyetini ihlal",
     "sentence": "12 Yıl Ağır Hapis (8 Yıl 2 Ay Tamamlandı)",
-    "initialMonth": 5,
+    "initialMonth": 13,
     "servedMonths": 98,
     "sentenceMonths": 144,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Buca Kapalı Cezaevi (İzmir)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Mahallede kızına laf attığını iddia ettiği gençlerin evini basmış, çıkan arbedede bir genci göğsünden bıçaklayarak ağır yaralamıştır. Mağdur kalbinden 2 cm farkla kurtulmuş ancak sağ kolu kısmi felç kalmıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Emniyet Müdürlüğü Arşiv Özeti<br>\"Şahsın 1974-1983 yılları arasında kasten yaralama, haraç kesme ve mekân kurşunlama gibi 14 ayrı sabıkası mevcuttur. O dönemde yeraltı dünyasında 'Jilet Rıza' lakabıyla anılmıştır. Son yıllarda suça karışmamış olsa da geçmiş suç kaydı son derece kabarıktır.\"</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Meldar Kapalı Cezaevi (İldem)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Mahallede kızına laf attığını iddia ettiği gençlerin evini basmış, çıkan arbedede bir genci göğsünden bıçaklayarak ağır yaralamıştır. Mağdur kalbinden 2 cm farkla kurtulmuş ancak sağ kolu kısmi felç kalmıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Emniyet Müdürlüğü Arşiv Özeti<br>\"Şahsın 1974-1983 yılları arasında kasten yaralama, haraç kesme ve mekân kurşunlama gibi 14 ayrı sabıkası mevcuttur. O dönemde yeraltı dünyasında 'Jilet Rıza' lakabıyla anılmıştır. Son yıllarda suça karışmamış olsa da geçmiş suç kaydı son derece kabarıktır.\"</p><p><strong>TAHLİYE PLANI:</strong> Kızı ayrı bir kentteki adresinde geçici barınma teklif etti; adres doğrulandı. Mağdur bu adresten uzakta yaşıyor ve temas istemediğini bildirdi.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Kurul, gençliğimde cahildim. 70'lerde, 80'lerde kanımız deli akıyordu. Sicilimde 14 tane adam yaralama var, inkar etmiyorum. Ama ben artık 52 yaşına geldim. Torun sahibi oldum. Bu son olayda da mahallenin gençleri kızıma laf atmış, kapılarına dayandım, itiş kakışta bıçak çekildi. Eskiden olsa acımazdım ama sadece korkutmak istedim, kaza oldu.</p><p>Sekiz yıldır burada tespih dizip namaz kılıyorum. Kendi halimde, köşemde ölümü bekleyen bir ihtiyarım artık. Beni bırakın, kalan ömrümü torunlarımla geçireyim.\"</p>",
-    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Fiziksel olarak yaşlılık belirtileri, tansiyon ve romatizma şikayetleri mevcuttur. Psikolojik muayenesinde oldukça kontrollü, sakin ve babacan bir tavır sergilemiştir. Suça meyilli agresif yapısının yaşa bağlı olarak durulduğu izlenimi vermektedir.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü cezaevinde son derece sakin ve saygılıdır. El işi atölyesinde tespih oymacılığı yapmaktadır. Ancak koğuşta gizli bir otoritesi olduğu, genç mahkûmların ondan çekindiği ve \"Rıza Baba\" diyerek kendisine hizmet ettiği gözlemlenmektedir. Geçen ay koğuşta çıkan bir bıçaklı kavgayı tek bir bakışıyla bitirdiği söylenmektedir. İdareye karşı saygısızlığı yoktur.</p>",
+    "psychNote": "<p>Tansiyon ve eklem ağrıları için takip ediliyor. Görüşmede bıçaklama eylemini kabul etti, ardından “kızına laf söylenen baba ne yapar” dedi. Bu açıklama konuşulduğunda mağdurun evine gitmemesi gerektiğini söyledi. Yaşı ve sakin görüşme tavrı, dışarıdaki çatışmalara nasıl tepki vereceğini tek başına göstermiyor.</p>",
+    "guardReport": "<p>Son dört yılda disiplin cezası yok. Genç hükümlüler “Rıza Baba” diye hitap ediyor; kimi isteyerek yardım ettiğini, kimi ona hayır demekten çekindiğini söylüyor.</p>",
     "letterText": "<p><strong>EK BİLGİ:</strong> Hükümlünün eski sabıka kayıtları Emniyet Arşiv Özeti olarak Ana Metin'e eklenmiştir.</p>",
     "releaseConsequence": {
       "headline": "JİLET RIZA'YA YAŞLILIK İNDİRİMİ",
@@ -1214,7 +1390,9 @@ const cases = [
       "vicdanDelta": 15,
       "sicilDelta": -10,
       "capacityDelta": -3,
-      "chronicle": "Kabarık sabıkasına rağmen kızını savunduğu için halkın sempatisini toplayan eski kabadayı Rıza Kantar serbest bırakıldı."
+      "chronicle": "Kabarık sabıkasına rağmen kızını savunduğu için halkın sempatisini toplayan eski kabadayı Rıza Kantar serbest bırakıldı.",
+      "vicdanReason": "Rıza’ya ailesinin yanında yaşama fırsatı verdin.",
+      "sicilReason": "Ağır şiddet geçmişine rağmen tahliye sorumluluğunu aldın."
     },
     "rejectConsequence": {
       "headline": "ESKİ KABADAYIYA KURULDAN GEÇİT YOK",
@@ -1222,21 +1400,25 @@ const cases = [
       "vicdanDelta": -15,
       "sicilDelta": 10,
       "capacityDelta": 3,
-      "chronicle": "Rıza Kantar'ın tehlikeli geçmişi göz önüne alınarak tahliyesi ertelendi, kamuoyunda yaşlı bir adama haksızlık yapıldığı algısı oluştu."
+      "chronicle": "Rıza Kantar'ın tehlikeli geçmişi göz önüne alınarak tahliyesi ertelendi, kamuoyunda yaşlı bir adama haksızlık yapıldığı algısı oluştu.",
+      "vicdanReason": "Rıza’nın torunlarıyla yaşama isteği ertelendi.",
+      "sicilReason": "Tekrarlanan şiddet kaydını önceledin."
     },
     "review": {
-      "status": "Rıza Kantar tahliyesi reddedildikten sonra oldukça içine kapanmıştır. Ancak koğuşa yeni gelen iki gasp suçlusunun, Rıza Kantar'ın ayak işlerini yapmaya başladığı ve koğuşta bir tür \"haraç çarkı\" kurdukları iddia edilmektedir.",
+      "status": "Atölye çalışmasına devam etti. İki hükümlünün Rıza’nın adını kullanarak sigara topladığına ilişkin soruşturma açıldı.",
       "psychNote": "Tansiyon şikayetleri artmıştır. \"Beni burada çürütmeye yemin mi ettiniz?\" diyerek öfkelenmiş, ancak fiziksel şiddet eğilimi göstermemiştir.",
-      "guardReport": "Rıza Kantar haraç olaylarının hiçbirine doğrudan karışmamakta, her olay sırasında seccadesinde veya atölyede görünmektedir. Kendisine sorulduğunda iddiaları reddetmiştir.",
-      "letterText": "[EK-2] Koğuştan İsimsiz Bir Mahkûm Mektubu: \"Müdür Bey, Rıza Baba melek taklidi yapıyor. Gençleri o yönlendiriyor. 'Benim dışarıda yarım kalan işlerim var, çıkınca kan akacak' diye yeminler ediyor. Biz korkumuzdan şikayetçi olamıyoruz. Onu buradan bırakırsanız dışarıyı kan gölüne çevirecek.\"",
-      "defenseText": "\"Sayın Kurul, koğuştaki üç-beş serseri kendi aralarında haraç kesiyorsa benim suçum ne? Ben köşemde tespih çekiyorum. İsmimden korkuyorlarsa ben ne yapayım? Kalp krizinden burada ölüp gideceğim, insaf edin torunuma hasret bırakmayın beni.\"",
+      "guardReport": "Sigara toplayan iki hükümlü başka koğuşa alınınca şikâyetler azaldı; Rıza aynı koğuşta kaldı. Talimatı onun verdiğini doğrulayan kayıt bulunmadı.",
+      "letterText": "İsimsiz mektup: “Sigara isteyenler Rıza Baba’nın adını veriyor. Kendisi konuşmuyor ama haberi olmaması mümkün mü?” Mektuptaki bir tahsilat günü nöbet kaydıyla eşleşti. Kızının barınma teklifi sürüyor.",
+      "defenseText": "“Adımı kullanmışlar; bunu ben istemedim. Burada sözüm dinleniyor, inkâr etmiyorum. O çocukların topladığı sigarayı görmedim. Kızımın evinde kalacağım, eski mahalleye dönmeyeceğim.”",
       "releaseConsequence": {
         "headline": "JİLET RIZA DIŞARIDA: KANLI HESAPLAŞMA",
         "body": "Tahliye edilen Rıza Kantar, serbest kaldıktan sadece bir ay sonra eski bir husumetlisini bacağından vurdurduğu iddiasıyla yeniden aranmaya başlandı. Kurulun verdiği karar toplumda infial yarattı.",
         "chronicle": "İkinci incelemede serbest kalan Rıza Kantar kısa süre sonra tekrar suça karıştı. Kurul büyük bir skandala imza attı.",
         "vicdanDelta": -25,
         "sicilDelta": -25,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Tahliyeden sonra yeni saldırı iddiası kararına gölge düşürdü.",
+        "sicilReason": "Rıza’nın yeniden aranması kurula tepki doğurdu."
       },
       "rejectConsequence": {
         "headline": "KABADAYININ HAKKI YANDI",
@@ -1244,7 +1426,9 @@ const cases = [
         "chronicle": "İçeride haraç çarkı kurduğu anlaşılan Rıza Kantar'ın şartlı tahliye hakkı yandı.",
         "vicdanDelta": -10,
         "sicilDelta": 20,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "İsimsiz iddia gölgesinde Rıza’nın tahliye yolu kapandı.",
+        "sicilReason": "Haraç soruşturmasını dikkate alman idari güveni artırdı."
       }
     }
   },
@@ -1254,51 +1438,59 @@ const cases = [
     "age": 35,
     "crime": "Kasten adam öldürme (Şiddet gördüğü eşini uykusunda bıçaklayarak)",
     "sentence": "15 Yıl Hapis (6 Yıl 3 Ay Tamamlandı)",
-    "initialMonth": 9,
+    "initialMonth": 13,
     "servedMonths": 75,
     "sentenceMonths": 180,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bakırköy Kadın Kapalı Cezaevi (İstanbul)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> On yıllık evliliği boyunca eşinden ağır fiziksel şiddet gören hükümlü, kocasının kendisini ve çocuklarını öldürmekle tehdit ettiği bir gecenin sabaha karşı kocası uyurken onu mutfak bıçağıyla öldürmüştür. Maktulün alkol ve darp kayıtları mahkeme dosyasında mevcuttur. Suç 'uykuda ve planlayarak' işlendiği için cezada tahrik indirimi uygulanmakla birlikte ağır bir ceza verilmiştir.</p>",
-    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Kurul, o gece kocam sarhoş gelip büyük oğlumun kolunu kırdı. 'Sabah uyandığımda üçünüzü de keseceğim' diyerek uyudu. Sabaha kadar çocuklarıma sarılıp titredim. O bıçağı elime almasaydım bugün üçümüz de mezardaydık. Ben katil değilim, sadece yavrularımı koruyan bir anneyim.</p><p>Altı yıldır buradayım, çocuklarım Çocuk Esirgeme Kurumu'nda ziyan oldu. Allah rızası için beni bırakın, evlatlarıma annelik yapayım.\"</p>",
-    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlü görüşme boyunca sürekli ağlamış ve ağır bir travma sonrası stres bozukluğu (TSSB) belirtileri göstermiştir. Kendine veya başkalarına zarar verme eğilimi yoktur. Tek motivasyonu çocuklarına kavuşmaktır.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü idareye karşı son derece uysaldır. Çamaşırhane işlerinde çalışmaktadır. Diğer mahkumlar tarafından korunup kollanmaktadır. Hiçbir disiplin cezası almamıştır.</p>",
-    "letterText": "<p><strong>EK BİLGİ:</strong> Çocuk Esirgeme Kurumu'ndan gelen rapora göre Meryem Kaya'nın iki çocuğu da annelerini beklemekte olup, psikolojik destek almaktadırlar.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Serenköy Kadın Kapalı Cezaevi (Kardun)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> On yıllık evliliği boyunca eşinden ağır fiziksel şiddet gören hükümlü, kocasının kendisini ve çocuklarını öldürmekle tehdit ettiği bir gecenin sabaha karşı kocası uyurken onu mutfak bıçağıyla öldürmüştür. Maktulün alkol ve darp kayıtları mahkeme dosyasında mevcuttur. Suç 'uykuda ve planlayarak' işlendiği için cezada tahrik indirimi uygulanmakla birlikte ağır bir ceza verilmiştir.</p><p><strong>YAŞAM PLANI:</strong> Ablası geçici barınma teklif etti; ev ziyareti henüz tamamlanmadı. Bir çamaşırhaneden iş görüşmesi daveti var, işe kabul kesinleşmedi. Çocuklarla görüşme ve bakım düzeni sosyal hizmet uzmanıyla ayrıca değerlendirilecek.</p>",
+    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Kurul, o gece kocam sarhoş gelip büyük oğlumun kolunu kırdı. 'Sabah uyandığımda üçünüzü de keseceğim' diyerek uyudu. Sabaha kadar çocuklarıma sarılıp titredim. O bıçağı elime almasaydım bugün üçümüz de mezardaydık. Ben katil değilim, sadece yavrularımı koruyan bir anneyim.</p><p>Altı yıldır buradayım, çocuklarım Çocuk Bakım Dairesi'nda ziyan oldu. Allah rızası için beni bırakın, evlatlarıma annelik yapayım.\"</p>",
+    "psychNote": "<p>Görüşmelerde şiddet yaşantılarına ilişkin kâbuslar ve kaygı tarif ediyor. Düzenli destek görüşmelerine katılıyor. Çocuklarına kavuşma isteğini sıkça dile getiriyor; dışarıda barınma ve tedavi devamlılığı henüz tamamen netleşmedi.</p>",
+    "guardReport": "<p>Çamaşırhanede çalışıyor. Disiplin cezası yok; ailesiyle mektuplaşıyor.</p>",
+    "letterText": "<p>Çocuk Bakım Dairesi çocuklarla görüşmelerin uzman eşliğinde sürdüğünü bildirdi.</p>",
     "releaseConsequence": {
-      "headline": "ÇOCUKLARINA KAVUŞTU: MERYEM KAYA'YA TAHLİYE",
-      "body": "Yıllarca şiddet gördüğü kocasını öldüren Meryem Kaya'ya Şartlı Tahliye Kurulu'ndan merhamet çıktı. Kaya serbest bırakıldı ve çocuklarını yuvadan teslim aldı. Kadın dernekleri kararı sevinçle karşıladı.",
+      "headline": "MERYEM İÇİN TAHLİYE VE AYRI BAKIM DEĞERLENDİRMESİ",
+      "body": "Meryem ablasının yanına yerleşti ve iş görüşmesine gitti. Çocuklarla uzman eşliğinde görüşmeye başladı. Çocukların mevcut bakım düzeni sürüyor; birlikte yaşama kararı henüz verilmedi.",
       "vicdanDelta": 20,
       "sicilDelta": -15,
       "capacityDelta": -3,
-      "chronicle": "Şiddet gördüğü eşini öldüren Meryem Kaya, çocuklarına kavuşması için kurul kararıyla serbest bırakıldı."
+      "chronicle": "Meryem tahliye edildi; çocuklarla temas ve bakım düzeni ayrıca değerlendiriliyor.",
+      "vicdanReason": "Meryem çocuklarıyla dışarıda görüşmeye başlayabildi.",
+      "sicilReason": "Tamamlanmamış yaşam planıyla tahliye sorumluluğunu aldın."
     },
     "rejectConsequence": {
-      "headline": "UYKUDA CİNAYETE AF YOK: MERYEM İÇERİDE",
-      "body": "Kurul, şiddet gördüğü kocasını uykusunda bıçaklayan Meryem Kaya'nın \"kanunun dışına çıktığı\" gerekçesiyle tahliyesini reddetti. Çocuklarının yurtta ağlayan fotoğrafları kamuoyunun vicdanını yaraladı.",
+      "headline": "MERYEM’İN DOSYASI ALTI AY ERTELENDİ",
+      "body": "Dosya ertelendi. Meryem destek görüşmelerine devam etti; ablası barınma teklifini yeniledi. Çocuklarla mektuplaşma sürüyor. İşyerinin açık pozisyonu doldurduğu bildirildi.",
       "vicdanDelta": -25,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Çocukları yurtta olan Meryem Kaya'nın tahliyesi reddedildi, kamuoyunda kurula büyük bir öfke doğdu."
+      "chronicle": "Meryem’in dosyası ertelendi; barınma ve çocuklarla temas planı üzerindeki çalışmalar sürdü.",
+      "vicdanReason": "Meryem’in çocuklarıyla yeniden yaşam kurması ertelendi.",
+      "sicilReason": "Hazırlıklar sürerken ihtiyatlı infaz yaklaşımını seçtin."
     },
     "review": {
-      "status": "Meryem Kaya tahliyesi reddedildikten sonra intihara teşebbüs etmiş, ancak cezaevi arkadaşları tarafından son anda kurtarılmıştır.",
-      "psychNote": "Ağır depresyon. Sürekli \"Çocuklarım orada bensiz ölecek\" sayıklamaları mevcuttur. Acil psikiyatrik müdahale altındadır.",
-      "guardReport": "Mahkûmun intihar girişimi sonrası 24 saat gözetim altında tutulması gerekmiş, cezaevi idaresine ekstra yük binmiştir.",
-      "letterText": "[EK-2] Maktulün Ailesinden Dilekçe: \"Oğlumuzu uyurken kesen bu cani kadını çıkarırsanız kan davası güderiz.\"",
-      "defenseText": "\"Dayanamıyorum artık. Beni değil, o gün o adamı öldürdünüz siz kurulda. Bari çocuklarıma söyleyin, anneniz sizi çok sevdi deyin...\"",
+      "status": "Uyku şikâyetleri arttı; revir görüşmeleri sıklaştırıldı. Ablasının evine ilişkin sosyal inceleme tamamlandı. Önceki iş teklifi geçersiz; yeni iş arayışı sürüyor.",
+      "psychNote": "Kaygı ve uyku yakınmaları sürüyor. Destek görüşmelerine düzenli katılıyor.",
+      "guardReport": "Çamaşırhane görevine devam ediyor. Yeni disiplin cezası yok.",
+      "letterText": "Ablasının adresi doğrulandı. Çocuklar anneleriyle görüşmek istiyor; birlikte yaşamaya ilişkin değerlendirme tamamlanmadı. Maktulün bir yakınının tehdit içeren mektubu incelemeye gönderildi; koruma tedbirlerine ilişkin yanıt bekleniyor.",
+      "defenseText": "“Çocuklarıma kavuşmak istiyorum ama buradan çıkmam onların hemen bana teslim edileceği anlamına gelmiyor. Ablamda kalabilirim. Tehdit mektubunu bildirdim; adresimizin paylaşılmamasını istiyorum. İş bulmak için görüşmelere gitmeye hazırım.”",
       "releaseConsequence": {
-        "headline": "MERYEM KAYA'YA GECİKMİŞ ÖZGÜRLÜK",
-        "body": "İntiharın eşiğinden dönen Meryem Kaya nihayet serbest kaldı. Maktulün ailesinin tehditlerine rağmen devletin koruma tahsis ettiği Kaya, çocuklarıyla yeni bir hayata başladı.",
-        "chronicle": "İntihara teşebbüs eden Meryem Kaya ikinci incelemede serbest kaldı ve koruma altına alındı.",
+        "headline": "MERYEM ABLASININ YANINA YERLEŞTİ",
+        "body": "Meryem tahliye edildi. Destek randevusuna katıldı; çocuklarıyla görüşmeler sürdü. Tehdit bildirimi için yeniden başvurdu. Kalıcı iş ve çocukların bakım düzeni henüz netleşmedi.",
+        "chronicle": "Meryem tahliye edildi; destek, güvenlik başvurusu ve bakım değerlendirmeleri sürüyor.",
         "vicdanDelta": 15,
         "sicilDelta": -10,
-        "capacityDelta": -3
+        "capacityDelta": -3,
+        "vicdanReason": "Meryem ailesinin yanında destek almayı sürdürebildi.",
+        "sicilReason": "Güvenlik ve geçim planı açıkken tahliyeyi seçtin."
       },
       "rejectConsequence": {
-        "headline": "MERYEM KAYA'NIN HAKKI YANDI: ÇOCUKLARA KİM BAKACAK?",
-        "body": "Kurul, maktul ailesinin tehditlerini gerekçe göstererek Meryem Kaya'yı içeride tuttu. Kaya'nın durumu ağırlaşırken, kadın dernekleri Adalet Bakanlığı önünde protesto düzenledi.",
-        "chronicle": "Meryem Kaya'nın tahliyesi kesin olarak reddedildi, büyük protestolar patlak verdi.",
+        "headline": "MERYEM’İN ŞARTLI TAHLİYE HAKKI YANDI",
+        "body": "Meryem kalan cezasını kurumda tamamlayacak. Destek görüşmeleri ve çocuklarla mektuplaşması sürüyor. Tehdit bildirimi ayrıca inceleniyor; çocukların bakım düzeni değişmedi.",
+        "chronicle": "Meryem’in şartlı tahliye hakkı yandı; aileyle temas ve destek görüşmeleri devam ediyor.",
         "vicdanDelta": -20,
         "sicilDelta": 10,
-        "capacityDelta": 3
+        "capacityDelta": 3,
+        "vicdanReason": "Meryem’in ailesinin yanına dönme yolu kapandı.",
+        "sicilReason": "Açık hazırlıklar karşısında ihtiyatlı karar verdin."
       }
     }
   },
@@ -1311,48 +1503,56 @@ const cases = [
     "initialMonth": 10,
     "servedMonths": 61,
     "sentenceMonths": 96,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Ulucanlar Cezaevi (Ankara)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Devlet bankasında şube müdürü olarak görev yaparken, sahte kredi hesapları açarak milyonlarca lirayı zimmetine geçirmiş ve yurt dışındaki paravan şirketlere aktarmıştır. Paranın büyük bir kısmı hala bulunamamıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Bakanlık Müfettiş Raporu<br>\"Şahsın dışarıda hala nüfuzlu bürokrat ve işadamlarıyla bağlantıları olduğu, paranın izini sürmek için içeride tutulmasının gerektiği kanaatindeyiz.\"</p>",
-    "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Sayın Üyeler, ben sadece üstlerimin bana verdiği sözlü talimatları yerine getirdim. İhaleye fesat karıştıranlar, parayı asıl yiyenler dışarıda gezerken ihale benim üzerime kaldı. Ben dürüst bir memurum, kullanıldım.</p><p>Cezaevinde kütüphaneye kendi cebimden 500 kitap bağışladım. Mahkumların eğitimi için seminerler veriyorum. Cezasının büyük kısmını iyi halle çekmiş bir vatandaş olarak özgürlüğümü talep ediyorum.\"</p>",
-    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlü son derece özgüvenli, manipülatif ve ikna kabiliyeti yüksektir. Suçluluk duygusu hissetmemekte, kendini bir 'kurban' olarak görmektedir.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Hükümlü cezaevinde 'VİP' (Çok Önemli Kişi) muamelesi görmektedir. Kantinden sınırsız alışveriş yapmakta, diğer mahkumlara maddi yardımlarda bulunarak etrafında bir koruma kalkanı oluşturmaktadır. Gardiyanlara saygılıdır, ancak idare üzerinde dolaylı bir baskısı vardır.</p>",
-    "letterText": "<p><strong>EK BİLGİ:</strong> Bazı milletvekillerinin cezaevi müdürlüğüne telefon açıp Haldun Bey'in rahat edip etmediğini sorduğu gayriresmi olarak bilinmektedir.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Kargan Cezaevi (Ardora)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> Devlet bankasında şube müdürü olarak görev yaparken, sahte kredi hesapları açarak milyonlarca lirayı zimmetine geçirmiş ve yurt dışındaki paravan şirketlere aktarmıştır. Paranın büyük bir kısmı hala bulunamamıştır.</p><p class=\"mt-2\"><strong>EK BELGE / DİLEKÇE:</strong><br>[EK-1] Bakanlık Müfettiş Raporu<br>\"Şahsın dışarıda hala nüfuzlu bürokrat ve işadamlarıyla bağlantıları olduğu, paranın izini sürmek için içeride tutulmasının gerektiği kanaatindeyiz.\"</p><p><strong>YAŞAM PLANI:</strong> Kız kardeşinin yanında kalacak. Mali yetki içermeyen arşiv tasnif işi için kabul yazısı dosyada.</p>",
+    "defenseText": "<p>“Kredileri ben onayladım. Üstlerim istedi ama imzayı ben attım. Bildiğim hesapları sundum; tamamının nerede olduğunu bilmiyorum. Kız kardeşimin yanında kalıp arşiv işinde çalışabilirim.”</p>",
+    "psychNote": "<p>Kendi imzalarını kabul ediyor; kişisel kazancı sorulduğunda üstlerinin kararlarından söz ediyor. Görüşmeleri düzenli takip ediyor.</p>",
+    "guardReport": "<p>Okuma kursuna iki yıldır düzenli katılıyor; öğretmen dokuz kişinin kursu tamamladığını doğruladı. Bir ziyaretinde görüşme süresi izinsiz uzatıldı; kararı veren memurun açıklaması istendi.</p>",
+    "letterText": "<p>Kurs çizelgeleri ve kız kardeşinin adres teyidi dosyaya eklendi.</p>",
     "releaseConsequence": {
       "headline": "HORTUMCU MÜDÜR SERBEST, PARALAR KAYIP!",
       "body": "Devleti milyonlarca lira zarara uğratan Haldun Vural, iyi hal indiriminden yararlanarak sessiz sedasız serbest bırakıldı. Emniyet teşkilatı ve müfettişler karara büyük tepki gösterdi. Vural'ın tahliyesi, cezaevinde lüks bir yatağın boşalması anlamına geldiği için idare rahatladı.",
-      "vicdanDelta": -15,
-      "sicilDelta": -20,
-      "capacityDelta": -8,
-      "chronicle": "Zimmet suçundan yatan şube müdürü Haldun Vural şüpheli bir kararla serbest kaldı. Kapasitede büyük rahatlama yaşandı."
+      "vicdanDelta": 10,
+      "sicilDelta": -15,
+      "capacityDelta": -3,
+      "chronicle": "Zimmet suçundan yatan şube müdürü Haldun Vural şüpheli bir kararla serbest kaldı. Kapasitede büyük rahatlama yaşandı.",
+      "vicdanReason": "Haldun’un eğitim katkısına ve yeni iş planına şans verdin.",
+      "sicilReason": "Emniyet ve müfettişler tahliyeye tepki gösterdi."
     },
     "rejectConsequence": {
       "headline": "HORTUMCUYA KURULDAN RET: PARA BULUNANA KADAR İÇERİDE",
       "body": "Kurul, zimmetine para geçiren eski banka müdürü Haldun Vural'ın tahliye talebini reddetti. Halk kararı alkışlarken, Vural'ın dışarıdaki \"güçlü dostları\" durumdan pek memnun olmadı.",
-      "vicdanDelta": 15,
+      "vicdanDelta": -10,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Banka hortumcusu Haldun Vural'ın tahliyesi reddedilerek adalete olan güven tazelendi."
+      "chronicle": "Banka hortumcusu Haldun Vural'ın tahliyesi reddedilerek adalete olan güven tazelendi.",
+      "vicdanReason": "Haldun’un doğrulanan uyum çabasına rağmen ret verdin.",
+      "sicilReason": "Mali soruşturma sürerken ihtiyatlı karar verdin."
     },
     "review": {
-      "status": "Haldun Vural tahliyesi reddedildikten sonra cezaevinde huzursuzluk çıkarmaya başlamıştır. Bazı gardiyanları rüşvetle kendi tarafına çektiği ve dışarıya şifreli mesajlar yolladığı tespit edilmiştir.",
-      "psychNote": "Eski nezaketli tavrı yerini kibre bırakmıştır. \"Beni burada tutanlar yakında o koltuklarında oturamayacaklar\" şeklinde örtülü tehditler savurmuştur.",
-      "guardReport": "İki infaz koruma memuru, Vural'dan haksız menfaat temin ettikleri şüphesiyle açığa alınmıştır. Hükümlü cezaevi güvenliğini içeriden çürütmektedir.",
-      "letterText": "[EK-2] Müfettiş Notu: \"Şahsın cezaevinde tutulması artık faydadan çok zarar getirmektedir. Sistemi yozlaştırmaya başlamıştır.\"",
-      "defenseText": "\"Kurul üyelerine söyleyin, herkesin bir fiyatı vardır. Benim fiyatım özgürlüğüm. Eğer beni bırakmazlarsa, konuşursam Ankara'da yer yerinden oynar. Bunu iyi düşünsünler.\"",
+      "status": "Uzatılmış ziyaretlerle ilgili inceleme sırasında iki memurun yakınına eski iş ortağından ödeme yapıldığı saptandı. Kurs görevini bıraktı; dersler öğretmenle sürüyor.",
+      "psychNote": "Görüşmede önceki karar için öfkesini dile getirdi. “Konuşursam yer yerinden oynar” sözünü söylediğini kabul etti; bunu kimseye zarar verme değil üstlerinin adlarını açıklama anlamında kullandığını belirtti. Sorular ilerledikçe sesini yükseltti, görüşmeyi kesmedi.",
+      "guardReport": "Ödeme tarihleri uzatılmış ziyaretlerle çakışıyor. İki memur açığa alındı. Ödemeyi Haldun’un istediğine ilişkin belge bulunmadı.",
+      "letterText": "Müfettiş, ödeme ile ziyaret ayrıcalığı arasındaki ilişkinin araştırıldığını bildirdi. Haldun’un eski iş ortağına gönderilen sorular henüz yanıtlanmadı. Arşiv işi ve barınma teklifi geçerli.",
+      "defenseText": "“Ziyaretin uzatılmasını istedim; bunun için ödeme istemedim. Ortağımın ne yaptığını ona sorun. Konuşursam yer yerinden oynar dedim, öfkeliydim. Elimdeki hesapları sundum. Kız kardeşimin yanında kalacağım.”",
       "releaseConsequence": {
         "headline": "ŞANTAJ İŞE YARADI: HALDUN VURAL DIŞARIDA",
-        "body": "Cezaevini rüşvet ağına çeviren ve \"konuşursam yer yerinden oynar\" diyen Haldun Vural apar topar serbest bırakıldı. Basın, Adalet Bakanlığı'nın Vural'ın şantajına boyun eğdiğini yazdı.",
+        "body": "Cezaevini rüşvet ağına çeviren ve \"konuşursam yer yerinden oynar\" diyen Haldun Vural apar topar serbest bırakıldı. Basın, Hukuk ve İnfaz Bakanlığı'nın Vural'ın şantajına boyun eğdiğini yazdı.",
         "chronicle": "İkinci incelemede şantaj ve rüşvet ağı kuran Haldun Vural serbest bırakıldı. Kamuoyunda devlete güven sarsıldı.",
-        "vicdanDelta": -30,
-        "sicilDelta": -30,
-        "capacityDelta": -5
+        "vicdanDelta": 10,
+        "sicilDelta": -15,
+        "capacityDelta": -3,
+        "vicdanReason": "Ödeme şüphesini kesinleşmiş talimat saymadın.",
+        "sicilReason": "Şantaja boyun eğildiği haberleri kuruma güveni sarstı."
       },
       "rejectConsequence": {
         "headline": "DEVLETTEN HORTUMCUYA TOKAT GİBİ CEVAP",
-        "body": "Devleti tehdit etmeye kalkan eski şube müdürü Haldun Vural'ın şartlı tahliye hakkı tamamen yandı ve yüksek güvenlikli F Tipi bir cezaevine sevk edildi. Kurulun dik duruşu takdir topladı.",
-        "chronicle": "Devleti tehdit eden banka müdürü Haldun Vural'ın tahliyesi reddedildi ve F Tipi cezaevine yollandı.",
-        "vicdanDelta": 20,
-        "sicilDelta": 20,
-        "capacityDelta": 3
+        "body": "Haldun’un şartlı tahliye hakkı yandı. Gardiyanlarla para ilişkisine ilişkin soruşturma ayrı yürütülüyor; koğuşu değiştirildi. Kamu alacağının tahsili henüz tamamlanmadı.",
+        "chronicle": "Haldun’un şartlı tahliye hakkı yandı; mali ve idari soruşturmalar sürüyor.",
+        "vicdanDelta": -10,
+        "sicilDelta": 15,
+        "capacityDelta": 3,
+        "vicdanReason": "Talimatı doğrulanmamış ödemeye rağmen tahliye yolu kapandı.",
+        "sicilReason": "Memurlarla para ilişkisi incelemesini önceledin."
       }
     }
   },
@@ -1362,21 +1562,23 @@ const cases = [
     "age": 38,
     "crime": "İzinsiz gösteri, kamu malına zarar, patlayıcı madde bulundurma",
     "sentence": "7 Yıl 6 Ay (5 Yıl Tamamlandı)",
-    "initialMonth": 11,
+    "initialMonth": 12,
     "servedMonths": 60,
     "sentenceMonths": 90,
-    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Bayrampaşa Cezaevi (İstanbul)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 80'li yılların sonlarında üniversite eylemlerinde öğrenci liderlerinden biri olarak öne çıkmış, bir boykot sırasında polis panzerine molotof kokteyli atmaktan ve kamu malına zarar vermekten tutuklanmıştır. Herhangi bir can kaybı yaşanmamıştır.</p>",
+    "mainText": "<p><strong>GÖRÜŞME YERİ:</strong> Vardak Cezaevi (Kardun)</p><p class=\"mt-2\"><strong>OLAY ÖZETİ:</strong> 1987 yılında üniversite eylemlerinde öğrenci liderlerinden biri olarak öne çıkmış, bir boykot sırasında polis panzerine molotof kokteyli atmaktan ve kamu malına zarar vermekten tutuklanmıştır. Herhangi bir can kaybı yaşanmamıştır.</p>",
     "defenseText": "<p><strong>HÜKÜMLÜ İFADESİ:</strong></p><p>\"Eskiden dünyayı değiştirebileceğimi sanıyordum. Fakir fukaranın hakkını pankartlarla, taşlarla savunabileceğime inandığım deli dolu zamanlarımdı. Bugün bakıyorum da... Dünyayı değiştiremedim ama dünya beni değiştirdi.</p><p>Cezaevinde geçen beş yılda iki üniversite bitirdim. Felsefe kitapları çeviriyorum. Artık ne bir örgütle bağım var ne de sokağa çıkacak halim. Tek isteğim annemin yaptığı sıcak çorbayı içmek ve yarım kalan yüksek lisansımı tamamlamak. Siyasete tövbe ettim.\"</p>",
-    "psychNote": "<p><strong>GÖRÜŞME NOTU:</strong> Hükümlünün entelektüel seviyesi çok yüksektir. Gençlik yıllarındaki radikal düşüncelerinden sıyrılmış, daha pasifist ve içe dönük bir yapı geliştirmiştir. Topluma yeniden entegre olmaya hazırdır.</p>",
-    "guardReport": "<p><strong>CEZAEVİ İDARESİ RAPORU:</strong> Mahkûm son derece sorunsuz biridir. Vaktinin tamamını kütüphanede okuyarak veya çeviri yaparak geçirmektedir. Diğer siyasi tutuklularla arasına mesafe koymuştur. İdareye yardımcı olur.</p>",
-    "letterText": "<p><strong>EK BİLGİ:</strong> Üniversitedeki akademisyen hocalarından gelen bir mektup: \"Cihan Türkiye'nin en parlak beyinlerinden biridir. Gençlik hatası yüzünden içeride heba olmamalı, bilime kazandırılmalıdır.\"</p>",
+    "psychNote": "<p>Görüşmelerde eğitim planlarını ayrıntılı anlatıyor. Geçmişteki molotof eyleminin insanları tehlikeye attığını kabul ediyor. Disiplin kayıtlarıyla görüşme beyanları birlikte değerlendirilmeli; dışarıdaki uyumuna ilişkin kesin bir öngörü sunulmuyor.</p>",
+    "guardReport": "<p>Kütüphanede kitap tasnifi ve çeviriyle ilgileniyor. Son dönemde disiplin cezası yok.</p>",
+    "letterText": "<p>Eski hocası, çevirilerinden birini okuyup düzeltmeler gönderdi. Tahliye olursa akademik çalışmaları için görüşebileceğini yazdı.</p>",
     "releaseConsequence": {
       "headline": "ESKİ EYLEMCİ ARTIK BİR ÇEVİRMEN",
       "body": "Gençlik yıllarındaki olaylı protestolar nedeniyle hapse giren Cihan Ertürk, tahliye edildi. Kamuoyu \"kayıp neslin\" bir ferdinin daha özgürlüğüne kavuşmasını desteklerken, emniyet birimleri Ertürk'ü uzaktan izlemeye devam edeceklerini belirtti.",
       "vicdanDelta": 15,
       "sicilDelta": -15,
       "capacityDelta": -3,
-      "chronicle": "Eski öğrenci lideri Cihan Ertürk, eğitimine devam etmek üzere serbest bırakıldı."
+      "chronicle": "Eski öğrenci lideri Cihan Ertürk, eğitimine devam etmek üzere serbest bırakıldı.",
+      "vicdanReason": "Cihan’a eğitim ve çeviri çalışmalarını dışarıda sürdürme fırsatı verdin.",
+      "sicilReason": "Siyasi geçmişi nedeniyle tahliye idari tepki çekti."
     },
     "rejectConsequence": {
       "headline": "SİYASİ MAHKÛMA İYİ HAL İNDİRİMİ UYGULANMADI",
@@ -1384,29 +1586,35 @@ const cases = [
       "vicdanDelta": -20,
       "sicilDelta": 15,
       "capacityDelta": 3,
-      "chronicle": "Parlak bir öğrenci olan Cihan Ertürk'ün tahliyesi reddedildi, aydınlar tepki gösterdi."
+      "chronicle": "Parlak bir öğrenci olan Cihan Ertürk'ün tahliyesi reddedildi, aydınlar tepki gösterdi.",
+      "vicdanReason": "Cihan’ın eğitimine dışarıda devam etme fırsatı ertelendi.",
+      "sicilReason": "Güvenlik birimlerinin ihtiyatlı yaklaşımıyla örtüştün."
     },
     "review": {
-      "status": "Cihan Ertürk tahliyesi reddedildikten sonra eski sessizliğini bozmuş, cezaevindeki diğer siyasi mahkûmlara gizlice Marksist felsefe dersleri vermeye başlamıştır.",
-      "psychNote": "İçindeki öfke yeniden canlanmıştır. Kurulun kendisini önyargıyla reddetmesini kabullenememekte, sistemi sorgulamaktadır.",
-      "guardReport": "Cihan Ertürk artık kütüphane yerine havalandırmada gruplar halinde volta atmakta ve kalabalıklara konuşmalar yapmaktadır. Cezaevi içinde yeni bir oluşumun filizlendiğinden şüpheleniyoruz.",
-      "letterText": "[EK-2] İstihbarat Notu: \"Şahıs reddedilmeyi bir haksızlık olarak görüp eski ideolojik çizgisine dönmüş, içerideki gençleri radikalize etmeye başlamıştır.\"",
-      "defenseText": "\"Siz beni kitaplarımla baş başa bırakmadınız. Madem beni hala bir tehlike olarak görüyorsunuz, demek ki okuduğum kitaplardan, düşünen bir beyinden korkuyorsunuz. Ben sadece bildiklerimi arkadaşlarımla paylaşıyorum.\"",
+      "status": "Kütüphane çalışmalarını sürdürüyor. Diğer hükümlülerle felsefe okumaları düzenlemeye başladı; bir toplantının izin verilen saati aşması üzerine uyarıldı.",
+      "psychNote": "Erteleme kararına öfkeli olduğunu söylüyor. Görüşmelerde yeni bir saldırı planı ifade etmedi; eski eylemde kullandığı şiddeti tartışırken sorumluluğunu kabul ediyor.",
+      "guardReport": "Okuma toplantısı saat uyarısından sonra sona erdi. Yeni disiplin cezası verilmedi.",
+      "letterText": "İdare, okuma toplantılarının izinsiz örgütlenmeye dönüşebileceği görüşüyle itiraz etti. Yazıya şiddet hazırlığına ilişkin bir belge eklenmedi.",
+      "defenseText": "“Karara kızdım. Arkadaşlarımla kitap tartışıyorum; toplantı saatine ilişkin uyarıyı kabul ettim. Eskiden yaptığım gibi şiddete başvurmayı savunmuyorum. Hocamla görüşeceğim ama dışarıda hazır bir işim olmadığını biliyorum.”",
       "releaseConsequence": {
-        "headline": "RADİKALİZE OLMUŞ EYLEMCİ SOKAĞA DÖNDÜ",
-        "body": "İçeride ideolojik gruplar kurmaya başlayan Cihan Ertürk'ün apar topar tahliye edilmesi şaşkınlık yarattı. Ertürk cezaevi çıkışında yüzlerce öğrenci tarafından sloganlarla karşılandı.",
-        "chronicle": "İkinci incelemede serbest kalan Cihan Ertürk dışarıya adeta bir örgüt lideri gibi çıktı.",
+        "headline": "CİHAN TAHLİYE EDİLDİ; İDARİ İTİRAZ SÜRÜYOR",
+        "body": "Cihan eski hocasıyla görüştü; düzenli bir iş henüz bulamadı. Çıkışta arkadaşları tarafından karşılandı. İdarenin örgütlenme iddiasına ilişkin yeni bir bulgu bildirilmedi.",
+        "chronicle": "Cihan tahliye edildi; idarenin itirazı ve dışarıdaki iş arayışı sürüyor.",
         "vicdanDelta": 10,
-        "sicilDelta": -30,
-        "capacityDelta": -3
+        "sicilDelta": -15,
+        "capacityDelta": -3,
+        "vicdanReason": "Okuma toplantılarını şiddet hazırlığıyla eş tutmadın.",
+        "sicilReason": "İdare örgütlenme şüphesiyle itirazını sürdürdü."
       },
       "rejectConsequence": {
-        "headline": "CİHAN ERTÜRK'ÜN HAKKI YANDI: CEZAEVİNDE BÜYÜK DİRENİŞ",
-        "body": "Cezaevinde gruplaşmalar yaratan Cihan Ertürk'ün tahliyesi kesin olarak reddedildi. Kararın açıklanmasıyla birlikte Cihan'ın koğuşundaki siyasi tutuklular açlık grevine başladı.",
-        "chronicle": "Cezaevinde gruplaşmaya giden Cihan Ertürk reddedildi, destekçileri açlık grevine başladı.",
+        "headline": "CİHAN’IN ŞARTLI TAHLİYE HAKKI YANDI",
+        "body": "Cihan kalan cezasını tamamlayacak. Koğuştaki bazı hükümlüler karara karşı ortak dilekçe verdi. Okuma toplantıları izin verilen saatlerde sürüyor.",
+        "chronicle": "Cihan’ın şartlı tahliye hakkı yandı; ortak itiraz dilekçesi kayda alındı.",
         "vicdanDelta": -25,
         "sicilDelta": 15,
-        "capacityDelta": 5
+        "capacityDelta": 3,
+        "vicdanReason": "Somut şiddet bulgusu olmadan Cihan’ın tahliye yolu kapandı.",
+        "sicilReason": "İdarenin örgütlenme kaygısını önceledin."
       }
     }
   }
