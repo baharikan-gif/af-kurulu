@@ -385,6 +385,55 @@
       border-color: #44403c !important;
     }
 
+    /* 3D İnteraktif Resmi Klasör & Sayfa Çevirme Animasyonları */
+    .dossier-perspective {
+      perspective: 2400px;
+      perspective-origin: 50% 50%;
+    }
+    .dossier-book-wrapper {
+      transform-style: preserve-3d;
+    }
+    .dossier-cover-leaf {
+      transform-origin: left center;
+      transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.85s;
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+    .dossier-cover-leaf.is-opened {
+      transform: rotateY(-180deg);
+      box-shadow: -15px 15px 35px rgba(0,0,0,0.6);
+      pointer-events: none;
+    }
+    .dossier-page-leaf {
+      transform-origin: left center;
+      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.4s ease;
+      backface-visibility: hidden;
+      will-change: transform;
+    }
+    .dossier-page-leaf.is-flipped {
+      transform: rotateY(-180deg);
+      pointer-events: none;
+      opacity: 0;
+    }
+    .page-curl-corner {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, transparent 50%, rgba(180, 150, 100, 0.35) 50%, rgba(246, 239, 225, 0.95) 65%, #fff 100%);
+      box-shadow: -3px -3px 8px rgba(0,0,0,0.18);
+      border-radius: 6px 0 0 0;
+      cursor: pointer;
+      transition: width 0.2s ease, height 0.2s ease, transform 0.2s ease;
+      z-index: 30;
+    }
+    .page-curl-corner:hover {
+      width: 50px;
+      height: 50px;
+      transform: scale(1.05);
+    }
+
     /* Modallar & Ayarlar */
     body.theme-dark #settingsModal > div,
     body.theme-dark #instructionsModal > div,
@@ -611,10 +660,10 @@
         </div>
       </div>
 
-      <!-- 3. CEZAEVİ KAPASİTESİ (1991 Doluluk Krizi) -->
+      <!-- 3. CEZAEVİ KAPASİTESİ (Doluluk Krizi) -->
       <div id="statCard-capacity" class="flex flex-col items-center p-0.5 rounded-lg border border-transparent transition-all duration-300">
         <div class="flex items-center justify-between w-full px-1 text-[10px] font-mono text-stone-300 mb-0.5">
-          <span class="flex items-center gap-0.5">🏢 DOLULUK</span>
+          <span class="flex items-center gap-0.5">🏢 <span id="capacityYearLabel">1991</span> DOLULUK</span>
           <span id="capacityValue" class="font-bold text-amber-400">104%</span>
         </div>
         <div class="w-full h-1.5 bg-stone-950 rounded-full overflow-hidden border border-stone-700">
@@ -668,35 +717,135 @@
       </div>
 
       <!-- Evrak Başlığı & 1991 Anteti -->
+      <!-- Evrak Başlığı & 1991 Anteti -->
       <div class="border-b-2 border-dashed border-stone-400 pb-1.5 mb-2">
-        <div class="flex items-center justify-between">
-          <div class="flex items-center gap-1.5">
-            <span class="text-[9px] font-mono tracking-widest text-stone-500 uppercase">CEZA VE TEVKİFEVLERİ GN. MD.</span>
-            <span id="docTermBadge" class="text-[9px] font-mono bg-stone-300 px-1 py-0.2 rounded text-stone-700">İLAM: 1991/01</span>
+        <div class="flex items-start justify-between">
+          
+          <!-- Sol Taraf: Antet, İsim, Yaş, Suç, İnfaz Süresi -->
+          <div class="flex-1 pr-2">
+            <div class="flex items-center gap-1.5">
+              <span class="text-[9px] font-mono tracking-widest text-stone-500 uppercase">HUKUK VE İNFAZ BAKANLIĞI · İNFAZ KURUMLARI GENEL DAİRESİ</span>
+              <span id="docTermBadge" class="text-[9px] font-mono bg-stone-300 px-1 py-0.2 rounded text-stone-700">İLAM: 1991/01</span>
+            </div>
+            <!-- 1. Sıra: İsim -->
+            <div class="mt-0.5">
+              <h2 id="inmateName" class="text-xl font-bold font-typewriter tracking-tight text-stone-900 leading-tight">Emre Yılmaz</h2>
+            </div>
+            <!-- 2. Sıra: Yaş -->
+            <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
+              <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">YAŞ:</span>
+              <span id="inmateAge" class="font-bold text-stone-900">24</span>
+            </div>
+            <!-- 3. Sıra: Suç -->
+            <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
+              <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">SUÇ:</span>
+              <span id="inmateCrimeLine" class="font-bold text-stone-900 truncate">Motosiklet Hırsızlığı & Mala Zarar</span>
+            </div>
+            <!-- 4. Sıra: İnfaz Süresi -->
+            <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
+              <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">İNFAZ SÜRESİ:</span>
+              <span id="timeServed" class="font-bold text-stone-900 tracking-tight whitespace-nowrap shrink-0">3 Yıl Hapis (2 Yıl 1 Ay Tamamlandı)</span>
+            </div>
+            <!-- 5. Sıra: Kurum -->
+            <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
+              <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">KURUM:</span>
+              <span id="inmatePrisonLine" class="font-bold text-stone-900 truncate">Vardak Kapalı İnfaz Kurumu</span>
+            </div>
           </div>
-          <span class="inline-block bg-stone-800 text-stone-200 text-[10px] font-mono px-2 py-0.5 rounded uppercase" id="verdictStatus">İNCELEMEDE</span>
-        </div>
-        <!-- 1. Sıra: İsim (Tam bir sıra) -->
-        <div class="mt-1">
-          <h2 id="inmateName" class="text-xl font-bold font-typewriter tracking-tight text-stone-900 leading-tight">Emre Yılmaz</h2>
-        </div>
 
-        <!-- 2. Sıra: Yaş (Tam bir sıra - İsmin hemen altında) -->
-        <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
-          <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">YAŞ:</span>
-          <span id="inmateAge" class="font-bold text-stone-900">24</span>
-        </div>
+          <!-- Sağ Taraf: İNCELEMEDE ve Tam Altında Sadece Klasör Resmi -->
+          <div class="flex flex-col items-center shrink-0 pt-0.5">
+            <span class="inline-block bg-stone-800 text-stone-200 text-[10px] font-mono px-2 py-0.5 rounded uppercase" id="verdictStatus">İNCELEMEDE</span>
+            
+            <!-- İncelemede Yazısının Tam Altındaki Klasör Resmi (Tıklanabilir) -->
+            <button id="btnOpenInteractiveDossier" onclick="openInteractiveDossier()" type="button" class="mt-1.5 group relative p-0 bg-transparent border-0 outline-none cursor-pointer active:scale-95 transition-transform" title="Dosyayı Aç">
+              <div class="relative w-12 h-10 flex items-center justify-center filter drop-shadow-md group-hover:scale-110 transition-transform duration-200">
+                <!-- 1991 Resmî Yıpranmış Arşiv Dosyası SVG (Vintage Worn Kraft Dossier) -->
+                <svg viewBox="0 0 52 42" class="w-full h-full drop-shadow-sm">
+                  <defs>
+                    <!-- Yıpranmış Kraft Karton Gradyanları -->
+                    <linearGradient id="agedKraftBack" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#7a542a"/>
+                      <stop offset="50%" stop-color="#66431e"/>
+                      <stop offset="100%" stop-color="#4e3012"/>
+                    </linearGradient>
+                    <linearGradient id="agedKraftFront" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#8c6435"/>
+                      <stop offset="40%" stop-color="#7a5327"/>
+                      <stop offset="100%" stop-color="#5a3815"/>
+                    </linearGradient>
+                    <!-- Sararmış Arşiv Kâğıdı Gradyanı -->
+                    <linearGradient id="agedPaperGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#faf2df"/>
+                      <stop offset="100%" stop-color="#ebd8b4"/>
+                    </linearGradient>
+                    <!-- Bez Cilt Sırt Şeridi (Maroon-Brown Cloth Spine) -->
+                    <linearGradient id="spineClothGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stop-color="#3a1c12"/>
+                      <stop offset="50%" stop-color="#4d2719"/>
+                      <stop offset="100%" stop-color="#2a120b"/>
+                    </linearGradient>
+                    <!-- Eskitilmiş Etiket Gradyanı -->
+                    <linearGradient id="agedLabelGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#fdfbf5"/>
+                      <stop offset="100%" stop-color="#ece2cc"/>
+                    </linearGradient>
+                  </defs>
 
-        <!-- 3. Sıra: Suç (Tam bir sıra - Yaşın hemen altında) -->
-        <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
-          <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">SUÇ:</span>
-          <span id="inmateCrimeLine" class="font-bold text-stone-900 truncate">Motosiklet Hırsızlığı & Mala Zarar</span>
-        </div>
+                  <!-- 1. Arka Karton Kapak ve Sekme (Tab) -->
+                  <path d="M6 7 L21 7 L25 11 L48 11 C49.5 11 50.5 12 50.5 13.5 L50.5 37 C50.5 38.5 49.5 39.5 48 39.5 L6 39.5 C4.5 39.5 3.5 38.5 3.5 37 L3.5 9.5 C3.5 8 4.5 7 6 7 Z" fill="url(#agedKraftBack)" stroke="#38200b" stroke-width="1.2"/>
+                  
+                  <!-- Arka Kapak İç Aşınma Gölgeleri -->
+                  <path d="M7 12 L47 12 L47 38 L7 38 Z" fill="#2d1706" opacity="0.35"/>
 
-        <!-- 4. Sıra: İnfaz Süresi (Tam bir sıra - Suçun hemen altında) -->
-        <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
-          <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">İNFAZ SÜRESİ:</span>
-          <span id="timeServed" class="font-bold text-stone-900 tracking-tight whitespace-nowrap shrink-0">3 Yıl Hapis (2 Yıl 1 Ay Tamamlandı)</span>
+                  <!-- 2. İçteki Sararmış Resmî Evrak Sayfaları (Katmanlı & Yıpranmış) -->
+                  <rect x="8" y="9.5" width="39" height="27.5" rx="1" fill="url(#agedPaperGrad)" stroke="#9c8766" stroke-width="0.7"/>
+                  <rect x="7" y="11" width="39" height="26" rx="0.8" fill="url(#agedPaperGrad)" stroke="#8f7a59" stroke-width="0.6"/>
+                  
+                  <!-- Evrak Üzerindeki Daktilo Satırları & Kırmızı Paraf -->
+                  <line x1="12" y1="14.5" x2="28" y2="14.5" stroke="#7e6e56" stroke-width="1" stroke-linecap="round" opacity="0.85"/>
+                  <line x1="12" y1="18" x2="41" y2="18" stroke="#7e6e56" stroke-width="0.9" stroke-linecap="round" opacity="0.75"/>
+                  <line x1="12" y1="21.5" x2="35" y2="21.5" stroke="#7e6e56" stroke-width="0.9" stroke-linecap="round" opacity="0.75"/>
+                  <circle cx="39" cy="14.5" r="2.2" fill="#7a1a1a" opacity="0.8"/>
+
+                  <!-- 3. Ön Kapak / Cep (Yıpranmış Kraft Karton) -->
+                  <path d="M4 16 L49.5 16 L46.5 39.5 L4 39.5 Z" fill="url(#agedKraftFront)" stroke="#38200b" stroke-width="1.2"/>
+                  
+                  <!-- Ön Kapak Üzerinde Aşınma ve Kıvrım Çizgisi -->
+                  <line x1="4" y1="20" x2="49" y2="20" stroke="#a67c4a" stroke-width="0.5" opacity="0.4"/>
+                  <line x1="4" y1="36.5" x2="46.5" y2="36.5" stroke="#2a1606" stroke-width="0.7" opacity="0.5"/>
+
+                  <!-- Sağ Üst Kıvrık / Aşınmış Köşe Efekti (Dog-eared Corner) -->
+                  <path d="M45.5 16 L49.5 20 L45.5 20 Z" fill="#42250e" stroke="#2a1606" stroke-width="0.6"/>
+
+                  <!-- 4. Sol Kenar Bez Cilt Sırt Şeridi (Archival Cloth Tape) -->
+                  <path d="M3.5 7 L8 7 L8 39.5 L3.5 39.5 Z" fill="url(#spineClothGrad)" stroke="#1f0f08" stroke-width="0.8"/>
+                  <!-- Bez Dikiş Noktaları -->
+                  <line x1="5.8" y1="9" x2="5.8" y2="37.5" stroke="#8c6a50" stroke-width="0.8" stroke-dasharray="1.5,1.5" opacity="0.6"/>
+
+                  <!-- 5. Pirinç Kuşgözü Perçin (Brass Eyelet / Grommet) -->
+                  <circle cx="5.8" cy="24" r="2" fill="#2a1506"/>
+                  <circle cx="5.8" cy="24" r="1.4" fill="#c4943f" stroke="#523610" stroke-width="0.6"/>
+                  <circle cx="5.8" cy="24" r="0.6" fill="#1f0f08"/>
+
+                  <!-- Kırmızı Arşiv İpi / Sicimi (Perçinden Sarkan Dokuma Bağcık) -->
+                  <path d="M5.8 24 C8 26, 7 30, 11 32 C13 33, 12 37, 10 39" fill="none" stroke="#8b1c1c" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  
+                  <!-- 6. Eskitilmiş Arşiv Etiketi (Vintage Paste-on Docket Label) -->
+                  <rect x="14" y="21.5" width="27" height="12" rx="1" fill="url(#agedLabelGrad)" stroke="#6b4c27" stroke-width="0.8"/>
+                  <rect x="15" y="22.5" width="25" height="10" rx="0.5" fill="none" stroke="#a88c67" stroke-width="0.4" stroke-dasharray="1.5,1"/>
+                  
+                  <!-- Etiket Üzerindeki Resmi Damga ve Daktilo Metni -->
+                  <text id="deskDossierYearTag" x="27.5" y="26.2" font-family="monospace" font-size="3.6" font-weight="bold" fill="#7a1a1a" text-anchor="middle" letter-spacing="0.3">★ GİZLİ · 1991 ★</text>
+                  <text x="27.5" y="31.2" font-family="monospace" font-size="5.2" font-weight="900" fill="#2d1c0c" text-anchor="middle" letter-spacing="0.8">DOSYA</text>
+
+                  <!-- 7. Yıpranmış Oval Kırmızı Mürekkep Kaşesi (Soluk Arşiv İzi) -->
+                  <ellipse cx="40" cy="28" rx="5.5" ry="3.8" fill="none" stroke="#942020" stroke-width="0.7" opacity="0.55" transform="rotate(-15 40 28)"/>
+                  <text x="40" y="29.2" font-family="monospace" font-size="2.6" font-weight="bold" fill="#942020" text-anchor="middle" opacity="0.65" transform="rotate(-15 40 28)">İNFAZ</text>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
       </div>
 
@@ -717,15 +866,6 @@
       <!-- EVRAK İÇERİK SEKMELERİ -->
       <div class="flex-1 overflow-y-auto pr-1 text-sm font-typewriter leading-relaxed text-stone-800 space-y-2" id="docContent">
         <!-- JS Dinamik olarak dolduracak -->
-      </div>
-
-      <!-- Alt Damgalama Bilgisi / Masanın Karar Alanı -->
-      <div class="mt-2 pt-1.5 border-t border-stone-300 flex items-center justify-between text-[11px] font-mono text-stone-500">
-        <span id="caseMeetingLabel">Oturum Tarihi: 07.01.1991</span>
-        <span class="italic text-stone-600 flex items-center gap-1.5 text-[10px] font-mono">
-          <span class="inline-block w-2 h-2 rounded-full bg-red-700/90 animate-pulse"></span>
-          <span>İmza ve Mühürle Tasdiklidir</span>
-        </span>
       </div>
 
     </div>
@@ -798,7 +938,7 @@
         <h2 id="consequenceHeadline" class="text-lg font-bold font-typewriter leading-tight text-stone-900">TAHLİYE EDİLEN ŞAHIS SANAYİDE İŞE BAŞLADI</h2>
         <div class="w-full h-0.5 bg-black my-2"></div>
         <p id="consequenceBody" class="text-xs font-typewriter leading-relaxed text-stone-800 mt-2">
-          Komisyonun kararıyla serbest bırakılan hükümlü, Organize Sanayi Bölgesi'nde tornacı olarak işe başladı.
+          Kurulun kararıyla serbest bırakılan hükümlü, Organize Sanayi Bölgesi'nde tornacı olarak işe başladı.
         </p>
       </div>
 
@@ -1196,6 +1336,133 @@
     </div>
   </div>
 
+  <!-- ==================== TAM EKRAN 3D GERÇEK İNFAZ KLASÖRÜ ==================== -->
+  <div id="interactiveDossierModal" class="hidden fixed inset-0 z-50 bg-[#0a0806]/98 backdrop-blur-md flex flex-col items-center justify-between pt-0 px-2 sm:px-4 pb-0.5 select-none">
+    
+    <!-- Gizli Yıl Başlığı (Test ve Mantık Uyumu İçin) -->
+    <span id="interactiveModalYearTitle" class="hidden"></span>
+
+    <!-- Ortadaki 3D Sahne (Klasör Alanı - Yukarıya Sıfır) -->
+    <div class="w-full max-w-xl flex-1 flex items-start justify-center dossier-perspective relative pt-0 pb-0">
+      
+      <!-- Klasör Gövdesi (Mobil Ekrana Tam Sığan ve Dikey Alanı Maksimum Kullanan Boyut) -->
+      <div id="interactiveDossierBook" class="w-full max-w-[480px] h-[calc(100vh-28px)] h-[calc(100dvh-28px)] max-h-[660px] dossier-book-wrapper relative flex flex-col justify-between mt-0">
+        
+        <!-- Sol Telli Klasör Sırtı Efekti -->
+        <div class="absolute -left-3 top-2 bottom-2 w-6 bg-gradient-to-r from-stone-950 via-stone-800 to-amber-950/80 rounded-l-md border-y border-l border-stone-700 shadow-2xl flex flex-col justify-around py-8 items-center z-40 pointer-events-none" aria-hidden="true">
+          <div class="w-3.5 h-3.5 rounded-full bg-stone-900 border-2 border-stone-500 shadow-inner"></div>
+          <div class="w-3.5 h-3.5 rounded-full bg-stone-900 border-2 border-stone-500 shadow-inner"></div>
+          <div class="w-3.5 h-3.5 rounded-full bg-stone-900 border-2 border-stone-500 shadow-inner"></div>
+        </div>
+
+        <!-- 3D DOSYA KAPAĞI (Cover Leaf) -->
+        <div id="interactiveCoverLeaf" onclick="openDossierCover()" class="absolute inset-0 dossier-cover-leaf bg-[#dfcfb0] paper-texture rounded-r-xl rounded-l-sm border-2 border-stone-700 p-3 sm:p-6 flex flex-col justify-between shadow-2xl z-30 cursor-pointer hover:brightness-105 transition-all duration-200">
+          
+          <!-- Kapak Üst Antet -->
+          <div class="border-b-2 border-stone-800 pb-1.5 sm:pb-2 text-center ml-2">
+            <div class="text-[10px] sm:text-xs font-mono tracking-widest text-stone-700 uppercase font-bold">
+              VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI
+            </div>
+            <div class="text-[9px] font-mono tracking-widest text-stone-600 uppercase">
+              İNFAZ KURUMLARI GENEL DAİRESİ · İNFAZ TEFTİŞ KURULU BAŞKANLIĞI
+            </div>
+            <div class="text-xs sm:text-sm font-bold tracking-wider text-stone-950 mt-1 uppercase font-serif">
+              ŞARTLI TAHLİYE VE İDARE GÖZLEM DOSYASI
+            </div>
+          </div>
+
+          <!-- Mahkûm Kimlik Çerçevesi -->
+          <div class="bg-stone-100/90 border-2 border-stone-600 rounded-lg p-2.5 sm:p-4 text-left space-y-1 sm:space-y-1.5 shadow-sm ml-2 font-mono">
+            <div class="flex justify-between items-center border-b border-stone-300 pb-1">
+              <span class="text-[10px] font-bold text-stone-600 uppercase">HÜKÜMLÜ ESAS KAYDI:</span>
+              <span id="coverCaseTerm" class="text-[10px] bg-stone-800 text-amber-200 px-1.5 py-0.5 rounded font-bold">İLAM: 1991/01</span>
+            </div>
+            <div class="pt-0.5 sm:pt-1">
+              <div class="text-[10px] text-stone-500 uppercase font-bold">HÜKÜMLÜ ADI SOYADI:</div>
+              <div id="coverInmateName" class="text-xl sm:text-2xl font-black text-stone-950 font-serif tracking-wide leading-tight">Emre Yılmaz</div>
+            </div>
+            <div class="grid grid-cols-2 gap-1.5 sm:gap-2 text-xs pt-1 sm:pt-1.5 border-t border-dashed border-stone-300">
+              <div><span class="text-stone-500 font-semibold uppercase">YAŞ:</span> <span id="coverInmateAge" class="font-bold text-stone-900">24</span></div>
+              <div><span class="text-stone-500 font-semibold uppercase">İNFAZ SÜRESİ:</span> <span id="coverInmateSentence" class="font-bold text-stone-900">3 Yıl Hapis</span></div>
+              <div class="col-span-2"><span class="text-stone-500 font-semibold uppercase">SUÇ:</span> <span id="coverInmateCrime" class="font-bold text-stone-900">Motosiklet Hırsızlığı</span></div>
+              <div class="col-span-2"><span class="text-stone-500 font-semibold uppercase">KURUM:</span> <span id="coverPrisonName" class="font-bold text-stone-900">Merkez Kapalı İnfaz Kurumu</span></div>
+            </div>
+          </div>
+
+          <!-- Resmi Kırmızı & Siyah Damgalar -->
+          <div class="py-1.5 sm:py-2 flex items-center justify-center gap-4 ml-2">
+            <div class="stamp-badge border-2 border-red-800 text-red-800 px-3 py-1 text-xs font-bold tracking-widest uppercase transform -rotate-4 shadow-sm">
+              GİZLİDİR · İVEDİ
+            </div>
+            <div class="stamp-badge border-2 border-stone-800 text-stone-800 px-2.5 py-1 text-[10px] font-bold tracking-wider uppercase transform rotate-2 shadow-sm">
+              KURUL HUZURUNDA AÇILIR
+            </div>
+          </div>
+
+          <!-- Kapak Alt Şeridi ve Sağ Altta Sayfayı Çevir Yazısı (Silik & Butonsuz) -->
+          <div class="pt-1.5 sm:pt-2 border-t border-stone-400 flex items-center justify-between ml-2">
+            <span id="coverArchiveTag" class="text-[10px] font-mono text-stone-600 font-bold tracking-wider">İTK-1991 / RESMİ İNFAZ CİLDİ</span>
+            <button id="btnCoverTurnPage" type="button" onclick="openDossierCover(); event.stopPropagation();" class="group flex items-center gap-1 bg-transparent border-0 p-0 text-stone-600/75 hover:text-stone-900 text-[11px] font-typewriter tracking-wide transition cursor-pointer select-none">
+              <span>Sayfayı Çevir</span>
+              <span class="transform group-hover:translate-x-1 transition-transform">➔</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3D İÇ EVRAK SAYFALARI (Pages Container) -->
+        <div id="interactivePagesWrapper" class="absolute inset-0 bg-[#f6efe1] paper-texture rounded-r-xl rounded-l-sm border-2 border-stone-600 p-2.5 sm:p-5 flex flex-col justify-between shadow-2xl z-20">
+          
+          <!-- Sayfa Başlığı ve Sekme Göstergesi -->
+          <div id="interactivePageHeader" class="border-b-2 border-stone-400 pb-1.5 flex items-center justify-between text-xs font-mono ml-2">
+            <div class="flex items-center gap-1.5 font-bold text-stone-900 font-typewriter">
+              <span id="interactivePageIcon">📁</span>
+              <span id="interactivePageTitle">GEREKÇELİ DOSYA (1. SAYFA)</span>
+            </div>
+            <span id="interactivePageCounter" class="bg-stone-800 text-amber-200 px-2 py-0.5 rounded text-[10px] font-bold">1 / 5</span>
+          </div>
+
+          <!-- Evrak İçeriği (Daktilo Metni + İmzalar) -->
+          <div id="interactivePageBody" class="flex-1 overflow-y-auto text-xs sm:text-sm font-typewriter leading-relaxed text-stone-800 space-y-2 pr-1 ml-2 my-1">
+            <!-- Dinamik doldurulacak -->
+          </div>
+
+          <!-- Sağ Alt Sayfa Kıvrık Kulakçığı (Page Curl Effect) -->
+          <div onclick="flipInteractivePage('next')" class="page-curl-corner" title="Sonraki Sayfaya Çevir"></div>
+
+          <!-- Sayfa Alt Bilgi Şeridi & Sağ Altta Sayfayı Çevir Yazısı (Silik & Butonsuz) -->
+          <div class="border-t border-stone-300 pt-1 flex items-center justify-between text-[10px] font-mono text-stone-500 ml-2">
+            <span>İnfaz Kurumları Genel Dairesi · İnfaz Teftiş Kurulu Başkanlığı</span>
+            <button id="btnInteractivePageCornerNext" type="button" onclick="flipInteractivePage('next')" class="group flex items-center gap-1 bg-transparent border-0 p-0 text-stone-500/75 hover:text-stone-900 text-[10.5px] font-typewriter tracking-wide transition cursor-pointer select-none">
+              <span>Sayfayı Çevir</span>
+              <span class="transform group-hover:translate-x-0.5 transition-transform">➔</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Alt Bölüm: Ultra Kompakt İnce Navigasyon (Maksimum Dosya Alanı) -->
+    <div class="w-full max-w-[440px] flex items-center justify-between gap-1 border-t border-stone-800/40 py-0.5 text-stone-300 font-mono text-[10px]">
+      <button id="btnInteractivePrev" onclick="flipInteractivePage('prev')" type="button" class="px-2 py-0.5 bg-stone-900/80 hover:bg-stone-800 active:scale-95 border border-stone-700/60 rounded flex items-center gap-1 text-stone-400 hover:text-stone-200 font-bold transition disabled:opacity-20 disabled:pointer-events-none cursor-pointer">
+        <span>◀ Önceki</span>
+      </button>
+
+      <!-- En Altta Ortada Masaya Dön -->
+      <button id="btnInteractiveCloseBottom" type="button" onclick="closeInteractiveDossier()" class="hover:text-amber-300 hover:border-amber-600 transition flex items-center gap-1 text-[10px] font-mono font-bold bg-stone-900/90 hover:bg-stone-800 px-3 py-0.5 rounded-full border border-stone-700/80 text-stone-300 cursor-pointer shadow active:scale-95">
+        <span>✕ Masaya Dön</span>
+      </button>
+
+      <button id="btnInteractiveNext" onclick="flipInteractivePage('next')" type="button" class="px-2 py-0.5 bg-stone-900/80 hover:bg-stone-800 active:scale-95 border border-stone-700/60 rounded flex items-center gap-1 text-stone-400 hover:text-stone-200 font-bold transition disabled:opacity-20 disabled:pointer-events-none cursor-pointer">
+        <span>Sonraki ▶</span>
+      </button>
+
+      <!-- Gizli Sayfa Başlığı (JS ve Test Uyumu İçin) -->
+      <span id="interactiveBottomNavInfo" class="hidden"></span>
+    </div>
+
+  </div>
+
   <!-- ==================== YENİ OYUN ONAY MODALI ==================== -->
   <div id="newGameConfirmModal" class="hidden fixed inset-0 z-50 bg-black/85 backdrop-blur-sm flex items-center justify-center p-3 overflow-y-auto">
     <div class="w-full max-w-[380px] bg-[#f6efe1] border-4 border-stone-800 p-5 rounded-xl shadow-2xl text-stone-900 font-typewriter">
@@ -1359,8 +1626,51 @@
       noise.stop(now + 0.16);
     }
 
-    // Kağıt Hışırtısı
+    // ==========================================
+    // KÂĞIT VE SAYFA ÇEVİRME SESLERİ (paper.ogg)
+    // ==========================================
+    let paperAudioPool = [];
+    const PAPER_AUDIO_POOL_SIZE = 4;
+
+    function playPaperAudioFile(fallbackFn, volume = 0.03) {
+      if (isMuted) return;
+      if (typeof gameSettings !== 'undefined' && gameSettings.sound === false) return;
+      
+      try {
+        if (typeof Audio !== 'undefined') {
+          if (paperAudioPool.length === 0) {
+            for (let i = 0; i < PAPER_AUDIO_POOL_SIZE; i++) {
+              const a = new Audio('paper.ogg');
+              a.preload = 'auto';
+              paperAudioPool.push(a);
+            }
+          }
+          // Boşta olan (durmuş ya da bitmiş) ses nesnesini bul
+          const sound = paperAudioPool.find(a => a.paused || a.ended) || paperAudioPool[0];
+          sound.currentTime = 0;
+          sound.volume = Math.min(volume, 0.035);
+          const playPromise = sound.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              if (typeof fallbackFn === 'function') fallbackFn();
+            });
+          }
+          return;
+        }
+      } catch (err) {
+        // Hata durumunda Web Audio sentezine geç
+      }
+
+      if (typeof fallbackFn === 'function') fallbackFn();
+    }
+
+    // Kağıt Hışırtısı (Öncelikli olarak paper.ogg, fısıltı seviyesinde arka plan sesi)
     function playPaperSound() {
+      if (isMuted) return;
+      playPaperAudioFile(playPaperSoundSynthetic, 0.025);
+    }
+
+    function playPaperSoundSynthetic() {
       if (isMuted) return;
       initAudio();
       if (!audioCtx) return;
@@ -1382,8 +1692,8 @@
       filter.Q.setValueAtTime(1.8, now);
 
       const gain = audioCtx.createGain();
-      gain.gain.setValueAtTime(0.25, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.12);
+      gain.gain.setValueAtTime(0.008, now);
+      gain.gain.exponentialRampToValueAtTime(0.0004, now + 0.12);
 
       noise.connect(filter);
       filter.connect(gain);
@@ -1391,6 +1701,85 @@
 
       noise.start(now);
       noise.stop(now + 0.13);
+    }
+
+    // Gerçekçi Çok Katmanlı Sayfa ve Klasör Çevirme Sesi (Fısıltı seviyesinde)
+    function playRealisticPageFlipSound() {
+      if (isMuted) return;
+      playPaperAudioFile(playRealisticPageFlipSoundSynthetic, 0.035);
+    }
+
+    function playRealisticPageFlipSoundSynthetic() {
+      if (isMuted) return;
+      initAudio();
+      if (!audioCtx) return;
+
+      const now = audioCtx.currentTime;
+
+      // 1. Katman: Havalanma ve Sürtünme Hışırtısı (0 - 0.28s)
+      const bufferSize = Math.floor(audioCtx.sampleRate * 0.28);
+      const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
+      const data = buffer.getChannelData(0);
+      let lastVal = 0;
+      for (let i = 0; i < bufferSize; i++) {
+        const white = Math.random() * 2 - 1;
+        lastVal = (lastVal + (0.04 * white)) / 1.04;
+        data[i] = lastVal * 2.8;
+      }
+
+      const noiseSource = audioCtx.createBufferSource();
+      noiseSource.buffer = buffer;
+
+      const sweepFilter = audioCtx.createBiquadFilter();
+      sweepFilter.type = 'bandpass';
+      sweepFilter.frequency.setValueAtTime(800, now);
+      sweepFilter.frequency.exponentialRampToValueAtTime(2200, now + 0.12);
+      sweepFilter.frequency.exponentialRampToValueAtTime(600, now + 0.26);
+      sweepFilter.Q.setValueAtTime(2.2, now);
+
+      const noiseGain = audioCtx.createGain();
+      noiseGain.gain.setValueAtTime(0.0004, now);
+      noiseGain.gain.linearRampToValueAtTime(0.012, now + 0.08);
+      noiseGain.gain.exponentialRampToValueAtTime(0.0004, now + 0.28);
+
+      noiseSource.connect(sweepFilter);
+      sweepFilter.connect(noiseGain);
+      noiseGain.connect(audioCtx.destination);
+
+      noiseSource.start(now);
+      noiseSource.stop(now + 0.29);
+
+      // 2. Katman: Kâğıdın Bükülme ve Gerilme Esneme Tonu (50ms - 220ms)
+      const flexOsc = audioCtx.createOscillator();
+      const flexGain = audioCtx.createGain();
+      flexOsc.type = 'triangle';
+      flexOsc.frequency.setValueAtTime(320, now + 0.05);
+      flexOsc.frequency.exponentialRampToValueAtTime(140, now + 0.22);
+
+      flexGain.gain.setValueAtTime(0.00005, now);
+      flexGain.gain.setValueAtTime(0.002, now + 0.06);
+      flexGain.gain.exponentialRampToValueAtTime(0.00005, now + 0.22);
+
+      flexOsc.connect(flexGain);
+      flexGain.connect(audioCtx.destination);
+      flexOsc.start(now + 0.05);
+      flexOsc.stop(now + 0.23);
+
+      // 3. Katman: Sayfanın Karşı Tarafa Oturma / Düşüş Tokluğu ("Pıt" mikro vuruş, 180ms - 280ms)
+      const thudOsc = audioCtx.createOscillator();
+      const thudGain = audioCtx.createGain();
+      thudOsc.type = 'sine';
+      thudOsc.frequency.setValueAtTime(95, now + 0.17);
+      thudOsc.frequency.exponentialRampToValueAtTime(35, now + 0.27);
+
+      thudGain.gain.setValueAtTime(0.00005, now);
+      thudGain.gain.setValueAtTime(0.004, now + 0.18);
+      thudGain.gain.exponentialRampToValueAtTime(0.00005, now + 0.27);
+
+      thudOsc.connect(thudGain);
+      thudGain.connect(audioCtx.destination);
+      thudOsc.start(now + 0.17);
+      thudOsc.stop(now + 0.28);
     }
 
     // 1991 Çevirmeli Telefon Zil Sentezi (Mekanik Çift Çan: 750Hz & 853Hz)
@@ -1578,10 +1967,19 @@
       // Tarih ve Sayaç
       const entry = gameState.queue[0];
       const dateInfo = dateFor(entry ? entry.month : (gameState.lastMonth || 0));
-      document.getElementById('boardDate').textContent = dateInfo.meetingDate;
-      document.getElementById('caseMeetingLabel').textContent = `Oturum Tarihi: ${dateInfo.short}`;
-      document.getElementById('docTermBadge').textContent = `İLAM: ${dateInfo.term}`;
-      document.getElementById('caseCounter').textContent = entry ? `DOSYA: ${gameState.meetingPosition}/${gameState.meetingPosition - 1 + gameState.queue.filter(e => e.month === entry.month).length}` : 'TAMAMLANDI';
+      const currentYear = 1991 + Math.floor((entry ? entry.month : (gameState.lastMonth || 0)) / 12);
+      const boardDateEl = document.getElementById('boardDate');
+      if (boardDateEl) boardDateEl.textContent = dateInfo.meetingDate;
+      const caseMeetingEl = document.getElementById('caseMeetingLabel');
+      if (caseMeetingEl) caseMeetingEl.textContent = `Oturum Tarihi: ${dateInfo.short}`;
+      const docTermBadgeEl = document.getElementById('docTermBadge');
+      if (docTermBadgeEl) docTermBadgeEl.textContent = `İLAM: ${dateInfo.term}`;
+      const deskYearEl = document.getElementById('deskDossierYearTag');
+      if (deskYearEl) deskYearEl.textContent = `★ GİZLİ · ${currentYear} ★`;
+      const capYearEl = document.getElementById('capacityYearLabel');
+      if (capYearEl) capYearEl.textContent = String(currentYear);
+      const caseCounterEl = document.getElementById('caseCounter');
+      if (caseCounterEl) caseCounterEl.textContent = entry ? `DOSYA: ${gameState.meetingPosition}/${gameState.meetingPosition - 1 + gameState.queue.filter(e => e.month === entry.month).length}` : 'TAMAMLANDI';
 
       // Tehlike Görsel Efektleri (Titreme & Kararma)
       const deskArea = document.getElementById('deskArea');
@@ -1644,7 +2042,7 @@
         descEl.textContent = "Kariyerini ve koltuğunu korumak uğruna masumları harcadın. Sicilin lekesiz, Ardora sana bayılıyor; fakat içindeki insan tamamen öldü. Artık Adliye koridorlarında sadece emirleri damgalayan yaşayan bir ölüsün.";
       } else if (forcedType === 'RIOT' || gameState.capacity > (typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 110)) {
         titleEl.textContent = "FİNAL: CEZAEVİNDE BÜYÜK İSYAN";
-        descEl.textContent = "Cezaevlerindeki doluluk patladı. Yer yatakları bile dolunca koğuşlarda kanlı isyan patlak verdi. Bakanlık komisyonunuzu lağvetti, hakkınızda adli tahkikat açıldı.";
+        descEl.textContent = "Cezaevlerindeki doluluk patladı. Yer yatakları bile dolunca koğuşlarda kanlı isyan patlak verdi. Bakanlık kurulunuzu lağvetti, hakkınızda adli tahkikat açıldı.";
       } else if (gameState.vicdan >= 50 && gameState.sicil >= 50) {
         titleEl.textContent = "FİNAL: BÜROKRASİNİN ŞEREFİ (DENGE USTASI)";
         descEl.textContent = "İki uçurumun arasında, bir ip cambazı gibi yürüdün. Ne vicdanını devlete sattın ne de devleti karşına alıp kendini yaktın. 1991 yılının o karanlık günlerinde adalet terazisini titretmeden ayakta tuttun. Tarihe örnek bir hukukçu olarak geçtin.";

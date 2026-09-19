@@ -233,7 +233,7 @@ const phoneCalls = {
   '32_0': {
     caller: 'İstihbarat Daire Başkan Yardımcısı Tuğrul Bey',
     callerDept: 'ARDORA · EMNİYET VE İSTİHBARAT SANTRALİ',
-    dialogue: 'Komisyon Başkanı! Masandaki Sarı Selim dosyası için arıyorum. Bu adamın dışarı adım atması demek, Batıgeçit ve İldem sokaklarının yeniden kan gölüne dönmesi demektir. Eski ortaklarını şimdiden tehdit ettiriyor. Şartlı tahliyesine derhal ret kaşesini basacaksın! Eğer onaylayıp salarsan, çıkacak ilk çatışmadan ve güvenlik zafiyetinden doğrudan sen sorumlu tutulursun!'
+    dialogue: 'Kurul Başkanı! Masandaki Sarı Selim dosyası için arıyorum. Bu adamın dışarı adım atması demek, Batıgeçit ve İldem sokaklarının yeniden kan gölüne dönmesi demektir. Eski ortaklarını şimdiden tehdit ettiriyor. Şartlı tahliyesine derhal ret kaşesini basacaksın! Eğer onaylayıp salarsan, çıkacak ilk çatışmadan ve güvenlik zafiyetinden doğrudan sen sorumlu tutulursun!'
   },
 
   "28_0": {"caller":"Milletvekili Rauf Erel’in Özel Kalem Müdürü Saim Bey","callerDept":"VELYA MECLİSİ · MİLLETVEKİLİ ÖZEL KALEMİ","dialogue":"Başkanım, Sayın Vekilimiz adına arıyorum. Oğuz Vardar’ın ailesi mağdurun zararını karşıladı, evrakı da dosyanızda. Vardar Metal bu şehrin ekmek kapısıdır. Oğuz Bey’in ailesine dönmesini bekliyoruz. Olumlu değerlendirmenizi Bakanlıktaki muhataplarımıza ileteceğiz. Dosya yine beklerse kurulunuzun neden işi uzattığını da sormamız gerekecek."},
@@ -246,11 +246,11 @@ const phoneCalls = {
   '5_0': {
     caller: 'Bakanlık Özel Kalem Müdürü Muzaffer Bey',
     callerDept: 'VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI SANTRAL · ARDORA',
-    dialogue: 'Sayın Komisyon Başkanım, Cemil Bozkurt Bey\'in dosyası önünüze gelmiş olmalı. Kendisi ağır şeker hastası, revirde yataktan kalkamıyor. Ailesi perişan vaziyette. Sayın Bakanımız bu dosyayı bizzat takip ediyor ve tahliyesini bekliyor. Bu akşam evrakı imzalayın, Ardora\'da önünüz açılsın. Aksi takdirde teftiş heyeti yarın masanızı inceler!'
+    dialogue: 'Sayın Kurul Başkanım, Cemil Bozkurt Bey\'in dosyası önünüze gelmiş olmalı. Kendisi ağır şeker hastası, revirde yataktan kalkamıyor. Ailesi perişan vaziyette. Sayın Bakanımız bu dosyayı bizzat takip ediyor ve tahliyesini bekliyor. Bu akşam evrakı imzalayın, Ardora\'da önünüz açılsın. Aksi takdirde teftiş heyeti yarın masanızı inceler!'
   },
   // 6. Vaka: Barış Aksoy (Tıp Fakültesi Öğrencisi & Bildiri) - İlk İnceleme
   '6_0': {
-    caller: 'DGM Başsavcı Vekili Kenan Bey',
+    caller: 'Devlet Güvenlik Mahkemesi Başsavcı Vekili Kenan Bey',
     callerDept: 'DEVLET GÜVENLİK MAHKEMESİ BAŞSAVCILIĞI',
     dialogue: 'Başkan dinle beni! Barış Aksoy isimli militanı tahliye etmeyi aklından bile geçirme. Fakülteden kaydı çoktan silindi, artık öğrenci falan değil. Dışarı çıkarsa öğrenci derneklerini yeniden sokağa döker. Erteleme kaşesini vur, dosyasını kapat. Yoksa terör örgütüne yataklıktan hakkında dosya açtırırım!'
   },
@@ -263,7 +263,7 @@ const phoneCalls = {
   // 9. Vaka: Murat Çetin (Alkollü Kaza) - İlk İnceleme
   '9_0': {
     caller: 'Milletvekili Başdanışmanı Selahattin Bey',
-    callerDept: 'TBMM İKTİDAR GRUBU ODASI',
+    callerDept: 'VELYA MECLİSİ İKTİDAR GRUBU ODASI',
     dialogue: 'Başkanım, bu dosyayı Sayın Vekilimiz yakından takip ediyor. Mağdur ailesinin dilekçesi var; ayrıca biz de bu toplantıda tahliye kararı çıkmasını istemiyoruz. Kurum raporlarınız olumlu olabilir, ancak kararınızın gerekçesi Ardora’da ayrıca değerlendirilecek. Erteleme yönünde hareket etmenizi bekliyoruz.'
   },
   // 1. Vaka: Emre Yılmaz (6 Ay Erteleme Sonrası Dönüş - 2. İnceleme)
@@ -734,7 +734,7 @@ function renderArchiveList() {
     container.innerHTML = `
       <div class="p-4 bg-stone-200/80 rounded border border-stone-300 text-center text-stone-600 font-typewriter">
         <p class="font-bold text-sm mb-1 text-stone-900">ARŞİVDE HENÜZ KARAR BULUNMUYOR</p>
-        <p class="text-[11px] leading-relaxed">Komisyonunuz karar verdikçe, verilen hükümler, basın kupürleri ve bürokratik sonuçlar bu çekmecede dosyalanacaktır.</p>
+        <p class="text-[11px] leading-relaxed">Kurulunuz karar verdikçe, verilen hükümler, basın kupürleri ve bürokratik sonuçlar bu çekmecede dosyalanacaktır.</p>
       </div>
     `;
     return;
@@ -823,6 +823,8 @@ function renderCurrentCase() {
   if (crimeLineEl) crimeLineEl.textContent = c.crime;
   const timeServedEl = document.getElementById('timeServed');
   if (timeServedEl) timeServedEl.textContent = c.sentence;
+  const prisonLineEl = document.getElementById('inmatePrisonLine');
+  if (prisonLineEl) prisonLineEl.textContent = getPrisonInfo(c).name;
   const verdictStatusEl = document.getElementById('verdictStatus');
   if (verdictStatusEl) verdictStatusEl.textContent = e.review ? 'YENİDEN İNCELEME' : 'İNCELEMEDE';
   const stampOverlayEl = document.getElementById('stampOverlay');
@@ -895,11 +897,11 @@ function getPrisonInfo(c) {
   if (text.includes('Serenköy')) {
     return {
       key: 'serenkoy',
-      name: 'Serenköy Kadın Kapalı Cezaevi',
+      name: 'Serenköy Kadın Kapalı İnfaz Kurumu',
       region: 'Kardun',
-      clerkLocation: 'Serenköy Zabıt Masası',
+      clerkLocation: 'Serenköy İnfaz Zabıt Masası',
       clerkCode: 'KRD-SRN',
-      headerDept: 'SERENKÖY KADIN CEZAEVİ MÜDÜRLÜĞÜ',
+      headerDept: 'SERENKÖY KADIN KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'SERENKÖY KADIN KAPALI',
       wardenName: 'Nevin Tümer',
       wardenTitle: 'Kurum Müdiresi (1. Sınıf)',
@@ -919,11 +921,11 @@ function getPrisonInfo(c) {
   if (text.includes('Kargan')) {
     return {
       key: 'kargan',
-      name: 'Kargan Kapalı Cezaevi',
+      name: 'Kargan Kapalı İnfaz Kurumu',
       region: 'Ardora',
-      clerkLocation: 'Ardora İnfaz Masası',
+      clerkLocation: 'Kargan İnfaz Zabıt Masası',
       clerkCode: 'ARD-KRG',
-      headerDept: 'KARGAN KAPALI CEZAEVİ MÜDÜRLÜĞÜ',
+      headerDept: 'KARGAN KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'KARGAN KAPALI İNFAZ',
       wardenName: 'Nusret Ergin',
       wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
@@ -943,11 +945,11 @@ function getPrisonInfo(c) {
   if (text.includes('Meldar')) {
     return {
       key: 'meldar',
-      name: 'Meldar Kapalı Cezaevi',
+      name: 'Meldar Kapalı İnfaz Kurumu',
       region: 'İldem',
-      clerkLocation: 'İldem İnfaz Masası',
+      clerkLocation: 'Meldar İnfaz Zabıt Masası',
       clerkCode: 'ILD-MLD',
-      headerDept: 'MELDAR KAPALI CEZAEVİ MÜDÜRLÜĞÜ',
+      headerDept: 'MELDAR KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'MELDAR KAPALI İNFAZ',
       wardenName: 'Fikret Yalçın',
       wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
@@ -967,11 +969,11 @@ function getPrisonInfo(c) {
   if (text.includes('Belra')) {
     return {
       key: 'belra',
-      name: 'Belra Kapalı Cezaevi',
+      name: 'Belra Kapalı İnfaz Kurumu',
       region: 'Belra',
-      clerkLocation: 'Belra İnfaz Masası',
+      clerkLocation: 'Belra İnfaz Zabıt Masası',
       clerkCode: 'BLR-KPL',
-      headerDept: 'BELRA CEZA VE İNFAZ KURUMU',
+      headerDept: 'BELRA KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'BELRA CEZA VE İNFAZ',
       wardenName: 'İsmet Aktaş',
       wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
@@ -991,11 +993,11 @@ function getPrisonInfo(c) {
   if (text.includes('Orven')) {
     return {
       key: 'orven',
-      name: 'Orven Kapalı Cezaevi',
+      name: 'Orven Kapalı İnfaz Kurumu',
       region: 'Orven',
-      clerkLocation: 'Orven İnfaz Masası',
+      clerkLocation: 'Orven İnfaz Zabıt Masası',
       clerkCode: 'ORV-KPL',
-      headerDept: 'ORVEN KAPALI İNFAZ KURUMU',
+      headerDept: 'ORVEN KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'ORVEN KAPALI İNFAZ',
       wardenName: 'Vehbi Dural',
       wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
@@ -1015,11 +1017,11 @@ function getPrisonInfo(c) {
   if (text.includes('Dervan')) {
     return {
       key: 'dervan',
-      name: 'Dervan Kapalı Cezaevi',
+      name: 'Dervan Kapalı İnfaz Kurumu',
       region: 'Dervan',
-      clerkLocation: 'Dervan Zabıt Masası',
+      clerkLocation: 'Dervan İnfaz Zabıt Masası',
       clerkCode: 'DRV-KPL',
-      headerDept: 'DERVAN İNFAZ VE ISLAH MÜDÜRLÜĞÜ',
+      headerDept: 'DERVAN KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'DERVAN KAPALI İNFAZ',
       wardenName: 'Rasim Çetin',
       wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
@@ -1039,12 +1041,12 @@ function getPrisonInfo(c) {
   if (text.includes('Nerhisar') || text.includes('Yelhisar')) {
     return {
       key: 'nerhisar',
-      name: 'Nerhisar Cezaevi',
+      name: 'Nerhisar Kapalı İnfaz Kurumu',
       region: 'Yelhisar',
-      clerkLocation: 'Yelhisar İnfaz Masası',
+      clerkLocation: 'Nerhisar İnfaz Zabıt Masası',
       clerkCode: 'YLH-NRH',
-      headerDept: 'NERHİSAR CEZA VE TEVKİFEVİ',
-      stampLine1: 'NERHİSAR CEZA VE İNFAZ',
+      headerDept: 'NERHİSAR KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
+      stampLine1: 'NERHİSAR KAPALI İNFAZ',
       wardenName: 'Ahmet Selçuk',
       wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
       wardenSigPath: 'M10,10 C8,18 10,26 16,28 C24,30 30,22 26,14 C32,8 38,6 42,18 C46,26 42,32 36,28 M50,10 L50,28 C58,10 66,4 72,16 C78,26 74,32 66,28 C74,18 84,8 94,20 C100,26 106,18 108,14 M8,32 C36,34 72,33 108,30',
@@ -1063,14 +1065,14 @@ function getPrisonInfo(c) {
   if (text.includes('Ardora Merkez')) {
     return {
       key: 'ardora_merkez',
-      name: 'Ardora Merkez Kapalı Cezaevi',
+      name: 'Ardora Merkez Kapalı İnfaz Kurumu',
       region: 'Ardora',
-      clerkLocation: 'Başkent Merkez Zabıt Dairesi',
+      clerkLocation: 'Ardora Merkez Zabıt Masası',
       clerkCode: 'ARD-MRK',
-      headerDept: 'ARDORA MERKEZ İNFAZ MÜDÜRLÜĞÜ',
+      headerDept: 'ARDORA MERKEZ KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
       stampLine1: 'ARDORA MERKEZ KAPALI',
       wardenName: 'Kemal Sancar',
-      wardenTitle: 'Merkez Cezaevi Müdürü',
+      wardenTitle: 'Merkez İnfaz Kurumu Müdürü',
       wardenSigPath: 'M10,12 C8,20 10,26 16,28 C24,30 30,22 28,14 C36,6 44,4 48,16 C52,26 48,32 40,28 M56,8 L56,28 M56,14 L68,12 M56,18 L64,20 C72,8 80,2 86,16 C92,26 88,32 80,28 C88,16 98,8 106,20 M8,32 C36,34 74,33 108,30 M96,20 C104,30 108,26',
       guardName: 'T. Alkan (Başgardiyan)',
       guardRank: 'Merkez İnfaz Başmemuru',
@@ -1087,11 +1089,11 @@ function getPrisonInfo(c) {
   // Varsayılan: Vardak (Kardun)
   return {
     key: 'vardak',
-    name: 'Vardak Kapalı Cezaevi',
+    name: 'Vardak Kapalı İnfaz Kurumu',
     region: 'Kardun',
-    clerkLocation: 'Kardun İnfaz Masası',
+    clerkLocation: 'Vardak İnfaz Zabıt Masası',
     clerkCode: 'KRD-VRD',
-    headerDept: 'VARDAK CEZA VE İNFAZ KURUMU',
+    headerDept: 'VARDAK KAPALI İNFAZ KURUMU MÜDÜRLÜĞÜ',
     stampLine1: 'VARDAK KAPALI İNFAZ',
     wardenName: 'Turan Sezgin',
     wardenTitle: 'Ceza İnfaz Kurumu Müdürü',
@@ -1113,36 +1115,37 @@ function renderDocumentSealAndSignature(tab, c) {
   if (!c) return '';
   const queueEntry = gameState?.queue?.[0];
   const meetingDate = queueEntry ? dateFor(queueEntry.month).meetingDate : '7 Ocak 1991';
+  const currentYear = queueEntry ? (1991 + Math.floor(queueEntry.month / 12)) : 1991;
   const inmateName = c.name || 'Hükümlü';
   const prison = getPrisonInfo(c);
 
   if (tab === 'defense') {
     const sig = getInmateSignatureData(c);
     return `
-      <div class="doc-seal-block mt-4 pt-3 border-t-2 border-dashed border-stone-300 font-typewriter select-none">
-        <div class="flex items-center justify-between text-[9px] font-mono text-stone-500 uppercase tracking-widest border-b border-stone-200 pb-1 mb-2">
+      <div class="doc-seal-block mt-2 pt-1.5 border-t border-dashed border-stone-300 font-typewriter select-none">
+        <div class="flex items-center justify-between text-[8px] font-mono text-stone-500 uppercase tracking-wider border-b border-stone-200 pb-0.5 mb-1">
           <span>HÜKÜMLÜ İFADE VE SAVUNMA TUTANAĞI</span>
-          <span>ZAPIT NO: 1991/${prison.clerkCode}-${String(c.id || 1).padStart(2, '0')}</span>
+          <span>ZAPIT NO: ${currentYear}/${prison.clerkCode}-${String(c.id || 1).padStart(2, '0')}</span>
         </div>
         <div class="flex items-end justify-between gap-2">
           <!-- Sol: İfadeyi Alan Kâtip & Damga -->
           <div class="flex flex-col items-start">
-            <div class="border border-indigo-900/60 bg-indigo-50/70 text-indigo-950 px-1.5 py-0.5 text-[9px] font-mono font-bold tracking-wider uppercase mb-1 rotate-1 rounded-xs shadow-2xs">
+            <div class="border border-indigo-900/60 bg-indigo-50/70 text-indigo-950 px-1 py-0.2 text-[8px] font-mono font-bold tracking-wider uppercase mb-0.5 rotate-1 rounded-xs">
               [BİZZAT DİNLENDİ VE ZAPTA GEÇİRİLDİ]
             </div>
-            <div class="text-[9px] text-stone-600 font-mono">Zabıt Memuru:</div>
-            <svg class="w-24 h-8 text-indigo-900 doc-sig-ink -my-1" viewBox="0 0 110 38" fill="none" stroke="currentColor">
+            <div class="text-[8px] text-stone-600 font-mono leading-none">Zabıt Memuru:</div>
+            <svg class="text-indigo-900 doc-sig-ink -my-0.5" style="width: 72px; height: 22px;" viewBox="0 0 110 38" fill="none" stroke="currentColor">
               <path d="M8,26 C7,14 13,6 18,13 C22,21 24,28 27,14 C30,7 35,6 37,17 C39,24 41,27 46,12 C49,7 57,6 56,18 C55,27 48,30 46,26 C45,21 52,22 57,20 C62,18 66,24 72,19 C77,15 82,23 88,17 C94,12 100,16 106,22 M14,32 C38,36 72,34 104,27" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <div class="text-[10px] font-bold text-stone-800">M. Demir</div>
-            <div class="text-[8px] font-mono text-stone-500">Zabıt Kâtibi · ${prison.clerkLocation}</div>
+            <div class="text-[9px] font-bold text-stone-800 leading-tight">M. Demir</div>
+            <div class="text-[7.5px] font-mono text-stone-500 leading-none">Zabıt Kâtibi · ${prison.clerkLocation}</div>
           </div>
 
           <!-- Sağ: Hükümlü İmzası ve Parmak İzi -->
-          <div class="flex items-end gap-2.5 text-right">
+          <div class="flex items-end gap-2 text-right">
             <!-- Otantik Parmak İzi (SVG Thumbprint) -->
             <div class="flex flex-col items-center">
-              <div class="w-8 h-11 text-slate-800 doc-thumbprint" style="opacity: ${sig.thumbOpacity}; transform: rotate(${sig.tilt}deg);" title="Hükümlü Sağ El Başparmak İzi">
+              <div class="text-slate-800 doc-thumbprint" style="width: 20px; height: 28px; opacity: ${sig.thumbOpacity}; transform: rotate(${sig.tilt}deg);" title="Hükümlü Sağ El Başparmak İzi">
                 <svg viewBox="0 0 40 55" fill="none" stroke="currentColor" class="w-full h-full">
                   <ellipse cx="20" cy="27" rx="17" ry="24" stroke-width="1.2" stroke-dasharray="3,1" />
                   <ellipse cx="20" cy="27" rx="13" ry="20" stroke-width="1.2" stroke-dasharray="4,1" />
@@ -1152,17 +1155,17 @@ function renderDocumentSealAndSignature(tab, c) {
                   <path d="M8,26 Q10,12 20,8 Q30,12 32,26" stroke-width="1.1" stroke-dasharray="2,2" />
                 </svg>
               </div>
-              <span class="text-[8px] font-mono text-stone-500 mt-0.5">Parmak İzi</span>
+              <span class="text-[7.5px] font-mono text-stone-500 mt-0.5 leading-none">Parmak İzi</span>
             </div>
 
             <!-- Hükümlü Islak İmzası -->
             <div>
-              <div class="text-[9px] text-stone-600 font-mono">İfade Sahibi Hükümlü:</div>
-              <svg class="w-28 h-8 ${sig.inkColor} doc-sig-ink ml-auto -my-1" viewBox="0 0 130 46" fill="none" stroke="currentColor">
+              <div class="text-[8px] text-stone-600 font-mono leading-none">İfade Sahibi Hükümlü:</div>
+              <svg class="${sig.inkColor} doc-sig-ink ml-auto -my-0.5" style="width: 78px; height: 22px;" viewBox="0 0 130 46" fill="none" stroke="currentColor">
                 <path d="${sig.path}" stroke-width="${sig.strokeWidth}" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <div class="text-[11px] font-bold text-stone-900 font-typewriter">${inmateName}</div>
-              <div class="text-[8px] font-mono text-stone-500">Mühür ve İmza Onaylı</div>
+              <div class="text-[10px] font-bold text-stone-900 font-typewriter leading-tight">${inmateName}</div>
+              <div class="text-[7.5px] font-mono text-stone-500 leading-none">Mühür ve İmza Onaylı</div>
             </div>
           </div>
         </div>
@@ -1172,26 +1175,26 @@ function renderDocumentSealAndSignature(tab, c) {
 
   if (tab === 'psych') {
     return `
-      <div class="doc-seal-block mt-4 pt-3 border-t-2 border-amber-400/80 font-typewriter select-none">
-        <div class="flex items-center justify-between text-[9px] font-mono text-amber-950/80 uppercase tracking-widest border-b border-amber-300 pb-1 mb-2">
+      <div class="doc-seal-block mt-2 pt-1.5 border-t border-amber-400/80 font-typewriter select-none">
+        <div class="flex items-center justify-between text-[8px] font-mono text-amber-950/80 uppercase tracking-wider border-b border-amber-300 pb-0.5 mb-1">
           <span>CEZAEVİ TABİPLİĞİ ADLİ TIP VE PSİKİYATRİ SERVİSİ</span>
           <span>SAĞLIK GÖZLEM TUTANAĞI</span>
         </div>
         <div class="flex items-end justify-between gap-2">
           <!-- Sol: Tabiplik Kayıt Damgası -->
           <div class="flex flex-col items-start">
-            <div class="border border-purple-900/60 bg-purple-50/70 text-purple-950 doc-seal-stamp-purple px-1.5 py-0.5 text-[9px] font-mono font-bold tracking-wider uppercase mb-1 -rotate-2 rounded-xs shadow-2xs">
-              [MÜŞAHEDE KAYIT: 1991/P]
+            <div class="border border-purple-900/60 bg-purple-50/70 text-purple-950 doc-seal-stamp-purple px-1 py-0.2 text-[8px] font-mono font-bold tracking-wider uppercase mb-0.5 -rotate-2 rounded-xs">
+              [MÜŞAHEDE KAYIT: ${currentYear}/P]
             </div>
-            <div class="text-[9px] text-amber-950/80 font-mono">Klinik Protokol No:</div>
-            <div class="text-[10px] font-bold text-amber-950 font-mono">${prison.doctorProtocol}</div>
-            <div class="text-[8px] font-mono text-amber-900/70">Müşahede Defterine İşlendi</div>
+            <div class="text-[8px] text-amber-950/80 font-mono leading-none">Klinik Protokol No:</div>
+            <div class="text-[9px] font-bold text-amber-950 font-mono leading-tight">${prison.doctorProtocol}</div>
+            <div class="text-[7.5px] font-mono text-amber-900/70 leading-none">Müşahede Defterine İşlendi</div>
           </div>
 
           <!-- Sağ: Hekim Kaşesi ve İmzası -->
           <div class="relative flex items-center justify-end">
             <!-- Oval Hekim Kaşesi (SVG) -->
-            <div class="relative w-24 h-13 shrink-0 -mr-6 opacity-85 transform rotate-3">
+            <div class="relative shrink-0 -mr-3 opacity-85 transform rotate-2" style="width: 58px; height: 32px;">
               <svg viewBox="0 0 110 58" class="w-full h-full text-purple-900 doc-seal-stamp-purple">
                 <ellipse cx="55" cy="29" rx="52" ry="26" stroke="currentColor" stroke-width="2" fill="none" />
                 <ellipse cx="55" cy="29" rx="48" ry="22" stroke="currentColor" stroke-width="0.8" stroke-dasharray="3,1.5" fill="none" />
@@ -1203,12 +1206,12 @@ function renderDocumentSealAndSignature(tab, c) {
 
             <!-- Doktor Islak İmzası -->
             <div class="relative z-10 text-right pr-1">
-              <div class="text-[9px] text-amber-950/80 font-mono">Muayene Eden Hekim:</div>
-              <svg class="w-28 h-8 text-blue-900 doc-sig-ink ml-auto -my-1" viewBox="0 0 110 35" fill="none" stroke="currentColor">
+              <div class="text-[8px] text-amber-950/80 font-mono leading-none">Muayene Eden Hekim:</div>
+              <svg class="text-blue-900 doc-sig-ink ml-auto -my-0.5" style="width: 78px; height: 22px;" viewBox="0 0 110 35" fill="none" stroke="currentColor">
                 <path d="${prison.doctorSigPath}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <div class="text-[11px] font-bold text-amber-950">${prison.doctorName}</div>
-              <div class="text-[8px] font-mono text-amber-900/80">${prison.doctorTitle}</div>
+              <div class="text-[10px] font-bold text-amber-950 leading-tight">${prison.doctorName}</div>
+              <div class="text-[7.5px] font-mono text-amber-900/80 leading-none">${prison.doctorTitle}</div>
             </div>
           </div>
         </div>
@@ -1218,29 +1221,29 @@ function renderDocumentSealAndSignature(tab, c) {
 
   if (tab === 'guard') {
     return `
-      <div class="doc-seal-block mt-4 pt-3 border-t-2 border-stone-300 font-typewriter select-none">
-        <div class="flex items-center justify-between text-[9px] font-mono text-stone-500 uppercase tracking-widest border-b border-stone-200 pb-1 mb-2">
+      <div class="doc-seal-block mt-2 pt-1.5 border-t border-stone-300 font-typewriter select-none">
+        <div class="flex items-center justify-between text-[8px] font-mono text-stone-500 uppercase tracking-wider border-b border-stone-200 pb-0.5 mb-1">
           <span>${prison.headerDept}</span>
           <span>DİSİPLİN VE ASAYİŞ TUTANAĞI</span>
         </div>
         <div class="flex items-end justify-between gap-2">
           <!-- Sol: Vardiya Başmemuru Parafı -->
           <div class="flex flex-col items-start">
-            <div class="border border-stone-700/70 bg-stone-100 text-stone-800 px-1.5 py-0.5 text-[9px] font-mono font-bold tracking-wider uppercase mb-1 rotate-1 rounded-xs shadow-2xs">
+            <div class="border border-stone-700/70 bg-stone-100 text-stone-800 px-1 py-0.2 text-[8px] font-mono font-bold tracking-wider uppercase mb-0.5 rotate-1 rounded-xs">
               [KOĞUŞ ASAYİŞİ ONAYLI]
             </div>
-            <div class="text-[9px] text-stone-600 font-mono">Vardiya Amiri:</div>
-            <svg class="w-20 h-7 text-stone-800 doc-sig-ink -my-1" viewBox="0 0 90 30" fill="none" stroke="currentColor">
+            <div class="text-[8px] text-stone-600 font-mono leading-none">Vardiya Amiri:</div>
+            <svg class="text-stone-800 doc-sig-ink -my-0.5" style="width: 60px; height: 18px;" viewBox="0 0 90 30" fill="none" stroke="currentColor">
               <path d="${prison.guardSigPath}" stroke-width="2" stroke-linecap="round"/>
             </svg>
-            <div class="text-[10px] font-bold text-stone-800">${prison.guardName}</div>
-            <div class="text-[8px] font-mono text-stone-500">${prison.guardRank}</div>
+            <div class="text-[9px] font-bold text-stone-800 leading-tight">${prison.guardName}</div>
+            <div class="text-[7.5px] font-mono text-stone-500 leading-none">${prison.guardRank}</div>
           </div>
 
           <!-- Sağ: Cezaevi Müdürlüğü Resmî Mührü ve İmzası -->
           <div class="relative flex items-center justify-end">
             <!-- Dikdörtgen Daire Kaşesi (SVG) -->
-            <div class="relative w-24 h-13 shrink-0 -mr-6 opacity-85 transform -rotate-3">
+            <div class="relative shrink-0 -mr-3 opacity-85 transform -rotate-2" style="width: 58px; height: 32px;">
               <svg viewBox="0 0 110 58" class="w-full h-full text-indigo-950 doc-seal-stamp-indigo">
                 <rect x="4" y="4" width="102" height="50" rx="3" stroke="currentColor" stroke-width="2" fill="none"/>
                 <rect x="7" y="7" width="96" height="44" rx="2" stroke="currentColor" stroke-width="0.8" stroke-dasharray="2,1.5" fill="none"/>
@@ -1252,12 +1255,12 @@ function renderDocumentSealAndSignature(tab, c) {
 
             <!-- Kurum Müdürü İmzası -->
             <div class="relative z-10 text-right pr-1">
-              <div class="text-[9px] text-stone-600 font-mono">Kurum Müdürü:</div>
-              <svg class="w-28 h-8 text-blue-900 doc-sig-ink ml-auto -my-1" viewBox="0 0 110 35" fill="none" stroke="currentColor">
+              <div class="text-[8px] text-stone-600 font-mono leading-none">Kurum Müdürü:</div>
+              <svg class="text-blue-900 doc-sig-ink ml-auto -my-0.5" style="width: 78px; height: 22px;" viewBox="0 0 110 35" fill="none" stroke="currentColor">
                 <path d="${prison.wardenSigPath}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
-              <div class="text-[10px] font-bold text-stone-900">${prison.wardenName}</div>
-              <div class="text-[8px] font-mono text-stone-500">${prison.wardenTitle}</div>
+              <div class="text-[10px] font-bold text-stone-900 leading-tight">${prison.wardenName}</div>
+              <div class="text-[7.5px] font-mono text-stone-500 leading-none">${prison.wardenTitle}</div>
             </div>
           </div>
         </div>
@@ -1267,29 +1270,29 @@ function renderDocumentSealAndSignature(tab, c) {
 
   // Varsayılan / Gerekçeli Dosya (`main`)
   return `
-    <div class="doc-seal-block mt-4 pt-3 border-t-2 border-stone-300 font-typewriter select-none">
-      <div class="flex items-center justify-between text-[9px] font-mono text-stone-500 uppercase tracking-widest border-b border-stone-200 pb-1 mb-2">
+    <div class="doc-seal-block mt-2 pt-1.5 border-t border-stone-300 font-typewriter select-none">
+      <div class="flex items-center justify-between text-[8px] font-mono text-stone-500 uppercase tracking-wider border-b border-stone-200 pb-0.5 mb-1">
         <span>TUTANAK TASDİK VE İNFAZ TEFTİŞ ŞERHİ</span>
         <span>VELYA CUMHURİYETİ</span>
       </div>
       <div class="flex items-end justify-between gap-2">
         <!-- Sol: Kâtip Parafı -->
         <div class="flex flex-col items-start">
-          <div class="border border-red-900/60 bg-red-50/70 text-red-950 doc-seal-stamp-red px-1.5 py-0.5 text-[9px] font-mono font-bold tracking-wider uppercase mb-1 -rotate-1 rounded-xs shadow-2xs">
+          <div class="border border-red-900/60 bg-red-50/70 text-red-950 doc-seal-stamp-red px-1 py-0.2 text-[8px] font-mono font-bold tracking-wider uppercase mb-0.5 -rotate-1 rounded-xs shadow-2xs">
             [ASLINA UYGUNDUR]
           </div>
-          <div class="text-[9px] text-stone-600 font-mono">Tanzim Eden Kâtip:</div>
-          <svg class="w-26 h-8 text-blue-900 doc-sig-ink -my-1" viewBox="0 0 115 40" fill="none" stroke="currentColor">
+          <div class="text-[8px] text-stone-600 font-mono leading-none">Tanzim Eden Kâtip:</div>
+          <svg class="text-blue-900 doc-sig-ink -my-0.5" style="width: 72px; height: 22px;" viewBox="0 0 115 40" fill="none" stroke="currentColor">
             <path d="M8,24 C12,30 20,31 22,23 C24,13 14,9 18,5 C22,1 27,4 25,13 C23,21 16,25 25,28 M34,6 L34,28 M47,8 C43,14 38,18 35,19 C40,21 45,26 49,29 M44,20 C49,16 53,23 58,18 C62,14 66,22 71,17 C76,13 81,21 86,16 C92,12 98,15 105,21 M15,34 C42,39 78,36 108,26 C112,24 105,21 96,23 C84,26 70,32 54,37" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          <div class="text-[10px] font-bold text-stone-800">S. Kenter</div>
-          <div class="text-[8px] font-mono text-stone-500">Zabıt Sicil: 4182-V</div>
+          <div class="text-[9px] font-bold text-stone-800 leading-tight">S. Kenter</div>
+          <div class="text-[7.5px] font-mono text-stone-500 leading-none">Zabıt Sicil: 4182-V</div>
         </div>
 
         <!-- Sağ: Resmî Kırmızı Kauçuk Mühür ve Heyet Başkanı İmzası -->
         <div class="relative flex items-center justify-end">
-          <!-- Mühür (SVG) -->
-          <div class="relative w-20 h-20 sm:w-22 sm:h-22 shrink-0 -mr-6 opacity-85 transform -rotate-6">
+          <!-- Mühür (SVG) - Kesin ve Kompakt Boyut -->
+          <div class="relative shrink-0 -mr-2 opacity-85 transform -rotate-6" style="width: 44px; height: 44px;">
             <svg viewBox="0 0 100 100" class="w-full h-full text-red-800 doc-seal-stamp-red">
               <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2" fill="none" />
               <circle cx="50" cy="50" r="41" stroke="currentColor" stroke-width="1" stroke-dasharray="2.5,2" fill="none" />
@@ -1305,18 +1308,18 @@ function renderDocumentSealAndSignature(tab, c) {
               <text font-size="5.5" font-weight="bold" fill="currentColor" letter-spacing="0.5">
                 <textPath href="#curveBottomMain" startOffset="50%" text-anchor="middle">★ İNFAZ TEFTİŞ KURULU ★</textPath>
               </text>
-              <text x="50" y="60" text-anchor="middle" font-size="5.5" font-weight="bold" fill="currentColor">1991</text>
+              <text x="50" y="60" text-anchor="middle" font-size="5.5" font-weight="bold" fill="currentColor">${currentYear}</text>
             </svg>
           </div>
 
           <!-- Kurul Başkanı İmzası -->
           <div class="relative z-10 text-right pr-1">
-            <div class="text-[9px] text-stone-600 font-mono">Teftiş Heyeti Adına:</div>
-            <svg class="w-32 h-9 text-blue-900 doc-sig-ink ml-auto -my-1" viewBox="0 0 130 40" fill="none" stroke="currentColor">
+            <div class="text-[8px] text-stone-600 font-mono leading-none">Teftiş Heyeti Adına:</div>
+            <svg class="text-blue-900 doc-sig-ink ml-auto -my-0.5" style="width: 82px; height: 24px;" viewBox="0 0 130 40" fill="none" stroke="currentColor">
               <path d="M10,12 C8,22 10,30 18,32 C28,34 36,24 30,16 C38,8 48,4 54,18 C58,26 54,34 46,30 C54,20 66,10 76,24 C82,32 80,36 72,32 C80,20 92,10 102,22 C110,30 116,22 120,14 M12,36 C44,38 80,37 122,32 M110,22 C116,34 120,36 124,28 M118,14 L124,30" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
-            <div class="text-[10px] font-bold text-stone-900">Kurul Başkanı / Başmüfettiş</div>
-            <div class="text-[8px] font-mono text-stone-500">${meetingDate}</div>
+            <div class="text-[10px] font-bold text-stone-900 leading-tight">Kurul Başkanı / Başmüfettiş</div>
+            <div class="text-[7.5px] font-mono text-stone-500 leading-none">${meetingDate}</div>
           </div>
         </div>
       </div>
@@ -1465,3 +1468,312 @@ function nextCase() {
   saveGame();
   renderCurrentCase();
 }
+
+/* ==========================================================================
+   TAM EKRAN 3D GERÇEK İNFAZ KLASÖRÜ & SAYFA ÇEVİRME SİSTEMİ
+   ========================================================================== */
+let interactiveDossierState = {
+  isOpen: false,
+  isCoverOpened: false,
+  currentPage: 0
+};
+
+const INTERACTIVE_TABS = [
+  { id: 'main', title: 'GEREKÇELİ DOSYA', icon: '📁' },
+  { id: 'defense', title: 'TUTUKLU SAVUNMASI', icon: '⚖️' },
+  { id: 'psych', title: 'DOKTOR MÜŞAHADE NOTU', icon: '📌' },
+  { id: 'guard', title: 'CEZAEVİ İDARE RAPORU', icon: '📋' },
+  { id: 'verdict', title: 'HÜKÜM VE KARAR MAZBATASI', icon: '📜' }
+];
+
+function executeInteractiveDecision(isRelease) {
+  closeInteractiveDossier();
+  handleDecision(isRelease);
+}
+
+function renderInteractiveVerdictPage(c) {
+  const e = gameState.queue[0];
+  const prison = getPrisonInfo(c);
+  const meetingDate = (e && typeof dateFor === 'function') ? dateFor(e.month).meetingDate : '7 OCAK 1991';
+  const currentYear = e ? (1991 + Math.floor(e.month / 12)) : 1991;
+  const isReview = e && e.review > 0;
+  const canDecide = gameState.phase === 'review';
+
+  return `
+    <div class="space-y-2.5 font-typewriter text-stone-900 select-none">
+      <!-- Resmi Antet & Başlık -->
+      <div class="border-b-2 border-stone-800 pb-1.5 text-center">
+        <div class="text-[9.5px] font-mono tracking-widest text-stone-700 uppercase font-bold">
+          VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI
+        </div>
+        <div class="text-[8.5px] font-mono tracking-wider text-stone-600 uppercase">
+          İNFAZ KURUMLARI GENEL DAİRESİ · İNFAZ TEFTİŞ KURULU BAŞKANLIĞI
+        </div>
+        <div class="text-xs sm:text-sm font-bold font-serif uppercase tracking-wider text-stone-950 mt-0.5">
+          ŞARTLI TAHLİYE VE İNFAZ TEFTİŞ KARAR MAZBATASI
+        </div>
+        <div class="text-[8.5px] font-mono text-stone-500 mt-0.5">
+          ESAS NO: ${currentYear}/${e ? e.id : (c.id || 1)} · CELSE TARİHİ: ${meetingDate}
+        </div>
+      </div>
+
+      <!-- Hükümlü Kimlik Çerçevesi (Yalnızca Ad Soyad ve Yaş) -->
+      <div class="bg-stone-100/90 border border-stone-400 rounded px-3 py-1.5 text-[11px] font-mono flex items-center justify-between shadow-2xs">
+        <div><span class="text-stone-500 font-semibold uppercase">HÜKÜMLÜ:</span> <strong class="text-stone-900">${c.name}</strong></div>
+        <div><span class="text-stone-500 font-semibold uppercase">YAŞ:</span> <strong class="text-stone-900">${c.age}</strong></div>
+      </div>
+
+      <!-- Süslü Bürokratik Gerekçe Cümleleri (Orijinal Tam Metin) -->
+      <div class="text-[11.5px] sm:text-xs leading-relaxed text-stone-900 space-y-1.5 text-justify">
+        <p>
+          Yukarıda hüviyet ve infaz evrakı derç olunan hükümlünün şartlı tahliye talebine matuf dosyası; Ceza İnfaz Kurumu Müdürlüğü disiplin ve asayiş zaptı, tabip müşahade müzekkeresi, zabıt kâtibi huzurunda bizzat istima olunan meşru savunması ve amme davası münderecatı muvacehesinde heyetimizce bi’l-etraf ve bi’t-tetkik incelenmiştir.
+        </p>
+        <p class="font-semibold text-stone-950">
+          Velya Cumhuriyeti mer’i infaz mevzuatı, amme intizamının muhafazası, ceza infaz kurumlarının umumi doluluk dengesi ile mezkûr şahsın cemiyet hayatına intibak kabiliyeti tezekkür olunarak; adalet ve vicdan terazisi muvacehesinde <u>aşağıdaki kararın ittihaz ve tesisi tensip ve uygun görülmüştür:</u>
+        </p>
+      </div>
+
+      <!-- Karar Verme ve Damga Vurma Alanı (Sol: Ret/Erteleme, Sağ: Tahliye) -->
+      <div class="pt-1">
+        ${canDecide ? `
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <!-- Sol: Ertele / Ret Damgası -->
+            <button type="button" onclick="executeInteractiveDecision(false)" class="group p-2 bg-red-950/5 hover:bg-red-900/15 active:scale-95 border-2 border-dashed border-red-800 rounded text-left transition cursor-pointer">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-red-950 font-typewriter tracking-tight flex items-center gap-1">
+                  <span>🔴</span> ${isReview ? 'KESİN RET DAMGASI VUR' : '6 AY ERTELEME DAMGASI VUR'}
+                </span>
+                <span class="text-[8px] font-mono uppercase bg-red-800 text-white px-1 py-0.2 rounded font-bold">MÜHÜR</span>
+              </div>
+              <p class="text-[9.5px] text-red-900/90 font-mono mt-0.5 leading-snug">
+                ${isReview 
+                  ? '"Şartlı tahliye istemi katiyetle reddedilerek infazın aynen tamamlanmasına..."' 
+                  : '"İnfazın devamı ile dosyanın altı ay sonra yeniden incelenmesine..."'}
+              </p>
+            </button>
+
+            <!-- Sağ: Tahliye Damgası -->
+            <button type="button" onclick="executeInteractiveDecision(true)" class="group p-2 bg-emerald-950/5 hover:bg-emerald-900/15 active:scale-95 border-2 border-dashed border-emerald-800 rounded text-left transition cursor-pointer">
+              <div class="flex items-center justify-between">
+                <span class="text-[11px] font-bold text-emerald-950 font-typewriter tracking-tight flex items-center gap-1">
+                  <span>🟢</span> TAHLİYE KARARINI DAMGALA
+                </span>
+                <span class="text-[8px] font-mono uppercase bg-emerald-800 text-white px-1 py-0.2 rounded font-bold">MÜHÜR</span>
+              </div>
+              <p class="text-[9.5px] text-emerald-900/90 font-mono mt-0.5 leading-snug">
+                "Şartlı tahliye istemi tensip ve uygun görülmüş olup derhal salıverilmesine..."
+              </p>
+            </button>
+          </div>
+        ` : `
+          <div class="p-2.5 bg-stone-200/90 border border-stone-400 rounded text-center text-xs font-typewriter text-stone-800">
+            <span class="font-bold text-stone-950">BU CELSEDE VERİLEN KARAR MASADA MÜHÜRLENMİŞTİR</span>
+            <p class="text-[10px] text-stone-600 font-mono mt-0.5">Kararın idari ve adli neticesi zabıt çekmecesine işlendi.</p>
+          </div>
+        `}
+      </div>
+    </div>
+  `;
+}
+
+function openInteractiveDossier() {
+  if (!currentCase()) return;
+  const c = currentCase(), e = gameState.queue[0];
+  const prison = (typeof PRISONS !== 'undefined' && PRISONS[c.prisonId]) ? PRISONS[c.prisonId] : { name: 'Merkez Kapalı İnfaz Kurumu' };
+
+  const currentYear = e ? (1991 + Math.floor(e.month / 12)) : 1991;
+  const termEl = document.getElementById('coverCaseTerm');
+  if (termEl) termEl.textContent = `İLAM: ${currentYear}/${e ? e.id : (c.id || 1)}`;
+  const archiveTagEl = document.getElementById('coverArchiveTag');
+  if (archiveTagEl) archiveTagEl.textContent = `İTK-${currentYear} / RESMİ İNFAZ CİLDİ`;
+  const modalYearEl = document.getElementById('interactiveModalYearTitle');
+  if (modalYearEl) modalYearEl.textContent = `${currentYear} İNFAZ KLASÖRÜ`;
+
+  const nameEl = document.getElementById('coverInmateName');
+  if (nameEl) nameEl.textContent = c.name;
+  const ageEl = document.getElementById('coverInmateAge');
+  if (ageEl) ageEl.textContent = c.age;
+  const sentenceEl = document.getElementById('coverInmateSentence');
+  if (sentenceEl) sentenceEl.textContent = c.sentence;
+  const crimeEl = document.getElementById('coverInmateCrime');
+  if (crimeEl) crimeEl.textContent = c.crime;
+  const prisonEl = document.getElementById('coverPrisonName');
+  if (prisonEl) prisonEl.textContent = prison.name;
+
+  interactiveDossierState.isOpen = true;
+  interactiveDossierState.isCoverOpened = false;
+  interactiveDossierState.currentPage = 0;
+
+  const coverLeaf = document.getElementById('interactiveCoverLeaf');
+  if (coverLeaf) {
+    coverLeaf.classList.remove('is-opened');
+  }
+
+  renderInteractiveDossierPage(0);
+
+  const modal = document.getElementById('interactiveDossierModal');
+  if (modal) modal.classList.remove('hidden');
+
+  setupInteractiveTouchSwipe();
+
+  if (typeof playRealisticPageFlipSound === 'function') {
+    playRealisticPageFlipSound();
+  } else if (typeof playPaperSound === 'function') {
+    playPaperSound();
+  }
+}
+
+function closeInteractiveDossier() {
+  interactiveDossierState.isOpen = false;
+  const modal = document.getElementById('interactiveDossierModal');
+  if (modal) modal.classList.add('hidden');
+  if (typeof playPaperSound === 'function') playPaperSound();
+}
+
+function openDossierCover() {
+  if (interactiveDossierState.isCoverOpened) return;
+  interactiveDossierState.isCoverOpened = true;
+  const coverLeaf = document.getElementById('interactiveCoverLeaf');
+  if (coverLeaf) {
+    coverLeaf.classList.add('is-opened');
+  }
+  if (typeof playRealisticPageFlipSound === 'function') {
+    playRealisticPageFlipSound();
+  } else if (typeof playPaperSound === 'function') {
+    playPaperSound();
+  }
+}
+
+function renderInteractiveDossierPage(index) {
+  interactiveDossierState.currentPage = index;
+  const c = currentCase();
+  if (!c) return;
+
+  const totalPages = INTERACTIVE_TABS.length;
+  const pageInfo = INTERACTIVE_TABS[index] || INTERACTIVE_TABS[0];
+  const fieldMap = {
+    main: 'mainText',
+    defense: 'defenseText',
+    psych: 'psychNote',
+    guard: 'guardReport'
+  };
+
+  const titleEl = document.getElementById('interactivePageTitle');
+  if (titleEl) titleEl.textContent = `${pageInfo.title} (${index + 1}. SAYFA)`;
+  const iconEl = document.getElementById('interactivePageIcon');
+  if (iconEl) iconEl.textContent = pageInfo.icon;
+  const counterEl = document.getElementById('interactivePageCounter');
+  if (counterEl) counterEl.textContent = `${index + 1} / ${totalPages}`;
+  const bottomNavInfo = document.getElementById('interactiveBottomNavInfo');
+  if (bottomNavInfo) bottomNavInfo.textContent = `Sayfa ${index + 1} / ${totalPages}: ${pageInfo.title}`;
+
+  const headerEl = document.getElementById('interactivePageHeader');
+  if (headerEl) {
+    if (pageInfo.id === 'verdict') {
+      headerEl.classList.add('hidden');
+    } else {
+      headerEl.classList.remove('hidden');
+    }
+  }
+
+  const prevBtn = document.getElementById('btnInteractivePrev');
+  if (prevBtn) prevBtn.disabled = (index === 0);
+  const nextBtn = document.getElementById('btnInteractiveNext');
+  if (nextBtn) nextBtn.disabled = (index === totalPages - 1);
+  const cornerNextBtn = document.getElementById('btnInteractivePageCornerNext');
+  if (cornerNextBtn) {
+    if (index === totalPages - 1) {
+      cornerNextBtn.style.visibility = 'hidden';
+      cornerNextBtn.disabled = true;
+    } else {
+      cornerNextBtn.style.visibility = 'visible';
+      cornerNextBtn.disabled = false;
+    }
+  }
+
+  const bodyEl = document.getElementById('interactivePageBody');
+  if (bodyEl) {
+    if (pageInfo.id === 'verdict') {
+      bodyEl.innerHTML = renderInteractiveVerdictPage(c);
+    } else {
+      const baseContent = c[fieldMap[pageInfo.id]] || c.mainText;
+      const sealAndSignature = renderDocumentSealAndSignature(pageInfo.id, c);
+      bodyEl.innerHTML = baseContent + sealAndSignature;
+    }
+    bodyEl.scrollTop = 0;
+  }
+}
+
+function flipInteractivePage(direction) {
+  if (!interactiveDossierState.isCoverOpened) {
+    openDossierCover();
+    return;
+  }
+
+  const totalPages = INTERACTIVE_TABS.length;
+  let nextIdx = interactiveDossierState.currentPage;
+  if (direction === 'next' && nextIdx < totalPages - 1) {
+    nextIdx++;
+  } else if (direction === 'prev' && nextIdx > 0) {
+    nextIdx--;
+  } else {
+    return;
+  }
+
+  const pageWrapper = document.getElementById('interactivePagesWrapper');
+  if (pageWrapper) {
+    pageWrapper.classList.remove('page-turn-forward', 'page-turn-backward');
+    void pageWrapper.offsetWidth;
+    pageWrapper.classList.add(direction === 'next' ? 'page-turn-forward' : 'page-turn-backward');
+  }
+
+  if (typeof playRealisticPageFlipSound === 'function') {
+    playRealisticPageFlipSound();
+  } else if (typeof playPaperSound === 'function') {
+    playPaperSound();
+  }
+
+  renderInteractiveDossierPage(nextIdx);
+}
+
+function setupInteractiveTouchSwipe() {
+  const book = document.getElementById('interactiveDossierBook');
+  if (!book || typeof book.addEventListener !== 'function' || book._swipeInit) return;
+  book._swipeInit = true;
+
+  let startX = 0;
+  let startY = 0;
+  book.addEventListener('touchstart', e => {
+    if (e.touches && e.touches[0]) {
+      startX = e.touches[0].clientX;
+      startY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  book.addEventListener('touchend', e => {
+    if (!e.changedTouches || !e.changedTouches[0]) return;
+    const diffX = e.changedTouches[0].clientX - startX;
+    const diffY = e.changedTouches[0].clientY - startY;
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.2) {
+      if (diffX < 0) {
+        flipInteractivePage('next');
+      } else {
+        flipInteractivePage('prev');
+      }
+    }
+  }, { passive: true });
+}
+
+if (typeof window !== 'undefined' && window.addEventListener) {
+  window.addEventListener('keydown', e => {
+    if (!interactiveDossierState.isOpen) return;
+    if (e.key === 'Escape') {
+      closeInteractiveDossier();
+    } else if (e.key === 'ArrowRight') {
+      flipInteractivePage('next');
+    } else if (e.key === 'ArrowLeft') {
+      flipInteractivePage('prev');
+    }
+  });
+}
+
