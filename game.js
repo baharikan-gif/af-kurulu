@@ -1642,6 +1642,7 @@ function closeInteractiveDossier() {
 function openDossierCover() {
   if (interactiveDossierState.isCoverOpened) return;
   interactiveDossierState.isCoverOpened = true;
+  scheduleDocumentFit();
   const coverLeaf = document.getElementById('interactiveCoverLeaf');
   if (coverLeaf) {
     coverLeaf.classList.add('is-opened');
@@ -1809,11 +1810,13 @@ function fitDocumentText(element) {
   }
   const scroll = element.scrollTop;
   const availableHeight = element.clientHeight;
-  const availableWidth = element.clientWidth;
+  const sheet = element.querySelector?.('.document-sheet');
   let chosen = 12;
   for (let size = 16; size >= 12; size -= 0.5) {
     element.style.setProperty('--auto-document-size', size + 'px');
-    if (element.scrollHeight <= availableHeight + 1 && element.scrollWidth <= availableWidth + 1) {
+    // Ortalamadan gelen boşluğu ve mühürlerin yatay taşmasını puntoya katma.
+    const contentHeight = sheet ? sheet.offsetHeight : element.scrollHeight;
+    if (contentHeight <= availableHeight + 1) {
       chosen = size;
       break;
     }
