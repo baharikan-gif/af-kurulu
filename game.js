@@ -1344,7 +1344,7 @@ function switchTab(tab, sound = true) {
   const content = currentCase()[fieldMap[tab]] || currentCase().mainText;
   const baseContent = tab === 'defense' ? cleanDefenseContent(content) : content;
   const sealAndSignature = renderDocumentSealAndSignature(tab, currentCase());
-  document.getElementById('docContent').innerHTML = `<div class="document-prose">${baseContent}</div>` + sealAndSignature;
+  document.getElementById('docContent').innerHTML = `<div class="document-sheet"><div class="document-prose">${baseContent}</div>${sealAndSignature}</div>`;
   scheduleDocumentFit();
   if (sound) saveGame();
 }
@@ -1505,7 +1505,7 @@ function renderInteractiveVerdictPage(c) {
   const canDecide = gameState.phase === 'review';
 
   return `
-    <div class="verdict-page space-y-2.5 font-typewriter text-stone-900 select-none">
+    <div class="document-sheet verdict-page space-y-2.5 font-typewriter text-stone-900 select-none">
       <!-- Resmi Antet & Başlık -->
       <div class="border-b-2 border-stone-800 pb-1.5 text-center relative">
         <button type="button" onclick="closeInteractiveDossier()" title="Masaya Dön (ESC)" class="absolute right-0 top-0 text-stone-600 hover:text-red-900 font-bold text-sm px-1.5 py-0.5 rounded hover:bg-stone-300/80 transition cursor-pointer select-none leading-none">✕</button>
@@ -1718,7 +1718,7 @@ function renderInteractiveDossierPage(index) {
       const content = c[fieldMap[pageInfo.id]] || c.mainText;
       const baseContent = pageInfo.id === 'defense' ? cleanDefenseContent(content) : content;
       const sealAndSignature = renderDocumentSealAndSignature(pageInfo.id, c);
-      bodyEl.innerHTML = `<div class="document-prose">${baseContent}</div>` + sealAndSignature;
+      bodyEl.innerHTML = `<div class="document-sheet"><div class="document-prose">${baseContent}</div>${sealAndSignature}</div>`;
     }
     bodyEl.scrollTop = 0;
     scheduleDocumentFit();

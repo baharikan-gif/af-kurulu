@@ -585,6 +585,34 @@
       #gameScreen { height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
     }
     #interactivePageBody .verdict-page { padding-bottom: 32px; }
+    /* Kısa evrak ortalanır; uzun evrak üstten başlayarak kaydırılır. */
+    #docContent, #interactivePageBody {
+      display: flex;
+      flex-direction: column;
+    }
+    .document-sheet {
+      flex: 0 0 auto;
+      width: 100%;
+      min-width: 0;
+      margin-block: auto;
+    }
+    /* Uzun kimlik bilgileri klasör simgesine ayrılan alanı daraltmaz. */
+    #dossierIdentityRow {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 48px;
+      align-items: start;
+      gap: 8px;
+    }
+    #dossierIdentityRow > :first-child { min-width: 0; padding-right: 0; }
+    #dossierIdentityRow > :first-child > div { min-width: 0; align-items: baseline; }
+    #inmateCrimeLine, #timeServed, #inmatePrisonLine {
+      min-width: 0;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      overflow: visible;
+      text-overflow: clip;
+    }
+    #inmateName { min-width: 0; overflow-wrap: anywhere; }
   </style>
 </head>
 
@@ -823,7 +851,7 @@
           <h2 id="inmateName" class="text-xl font-bold font-typewriter tracking-tight text-stone-900 leading-tight">Emre Yılmaz</h2>
           <span class="inline-block shrink-0 bg-stone-800 text-stone-200 text-[10px] font-mono px-2 py-0.5 rounded uppercase" id="verdictStatus">İNCELEMEDE</span>
         </div>
-        <div class="flex items-start justify-between">
+        <div id="dossierIdentityRow">
           
           <!-- Sol Taraf: Antet, İsim, Yaş, Suç, İnfaz Süresi -->
           <div class="flex-1 pr-2">
@@ -837,7 +865,7 @@
             <!-- 3. Sıra: Suç -->
             <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
               <span class="text-[10px] uppercase tracking-wider text-stone-600 font-semibold shrink-0">SUÇ:</span>
-              <span id="inmateCrimeLine" class="font-bold text-stone-900 truncate">Motosiklet Hırsızlığı & Mala Zarar</span>
+              <span id="inmateCrimeLine" class="font-bold text-stone-900">Motosiklet Hırsızlığı & Mala Zarar</span>
             </div>
             <!-- 4. Sıra: İnfaz Süresi -->
             <div class="mt-0.5 flex items-center gap-1.5 text-xs font-mono text-stone-800">
@@ -2137,7 +2165,7 @@
       }
     }
   </script>
-  <script src="cases.js?v=20260919-3"></script>
-  <script src="game.js?v=20260919-3"></script>
+  <script src="cases.js?v=20260919-6"></script>
+  <script src="game.js?v=20260919-6"></script>
 </body>
 </html>
