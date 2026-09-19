@@ -526,7 +526,7 @@
 
     /* Standart evrak boyutu, ölçülen kullanılabilir alana göre ayarlanır. */
     body.font-size-normal :is(#docContent, #interactivePageBody),
-    body.font-size-normal :is(#docContent, #interactivePageBody) :is(p, div, span, strong, summary, li) {
+    body.font-size-normal :is(#docContent, #interactivePageBody) :is(p, div, span, strong, summary, li):not(.doc-seal-block, .doc-seal-block *) {
       font-size: var(--auto-document-size, 12px) !important;
       line-height: 1.4 !important;
     }
@@ -556,6 +556,40 @@
       #statCard-capacity > div:first-child,
       #statCard-vicdan > div:first-child,
       #statCard-sicil > div:first-child { flex-wrap: wrap; gap: 2px; padding: 0; }
+    }
+
+    /* Belge ölçümü için tüm ekranlarda sınırlandırılmış çalışma alanı. */
+    #gameScreen {
+      height: calc(100dvh - 32px);
+      flex: 0 0 auto;
+      min-height: 0;
+    }
+    #gameScreen > header, #deskArea > :not(#paperDossier) { flex-shrink: 0; }
+    #deskArea, #paperDossier { min-height: 0; }
+    #paperDossier { overflow: auto; }
+    #docContent { flex: 1 1 0; min-height: 48px; }
+    #documentTabs {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 3px;
+      padding: 0 3px;
+      margin-bottom: -1px;
+    }
+    #documentTabs button {
+      min-width: 0;
+      height: 30px;
+      padding: 3px 2px;
+      justify-content: center;
+      white-space: nowrap;
+      font-size: 11px;
+      line-height: 1;
+      border-width: 1px;
+      border-bottom-width: 0;
+      border-radius: 6px 6px 0 0;
+      box-shadow: none;
+    }
+    @media (max-width: 639px) {
+      #gameScreen { height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
     }
   </style>
 </head>
@@ -770,19 +804,11 @@
   <main id="deskArea" class="w-full max-w-[430px] flex-1 flex flex-col items-center relative transition-all duration-300">
     
     <!-- Üst Sekmeler / Masadaki Ek Evraklar -->
-    <div class="w-full flex items-center justify-start gap-1 px-2 mb-[-3px] z-10 text-[11px] font-typewriter font-semibold overflow-x-auto pb-0.5">
-      <button onclick="switchTab('main')" id="tabBtn-main" class="px-2.5 py-1 rounded-t-lg bg-[#f6efe1] text-stone-900 border-t-2 border-x-2 border-stone-500 shadow-md flex items-center gap-1">
-        📁 Gerekçeli Dosya
-      </button>
-      <button onclick="switchTab('defense')" id="tabBtn-defense" class="px-2.5 py-1 rounded-t-lg bg-[#f0e8d5] text-stone-900 border-t-2 border-x-2 border-stone-400 shadow-md opacity-75 hover:opacity-100 flex items-center gap-1">
-        ⚖️ Tutuklu Savunması
-      </button>
-      <button onclick="switchTab('psych')" id="tabBtn-psych" class="px-2.5 py-1 rounded-t-lg bg-[#fef08a] text-amber-950 border-t-2 border-x-2 border-amber-400/80 shadow-md opacity-75 hover:opacity-100 flex items-center gap-1">
-        📌 Doktor Raporu
-      </button>
-      <button onclick="switchTab('guard')" id="tabBtn-guard" class="px-2.5 py-1 rounded-t-lg bg-stone-300 text-stone-800 border-t-2 border-x-2 border-stone-400 shadow-md opacity-75 hover:opacity-100 flex items-center gap-1">
-        📋 Cezaevi Raporu
-      </button>
+    <div id="documentTabs" class="w-full z-10 font-typewriter font-semibold" aria-label="Dosya belgeleri">
+      <button onclick="switchTab('main')" id="tabBtn-main" class="px-2.5 py-1 rounded-t-lg bg-[#f6efe1] text-stone-900 border-t-2 border-x-2 border-stone-500 shadow-md flex items-center gap-1" title="Gerekçeli Dosya">Dosya</button>
+      <button onclick="switchTab('defense')" id="tabBtn-defense" class="px-2.5 py-1 rounded-t-lg bg-[#f0e8d5] text-stone-900 border-t-2 border-x-2 border-stone-400 shadow-md opacity-75 hover:opacity-100 flex items-center gap-1" title="Tutuklu Savunması">Savunma</button>
+      <button onclick="switchTab('psych')" id="tabBtn-psych" class="px-2.5 py-1 rounded-t-lg bg-[#fef08a] text-amber-950 border-t-2 border-x-2 border-amber-400/80 shadow-md opacity-75 hover:opacity-100 flex items-center gap-1" title="Doktor Raporu">Doktor</button>
+      <button onclick="switchTab('guard')" id="tabBtn-guard" class="px-2.5 py-1 rounded-t-lg bg-stone-300 text-stone-800 border-t-2 border-x-2 border-stone-400 shadow-md opacity-75 hover:opacity-100 flex items-center gap-1" title="Cezaevi İdare Raporu">İdare</button>
     </div>
 
     <!-- MAHKÛM KLASÖRÜ (Eskitilmiş 1991 Daktilo Dosyası) -->

@@ -1800,10 +1800,12 @@ function fitDocumentText(element) {
     return;
   }
   const scroll = element.scrollTop;
+  const availableHeight = element.clientHeight;
+  const availableWidth = element.clientWidth;
   let chosen = 12;
   for (let size = 16; size >= 12; size -= 0.5) {
     element.style.setProperty('--auto-document-size', size + 'px');
-    if (element.scrollHeight <= element.clientHeight + 1 && element.scrollWidth <= element.clientWidth + 1) {
+    if (element.scrollHeight <= availableHeight + 1 && element.scrollWidth <= availableWidth + 1) {
       chosen = size;
       break;
     }
@@ -1821,6 +1823,7 @@ function scheduleDocumentFit() {
   });
 }
 window.addEventListener('resize', scheduleDocumentFit);
+window.visualViewport?.addEventListener('resize', scheduleDocumentFit);
 window.addEventListener('DOMContentLoaded', () => {
   if (typeof ResizeObserver !== 'undefined') {
     const observer = new ResizeObserver(scheduleDocumentFit);
@@ -1830,6 +1833,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
   document.addEventListener?.('toggle', scheduleDocumentFit, true);
+  document.addEventListener?.('transitionend', scheduleDocumentFit, true);
   document.fonts?.ready.then(scheduleDocumentFit);
   scheduleDocumentFit();
 });
