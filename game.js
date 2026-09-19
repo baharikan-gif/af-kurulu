@@ -221,7 +221,7 @@ const phoneCalls = {
   '32_0': {
     caller: 'İstihbarat Daire Başkan Yardımcısı Tuğrul Bey',
     callerDept: 'ARDORA · EMNİYET VE İSTİHBARAT SANTRALİ',
-    dialogue: 'Kurul Başkanı! Masandaki Sarı Selim dosyası için arıyorum. Bu adamın dışarı adım atması demek, Batıgeçit ve İldem sokaklarının yeniden kan gölüne dönmesi demektir. Eski ortaklarını şimdiden tehdit ettiriyor. Şartlı tahliyesine derhal ret kaşesini basacaksın! Eğer onaylayıp salarsan, çıkacak ilk çatışmadan ve güvenlik zafiyetinden doğrudan sen sorumlu tutulursun!'
+    dialogue: 'Kurul Başkanı! Masandaki Sarı Selim dosyası için arıyorum. Bu adamın dışarı adım atması demek, Batıgeçit ve İldem sokaklarının yeniden kan gölüne dönmesi demektir. Esnaf onun adını kullanan kişilerce tehdit ediliyor. Talimat bağını henüz belgeleyemedik ama bu riski alamayız. Şartlı tahliyesine derhal ret kaşesini basacaksın! Eğer onaylayıp salarsan, çıkacak ilk çatışmadan ve güvenlik zafiyetinden doğrudan sen sorumlu tutulursun!'
   },
 
   "28_0": {"caller":"Milletvekili Rauf Erel’in Özel Kalem Müdürü Saim Bey","callerDept":"VELYA MECLİSİ · MİLLETVEKİLİ ÖZEL KALEMİ","dialogue":"Başkanım, Sayın Vekilimiz adına arıyorum. Oğuz Vardar’ın ailesi mağdurun zararını karşıladı, evrakı da dosyanızda. Vardar Metal bu şehrin ekmek kapısıdır. Oğuz Bey’in ailesine dönmesini bekliyoruz. Olumlu değerlendirmenizi Bakanlıktaki muhataplarımıza ileteceğiz. Dosya yine beklerse kurulunuzun neden işi uzattığını da sormamız gerekecek."},
@@ -871,6 +871,7 @@ function getInmateSignatureData(c) {
     30: 'M18,16 C12,10 10,20 16,24 C22,28 18,32 10,30 C22,24 36,20 52,30 C68,14 84,28 98,22 M12,32 C46,34 82,33 100,28',
     31: 'M10,6 L10,34 M28,8 L10,20 L28,34 C46,14 64,36 82,8 C100,32 118,10 126,26 M8,36 L128,28 M18,39 L120,32',
     32: 'M22,10 C8,8 6,22 20,26 C30,28 18,34 8,34 L44,12 L62,32 L82,10 L102,30 L124,14 M6,36 L126,28',
+    34: 'M8,10 L42,10 M25,10 L23,31 M52,13 C36,6 34,29 51,29 C64,29 69,17 78,21 C92,32 109,18 120,24 M16,35 Q69,40 121,30 M43,33 L48,38',
     33: 'M12,10 L12,28 M12,18 C22,10 30,12 32,22 C34,30 22,32 12,28 C28,20 46,8 62,28 C78,12 96,26 110,18 M14,32 Q62,36 110,28'
   };
   const path = signatures[id] || signatures[1];
