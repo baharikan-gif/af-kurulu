@@ -217,16 +217,16 @@
     }
 
     /* ==================== YAZI BOYUTU ÖLÇEKLENDİRME ==================== */
-    body.font-size-large #docContent,
-    body.font-size-large #docContent p,
-    body.font-size-large #docContent div {
+    body.font-size-large :is(#docContent, #interactivePageBody),
+    body.font-size-large :is(#docContent, #interactivePageBody) p,
+    body.font-size-large :is(#docContent, #interactivePageBody) div {
       font-size: 15.5px !important;
       line-height: 1.6 !important;
     }
 
-    body.font-size-xlarge #docContent,
-    body.font-size-xlarge #docContent p,
-    body.font-size-xlarge #docContent div {
+    body.font-size-xlarge :is(#docContent, #interactivePageBody),
+    body.font-size-xlarge :is(#docContent, #interactivePageBody) p,
+    body.font-size-xlarge :is(#docContent, #interactivePageBody) div {
       font-size: 17px !important;
       line-height: 1.7 !important;
     }
@@ -291,48 +291,48 @@
       color: #e7e5e4 !important;
     }
 
-    body.theme-dark #docContent {
+    body.theme-dark :is(#docContent, #interactivePageBody) {
       color: #d6d3d1 !important;
     }
 
-    body.theme-dark #docContent p,
-    body.theme-dark #docContent span {
+    body.theme-dark :is(#docContent, #interactivePageBody) p,
+    body.theme-dark :is(#docContent, #interactivePageBody) span {
       color: #d6d3d1 !important;
     }
 
-    body.theme-dark #docContent strong {
+    body.theme-dark :is(#docContent, #interactivePageBody) strong {
       color: #fafaf9 !important;
     }
 
-    body.theme-dark #docContent .bg-stone-50\/80,
-    body.theme-dark #docContent .bg-amber-50\/70,
-    body.theme-dark #docContent .bg-stone-100 {
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-stone-50\/80,
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-amber-50\/70,
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-stone-100 {
       background-color: #292524 !important;
       border-color: #44403c !important;
       color: #d6d3d1 !important;
     }
 
     /* DOKTOR RAPORU / SARI POST-IT (Karanlık Modda Parlak Sarı & Beyaz Çakışmasını Önleme) */
-    body.theme-dark #docContent .bg-yellow-100 {
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 {
       background-color: #2a2213 !important;
       border-color: #854d0e !important;
       color: #fef08a !important;
       box-shadow: 0 6px 16px rgba(0,0,0,0.5), 0 0 0 1px rgba(202, 138, 4, 0.25) !important;
     }
 
-    body.theme-dark #docContent .bg-yellow-100 p,
-    body.theme-dark #docContent .bg-yellow-100 span,
-    body.theme-dark #docContent .bg-yellow-100 div {
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 p,
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 span,
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 div {
       color: #fef08a !important;
     }
 
-    body.theme-dark #docContent .bg-yellow-100 strong {
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 strong {
       color: #ffffff !important;
       text-shadow: 0 0 6px rgba(254, 240, 138, 0.4);
     }
 
-    body.theme-dark #docContent .bg-yellow-100 .border-amber-300,
-    body.theme-dark #docContent .bg-yellow-100 .border-yellow-300 {
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 .border-amber-300,
+    body.theme-dark :is(#docContent, #interactivePageBody) .bg-yellow-100 .border-yellow-300 {
       border-color: #854d0e !important;
     }
 
@@ -392,16 +392,21 @@
     }
     .dossier-book-wrapper {
       transform-style: preserve-3d;
-      height: calc(100vh - 36px);
-      height: calc(100dvh - 36px);
-      max-height: 720px;
+      height: 100vh;
+      height: 100dvh;
+      max-height: 100dvh;
     }
     @media (min-width: 640px) {
       .dossier-book-wrapper {
-        height: min(640px, calc(100vh - 44px));
+        height: min(820px, 96vh);
+        max-height: 860px;
       }
     }
     .dossier-cover-leaf {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
       transform-origin: left center;
       transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.85s;
       backface-visibility: hidden;
@@ -486,6 +491,38 @@
       background-color: #292524 !important;
       color: #fbbf24 !important;
     }
+
+    /* Klasör iç sayfalarının yönlü dönüşü */
+    @keyframes dossierPageForward {
+      from { transform: rotateY(18deg); opacity: 0.65; }
+      to { transform: rotateY(0); opacity: 1; }
+    }
+    @keyframes dossierPageBackward {
+      from { transform: rotateY(-18deg); opacity: 0.65; }
+      to { transform: rotateY(0); opacity: 1; }
+    }
+    #interactivePagesWrapper { transform-origin: left center; }
+    .page-turn-forward { animation: dossierPageForward 0.4s ease-out; }
+    .page-turn-backward { animation: dossierPageBackward 0.4s ease-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .page-turn-forward, .page-turn-backward { animation: none; }
+      .dossier-cover-leaf { transition: none; }
+    }
+
+    body.theme-dark #interactivePagesWrapper [class*="text-stone-"],
+    body.theme-dark #interactiveCoverLeaf [class*="text-stone-"] {
+      color: #e7e5e4 !important;
+    }
+    body.theme-dark #interactivePageBody [class*="bg-stone-"],
+    body.theme-dark #interactivePageBody [class*="bg-white"],
+    body.theme-dark #interactivePageBody [class*="bg-amber-"] {
+      background-color: #292524 !important;
+      border-color: #78716c !important;
+    }
+    body.theme-dark #interactivePageBody [class*="bg-red-100"] {
+      background-color: #450a0a !important;
+      color: #fecaca !important;
+    }
   </style>
 </head>
 
@@ -561,7 +598,7 @@
             <span class="text-base text-stone-400">⚙️</span>
             <div class="text-xs font-bold text-stone-300">AYARLAR</div>
           </div>
-          <span class="text-[9px] font-mono text-stone-500">Ses & Sarsıntı</span>
+          <span class="text-[9px] font-mono text-stone-500">Ses & Görünüm</span>
         </div>
       </button>
 
@@ -1233,17 +1270,6 @@
           </button>
         </div>
 
-        <!-- Ekran Sarsıntısı -->
-        <div class="flex items-center justify-between p-3 bg-white/80 rounded border border-stone-300">
-          <div>
-            <div class="font-bold text-stone-900 text-xs">📳 Ekran Sarsıntısı</div>
-            <div class="text-[10px] text-stone-500">Kritik stres ve tehlike anlarında titreme efekti</div>
-          </div>
-          <button type="button" onclick="toggleScreenShake()" id="btnSettingShakeToggle" class="bg-emerald-800 text-emerald-100 px-3 py-1.5 rounded font-bold text-xs cursor-pointer border border-emerald-600">
-            AÇIK
-          </button>
-        </div>
-
         <!-- Evrak Yazı Boyutu -->
         <div class="p-3 bg-white/80 rounded border border-stone-300">
           <div class="flex items-center justify-between mb-2">
@@ -1345,15 +1371,18 @@
   </div>
 
   <!-- ==================== TAM EKRAN 3D GERÇEK İNFAZ KLASÖRÜ ==================== -->
-  <div id="interactiveDossierModal" class="hidden fixed inset-0 z-50 bg-[#0a0806]/98 backdrop-blur-md flex flex-col items-center justify-between pt-0 px-2 sm:px-4 pb-0.5 select-none">
+  <div id="interactiveDossierModal" class="hidden fixed inset-0 z-50 bg-[#0a0806]/98 backdrop-blur-md flex flex-col items-center justify-center p-0 select-none">
     
-    <!-- Gizli Yıl Başlığı (Test ve Mantık Uyumu İçin) -->
+    <!-- Gizli Elementler (Test ve Kod Uyumu İçin) -->
     <span id="interactiveModalYearTitle" class="hidden"></span>
+    <span id="interactiveBottomNavInfo" class="hidden"></span>
+    <button id="btnInteractivePrev" class="hidden"></button>
+    <button id="btnInteractiveNext" class="hidden"></button>
 
-    <!-- Ortadaki 3D Sahne (Klasör Alanı - Yukarıya Sıfır) -->
-    <div class="w-full max-w-xl flex-1 flex items-start justify-center dossier-perspective relative pt-0 pb-0">
+    <!-- Ortadaki 3D Sahne (Klasör Alanı - En Alta Kadar Tam Ekran) -->
+    <div class="w-full max-w-xl flex-1 flex items-center justify-center dossier-perspective relative p-0 h-full">
       
-      <!-- Klasör Gövdesi (Mobil Ekrana Tam Sığan ve Dikey Alanı Maksimum Kullanan Boyut) -->
+      <!-- Klasör Gövdesi (En Alta Kadar Uzanan Boyut) -->
       <div id="interactiveDossierBook" class="w-full max-w-[500px] dossier-book-wrapper relative flex flex-col justify-between mt-0">
         
         <!-- Sol Telli Klasör Sırtı Efekti -->
@@ -1363,47 +1392,56 @@
           <div class="w-3.5 h-3.5 rounded-full bg-stone-900 border-2 border-stone-500 shadow-inner"></div>
         </div>
 
-        <!-- 3D DOSYA KAPAĞI (Cover Leaf) -->
-        <div id="interactiveCoverLeaf" onclick="openDossierCover()" class="absolute inset-0 dossier-cover-leaf bg-[#dfcfb0] paper-texture rounded-r-xl rounded-l-sm border-2 border-stone-700 p-3 sm:p-6 flex flex-col justify-between shadow-2xl z-30 cursor-pointer hover:brightness-105 transition-all duration-200">
+        <!-- 3D DOSYA KAPAĞI (Cover Leaf - Tam Boy Klasör Kapağı) -->
+        <div id="interactiveCoverLeaf" onclick="openDossierCover()" class="absolute inset-0 w-full h-full dossier-cover-leaf bg-[#dfcfb0] paper-texture rounded-r-xl rounded-l-sm border-2 border-stone-700 p-3 sm:p-5 flex flex-col justify-between shadow-2xl z-30 cursor-pointer hover:brightness-105 transition-all duration-200">
           
-          <!-- Kapak Üst Antet -->
-          <div class="border-b-2 border-stone-800 pb-1.5 sm:pb-2 text-center ml-2">
-            <div class="text-[10px] sm:text-xs font-mono tracking-widest text-stone-700 uppercase font-bold">
-              VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI
+          <!-- Kapak Kapatma Butonu (Sağ Üst) -->
+          <button type="button" onclick="closeInteractiveDossier(); event.stopPropagation();" title="Masaya Dön (ESC)" class="absolute right-2 top-2 text-stone-600 hover:text-red-900 font-bold text-base px-2 py-0.5 rounded hover:bg-stone-300/80 transition cursor-pointer z-40 select-none">✕</button>
+
+          <!-- Üst Grup: Kapak Üst Antet & Mahkûm Kimlik Çerçevesi -->
+          <div class="space-y-2 sm:space-y-3 ml-2">
+            <!-- Kapak Üst Antet -->
+            <div class="border-b-2 border-stone-800 pb-1.5 sm:pb-2 text-center">
+              <div class="text-[10px] sm:text-xs font-mono tracking-widest text-stone-700 uppercase font-bold">
+                VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI
+              </div>
+              <div class="text-[9px] font-mono tracking-widest text-stone-600 uppercase">
+                İNFAZ KURUMLARI GENEL DAİRESİ · İNFAZ TEFTİŞ KURULU BAŞKANLIĞI
+              </div>
+              <div class="text-xs sm:text-sm font-bold tracking-wider text-stone-950 mt-1 uppercase font-serif">
+                ŞARTLI TAHLİYE VE İDARE GÖZLEM DOSYASI
+              </div>
             </div>
-            <div class="text-[9px] font-mono tracking-widest text-stone-600 uppercase">
-              İNFAZ KURUMLARI GENEL DAİRESİ · İNFAZ TEFTİŞ KURULU BAŞKANLIĞI
-            </div>
-            <div class="text-xs sm:text-sm font-bold tracking-wider text-stone-950 mt-1 uppercase font-serif">
-              ŞARTLI TAHLİYE VE İDARE GÖZLEM DOSYASI
+
+            <!-- Mahkûm Kimlik Çerçevesi (Hep Alt Alta Düzen) -->
+            <div class="bg-stone-100/90 border-2 border-stone-600 rounded-lg p-2.5 sm:p-3.5 text-left space-y-1.5 shadow-sm font-mono text-xs">
+              <div class="flex justify-between items-center border-b border-stone-300 pb-1">
+                <span class="text-[10px] font-bold text-stone-600 uppercase">HÜKÜMLÜ ESAS KAYDI:</span>
+                <span id="coverCaseTerm" class="text-[10px] bg-stone-800 text-amber-200 px-1.5 py-0.5 rounded font-bold">İLAM: 1991/01</span>
+              </div>
+              <div class="pt-0.5">
+                <div class="text-[10px] text-stone-500 uppercase font-bold">HÜKÜMLÜ ADI SOYADI:</div>
+                <div id="coverInmateName" class="text-xl sm:text-2xl font-black text-stone-950 font-serif tracking-wide leading-tight">Emre Yılmaz</div>
+              </div>
+              <div class="space-y-1 pt-1.5 border-t border-dashed border-stone-300 text-[11.5px] sm:text-xs">
+                <div><span class="text-stone-500 font-semibold uppercase">SİCİL NO:</span> <span id="coverInmateSicil" class="font-bold text-stone-900 font-mono">HS-1991/482101</span></div>
+                <div><span class="text-stone-500 font-semibold uppercase">YAŞ:</span> <span id="coverInmateAge" class="font-bold text-stone-900">24</span></div>
+                <div><span class="text-stone-500 font-semibold uppercase">İNFAZ SÜRESİ:</span> <span id="coverInmateSentence" class="font-bold text-stone-900">3 Yıl Hapis</span></div>
+                <div><span class="text-stone-500 font-semibold uppercase">SUÇ:</span> <span id="coverInmateCrime" class="font-bold text-stone-900">Motosiklet Hırsızlığı</span></div>
+                <div><span class="text-stone-500 font-semibold uppercase">KURUM:</span> <span id="coverPrisonName" class="font-bold text-stone-900">Merkez Kapalı İnfaz Kurumu</span></div>
+              </div>
             </div>
           </div>
 
-          <!-- Mahkûm Kimlik Çerçevesi -->
-          <div class="bg-stone-100/90 border-2 border-stone-600 rounded-lg p-2.5 sm:p-4 text-left space-y-1 sm:space-y-1.5 shadow-sm ml-2 font-mono">
-            <div class="flex justify-between items-center border-b border-stone-300 pb-1">
-              <span class="text-[10px] font-bold text-stone-600 uppercase">HÜKÜMLÜ ESAS KAYDI:</span>
-              <span id="coverCaseTerm" class="text-[10px] bg-stone-800 text-amber-200 px-1.5 py-0.5 rounded font-bold">İLAM: 1991/01</span>
+          <!-- Orta Bölüm: Resmi Kırmızı Damga ve Bürokratik Şerit -->
+          <div class="my-auto py-2 flex flex-col items-center justify-center gap-2.5 ml-2">
+            <div class="flex items-center justify-center">
+              <div class="stamp-badge border-2 border-red-800 text-red-800 px-3.5 py-1 text-xs font-bold tracking-widest uppercase transform -rotate-3 shadow-sm">
+                GİZLİDİR · İVEDİ
+              </div>
             </div>
-            <div class="pt-0.5 sm:pt-1">
-              <div class="text-[10px] text-stone-500 uppercase font-bold">HÜKÜMLÜ ADI SOYADI:</div>
-              <div id="coverInmateName" class="text-xl sm:text-2xl font-black text-stone-950 font-serif tracking-wide leading-tight">Emre Yılmaz</div>
-            </div>
-            <div class="grid grid-cols-2 gap-1.5 sm:gap-2 text-xs pt-1 sm:pt-1.5 border-t border-dashed border-stone-300">
-              <div><span class="text-stone-500 font-semibold uppercase">YAŞ:</span> <span id="coverInmateAge" class="font-bold text-stone-900">24</span></div>
-              <div><span class="text-stone-500 font-semibold uppercase">İNFAZ SÜRESİ:</span> <span id="coverInmateSentence" class="font-bold text-stone-900">3 Yıl Hapis</span></div>
-              <div class="col-span-2"><span class="text-stone-500 font-semibold uppercase">SUÇ:</span> <span id="coverInmateCrime" class="font-bold text-stone-900">Motosiklet Hırsızlığı</span></div>
-              <div class="col-span-2"><span class="text-stone-500 font-semibold uppercase">KURUM:</span> <span id="coverPrisonName" class="font-bold text-stone-900">Merkez Kapalı İnfaz Kurumu</span></div>
-            </div>
-          </div>
-
-          <!-- Resmi Kırmızı & Siyah Damgalar -->
-          <div class="py-1.5 sm:py-2 flex items-center justify-center gap-4 ml-2">
-            <div class="stamp-badge border-2 border-red-800 text-red-800 px-3 py-1 text-xs font-bold tracking-widest uppercase transform -rotate-4 shadow-sm">
-              GİZLİDİR · İVEDİ
-            </div>
-            <div class="stamp-badge border-2 border-stone-800 text-stone-800 px-2.5 py-1 text-[10px] font-bold tracking-wider uppercase transform rotate-2 shadow-sm">
-              KURUL HUZURUNDA AÇILIR
+            <div class="text-[9px] font-mono text-stone-600 uppercase tracking-widest text-center border-t border-b border-stone-400/50 py-0.5 px-2">
+              VELYA CUMHURİYETİ İNFAZ VE TEFTİŞ ARŞİVİ · RESMİ CİLT
             </div>
           </div>
 
@@ -1420,13 +1458,16 @@
         <!-- 3D İÇ EVRAK SAYFALARI (Pages Container) -->
         <div id="interactivePagesWrapper" class="absolute inset-0 bg-[#f6efe1] paper-texture rounded-r-xl rounded-l-sm border-2 border-stone-600 p-2.5 sm:p-5 flex flex-col justify-between shadow-2xl z-20">
           
-          <!-- Sayfa Başlığı ve Sekme Göstergesi -->
+          <!-- Sayfa Başlığı ve Sekme Göstergesi (Sayfa Numarası Yanında Masaya Döndüren ✕ İşareti) -->
           <div id="interactivePageHeader" class="border-b-2 border-stone-400 pb-1.5 flex items-center justify-between text-xs font-mono ml-2">
             <div class="flex items-center gap-1.5 font-bold text-stone-900 font-typewriter">
               <span id="interactivePageIcon">📁</span>
               <span id="interactivePageTitle">GEREKÇELİ DOSYA (1. SAYFA)</span>
             </div>
-            <span id="interactivePageCounter" class="bg-stone-800 text-amber-200 px-2 py-0.5 rounded text-[10px] font-bold">1 / 5</span>
+            <div class="flex items-center gap-2">
+              <span id="interactivePageCounter" class="bg-stone-800 text-amber-200 px-2 py-0.5 rounded text-[10px] font-bold">1 / 5</span>
+              <button id="btnDossierClose" type="button" onclick="closeInteractiveDossier()" title="Masaya Dön (ESC)" class="text-stone-600 hover:text-red-900 font-bold text-sm px-1.5 py-0.5 rounded hover:bg-stone-300/80 transition cursor-pointer select-none leading-none">✕</button>
+            </div>
           </div>
 
           <!-- Evrak İçeriği (Daktilo Metni + İmzalar) -->
@@ -1437,9 +1478,12 @@
           <!-- Sağ Alt Sayfa Kıvrık Kulakçığı (Page Curl Effect) -->
           <div onclick="flipInteractivePage('next')" class="page-curl-corner" title="Sonraki Sayfaya Çevir"></div>
 
-          <!-- Sayfa Alt Bilgi Şeridi & Sağ Altta Sayfayı Çevir Yazısı (Silik & Butonsuz) -->
+          <!-- Sayfa Alt Bilgi Şeridi: Solda Önceki Sayfa, Sağda Sayfayı Çevir -->
           <div class="border-t border-stone-300 pt-1 flex items-center justify-between text-[10px] font-mono text-stone-500 ml-2">
-            <span>İnfaz Kurumları Genel Dairesi · İnfaz Teftiş Kurulu Başkanlığı</span>
+            <button id="btnInteractivePageCornerPrev" type="button" onclick="flipInteractivePage('prev')" class="group flex items-center gap-1 bg-transparent border-0 p-0 text-stone-500/75 hover:text-stone-900 text-[10.5px] font-typewriter tracking-wide transition cursor-pointer select-none">
+              <span class="transform group-hover:-translate-x-0.5 transition-transform">⯇</span>
+              <span>Önceki Sayfa</span>
+            </button>
             <button id="btnInteractivePageCornerNext" type="button" onclick="flipInteractivePage('next')" class="group flex items-center gap-1 bg-transparent border-0 p-0 text-stone-500/75 hover:text-stone-900 text-[10.5px] font-typewriter tracking-wide transition cursor-pointer select-none">
               <span>Sayfayı Çevir</span>
               <span class="transform group-hover:translate-x-0.5 transition-transform">➔</span>
@@ -1448,25 +1492,6 @@
         </div>
 
       </div>
-    </div>
-
-    <!-- Alt Bölüm: Ultra Kompakt İnce Navigasyon (Maksimum Dosya Alanı) -->
-    <div class="w-full max-w-[440px] flex items-center justify-between gap-1 border-t border-stone-800/40 py-0.5 text-stone-300 font-mono text-[10px]">
-      <button id="btnInteractivePrev" onclick="flipInteractivePage('prev')" type="button" class="px-2 py-0.5 bg-stone-900/80 hover:bg-stone-800 active:scale-95 border border-stone-700/60 rounded flex items-center gap-1 text-stone-400 hover:text-stone-200 font-bold transition disabled:opacity-20 disabled:pointer-events-none cursor-pointer">
-        <span>◀ Önceki</span>
-      </button>
-
-      <!-- En Altta Ortada Masaya Dön -->
-      <button id="btnInteractiveCloseBottom" type="button" onclick="closeInteractiveDossier()" class="hover:text-amber-300 hover:border-amber-600 transition flex items-center gap-1 text-[10px] font-mono font-bold bg-stone-900/90 hover:bg-stone-800 px-3 py-0.5 rounded-full border border-stone-700/80 text-stone-300 cursor-pointer shadow active:scale-95">
-        <span>✕ Masaya Dön</span>
-      </button>
-
-      <button id="btnInteractiveNext" onclick="flipInteractivePage('next')" type="button" class="px-2 py-0.5 bg-stone-900/80 hover:bg-stone-800 active:scale-95 border border-stone-700/60 rounded flex items-center gap-1 text-stone-400 hover:text-stone-200 font-bold transition disabled:opacity-20 disabled:pointer-events-none cursor-pointer">
-        <span>Sonraki ▶</span>
-      </button>
-
-      <!-- Gizli Sayfa Başlığı (JS ve Test Uyumu İçin) -->
-      <span id="interactiveBottomNavInfo" class="hidden"></span>
     </div>
 
   </div>

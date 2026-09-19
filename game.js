@@ -71,14 +71,6 @@ function applySettings() {
       : 'bg-stone-700 text-stone-300 px-3 py-1.5 rounded font-bold text-xs cursor-pointer border border-stone-600';
   }
 
-  const settingShakeBtn = document.getElementById('btnSettingShakeToggle');
-  if (settingShakeBtn) {
-    settingShakeBtn.textContent = gameSettings.shake ? 'AÇIK' : 'KAPALI';
-    settingShakeBtn.className = gameSettings.shake
-      ? 'bg-emerald-800 text-emerald-100 px-3 py-1.5 rounded font-bold text-xs cursor-pointer border border-emerald-600'
-      : 'bg-stone-700 text-stone-300 px-3 py-1.5 rounded font-bold text-xs cursor-pointer border border-stone-600';
-  }
-
   // Yazı Boyutu ve Karanlık Modu DOM'a yansıt
   if (typeof document !== 'undefined' && document.body && document.body.classList) {
     document.body.classList.remove('font-size-normal', 'font-size-large', 'font-size-xlarge');
@@ -134,11 +126,6 @@ function applySettings() {
 
 function toggleSettingsSound() {
   gameSettings.sound = !gameSettings.sound;
-  saveSettings();
-}
-
-function toggleScreenShake() {
-  gameSettings.shake = !gameSettings.shake;
   saveSettings();
 }
 
@@ -1491,6 +1478,14 @@ function executeInteractiveDecision(isRelease) {
   handleDecision(isRelease);
 }
 
+function getInmateSicil(c) {
+  if (!c) return 'HS-1991/482101';
+  if (c.sicilNo) return c.sicilNo;
+  const caseYear = 1991 + Math.floor((c.initialMonth || 0) / 12);
+  const inmateSeq = 482100 + (c.id || 1);
+  return `HS-${caseYear}/${inmateSeq}`;
+}
+
 function renderInteractiveVerdictPage(c) {
   const e = gameState.queue[0];
   const prison = getPrisonInfo(c);
@@ -1502,7 +1497,8 @@ function renderInteractiveVerdictPage(c) {
   return `
     <div class="space-y-2.5 font-typewriter text-stone-900 select-none">
       <!-- Resmi Antet & Başlık -->
-      <div class="border-b-2 border-stone-800 pb-1.5 text-center">
+      <div class="border-b-2 border-stone-800 pb-1.5 text-center relative">
+        <button type="button" onclick="closeInteractiveDossier()" title="Masaya Dön (ESC)" class="absolute right-0 top-0 text-stone-600 hover:text-red-900 font-bold text-sm px-1.5 py-0.5 rounded hover:bg-stone-300/80 transition cursor-pointer select-none leading-none">✕</button>
         <div class="text-[9.5px] font-mono tracking-widest text-stone-700 uppercase font-bold">
           VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI
         </div>
@@ -1517,10 +1513,10 @@ function renderInteractiveVerdictPage(c) {
         </div>
       </div>
 
-      <!-- Hükümlü Kimlik Çerçevesi (Yalnızca Ad Soyad ve Yaş) -->
+      <!-- Hükümlü Kimlik Çerçevesi (Ad Soyad ve Sicil No) -->
       <div class="bg-stone-100/90 border border-stone-400 rounded px-3 py-1.5 text-[11px] font-mono flex items-center justify-between shadow-2xs">
         <div><span class="text-stone-500 font-semibold uppercase">HÜKÜMLÜ:</span> <strong class="text-stone-900">${c.name}</strong></div>
-        <div><span class="text-stone-500 font-semibold uppercase">YAŞ:</span> <strong class="text-stone-900">${c.age}</strong></div>
+        <div><span class="text-stone-500 font-semibold uppercase">SİCİL NO:</span> <strong class="text-stone-900 font-mono">${getInmateSicil(c)}</strong></div>
       </div>
 
       <!-- Süslü Bürokratik Gerekçe Cümleleri (Orijinal Tam Metin) -->
@@ -1536,32 +1532,32 @@ function renderInteractiveVerdictPage(c) {
       <!-- Karar Verme ve Damga Vurma Alanı (Sol: Ret/Erteleme, Sağ: Tahliye) -->
       <div class="pt-1">
         ${canDecide ? `
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div class="grid grid-cols-2 gap-1.5 sm:gap-2">
             <!-- Sol: Ertele / Ret Damgası -->
-            <button type="button" onclick="executeInteractiveDecision(false)" class="group p-2 bg-red-950/5 hover:bg-red-900/15 active:scale-95 border-2 border-dashed border-red-800 rounded text-left transition cursor-pointer">
-              <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold text-red-950 font-typewriter tracking-tight flex items-center gap-1">
-                  <span>🔴</span> ${isReview ? 'KESİN RET DAMGASI VUR' : '6 AY ERTELEME DAMGASI VUR'}
+            <button type="button" onclick="executeInteractiveDecision(false)" class="group p-1.5 sm:p-2 bg-red-950/5 hover:bg-red-900/15 active:scale-95 border-2 border-dashed border-red-800 rounded text-left transition cursor-pointer flex flex-col justify-between">
+              <div class="flex items-center justify-between gap-0.5">
+                <span class="text-[9.5px] sm:text-[11px] font-bold text-red-950 font-typewriter tracking-tight flex items-center gap-0.5">
+                  <span>🔴</span> <span>${isReview ? 'KESİN RET DAMGASI VUR' : '6 AY ERTELEME DAMGASI VUR'}</span>
                 </span>
-                <span class="text-[8px] font-mono uppercase bg-red-800 text-white px-1 py-0.2 rounded font-bold">MÜHÜR</span>
+                <span class="text-[7.5px] sm:text-[8px] font-mono uppercase bg-red-800 text-white px-1 py-0.2 rounded font-bold shrink-0">MÜHÜR</span>
               </div>
-              <p class="text-[9.5px] text-red-900/90 font-mono mt-0.5 leading-snug">
+              <p class="text-[8.5px] sm:text-[9.5px] text-red-900/90 font-mono mt-0.5 leading-snug">
                 ${isReview 
-                  ? '"Şartlı tahliye istemi katiyetle reddedilerek infazın aynen tamamlanmasına..."' 
-                  : '"İnfazın devamı ile dosyanın altı ay sonra yeniden incelenmesine..."'}
+                  ? '"Şartlı tahliye istemi katiyetle reddedilerek..."' 
+                  : '"İnfazın devamı ile 6 ay sonra yeniden incelenmesine..."'}
               </p>
             </button>
 
             <!-- Sağ: Tahliye Damgası -->
-            <button type="button" onclick="executeInteractiveDecision(true)" class="group p-2 bg-emerald-950/5 hover:bg-emerald-900/15 active:scale-95 border-2 border-dashed border-emerald-800 rounded text-left transition cursor-pointer">
-              <div class="flex items-center justify-between">
-                <span class="text-[11px] font-bold text-emerald-950 font-typewriter tracking-tight flex items-center gap-1">
-                  <span>🟢</span> TAHLİYE KARARINI DAMGALA
+            <button type="button" onclick="executeInteractiveDecision(true)" class="group p-1.5 sm:p-2 bg-emerald-950/5 hover:bg-emerald-900/15 active:scale-95 border-2 border-dashed border-emerald-800 rounded text-left transition cursor-pointer flex flex-col justify-between">
+              <div class="flex items-center justify-between gap-0.5">
+                <span class="text-[9.5px] sm:text-[11px] font-bold text-emerald-950 font-typewriter tracking-tight flex items-center gap-0.5">
+                  <span>🟢</span> <span>TAHLİYE KARARINI DAMGALA</span>
                 </span>
-                <span class="text-[8px] font-mono uppercase bg-emerald-800 text-white px-1 py-0.2 rounded font-bold">MÜHÜR</span>
+                <span class="text-[7.5px] sm:text-[8px] font-mono uppercase bg-emerald-800 text-white px-1 py-0.2 rounded font-bold shrink-0">MÜHÜR</span>
               </div>
-              <p class="text-[9.5px] text-emerald-900/90 font-mono mt-0.5 leading-snug">
-                "Şartlı tahliye istemi tensip ve uygun görülmüş olup derhal salıverilmesine..."
+              <p class="text-[8.5px] sm:text-[9.5px] text-emerald-900/90 font-mono mt-0.5 leading-snug">
+                "Şartlı tahliye istemi uygun görülmüş olup..."
               </p>
             </button>
           </div>
@@ -1579,7 +1575,7 @@ function renderInteractiveVerdictPage(c) {
 function openInteractiveDossier() {
   if (!currentCase()) return;
   const c = currentCase(), e = gameState.queue[0];
-  const prison = (typeof PRISONS !== 'undefined' && PRISONS[c.prisonId]) ? PRISONS[c.prisonId] : { name: 'Merkez Kapalı İnfaz Kurumu' };
+  const prison = getPrisonInfo(c);
 
   const currentYear = e ? (1991 + Math.floor(e.month / 12)) : 1991;
   const termEl = document.getElementById('coverCaseTerm');
@@ -1593,6 +1589,8 @@ function openInteractiveDossier() {
   if (nameEl) nameEl.textContent = c.name;
   const ageEl = document.getElementById('coverInmateAge');
   if (ageEl) ageEl.textContent = c.age;
+  const sicilEl = document.getElementById('coverInmateSicil');
+  if (sicilEl) sicilEl.textContent = getInmateSicil(c);
   const sentenceEl = document.getElementById('coverInmateSentence');
   if (sentenceEl) sentenceEl.textContent = c.sentence;
   const crimeEl = document.getElementById('coverInmateCrime');
@@ -1688,6 +1686,16 @@ function renderInteractiveDossierPage(index) {
     } else {
       cornerNextBtn.style.visibility = 'visible';
       cornerNextBtn.disabled = false;
+    }
+  }
+  const cornerPrevBtn = document.getElementById('btnInteractivePageCornerPrev');
+  if (cornerPrevBtn) {
+    if (index === 0) {
+      cornerPrevBtn.style.visibility = 'hidden';
+      cornerPrevBtn.disabled = true;
+    } else {
+      cornerPrevBtn.style.visibility = 'visible';
+      cornerPrevBtn.disabled = false;
     }
   }
 
