@@ -494,7 +494,7 @@ function currentCase() {
   c.mainText = banner + `<p><strong>GÜNCEL DURUM:</strong> ${status}</p><details class="mt-3"><summary>İlk dosyayı aç (arşiv)</summary>${c.mainText}</details>`;
   c.psychNote = banner + `<p><strong>GÜNCEL DOKTOR RAPORU:</strong> ${revPsych}</p>`;
   c.guardReport = banner + `<p><strong>SON ALTI AYIN JURNALİ:</strong> ${revGuard}</p>`;
-  c.defenseText = banner + `<div class="bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900"><div class="flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600"><span>GÜNCEL HÜKÜMLÜ BEYANI</span><span>${e.review + 1}. İNCELEME</span></div><p class="italic text-stone-800 leading-relaxed text-[13px]">${revDefense}</p><div class="mt-3 pt-2 border-t border-dashed border-stone-300 text-right text-[11px] font-mono text-stone-500">İfade Sahibi: <span class="italic text-stone-700 font-semibold">${base.name} (Ek Savunma)</span></div></div>`;
+  c.defenseText = banner + `<div class="bg-stone-50/80 p-3 rounded border border-stone-300 font-typewriter text-stone-900"><div class="flex items-center justify-between border-b border-stone-300 pb-1.5 mb-2 text-xs font-mono text-stone-600"><span>GÜNCEL HÜKÜMLÜ BEYANI</span><span>${e.review + 1}. İNCELEME</span></div><p class="italic text-stone-800 leading-relaxed text-[13px]">${revDefense}</p></div>`;
   c.letterText = banner + `<p><strong>YENİ MEKTUP / EK BELGE:</strong> ${revLetter}</p>`;
   if (revLetter) c.mainText += `<p class="mt-2"><strong>GÜNCEL EK BELGE:</strong> ${revLetter}</p>`;
   c.releaseConsequence = revRelease;
@@ -815,7 +815,7 @@ function renderCurrentCase() {
   const prisonLineEl = document.getElementById('inmatePrisonLine');
   if (prisonLineEl) prisonLineEl.textContent = getPrisonInfo(c).name;
   const verdictStatusEl = document.getElementById('verdictStatus');
-  if (verdictStatusEl) verdictStatusEl.textContent = e.review ? 'YENİDEN İNCELEME' : 'İNCELEMEDE';
+  if (verdictStatusEl) verdictStatusEl.textContent = e.review ? '2. İNCELEME' : 'İNCELEMEDE';
   const stampOverlayEl = document.getElementById('stampOverlay');
   if (stampOverlayEl) stampOverlayEl.classList.add('hidden');
 
@@ -1316,6 +1316,11 @@ function renderDocumentSealAndSignature(tab, c) {
   `;
 }
 
+function cleanDefenseContent(content) {
+  // Eski vaka dosyalarındaki üst kimlik satırını kaldır; alttaki imzayı koru.
+  return (content || '').replace(/<(div|p)\b[^>]*>\s*(?:<[^>]+>\s*)*İfade Sahibi\s*:[\s\S]*?<\/\1>/gi, '');
+}
+
 function switchTab(tab, sound = true) {
   if (!currentCase()) return;
   if (!['main','defense','psych','guard','letter'].includes(tab)) tab = 'main';
@@ -1325,7 +1330,8 @@ function switchTab(tab, sound = true) {
   for (const t of ['main','defense','psych','guard']) {
     const btn = document.getElementById(`tabBtn-${t}`);
     if (btn) {
-      btn.classList.remove('opacity-75','opacity-100','font-bold');
+      btn.classList.remove('opacity-75','opacity-100','font-bold','is-active');
+      if (t === tab) btn.classList.add('is-active');
       btn.classList.add(t === tab ? 'opacity-100' : 'opacity-75');
     }
   }
@@ -1335,7 +1341,8 @@ function switchTab(tab, sound = true) {
     psych: 'psychNote',
     guard: 'guardReport'
   };
-  const baseContent = currentCase()[fieldMap[tab]] || currentCase().mainText;
+  const content = currentCase()[fieldMap[tab]] || currentCase().mainText;
+  const baseContent = tab === 'defense' ? cleanDefenseContent(content) : content;
   const sealAndSignature = renderDocumentSealAndSignature(tab, currentCase());
   document.getElementById('docContent').innerHTML = baseContent + sealAndSignature;
   scheduleDocumentFit();
@@ -1498,7 +1505,7 @@ function renderInteractiveVerdictPage(c) {
   const canDecide = gameState.phase === 'review';
 
   return `
-    <div class="space-y-2.5 font-typewriter text-stone-900 select-none">
+    <div class="verdict-page space-y-2.5 font-typewriter text-stone-900 select-none">
       <!-- Resmi Antet & Başlık -->
       <div class="border-b-2 border-stone-800 pb-1.5 text-center relative">
         <button type="button" onclick="closeInteractiveDossier()" title="Masaya Dön (ESC)" class="absolute right-0 top-0 text-stone-600 hover:text-red-900 font-bold text-sm px-1.5 py-0.5 rounded hover:bg-stone-300/80 transition cursor-pointer select-none leading-none">✕</button>
@@ -1708,7 +1715,8 @@ function renderInteractiveDossierPage(index) {
     if (pageInfo.id === 'verdict') {
       bodyEl.innerHTML = renderInteractiveVerdictPage(c);
     } else {
-      const baseContent = c[fieldMap[pageInfo.id]] || c.mainText;
+      const content = c[fieldMap[pageInfo.id]] || c.mainText;
+      const baseContent = pageInfo.id === 'defense' ? cleanDefenseContent(content) : content;
       const sealAndSignature = renderDocumentSealAndSignature(pageInfo.id, c);
       bodyEl.innerHTML = baseContent + sealAndSignature;
     }

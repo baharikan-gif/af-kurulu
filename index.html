@@ -360,29 +360,24 @@
       opacity: 0.9 !important;
     }
 
-    /* Sekmeler */
-    body.theme-dark #tabBtn-main {
-      background-color: #292524 !important;
-      color: #fafaf9 !important;
-      border-color: #57534e !important;
+    /* Sarı vurgu yalnızca seçili sekmede. */
+    #documentTabs button {
+      background-color: #e5dccb;
+      color: #292524;
+      border-color: #a8a29e;
     }
-
-    body.theme-dark #tabBtn-defense {
-      background-color: #1c1917 !important;
-      color: #d6d3d1 !important;
-      border-color: #44403c !important;
+    body.theme-dark #documentTabs button {
+      background-color: #292524;
+      color: #d6d3d1;
+      border-color: #57534e;
     }
-
-    body.theme-dark #tabBtn-psych {
-      background-color: #2a2213 !important;
-      color: #fef08a !important;
-      border-color: #854d0e !important;
-    }
-
-    body.theme-dark #tabBtn-guard {
-      background-color: #1c1917 !important;
-      color: #a8a29e !important;
-      border-color: #44403c !important;
+    #documentTabs button.is-active,
+    body.theme-dark #documentTabs button.is-active {
+      background-color: #fef08a;
+      color: #422006;
+      border-color: #ca8a04;
+      opacity: 1;
+      font-weight: 700;
     }
 
     /* 3D İnteraktif Resmi Klasör & Sayfa Çevirme Animasyonları */
@@ -591,6 +586,7 @@
     @media (max-width: 639px) {
       #gameScreen { height: calc(100dvh - 16px - env(safe-area-inset-top) - env(safe-area-inset-bottom)); }
     }
+    #interactivePageBody .verdict-page { padding-bottom: 32px; }
   </style>
 </head>
 
@@ -830,7 +826,6 @@
           <div class="flex-1 pr-2">
             <div class="flex items-center gap-1.5">
               <span class="text-[9px] font-mono tracking-widest text-stone-500 uppercase">HUKUK VE İNFAZ BAKANLIĞI · İNFAZ KURUMLARI GENEL DAİRESİ</span>
-              <span id="docTermBadge" class="text-[9px] font-mono bg-stone-300 px-1 py-0.2 rounded text-stone-700">İLAM: 1991/01</span>
             </div>
             <!-- 1. Sıra: İsim -->
             <div class="mt-0.5">
@@ -1477,7 +1472,7 @@
             <div class="bg-stone-100/90 border-2 border-stone-600 rounded-lg p-2.5 sm:p-3.5 text-left space-y-1.5 shadow-sm font-mono text-xs">
               <div class="flex justify-between items-center border-b border-stone-300 pb-1">
                 <span class="text-[10px] font-bold text-stone-600 uppercase">HÜKÜMLÜ ESAS KAYDI:</span>
-                <span id="coverCaseTerm" class="text-[10px] bg-stone-800 text-amber-200 px-1.5 py-0.5 rounded font-bold">İLAM: 1991/01</span>
+                <span id="coverCaseTerm" class="text-[10px] bg-stone-800 text-amber-200 px-1.5 py-0.5 rounded font-bold">İLAM: 1991/1</span>
               </div>
               <div class="pt-0.5">
                 <div class="text-[10px] text-stone-500 uppercase font-bold">HÜKÜMLÜ ADI SOYADI:</div>
@@ -2065,8 +2060,6 @@
       if (boardDateEl) boardDateEl.textContent = dateInfo.meetingDate;
       const caseMeetingEl = document.getElementById('caseMeetingLabel');
       if (caseMeetingEl) caseMeetingEl.textContent = `Oturum Tarihi: ${dateInfo.short}`;
-      const docTermBadgeEl = document.getElementById('docTermBadge');
-      if (docTermBadgeEl) docTermBadgeEl.textContent = `İLAM: ${dateInfo.term}`;
       const deskYearEl = document.getElementById('deskDossierYearTag');
       if (deskYearEl) deskYearEl.textContent = `★ GİZLİ · ${currentYear} ★`;
       const caseCounterEl = document.getElementById('caseCounter');
@@ -2146,7 +2139,7 @@
       }
     }
   </script>
-  <script src="cases.js"></script>
-  <script src="game.js"></script>
+  <script src="cases.js?v=20260919-2"></script>
+  <script src="game.js?v=20260919-2"></script>
 </body>
 </html>
