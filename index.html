@@ -336,6 +336,30 @@
       border-color: #854d0e !important;
     }
 
+    /* Tutanak Resmî Mühür ve İmzalar (Karanlık Mod Uyumu) */
+    body.theme-dark .doc-seal-block {
+      border-color: #57534e !important;
+    }
+    body.theme-dark .doc-seal-stamp-red {
+      color: #ef4444 !important;
+      opacity: 0.95 !important;
+    }
+    body.theme-dark .doc-seal-stamp-purple {
+      color: #c084fc !important;
+      opacity: 0.95 !important;
+    }
+    body.theme-dark .doc-seal-stamp-indigo {
+      color: #a5b4fc !important;
+      opacity: 0.95 !important;
+    }
+    body.theme-dark .doc-sig-ink {
+      color: #93c5fd !important;
+    }
+    body.theme-dark .doc-thumbprint {
+      color: #94a3b8 !important;
+      opacity: 0.9 !important;
+    }
+
     /* Sekmeler */
     body.theme-dark #tabBtn-main {
       background-color: #292524 !important;
@@ -698,7 +722,10 @@
       <!-- Alt Damgalama Bilgisi / Masanın Karar Alanı -->
       <div class="mt-2 pt-1.5 border-t border-stone-300 flex items-center justify-between text-[11px] font-mono text-stone-500">
         <span id="caseMeetingLabel">Oturum Tarihi: 07.01.1991</span>
-        <span class="italic text-stone-600">İmza ve Mühür Zorunludur</span>
+        <span class="italic text-stone-600 flex items-center gap-1.5 text-[10px] font-mono">
+          <span class="inline-block w-2 h-2 rounded-full bg-red-700/90 animate-pulse"></span>
+          <span>İmza ve Mühürle Tasdiklidir</span>
+        </span>
       </div>
 
     </div>
@@ -1147,7 +1174,7 @@
 
         <div class="p-2.5 bg-white/80 rounded border border-stone-300">
           <div class="font-bold text-stone-900 font-mono text-[11px]">🏢 CEZAEVİ KAPASİTESİ (1991 Doluluk Krizi)</div>
-          <p class="text-[11px] text-stone-700 mt-0.5 leading-snug">Tahliye edilen her mahkûm koğuşları rahatlatır (-%3). Tahliye edilmeyenler doluluğu artırır (+%3). Doluluk %110'a ulaşırsa <strong>Kanlı Cezaevi İsyanı</strong> patlak verir.</p>
+          <p class="text-[11px] text-stone-700 mt-0.5 leading-snug">Tahliye edilen her mahkûm koğuşları rahatlatır (-%3). Tahliye edilmeyenler doluluğu artırır (+%3). Doluluk %110'u aşarsa <strong>Kanlı Cezaevi İsyanı</strong> patlak verir.</p>
         </div>
 
         <div class="p-2.5 bg-white/80 rounded border border-stone-300">
@@ -1197,7 +1224,7 @@
       <div class="text-center border-b-2 border-stone-800 pb-3">
         <span class="text-[10px] font-mono tracking-widest text-stone-600 uppercase">VELYA CUMHURİYETİ HUKUK VE İNFAZ BAKANLIĞI TEFTİŞ KURULU</span>
         <h1 id="endTitle" class="text-2xl font-black font-serif uppercase tracking-tight text-stone-950 mt-1">NİHAİ RAPOR: 1991 ŞARTLI TAHLİYE BİLANÇOSU</h1>
-        <p id="endSubtitle" class="text-xs font-mono text-stone-600 mt-1">10 Aylık Görev Süresi Tamamlandı (Ocak - Ekim 1991)</p>
+        <p id="endSubtitle" class="text-xs font-mono text-stone-600 mt-1">Görev özeti hazırlanıyor.</p>
       </div>
 
       <!-- Bitiş Açıklaması -->
@@ -1226,8 +1253,8 @@
       <!-- Mahkûmların Akıbeti Kronolojisi (Ocak-Ekim 1991) -->
       <div class="mb-5">
         <h3 class="text-xs font-bold font-mono uppercase text-stone-700 mb-2 border-b border-stone-300 pb-1 flex justify-between">
-          <span>1991 MAHKÛMLARIN AKIBETİ</span>
-          <span class="text-[10px] text-stone-500">(10 AY / 10 VAKA)</span>
+          <span>MAHKÛMLARIN AKIBETİ</span>
+          <span id="endCaseCount" class="text-[10px] text-stone-500"></span>
         </h3>
         <div id="chronicleList" class="space-y-1.5 max-h-48 overflow-y-auto text-[11px] font-typewriter text-stone-800 pr-1">
           <!-- JS dinamik dolduracak -->
@@ -1269,14 +1296,18 @@
     }
 
     function toggleAudio() {
-      isMuted = !isMuted;
-      document.getElementById('soundIcon').textContent = isMuted ? '🔇' : '🔊';
-      if (isMuted && heartbeatInterval) {
-        clearInterval(heartbeatInterval);
-        heartbeatInterval = null;
-      } else if (!isMuted) {
-        initAudio();
-        checkHeartbeat();
+      if (typeof toggleSettingsSound === 'function') {
+        toggleSettingsSound();
+      } else {
+        isMuted = !isMuted;
+        document.getElementById('soundIcon').textContent = isMuted ? '🔇' : '🔊';
+        if (isMuted && heartbeatInterval) {
+          clearInterval(heartbeatInterval);
+          heartbeatInterval = null;
+        } else if (!isMuted) {
+          initAudio();
+          checkHeartbeat();
+        }
       }
     }
 
@@ -1447,7 +1478,7 @@
       osc.stop(now + 0.15);
     }
 
-    // Kalp Atışı (Kritik Tehlike: Vicdan veya Sicil < %25)
+    // Kalp Atışı (Kritik Tehlike: Vicdan <= 10, Sicil <= 10 veya Doluluk >= 110)
     function playSingleHeartbeat() {
       if (isMuted || !audioCtx) return;
       const now = audioCtx.currentTime;
@@ -1478,7 +1509,7 @@
     }
 
     function checkHeartbeat() {
-      const isCritical = gameState.phase !== 'ended' && (gameState.vicdan <= 25 || gameState.sicil <= 25);
+      const isCritical = gameState.phase !== 'ended' && (gameState.vicdan <= 10 || gameState.sicil <= 10 || gameState.capacity >= (typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 110));
       if (isCritical && !heartbeatInterval && !isMuted) {
         heartbeatInterval = setInterval(playSingleHeartbeat, 800);
       } else if (!isCritical && heartbeatInterval) {
@@ -1581,6 +1612,9 @@
 
       const titleEl = document.getElementById('endTitle');
       const descEl = document.getElementById('endDescription');
+      const summary = endingSummary();
+      document.getElementById('endSubtitle').textContent = summary.period;
+      document.getElementById('endCaseCount').textContent = summary.count;
 
       document.getElementById('finalVicdan').textContent = `${gameState.vicdan}%`;
       document.getElementById('finalSicil').textContent = `${gameState.sicil}%`;
@@ -1608,7 +1642,7 @@
       } else if (forcedType === 'MONSTER' || gameState.vicdan <= 0) {
         titleEl.textContent = "FİNAL: TAŞLAŞMIŞ BÜROKRAT (RUHEN ÖLÜ)";
         descEl.textContent = "Kariyerini ve koltuğunu korumak uğruna masumları harcadın. Sicilin lekesiz, Ardora sana bayılıyor; fakat içindeki insan tamamen öldü. Artık Adliye koridorlarında sadece emirleri damgalayan yaşayan bir ölüsün.";
-      } else if (forcedType === 'RIOT' || gameState.capacity >= (typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 110)) {
+      } else if (forcedType === 'RIOT' || gameState.capacity > (typeof RIOT_CAPACITY !== 'undefined' ? RIOT_CAPACITY : 110)) {
         titleEl.textContent = "FİNAL: CEZAEVİNDE BÜYÜK İSYAN";
         descEl.textContent = "Cezaevlerindeki doluluk patladı. Yer yatakları bile dolunca koğuşlarda kanlı isyan patlak verdi. Bakanlık komisyonunuzu lağvetti, hakkınızda adli tahkikat açıldı.";
       } else if (gameState.vicdan >= 50 && gameState.sicil >= 50) {
