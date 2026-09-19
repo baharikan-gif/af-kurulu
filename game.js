@@ -1344,7 +1344,7 @@ function switchTab(tab, sound = true) {
   const content = currentCase()[fieldMap[tab]] || currentCase().mainText;
   const baseContent = tab === 'defense' ? cleanDefenseContent(content) : content;
   const sealAndSignature = renderDocumentSealAndSignature(tab, currentCase());
-  document.getElementById('docContent').innerHTML = baseContent + sealAndSignature;
+  document.getElementById('docContent').innerHTML = `<div class="document-prose">${baseContent}</div>` + sealAndSignature;
   scheduleDocumentFit();
   if (sound) saveGame();
 }
@@ -1530,7 +1530,7 @@ function renderInteractiveVerdictPage(c) {
       </div>
 
       <!-- Süslü Bürokratik Gerekçe Cümleleri (Orijinal Tam Metin) -->
-      <div class="text-[11.5px] sm:text-xs leading-relaxed text-stone-900 space-y-1.5 text-justify">
+      <div class="document-prose text-[11.5px] sm:text-xs leading-relaxed text-stone-900 space-y-1.5 text-justify">
         <p>
           Yukarıda hüviyet ve infaz evrakı derç olunan hükümlünün şartlı tahliye talebine matuf dosyası; Ceza İnfaz Kurumu Müdürlüğü disiplin ve asayiş zaptı, tabip müşahade müzekkeresi, zabıt kâtibi huzurunda bizzat istima olunan meşru savunması ve amme davası münderecatı muvacehesinde heyetimizce bi’l-etraf ve bi’t-tetkik incelenmiştir.
         </p>
@@ -1718,7 +1718,7 @@ function renderInteractiveDossierPage(index) {
       const content = c[fieldMap[pageInfo.id]] || c.mainText;
       const baseContent = pageInfo.id === 'defense' ? cleanDefenseContent(content) : content;
       const sealAndSignature = renderDocumentSealAndSignature(pageInfo.id, c);
-      bodyEl.innerHTML = baseContent + sealAndSignature;
+      bodyEl.innerHTML = `<div class="document-prose">${baseContent}</div>` + sealAndSignature;
     }
     bodyEl.scrollTop = 0;
     scheduleDocumentFit();
