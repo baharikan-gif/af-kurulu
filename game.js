@@ -50,6 +50,7 @@ function saveSettings() {
 }
 
 function applySettings() {
+  scheduleDocumentFit();
   if (typeof isMuted !== 'undefined') {
     isMuted = !gameSettings.sound;
     if (isMuted && typeof heartbeatInterval !== 'undefined' && heartbeatInterval) {
@@ -379,6 +380,7 @@ function openMainMenu() {
 function closeMainMenu() {
   document.getElementById('mainMenuScreen')?.classList.add('hidden');
   document.getElementById('gameScreen')?.classList.remove('hidden');
+  scheduleDocumentFit();
 }
 
 function continueGame() {
@@ -1336,6 +1338,7 @@ function switchTab(tab, sound = true) {
   const baseContent = currentCase()[fieldMap[tab]] || currentCase().mainText;
   const sealAndSignature = renderDocumentSealAndSignature(tab, currentCase());
   document.getElementById('docContent').innerHTML = baseContent + sealAndSignature;
+  scheduleDocumentFit();
   if (sound) saveGame();
 }
 
@@ -1613,6 +1616,7 @@ function openInteractiveDossier() {
   if (modal) modal.classList.remove('hidden');
 
   setupInteractiveTouchSwipe();
+  scheduleDocumentFit();
 
   if (typeof playRealisticPageFlipSound === 'function') {
     playRealisticPageFlipSound();
@@ -1709,6 +1713,7 @@ function renderInteractiveDossierPage(index) {
       bodyEl.innerHTML = baseContent + sealAndSignature;
     }
     bodyEl.scrollTop = 0;
+    scheduleDocumentFit();
   }
 }
 
@@ -1785,3 +1790,46 @@ if (typeof window !== 'undefined' && window.addEventListener) {
   });
 }
 
+
+
+// Seçili standart boyutta, taşmadan sığan en büyük yarım pikseli bul.
+function fitDocumentText(element) {
+  if (!element || !element.clientHeight || !element.clientWidth || !element.style?.setProperty) return;
+  if (gameSettings.fontSize !== 'normal') {
+    element.style.removeProperty('--auto-document-size');
+    return;
+  }
+  const scroll = element.scrollTop;
+  let chosen = 12;
+  for (let size = 16; size >= 12; size -= 0.5) {
+    element.style.setProperty('--auto-document-size', size + 'px');
+    if (element.scrollHeight <= element.clientHeight + 1 && element.scrollWidth <= element.clientWidth + 1) {
+      chosen = size;
+      break;
+    }
+  }
+  element.style.setProperty('--auto-document-size', chosen + 'px');
+  element.scrollTop = scroll;
+}
+function scheduleDocumentFit() {
+  if (typeof window.requestAnimationFrame !== 'function') return;
+  if (scheduleDocumentFit.pending) return;
+  scheduleDocumentFit.pending = true;
+  window.requestAnimationFrame(() => {
+    scheduleDocumentFit.pending = false;
+    for (const id of ['docContent', 'interactivePageBody']) fitDocumentText(document.getElementById(id));
+  });
+}
+window.addEventListener('resize', scheduleDocumentFit);
+window.addEventListener('DOMContentLoaded', () => {
+  if (typeof ResizeObserver !== 'undefined') {
+    const observer = new ResizeObserver(scheduleDocumentFit);
+    for (const id of ['docContent', 'interactivePageBody']) {
+      const element = document.getElementById(id);
+      if (element) observer.observe(element);
+    }
+  }
+  document.addEventListener?.('toggle', scheduleDocumentFit, true);
+  document.fonts?.ready.then(scheduleDocumentFit);
+  scheduleDocumentFit();
+});
